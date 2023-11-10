@@ -1,0 +1,134 @@
+@media (max-width: 1115px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar .firstSide {
+    margin-left: 30px;
+  }
+  .navbar .firstSide a {
+    color: white;
+    text-decoration: none;
+  }
+  .navbar .firstSide a h1 {
+    border-bottom: 3px solid rgb(255, 255, 255);
+  }
+  .navbar .links {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-right: 20px;
+  }
+  .navbar2 {
+    display: flex;
+    justify-content: space-between;
+    display: none;
+  }
+  .navbar2 .firstSide {
+    margin-left: 30px;
+  }
+  .navbar2 .firstSide a {
+    color: white;
+    text-decoration: none;
+  }
+  .navbar2 .firstSide a h1 {
+    border-bottom: 3px solid rgb(255, 255, 255);
+  }
+  .navbar2 .links {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .info-area .info-side {
+    width: 50%;
+    color: white;
+  }
+  .info-area .info-side h1 {
+    font-size: 25px;
+  }
+  .info-area .info-side p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 900px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar .firstSide {
+    margin-left: 30px;
+  }
+  .navbar .firstSide a {
+    color: white;
+    text-decoration: none;
+  }
+  .navbar .firstSide a h1 {
+    border-bottom: 3px solid rgb(255, 255, 255);
+  }
+  .navbar .links {
+    display: none;
+  }
+  .navbar .hamburgerMenu {
+    display: block;
+  }
+  .navbar2 {
+    display: flex;
+    justify-content: space-between;
+    display: none;
+  }
+  .navbar2 .firstSide {
+    margin-left: 30px;
+  }
+  .navbar2 .firstSide a {
+    color: white;
+    text-decoration: none;
+  }
+  .navbar2 .firstSide a h1 {
+    border-bottom: 3px solid rgb(255, 255, 255);
+  }
+  .navbar2 .links {
+    display: none;
+  }
+  .navbar2 .hamburgerMenu {
+    display: block;
+  }
+}
+@media (max-width: 700px) {
+  .info-area {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .info-area .info-side {
+    width: 90%;
+    color: white;
+  }
+  .info-area .info-side h1 {
+    font-size: 20px;
+  }
+  .info-area .info-side p {
+    font-size: 12px;
+  }
+  .info-area .pic img {
+    max-width: 270px;
+    height: auto;
+  }
+  .jumbotron {
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .jumbotron .main_stuff h1 {
+    color: white;
+    font-size: 60px;
+  }
+  .jumbotron .main_stuff h5 {
+    color: white;
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=smaller_screens.css.map */

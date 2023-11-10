@@ -1,0 +1,18 @@
+<div class="popup_cookies" id="popup_cookiesID">
+
+    <div class="first">
+        <h5>
+            Please be informed that this website collects data for analytics purposes, helping me enhance user experience and 
+            improve the overall performance of the site. For more details, refer to <a href="#">Privacy Policy</a>.
+        </h5>
+    </div>
+
+    <div class="second">
+        <button onclick="accepted_popup()">Accept</button>
+    </div>
+
+</div>
+
+{% load static %}
+
+<script src="{% static 'js/popup.js' %}"></script>

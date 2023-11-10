@@ -1,0 +1,60 @@
+<div class="navbar" id="oldNav">
+    <div class="firstSide">
+        <a href="#"><h1>CEJ Kirk</h1></a>
+    </div>
+    <div class="links">
+        <a href="#" id="home-page">Home</a>
+        <a href="#" id="about-page">About Me</a>
+        <div class="driodiwb">
+            <a  onmouseover="showPopup()" onmouseout="hidePopup()" id="projects-page">Projects <span><i class="fa-solid fa-caret-down"></i></span></a>
+            <div class="dropdown_menu" id="popup-element" style="display: none;" onmouseover="showPopup()" onmouseout="hidePopup()">
+                <a href="#">Web Development</a>
+                <a href="#">Backend</a>
+                <a href="#">Applications</a>
+            </div>
+        </div>
+        <a href="#" id="contact-page">Contact</a>
+    </div>
+
+    <div class="hamburgerMenu">
+        <i class="fa-solid fa-bars" onclick="open_menu()"></i>
+    </div>
+</div>
+
+<div class="hamburgerMenu_links" id="hamburgerMenu_linksID">
+
+    <div class="x-button">
+        <button onclick="closeX()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="things">
+        <a href="#" id="home-page">Home</a>
+        <a href="#" id="about-page">About Me</a>
+        <a href="#" id="projects-page" onclick="open_projects_(event)">Projects</a>
+        <a href="#" id="contact-page">Contact</a>
+    </div>
+</div>
+
+<div class="hamburgerMenu_projects" id="hamburgerMenu_projectsID">
+    <div class="buttons">
+        <div class="x-button">
+            <button onclick="back()"><i class="fa-solid fa-circle-arrow-left"></i></button>
+        </div>
+    
+        <div class="x-button2">
+            <button onclick="closeX2()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+
+    <div class="things">
+        <a href="#">Web Development</a>
+        <a href="#">Backend</a>
+        <a href="#">Applications</a>
+    </div>
+
+</div>
+
+{% include 'index_things/navbar2.html' %}
+
+{% load static %}
+<script src="{% static 'js/navbar.js' %}"></script>

@@ -2,6 +2,7 @@
 $text-color: rgba(255, 255, 255, 0.884);
 $border-white: 2px solid white;
 $border-black: 2px solid black;
+$border-white-dotted: 2px dotted white;
 $hover-color: rgb(184, 36, 36);
 
 // $co: rgb(204, 204, 204);
@@ -17,7 +18,423 @@ $jumbo_ptag_background: rgba(255, 255, 255, 0.842);
 $transparent_color: rgba(255, 255, 255, 0);
 
 
-
-h1 {
-    color: white;
+// to prove we are on index page
+#index_pageID {
+    position: absolute;
+    visibility: hidden;
 }
+
+
+// popup stuff
+.popup_cookies {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.919);
+    padding: 10px;
+    border-top: 2px solid blue;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+    .second {
+        width: 30%;
+        text-align: center;
+
+        button {
+            width: 80%;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+    }
+
+}
+
+// CSS for the first navbar
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+
+    .firstSide {
+        margin-left: 30px;
+        a {
+            color: white;
+            text-decoration: none;
+
+            h1 {
+                border-bottom: 3px solid rgb(255, 255, 255);
+            }
+        }
+
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin-right: 20px;
+
+        a {
+            color: white;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            text-decoration: none;
+
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown_menu {
+            position: absolute;
+            border: 1px solid white;
+            text-align: left;
+            width: 17%;
+            padding-top: 10px;
+            background-color: black;
+            display: none;
+
+            a {
+                font-size: 13px;
+                margin-bottom: 20px;
+                margin-left: 10px;
+            }
+        }
+
+        #home-page {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        #about-page {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        #projects-page {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        #projects-page:hover {
+            color: white;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        #contact-page {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+    }
+
+    .hamburgerMenu {
+        display: none;
+        i {
+            color: white;
+            margin-right: 50px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+    }
+
+}
+.hamburgerMenu_links {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.858);
+    z-index: 6;
+    display: none;
+
+    .x-button {
+        text-align: end;
+        padding: 10px;
+        margin-bottom: 50px;
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+
+            i {
+                font-size: 30px;
+                color: white;
+            }
+        }
+
+    }
+
+
+    .things {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        top: 75%;
+        left: 50%; /* Adjust left to 50% */
+        transform: translate(-50%, -75%); /* Update transform property */
+
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-bottom: 40px;
+            font-size: 40px;
+        }
+
+    }
+}
+.hamburgerMenu_projects {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.858);
+    z-index: 6;
+    display: none;
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        .x-button {
+            text-align: left;
+            padding: 10px;
+            margin-bottom: 50px;
+    
+            button {
+                padding: 10px;
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+    
+                i {
+                    font-size: 30px;
+                    color: white;
+                }
+            }
+    
+        }
+    
+        .x-button2 {
+            text-align: end;
+            padding: 10px;
+            margin-bottom: 50px;
+    
+            button {
+                padding: 10px;
+                border: none;
+                background-color: rgba(0, 0, 0, 0);
+    
+                i {
+                    font-size: 30px;
+                    color: white;
+                }
+            }
+    
+        }
+    }
+
+
+    .things {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        top: 75%;
+        left: 50%; /* Adjust left to 50% */
+        transform: translate(-50%, -75%); /* Update transform property */
+
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-bottom: 40px;
+            font-size: 40px;
+        }
+
+    }
+}
+
+
+// CSS for the first navbar
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.846);
+    z-index: 5;
+    padding: 10px;
+    display: none;
+
+    .firstSide {
+        margin-left: 30px;
+        a {
+            color: white;
+            text-decoration: none;
+
+            h1 {
+                border-bottom: 3px solid rgb(255, 255, 255);
+            }
+        }
+
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin-right: 20px;
+
+        a {
+            color: white;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            text-decoration: none;
+
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #projects-page1:hover {
+            color: white;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .dropdown_menu {
+            position: absolute;
+            border: 1px solid white;
+            text-align: left;
+            width: 17%;
+            padding-top: 10px;
+            background-color: black;
+            display: none;
+
+            a {
+                font-size: 13px;
+                margin-bottom: 20px;
+                margin-left: 10px;
+            }
+        }
+
+    }
+
+    .hamburgerMenu {
+        display: none;
+        i {
+            color: white;
+            margin-right: 50px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+
+// Main CSS for the Jumbotron
+.jumbotron {
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    margin-bottom: 0px;
+
+    .back-video {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+
+
+    .main_stuff {
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%; /* Adjust left to 50% */
+        transform: translate(-50%, -50%); /* Update transform property */
+        text-align: center; /* Center-align the text horizontally */
+        width: 100%;
+
+        h1 {
+            color: white;
+            font-size: 100px;
+            text-shadow: 3px 3px black;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            cursor: default;
+        }
+
+        h5 {
+            color: white;
+            font-size: 60px;
+            cursor: default;
+            text-shadow: 3px 3px black;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+    }
+}
+
+
+
+// CSS for the picture and summary
+.info-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+
+
+    .info-side {
+        width: 50%;
+        color: white;
+        border-right: $border_white;
+        padding-right: 10px;
+
+        h1 {
+            cursor: default;
+        }
+
+        p {
+            cursor: default;
+        }
+    }
+
+    .pic {
+        img {
+            max-width: 320px;
+            height: auto;
+        }
+    }
+}
+

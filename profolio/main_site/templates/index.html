@@ -2,9 +2,27 @@
 
 
 
-{% block content %}
 
-<h1>janjan</h1>
+{% block title %}   
+    <title>CEJ Kirk - Homepage</title>
+{% endblock title %}
+
+
+{% block content %}
+{% load static %}
+
+    <h1 id="index_pageID">index</h1>
+
+    {% include 'index_things/jumbotron.html' %}
+
+
+    {% include 'index_things/info_area.html' %}
+
+
+
+
+
+    {% include 'index_things/popup.html' %}
 
 
 {% endblock content %}

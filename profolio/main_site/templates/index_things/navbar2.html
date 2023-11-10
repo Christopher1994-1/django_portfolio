@@ -1,0 +1,25 @@
+<div class="navbar2" id="scroll-navbarID">
+    <div class="firstSide">
+        <a href="#"><h1>CEJ Kirk</h1></a>
+    </div>
+    <div class="links">
+        <a href="#" id="home-page">Home</a>
+        <a href="#" id="about-page">About Me</a>
+        <div class="driodiwb">
+            <a  onmouseover="showPopup2Scroll()" onmouseout="hidePopup2Scroll()" id="projects-page1">Projects <span><i class="fa-solid fa-caret-down"></i></span></a>
+            <div class="dropdown_menu" id="popup-element2" style="display: none;" onmouseover="showPopup2Scroll()" onmouseout="hidePopup2Scroll()">
+                <a href="#">Web Development</a>
+                <a href="#">Backend</a>
+                <a href="#">Applications</a>
+            </div>
+        </div>
+        <a href="#" id="contact-page">Contact</a>
+    </div>
+
+    <div class="hamburgerMenu">
+        <i class="fa-solid fa-bars" onclick="open_menu()"></i>
+    </div>
+</div>
+
+{% load static %}
+<script src="{% static 'js/navbar2.js' %}"></script>

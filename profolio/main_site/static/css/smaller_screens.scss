@@ -1,0 +1,222 @@
+// Global Scss Variables
+$text-color: rgba(255, 255, 255, 0.884);
+$border-white: 2px solid white;
+$border-black: 2px solid black;
+$border-white-dotted: 2px dotted white;
+$hover-color: rgb(184, 36, 36);
+
+// $co: rgb(204, 204, 204);
+
+$table-bg: #999999;
+$table-border-color: #ddd;
+$table-header-bg: #444;
+$table-header-color: #fff;
+$table-row-hover-color: #f5f5f5;
+
+$jumbo_ptag_background: rgba(255, 255, 255, 0.842);
+
+$transparent_color: rgba(255, 255, 255, 0);
+
+
+
+@media(max-width:1115px) {
+    // CSS for the first navbar
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+
+        .firstSide {
+            margin-left: 30px;
+            a {
+                color: white;
+                text-decoration: none;
+
+                h1 {
+                    border-bottom: 3px solid rgb(255, 255, 255);
+                }
+            }
+
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+            margin-right: 20px;
+
+        }
+    }
+
+    // CSS for the first navbar
+    .navbar2 {
+        display: flex;
+        justify-content: space-between;
+        display: none;
+
+        .firstSide {
+            margin-left: 30px;
+            a {
+                color: white;
+                text-decoration: none;
+
+                h1 {
+                    border-bottom: 3px solid rgb(255, 255, 255);
+                }
+            }
+
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+            margin-right: 20px;
+
+        }
+    }
+}
+
+
+
+// Media Max Width ~ 1000px ~
+@media(max-width:1000px) {
+    // CSS for the picture and summary
+    .info-area {
+
+        .info-side {
+            width: 50%;
+            color: white;
+
+            h1 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+
+    }
+    
+}
+
+
+
+@media(max-width:900px) {
+    // CSS for the first navbar
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+
+        .firstSide {
+            margin-left: 30px;
+            a {
+                color: white;
+                text-decoration: none;
+
+                h1 {
+                    border-bottom: 3px solid rgb(255, 255, 255);
+                }
+            }
+
+        }
+
+        .links {
+            display: none;
+        }
+
+        .hamburgerMenu {
+            display: block;
+        }
+    }
+
+
+    // CSS for the first navbar
+    .navbar2 {
+        display: flex;
+        justify-content: space-between;
+        display: none;
+
+        .firstSide {
+            margin-left: 30px;
+            a {
+                color: white;
+                text-decoration: none;
+
+                h1 {
+                    border-bottom: 3px solid rgb(255, 255, 255);
+                }
+            }
+
+        }
+
+        .links {
+            display: none;
+        }
+
+        .hamburgerMenu {
+            display: block;
+        }
+    }
+}
+
+
+
+// Media Max Width ~ 700px ~
+@media(max-width:700px) {
+    // CSS for the picture and summary
+    .info-area {
+        flex-direction: column;
+        margin-top: 0px;
+
+        .info-side {
+            width: 90%;
+            color: white;
+
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .pic {
+            img {
+                max-width: 270px;
+                height: auto;
+            }
+        }
+
+    }
+
+    // Main CSS for the Jumbotron
+    .jumbotron {
+        height: 600px;
+        background-color: rgba(0, 0, 0, 0);
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+
+@media(max-width:500px) {
+    // Main CSS for the Jumbotron
+    .jumbotron {
+
+        .main_stuff {
+
+            h1 {
+                color: white;
+                font-size: 60px;
+            }
+
+            h5 {
+                color: white;
+                font-size: 40px;
+            }
+        }
+    }
+
+}
