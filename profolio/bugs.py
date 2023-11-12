@@ -1,0 +1,1 @@
+# BUG when pressing switch keys on projects display, side bounces up and down, thought it might be the see more thingy

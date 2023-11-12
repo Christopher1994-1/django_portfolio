@@ -1,0 +1,484 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.slide-forward {
+  transform: translateX(-100%);
+}
+
+/***** Slide Left *****/
+.slide-left {
+  animation: 1.2s slide-left;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+/***** Slide Right *****/
+.slide-right {
+  animation: 1.2s slide-right;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+/***** Slide backk *****/
+.slide-backk {
+  animation: 1.2s slide-backk;
+}
+
+@keyframes slide-backk {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.client-testimonials-area {
+  color: white;
+  padding: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.client-testimonials-area h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-bottom: 40px;
+}
+.client-testimonials-area .left-arrow {
+  position: absolute;
+  color: white;
+  top: 50%;
+  z-index: 1;
+  left: 2%; /* Adjust left to 50% */
+  transform: translate(-50%); /* Update transform property */
+}
+.client-testimonials-area .left-arrow i {
+  font-size: 25px;
+  cursor: pointer;
+}
+.client-testimonials-area .right-arrow {
+  position: absolute;
+  color: white;
+  top: 50%;
+  z-index: 1;
+  right: 0%; /* Adjust left to 50% */
+  transform: translate(-50%); /* Update transform property */
+}
+.client-testimonials-area .right-arrow i {
+  font-size: 25px;
+  cursor: pointer;
+}
+.client-testimonials-area .clients {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  transition: transform 1.2s ease;
+}
+.client-testimonials-area .clients .feedback {
+  justify-self: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.775);
+  width: 80%;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+.client-testimonials-area .clients .feedback .icons {
+  margin-bottom: 5px;
+  position: relative;
+}
+.client-testimonials-area .clients .feedback .icons .labels {
+  display: flex;
+  justify-content: space-between;
+}
+.client-testimonials-area .clients .feedback .icons .labels a {
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+.client-testimonials-area .clients .feedback .icons .labels i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.client-testimonials-area .clients .feedback .icons .labels button {
+  border: none;
+  padding: 5px;
+  width: 35%;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+}
+.client-testimonials-area .clients .feedback .icons .is {
+  position: absolute;
+  border: 1px solid white;
+  text-align: left;
+  width: 50%;
+  padding-top: 10px;
+  background-color: black;
+  transition: ease-out 0.3s;
+  display: none;
+}
+.client-testimonials-area .clients .feedback .icons .is small {
+  color: white;
+}
+.client-testimonials-area .clients .feedback .icons .is h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.client-testimonials-area .clients .feedback .icons .is h5:hover {
+  text-decoration: underline;
+}
+.client-testimonials-area .clients .feedback .img-div {
+  position: relative;
+  z-index: 11;
+}
+.client-testimonials-area .clients .feedback .img-div #ss {
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: ease-in 0.2s;
+}
+.client-testimonials-area .clients .feedback .img-div #ss img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #ffffff; /* Adjust the color as needed */
+}
+.client-testimonials-area .clients .feedback .img-div #ss:hover {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.client-testimonials-area .clients .feedback .img-div .live-demo-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2;
+}
+.client-testimonials-area .clients .feedback .img-div .live-demo-button a button {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.client-testimonials-area .clients .feedback .img-div:hover .live-demo-button {
+  display: block;
+}
+.client-testimonials-area .clients .feedback .img-div:hover #ss {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.client-testimonials-area .clients .feedback i {
+  font-size: 30px;
+}
+.client-testimonials-area .clients .feedback #title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.client-testimonials-area .clients.slideIn .feedback {
+  transform: translateX(0);
+}
+.client-testimonials-area .clients.slideOut .feedback {
+  transform: translateX(-100%);
+}
+.client-testimonials-area #clients_displayID {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  transition: transform 1.2s ease;
+  display: none;
+}
+.client-testimonials-area #clients_displayID .feedback {
+  justify-self: center;
+  border-radius: 10px;
+  background-color: white;
+  width: 80%;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+  transition: transform 0.5s ease;
+}
+.client-testimonials-area #clients_displayID .feedback i {
+  font-size: 30px;
+}
+.client-testimonials-area #clients_displayID2 {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  transition: transform 1.2s ease;
+  display: none;
+}
+.client-testimonials-area #clients_displayID2 .feedback {
+  justify-self: center;
+  border-radius: 10px;
+  background-color: white;
+  width: 80%;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+  transition: transform 0.5s ease;
+}
+.client-testimonials-area #clients_displayID2 .feedback i {
+  font-size: 30px;
+}
+
+.client-testimonials-area2 {
+  color: white;
+  padding: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  display: none;
+}
+.client-testimonials-area2 h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-bottom: 40px;
+}
+.client-testimonials-area2 .left-arrow {
+  position: absolute;
+  color: white;
+  top: 50%;
+  z-index: 1;
+  left: 2%; /* Adjust left to 50% */
+  transform: translate(-50%); /* Update transform property */
+}
+.client-testimonials-area2 .left-arrow i {
+  font-size: 25px;
+  cursor: pointer;
+}
+.client-testimonials-area2 .right-arrow {
+  position: absolute;
+  color: white;
+  top: 50%;
+  z-index: 1;
+  right: 0%; /* Adjust left to 50% */
+  transform: translate(-50%); /* Update transform property */
+}
+.client-testimonials-area2 .right-arrow i {
+  font-size: 25px;
+  cursor: pointer;
+}
+.client-testimonials-area2 .clients2 {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  transition: transform 1.2s ease;
+}
+.client-testimonials-area2 .clients2 .feedback {
+  justify-self: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.775);
+  width: 80%;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+.client-testimonials-area2 .clients2 .feedback .icons {
+  margin-bottom: 5px;
+  position: relative;
+}
+.client-testimonials-area2 .clients2 .feedback .icons .labels {
+  display: flex;
+  justify-content: space-between;
+}
+.client-testimonials-area2 .clients2 .feedback .icons .labels a {
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+.client-testimonials-area2 .clients2 .feedback .icons .labels i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.client-testimonials-area2 .clients2 .feedback .icons .labels button {
+  border: none;
+  padding: 5px;
+  width: 35%;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+}
+.client-testimonials-area2 .clients2 .feedback .icons .is {
+  position: absolute;
+  border: 1px solid white;
+  text-align: left;
+  width: 50%;
+  padding-top: 10px;
+  background-color: black;
+  transition: ease-out 0.3s;
+  display: none;
+}
+.client-testimonials-area2 .clients2 .feedback .icons .is small {
+  color: white;
+}
+.client-testimonials-area2 .clients2 .feedback .icons .is h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.client-testimonials-area2 .clients2 .feedback .icons .is h5:hover {
+  text-decoration: underline;
+}
+.client-testimonials-area2 .clients2 .feedback .img-div {
+  position: relative;
+  z-index: 11;
+}
+.client-testimonials-area2 .clients2 .feedback .img-div #ss {
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: ease-in 0.2s;
+}
+.client-testimonials-area2 .clients2 .feedback .img-div #ss img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #ffffff; /* Adjust the color as needed */
+}
+.client-testimonials-area2 .clients2 .feedback .img-div #ss:hover {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.client-testimonials-area2 .clients2 .feedback .img-div .live-demo-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2;
+}
+.client-testimonials-area2 .clients2 .feedback .img-div .live-demo-button a button {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.client-testimonials-area2 .clients2 .feedback .img-div:hover .live-demo-button {
+  display: block;
+}
+.client-testimonials-area2 .clients2 .feedback .img-div:hover #ss {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.client-testimonials-area2 .clients2 .feedback i {
+  font-size: 30px;
+}
+.client-testimonials-area2 .clients2 .feedback #title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.client-testimonials-area2 .clients2.slideIn .feedback {
+  transform: translateX(0);
+}
+.client-testimonials-area2 .clients2.slideOut .feedback {
+  transform: translateX(-100%);
+}
+.client-testimonials-area2 #clients_displayID2 {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  transition: transform 1.2s ease;
+  display: none;
+}
+.client-testimonials-area2 #clients_displayID2 .feedback {
+  justify-self: center;
+  border-radius: 10px;
+  background-color: white;
+  width: 80%;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+  transition: transform 0.5s ease;
+}
+.client-testimonials-area2 #clients_displayID2 .feedback i {
+  font-size: 30px;
+}
+
+.switch_buttons {
+  text-align: center;
+}
+.switch_buttons .first i {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+.switch_buttons .second {
+  display: none;
+}
+.switch_buttons .second i {
+  cursor: pointer;
+  color: white;
+}
+.switch_buttons .third {
+  display: none;
+}
+.switch_buttons .third i {
+  cursor: pointer;
+  color: white;
+}
+
+.techies {
+  cursor: pointer;
+}
+
+.see-more-display {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease-out, transform 0.7s ease-out;
+}
+.see-more-display a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+}/*# sourceMappingURL=slide.css.map */

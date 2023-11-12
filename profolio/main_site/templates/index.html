@@ -11,6 +11,8 @@
 {% block content %}
 {% load static %}
 
+<div class="overlay" id="overlay" onclick="overly_clicked()"></div>
+
     <h1 id="index_pageID">index</h1>
 
     {% include 'index_things/jumbotron.html' %}
@@ -19,10 +21,16 @@
     {% include 'index_things/info_area.html' %}
 
 
+    {% include 'index_things/projects.html' %}
+
+
 
 
 
     {% include 'index_things/popup.html' %}
 
+
+    <script src="{% static 'js/projects.js' %}"></script>
+    <script src="{% static 'js/projectsHover.js' %}"></script>
 
 {% endblock content %}
