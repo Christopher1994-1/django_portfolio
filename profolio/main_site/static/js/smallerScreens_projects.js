@@ -1,25 +1,17 @@
 
 
-const first_ = document.getElementById('clientsID');
-const second_ = document.getElementById('clientsID2');
-const third_ = document.getElementById('clientsID3');
+const firstDisplay = document.getElementById('clientsID');
+const secondDisplay = document.getElementById('clientsID2');
+const thirdDisplay = document.getElementById('clientsID3');
 
 
-let dot_one = document.getElementById('firstDots');
-let dot_two = document.getElementById('secondDots');
-let dot_three = document.getElementById('thirdDots');
+let dotOne = document.getElementById('firstDots');
+let dotTwo = document.getElementById('secondDots');
+let dotThree = document.getElementById('thirdDots');
 
-
-
-// default is set to true
-let slide_finished = true
 
 // number display is set to
-let current_display_number = 1
-
-
-let current_dots_number = 1
-
+let current_display_number_ = 1
 
 
 
@@ -83,16 +75,16 @@ function moving_backward(display_leaving, display_coming) {
 
 // Function called when -> button is pressed
 function goForward() {
-    if (current_display_number == 1) {
-        moving_forward(first_, second_)
-        changeDots(dot_one, dot_two)
-        current_display_number = 2
+    if (current_display_number_ == 1) {
+        moving_forward(firstDisplay, secondDisplay)
+        changeDots(dotOne, dotTwo)
+        current_display_number_ = 2
         num = 2
     }
-    else if (current_display_number == 2) {
-        moving_forward(second_, third_)
-        changeDots(dot_two, dot_three)
-        current_display_number = 3
+    else if (current_display_number_ == 2) {
+        moving_forward(secondDisplay, thirdDisplay)
+        changeDots(dotTwo, dotThree)
+        current_display_number_ = 3
         num = 3
     }
 }
@@ -100,27 +92,27 @@ function goForward() {
 
 // function called when <- button is pressed
 function goBack() {
-    if (current_display_number == 3) {
-        moving_backward(third_, second_)
-        changeDots(dot_three, dot_two)
-        current_display_number = 2
+    if (current_display_number_ == 3) {
+        moving_backward(thirdDisplay, secondDisplay)
+        changeDots(dotThree, dotTwo)
+        current_display_number_ = 2
         num = 2
-    } else if (current_display_number == 2) {
+    } else if (current_display_number_ == 2) {
         // Remove slide-backk class before transitioning to the first section
-        second_.classList.remove('slide-backk');
+        secondDisplay.classList.remove('slide-backk');
 
-        second_.classList.add('slide-right')
+        secondDisplay.classList.add('slide-right')
 
         setTimeout(() => {
-            first_.classList.add('slide-backk');
-            first_.style.display = 'grid'
+            firstDisplay.classList.add('slide-backk');
+            firstDisplay.style.display = 'grid'
 
-            second_.classList.remove('slide-right');
-            second_.style.display = 'none';
+            secondDisplay.classList.remove('slide-right');
+            secondDisplay.style.display = 'none';
         }, 700)
-        changeDots(dot_two, dot_one)
+        changeDots(dotTwo, dotOne)
 
-        current_display_number = 1
+        current_display_number_ = 1
         num = 1
     }
 }
@@ -183,24 +175,24 @@ document.getElementById('switch_buttonsID').addEventListener('mouseover', functi
 
 // function when dot two is clicked 
 function dotTwo_clicked(wanted) {
-    if (current_display_number == 1 && wanted == '2') {
-        moving_forward(first_, second_)
-        changeDots(dot_one, dot_two)
-        current_display_number = 2
+    if (current_display_number_ == 1 && wanted == '2') {
+        moving_forward(firstDisplay, secondDisplay)
+        changeDots(dotOne, dotTwo)
+        current_display_number_ = 2
         end_opens101()
         num = 2
     }
-    else if (current_display_number == 2 && wanted == '3') {
-        moving_forward(second_, third_)
-        changeDots(dot_two, dot_three)
-        current_display_number = 3
+    else if (current_display_number_ == 2 && wanted == '3') {
+        moving_forward(secondDisplay, thirdDisplay)
+        changeDots(dotTwo, dotThree)
+        current_display_number_ = 3
         end_opens101()
         num = 3
     }
-    else if (current_display_number == 1 && wanted == '3') {
-        moving_forward(first_, third_)
-        changeDots(dot_one, dot_three)
-        current_display_number = 3
+    else if (current_display_number_ == 1 && wanted == '3') {
+        moving_forward(firstDisplay, thirdDisplay)
+        changeDots(dotOne, dotThree)
+        current_display_number_ = 3
         end_opens101()
         num = 3
     }
@@ -210,32 +202,32 @@ function dotTwo_clicked(wanted) {
 
 
 function dot_backwards(wanted) {
-    if (current_display_number == 2 && wanted == '1') {
-        second_.classList.remove('slide-backk');
+    if (current_display_number_ == 2 && wanted == '1') {
+        secondDisplay.classList.remove('slide-backk');
 
-        second_.classList.add('slide-right')
+        secondDisplay.classList.add('slide-right')
 
         setTimeout(() => {
-            first_.classList.add('slide-backk');
-            first_.style.display = 'grid'
+            firstDisplay.classList.add('slide-backk');
+            firstDisplay.style.display = 'grid'
 
-            second_.classList.remove('slide-right');
-            second_.style.display = 'none';
+            secondDisplay.classList.remove('slide-right');
+            secondDisplay.style.display = 'none';
         }, 700)
-        changeDots(dot_two, dot_one)
-        current_display_number = 1
+        changeDots(dotTwo, dotOne)
+        current_display_number_ = 1
         num = 1
     }
-    else if (current_display_number == 3 && wanted == '2') {
-        moving_backward(third_, second_)
-        changeDots(dot_three, dot_two)
-        current_display_number = 2
+    else if (current_display_number_ == 3 && wanted == '2') {
+        moving_backward(thirdDisplay, secondDisplay)
+        changeDots(dotThree, dotTwo)
+        current_display_number_ = 2
         num = 2
     }
-    else if (current_display_number == 3 && wanted == '1') {
-        moving_backward(third_, first_)
-        changeDots(dot_three, dot_one)
-        current_display_number = 1
+    else if (current_display_number_ == 3 && wanted == '1') {
+        moving_backward(thirdDisplay, firstDisplay)
+        changeDots(dotThree, dotOne)
+        current_display_number_ = 1
         num = 1
     }
 

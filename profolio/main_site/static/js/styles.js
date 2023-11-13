@@ -40,13 +40,3 @@ window.addEventListener('load', function() {
     }
     
 });
-
-
-if (navigator.onLine) {
-    // Code to execute when there is an internet connection
-    console.log("Online");
-} else {
-    // Code to handle the absence of an internet connection
-    console.log("Offline");
-}
-

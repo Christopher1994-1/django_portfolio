@@ -1,272 +1,355 @@
 {% load static %}
 
-<div class="client-testimonials-area" id="old">
+<script>
+    let num = 1
+</script>
 
-    <h1>Projects - Web Apps</h1>
-
+<div class="container_holder">
+    <h1>Projects Showcase</h1>
+    
     <div class="left-arrow">
-        <!-- <i class="fa-solid fa-circle-left" onclick="go_back()"></i> -->
-        <button onclick="go_back()" id="go_back1">GB</button>
+        <i class="fa-solid fa-circle-left" onclick="goBack()" onmouseover="end_opens()"></i>
     </div>
 
 
-    
-    <div class="clients" id="clientsID">
+        <div class="clients" id="clientsID">
+
+            <div class="feedback" id="feedbackID">
+                <h5 id="title">Starbucks Mock Up1</h5>
+                
+                <div class="img-div">
+                    <a href="" id="ss"><img src="{% static 'images/project_images/starbucks/star1.png' %}" alt=""></a>
+                    <!-- <a href="#"><img src="{% static 'images/product_showcases/dream.png' %}" alt=""></a> -->
+                    <div class="live-demo-button" id="live-demo-buttonID">
+                        <a href="" id="live-demo-buttonITSELF"><button>Live Demo</button></a>
+                    </div>
+
+                </div>
 
 
-        <div class="feedback" id="feedbackID">
-            <h5 id="title">Starbucks Mock Up</h5>
+                <hr>
+                <div class="icons">
+
+                    <div class="labels">
+                        <a onclick="open_techies('isID')">Technologies <span><i class="fa-solid fa-caret-down"></i></span></a>
+
+                        <button>More</button>
+                    </div>
+
+                    <div class="is" id="isID">
+                        <h5>Python</h5>
+                        <h5>Sass</h5>
+                        <h5>HTML5</h5>
+                        <h5>JavaScript</h5>
+                        <h5>Flask</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="feedback" id="feedbackID">
+                <h5 id="title">Starbucks Mock Up</h5>
+                
+                <div class="img-div">
+                    <a href="" id="ss"><img src="{% static 'images/project_images/starbucks/star1.png' %}" alt=""></a>
+                    <!-- <a href="#"><img src="{% static 'images/product_showcases/dream.png' %}" alt=""></a> -->
+                    <div class="live-demo-button" id="live-demo-buttonID">
+                        <a href="" id="live-demo-buttonITSELF"><button>Live Demo</button></a>
+                    </div>
+
+                </div>
+
+
+                <hr>
+                <div class="icons">
+
+                    <div class="labels">
+                        <a onclick="open_techies2('isID2')">Technologies <span><i class="fa-solid fa-caret-down"></i></span></a>
+
+                        <button>More</button>
+                    </div>
+
+                    <div class="is" id="isID2">
+                        <h5>Python</h5>
+                        <h5>Sass</h5>
+                        <h5>HTML5</h5>
+                        <h5>JavaScript</h5>
+                        <h5>Flask</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="feedback" id="feedbackID">
+                <h5 id="title">Starbucks Mock Up</h5>
+                
+                <div class="img-div">
+                    <a href="" id="ss"><img src="{% static 'images/project_images/starbucks/star1.png' %}" alt=""></a>
+                    <!-- <a href="#"><img src="{% static 'images/product_showcases/dream.png' %}" alt=""></a> -->
+                    <div class="live-demo-button" id="live-demo-buttonID">
+                        <a href="" id="live-demo-buttonITSELF"><button>Live Demo</button></a>
+                    </div>
+
+                </div>
+
+
+                <hr>
+                <div class="icons">
+
+                    <div class="labels">
+                        <a onclick="open_techies3('isID3')">Technologies <span><i class="fa-solid fa-caret-down"></i></span></a>
+
+                        <button>More</button>
+                    </div>
+
+                    <div class="is" id="isID3">
+                        <h5>Python</h5>
+                        <h5>Sass</h5>
+                        <h5>HTML5</h5>
+                        <h5>JavaScript</h5>
+                        <h5>Flask</h5>
+                    </div>
+                </div>
+
+            </div>
             
-            <div class="img-div">
-                <a href="" id="ss"><img src="{% static 'images/project_images/starbucks/star1.png' %}" alt=""></a>
-                <!-- <a href="#"><img src="{% static 'images/product_showcases/dream.png' %}" alt=""></a> -->
-                <div class="live-demo-button" id="live-demo-buttonID">
-                    <a href="" id="live-demo-buttonITSELF"><button>Live Demo</button></a>
+        </div>
+
+
+        <div class="clients2" id="clientsID2">
+
+            <div class="feedback" id="feedbackID">
+                <h5 id="title">Starbucks Mock Up2</h5>
+                
+                <div class="img-div">
+                    <a href="" id="ss"><img src="{% static 'images/project_images/starbucks/star1.png' %}" alt=""></a>
+                    <!-- <a href="#"><img src="{% static 'images/product_showcases/dream.png' %}" alt=""></a> -->
+                    <div class="live-demo-button" id="live-demo-buttonID">
+                        <a href="" id="live-demo-buttonITSELF"><button>Live Demo</button></a>
+                    </div>
+
+                </div>
+
+
+                <hr>
+                <div class="icons">
+
+                    <div class="labels">
+                        <a onclick="open_techies4('isID4')">Technologies <span><i class="fa-solid fa-caret-down"></i></span></a>
+
+                        <button>More</button>
+                    </div>
+
+                    <div class="is" id="isID4">
+                        <h5>Python</h5>
+                        <h5>Sass</h5>
+                        <h5>HTML5</h5>
+                        <h5>JavaScript</h5>
+                        <h5>Flask</h5>
+                    </div>
                 </div>
 
             </div>
 
+            <div class="feedback" id="feedbackID">
+                <h5 id="title">Starbucks Mock Up</h5>
+                
+                <div class="img-div">
+                    <a href="" id="ss"><img src="{% static 'images/project_images/starbucks/star1.png' %}" alt=""></a>
+                    <!-- <a href="#"><img src="{% static 'images/product_showcases/dream.png' %}" alt=""></a> -->
+                    <div class="live-demo-button" id="live-demo-buttonID">
+                        <a href="" id="live-demo-buttonITSELF"><button>Live Demo</button></a>
+                    </div>
 
-            <hr>
-            <div class="icons">
-
-                <div class="labels">
-                    <a  onmouseover="showPopup222()" onmouseout="hidePopup222()" id="projects-page" onclick="open_techies()">Technologies <span><i class="fa-solid fa-caret-down"></i></span></a>
-
-                    <button>More</button>
                 </div>
 
-                <div class="is" id="isID" onmouseover="showPopup222()" onmouseout="hidePopup222()">
-                    <h5>Python</h5>
-                    <h5>Sass</h5>
-                    <h5>HTML5</h5>
-                    <h5>JavaScript</h5>
-                    <h5>Flask</h5>
+
+                <hr>
+                <div class="icons">
+
+                    <div class="labels">
+                        <a onclick="open_techies5('isID5')">Technologies <span><i class="fa-solid fa-caret-down"></i></span></a>
+
+                        <button>More</button>
+                    </div>
+
+                    <div class="is" id="isID5">
+                        <h5>Python</h5>
+                        <h5>Sass</h5>
+                        <h5>HTML5</h5>
+                        <h5>JavaScript</h5>
+                        <h5>Flask</h5>
+                    </div>
                 </div>
+
             </div>
 
+            <div class="feedback" id="feedbackID">
+                <h5 id="title">Starbucks Mock Up</h5>
+                
+                <div class="img-div">
+                    <a href="" id="ss"><img src="{% static 'images/project_images/starbucks/star1.png' %}" alt=""></a>
+                    <!-- <a href="#"><img src="{% static 'images/product_showcases/dream.png' %}" alt=""></a> -->
+                    <div class="live-demo-button" id="live-demo-buttonID">
+                        <a href="" id="live-demo-buttonITSELF"><button>Live Demo</button></a>
+                    </div>
+
+                </div>
+
+
+                <hr>
+                <div class="icons">
+
+                    <div class="labels">
+                        <a onclick="open_techies6('isID6')">Technologies <span><i class="fa-solid fa-caret-down"></i></span></a>
+
+                        <button>More</button>
+                    </div>
+
+                    <div class="is" id="isID6">
+                        <h5>Python</h5>
+                        <h5>Sass</h5>
+                        <h5>HTML5</h5>
+                        <h5>JavaScript</h5>
+                        <h5>Flask</h5>
+                    </div>
+                </div>
+
+            </div>
+            
         </div>
 
-        <div class="feedback">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae expedita distinctio quis tempora! At sed 
-                quia architecto laborum repellat, dolor reiciendis incidunt esse, suscipit minus aperiam obcaecati libero? Tempora, distinctio.
-            </p>
 
-            <hr>
-            <h5>Demo Client 1</h5>
+        <div class="clients3" id="clientsID3">
 
+            <div class="feedback" id="feedbackID">
+                <h5 id="title">Starbucks Mock Up3</h5>
+                
+                <div class="img-div">
+                    <a href="" id="ss"><img src="{% static 'images/project_images/starbucks/star1.png' %}" alt=""></a>
+                    <!-- <a href="#"><img src="{% static 'images/product_showcases/dream.png' %}" alt=""></a> -->
+                    <div class="live-demo-button" id="live-demo-buttonID">
+                        <a href="" id="live-demo-buttonITSELF"><button>Live Demo</button></a>
+                    </div>
+
+                </div>
+
+
+                <hr>
+                <div class="icons">
+
+                    <div class="labels">
+                        <a onclick="open_techies7('isID7')">Technologies <span><i class="fa-solid fa-caret-down"></i></span></a>
+
+                        <button>More</button>
+                    </div>
+
+                    <div class="is" id="isID7">
+                        <h5>Python</h5>
+                        <h5>Sass</h5>
+                        <h5>HTML5</h5>
+                        <h5>JavaScript</h5>
+                        <h5>Flask</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="feedback" id="feedbackID">
+                <h5 id="title">Starbucks Mock Up</h5>
+                
+                <div class="img-div">
+                    <a href="" id="ss"><img src="{% static 'images/project_images/starbucks/star1.png' %}" alt=""></a>
+                    <!-- <a href="#"><img src="{% static 'images/product_showcases/dream.png' %}" alt=""></a> -->
+                    <div class="live-demo-button" id="live-demo-buttonID">
+                        <a href="" id="live-demo-buttonITSELF"><button>Live Demo</button></a>
+                    </div>
+
+                </div>
+
+
+                <hr>
+                <div class="icons">
+
+                    <div class="labels">
+                        <a onclick="open_techies8('isID8')">Technologies <span><i class="fa-solid fa-caret-down"></i></span></a>
+
+                        <button>More</button>
+                    </div>
+
+                    <div class="is" id="isID8">
+                        <h5>Python</h5>
+                        <h5>Sass</h5>
+                        <h5>HTML5</h5>
+                        <h5>JavaScript</h5>
+                        <h5>Flask</h5>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="feedback" id="feedbackID">
+                <h5 id="title">Starbucks Mock Up</h5>
+                
+                <div class="img-div">
+                    <a href="" id="ss"><img src="{% static 'images/project_images/starbucks/star1.png' %}" alt=""></a>
+                    <!-- <a href="#"><img src="{% static 'images/product_showcases/dream.png' %}" alt=""></a> -->
+                    <div class="live-demo-button" id="live-demo-buttonID">
+                        <a href="" id="live-demo-buttonITSELF"><button>Live Demo</button></a>
+                    </div>
+
+                </div>
+
+
+                <hr>
+                <div class="icons">
+
+                    <div class="labels">
+                        <a onclick="open_techies9('isID9')">Technologies <span><i class="fa-solid fa-caret-down"></i></span></a>
+
+                        <button>More</button>
+                    </div>
+
+                    <div class="is" id="isID9">
+                        <h5>Python</h5>
+                        <h5>Sass</h5>
+                        <h5>HTML5</h5>
+                        <h5>JavaScript</h5>
+                        <h5>Flask</h5>
+                    </div>
+                </div>
+
+            </div>
+            
         </div>
 
-        <div class="feedback">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae expedita distinctio quis tempora! At sed 
-                quia architecto laborum repellat, dolor reiciendis incidunt esse, suscipit minus aperiam obcaecati libero? Tempora, distinctio.
-            </p>
-
-            <hr>
-            <h5>Demo Client 1</h5>
-
+        <div class="right-arrow">
+            <i class="fa-solid fa-circle-right" onclick="goForward()" onmouseover="end_opens2()"></i>
         </div>
-        
-    </div>
-
-
-
-    <div class="clients-display" id="clients_displayID">
-
-        <div class="feedback">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae expedita distinctio quis tempora! At sed 
-                quia architecto laborum repellat, dolor reiciendis incidunt esse, suscipit minus aperiam obcaecati libero? Tempora, distinctio.
-            </p>
-
-            <hr>
-            <h5>Demo Client 2</h5>
-
-        </div>
-
-        <div class="feedback">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae expedita distinctio quis tempora! At sed 
-                quia architecto laborum repellat, dolor reiciendis incidunt esse, suscipit minus aperiam obcaecati libero? Tempora, distinctio.
-            </p>
-
-            <hr>
-            <h5>Demo Client 2</h5>
-
-        </div>
-
-        <div class="feedback">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae expedita distinctio quis tempora! At sed 
-                quia architecto laborum repellat, dolor reiciendis incidunt esse, suscipit minus aperiam obcaecati libero? Tempora, distinctio.
-            </p>
-
-            <hr>
-            <h5>Demo Client 2</h5>
-
-        </div>
-        
-    </div>
-
-
-
-
-    <div class="right-arrow" id="right-arrowID">
-        <!-- <i class="fa-solid fa-circle-right" onclick="go_forward()"></i> -->
-        <button onclick="go_forward()" id="go_forward1">GF</button>
-    </div>
-    
 </div>
 
-
-
-<div class="client-testimonials-area2" id="new">
-
-    <h1>Projects - Web Apps</h1>
-
-    <div class="left-arrow">
-        <!-- <i class="fa-solid fa-circle-left" onclick="go_back()"></i> -->
-        <button onclick="go_back()" id="go_back1">GB</button>
-    </div>
-
-
-    
-    <div class="clients2" id="clientsID2">
-
-
-        <div class="feedback" id="feedbackID">
-            <h5 id="title">Starbucks Mock Up</h5>
-            
-            <div class="img-div">
-                <a href="" id="ss"><img src="{% static 'images/project_images/starbucks/star1.png' %}" alt=""></a>
-                <!-- <a href="#"><img src="{% static 'images/product_showcases/dream.png' %}" alt=""></a> -->
-                <div class="live-demo-button" id="live-demo-buttonID">
-                    <a href="" id="live-demo-buttonITSELF"><button>Live Demo</button></a>
-                </div>
-
-            </div>
-
-
-            <hr>
-            <div class="icons">
-
-                <div class="labels">
-                    <a  onmouseover="showPopup222()" onmouseout="hidePopup222()" id="projects-page" onclick="open_techies()">Technologies <span><i class="fa-solid fa-caret-down"></i></span></a>
-
-                    <button>More</button>
-                </div>
-
-                <div class="is" id="isID" onmouseover="showPopup222()" onmouseout="hidePopup222()">
-                    <h5>Python</h5>
-                    <h5>Sass</h5>
-                    <h5>HTML5</h5>
-                    <h5>JavaScript</h5>
-                    <h5>Flask</h5>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="feedback">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae expedita distinctio quis tempora! At sed 
-                quia architecto laborum repellat, dolor reiciendis incidunt esse, suscipit minus aperiam obcaecati libero? Tempora, distinctio.
-            </p>
-
-            <hr>
-            <h5>Demo Client 1</h5>
-
-        </div>
-
-        <div class="feedback">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae expedita distinctio quis tempora! At sed 
-                quia architecto laborum repellat, dolor reiciendis incidunt esse, suscipit minus aperiam obcaecati libero? Tempora, distinctio.
-            </p>
-
-            <hr>
-            <h5>Demo Client 1</h5>
-
-        </div>
-        
-    </div>
-
-
-
-    <div class="clients-display2" id="clients_displayID2">
-
-        <div class="feedback">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae expedita distinctio quis tempora! At sed 
-                quia architecto laborum repellat, dolor reiciendis incidunt esse, suscipit minus aperiam obcaecati libero? Tempora, distinctio.
-            </p>
-
-            <hr>
-            <h5>Demo Client 2</h5>
-
-        </div>
-
-        <div class="feedback">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae expedita distinctio quis tempora! At sed 
-                quia architecto laborum repellat, dolor reiciendis incidunt esse, suscipit minus aperiam obcaecati libero? Tempora, distinctio.
-            </p>
-
-            <hr>
-            <h5>Demo Client 2</h5>
-
-        </div>
-
-        <div class="feedback">
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae expedita distinctio quis tempora! At sed 
-                quia architecto laborum repellat, dolor reiciendis incidunt esse, suscipit minus aperiam obcaecati libero? Tempora, distinctio.
-            </p>
-
-            <hr>
-            <h5>Demo Client 2</h5>
-
-        </div>
-        
-    </div>
-
-
-
-
-    <div class="right-arrow" id="right-arrowID">
-        <!-- <i class="fa-solid fa-circle-right" onclick="go_forward()"></i> -->
-        <button onclick="go_forward()" id="go_forward1">GF</button>
-    </div>
-    
-</div>
-
-
-
-<div class="switch_buttons">
+<br>
+<div class="switch_buttons" id="switch_buttonsID">
 
     <div class="first" id="firstDots">
-        <i class="fa-solid fa-circle"></i>
-        <i class="fa-regular fa-circle"></i>
-        <i class="fa-regular fa-circle"></i>
+        <i class="fa-solid fa-circle" style="cursor: pointer;"></i>
+        <i class="fa-regular fa-circle" onclick="dotTwo_clicked('2')"></i>
+        <i class="fa-regular fa-circle" onclick="dotTwo_clicked('3')"></i>
     </div>
 
     <div class="second" id="secondDots">
-        <i class="fa-regular fa-circle"></i>
+        <i class="fa-regular fa-circle" onclick="dot_backwards('1')"></i>
         <i class="fa-solid fa-circle"></i>
-        <i class="fa-regular fa-circle"></i>
+        <i class="fa-regular fa-circle" onclick="dotTwo_clicked('3')"></i>
     </div>
 
     <div class="third" id="thirdDots">
-        <i class="fa-regular fa-circle"></i>
-        <i class="fa-regular fa-circle"></i>
+        <i class="fa-regular fa-circle" onclick="dot_backwards('1')"></i>
+        <i class="fa-regular fa-circle" onclick="dot_backwards('2')"></i>
         <i class="fa-solid fa-circle"></i>
     </div>
 
 </div>
-
-
 
 
 
@@ -274,6 +357,3 @@
 <div class="see-more-display" id="see-more-displayID">
     <a href="#">See More</a>
 </div>
-
-
-<script src="{% static 'js/test.js' %}"></script>
