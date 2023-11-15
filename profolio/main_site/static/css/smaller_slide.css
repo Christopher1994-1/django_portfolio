@@ -88,6 +88,7 @@
 .container_holder2 .clients .feedback {
   justify-self: center;
   border-radius: 10px;
+  position: relative;
   background-color: rgba(255, 255, 255, 0.775);
   width: 80%;
   color: black;
@@ -148,12 +149,11 @@
   text-decoration: underline;
 }
 .container_holder2 .clients .feedback .img-div {
-  position: relative;
   z-index: 11;
 }
 .container_holder2 .clients .feedback .img-div #ss {
-  display: block;
-  position: relative;
+  display: none;
+  position: absolute;
   z-index: 1;
   transition: ease-in 0.2s;
 }
@@ -203,7 +203,7 @@
 .container_holder2 .clients.slideOut .feedback {
   transform: translateX(-100%);
 }
-.container_holder2 .clients2 {
+.container_holder2 .clients22 {
   display: grid;
   -moz-column-gap: 10px;
        column-gap: 10px;
@@ -211,7 +211,7 @@
   transition: transform 1.2s ease;
   display: none;
 }
-.container_holder2 .clients2 .feedback {
+.container_holder2 .clients22 .feedback {
   justify-self: center;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.775);
@@ -222,26 +222,26 @@
   transition: transform 0.5s ease;
   z-index: 10;
 }
-.container_holder2 .clients2 .feedback .icons {
+.container_holder2 .clients22 .feedback .icons {
   margin-bottom: 5px;
   position: relative;
 }
-.container_holder2 .clients2 .feedback .icons .labels {
+.container_holder2 .clients22 .feedback .icons .labels {
   display: flex;
   justify-content: space-between;
 }
-.container_holder2 .clients2 .feedback .icons .labels a {
+.container_holder2 .clients22 .feedback .icons .labels a {
   width: 60%;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 17px;
   cursor: pointer;
 }
-.container_holder2 .clients2 .feedback .icons .labels i {
+.container_holder2 .clients22 .feedback .icons .labels i {
   font-size: 20px;
   cursor: pointer;
 }
-.container_holder2 .clients2 .feedback .icons .labels button {
+.container_holder2 .clients22 .feedback .icons .labels button {
   border: none;
   padding: 5px;
   width: 35%;
@@ -251,7 +251,7 @@
   font-family: Arial, Helvetica, sans-serif;
   background-color: #333;
 }
-.container_holder2 .clients2 .feedback .icons .is {
+.container_holder2 .clients22 .feedback .icons .is {
   position: absolute;
   border: 1px solid white;
   text-align: left;
@@ -261,7 +261,7 @@
   transition: ease-out 0.3s;
   display: none;
 }
-.container_holder2 .clients2 .feedback .icons .is h5 {
+.container_holder2 .clients22 .feedback .icons .is h5 {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: none;
@@ -270,29 +270,29 @@
   margin-left: 10px;
   cursor: help;
 }
-.container_holder2 .clients2 .feedback .icons .is h5:hover {
+.container_holder2 .clients22 .feedback .icons .is h5:hover {
   text-decoration: underline;
 }
-.container_holder2 .clients2 .feedback .img-div {
+.container_holder2 .clients22 .feedback .img-div {
   position: relative;
   z-index: 11;
 }
-.container_holder2 .clients2 .feedback .img-div #ss {
+.container_holder2 .clients22 .feedback .img-div #ss {
   display: block;
   position: relative;
   z-index: 1;
   transition: ease-in 0.2s;
 }
-.container_holder2 .clients2 .feedback .img-div #ss img {
+.container_holder2 .clients22 .feedback .img-div #ss img {
   width: 100%;
   border-radius: 5px;
   box-shadow: 0 0 20px #ffffff; /* Adjust the color as needed */
 }
-.container_holder2 .clients2 .feedback .img-div #ss:hover {
+.container_holder2 .clients22 .feedback .img-div #ss:hover {
   filter: brightness(0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.container_holder2 .clients2 .feedback .img-div .live-demo-button {
+.container_holder2 .clients22 .feedback .img-div .live-demo-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -300,7 +300,7 @@
   display: none;
   z-index: 2;
 }
-.container_holder2 .clients2 .feedback .img-div .live-demo-button a button {
+.container_holder2 .clients22 .feedback .img-div .live-demo-button a button {
   padding: 10px;
   border: none;
   background-color: white;
@@ -308,28 +308,28 @@
   font-weight: bold;
   border-radius: 10px;
 }
-.container_holder2 .clients2 .feedback .img-div:hover .live-demo-button {
+.container_holder2 .clients22 .feedback .img-div:hover .live-demo-button {
   display: block;
 }
-.container_holder2 .clients2 .feedback .img-div:hover #ss {
+.container_holder2 .clients22 .feedback .img-div:hover #ss {
   filter: brightness(0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.container_holder2 .clients2 .feedback i {
+.container_holder2 .clients22 .feedback i {
   font-size: 30px;
 }
-.container_holder2 .clients2 .feedback #title {
+.container_holder2 .clients22 .feedback #title {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin-left: 5px;
 }
-.container_holder2 .clients2.slideIn .feedback {
+.container_holder2 .clients22.slideIn .feedback {
   transform: translateX(0);
 }
-.container_holder2 .clients2.slideOut .feedback {
+.container_holder2 .clients22.slideOut .feedback {
   transform: translateX(-100%);
 }
-.container_holder2 .clients3 {
+.container_holder2 .clients32 {
   display: grid;
   -moz-column-gap: 10px;
        column-gap: 10px;
@@ -337,7 +337,7 @@
   transition: transform 1.2s ease;
   display: none;
 }
-.container_holder2 .clients3 .feedback {
+.container_holder2 .clients32 .feedback {
   justify-self: center;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.775);
@@ -348,26 +348,26 @@
   transition: transform 0.5s ease;
   z-index: 10;
 }
-.container_holder2 .clients3 .feedback .icons {
+.container_holder2 .clients32 .feedback .icons {
   margin-bottom: 5px;
   position: relative;
 }
-.container_holder2 .clients3 .feedback .icons .labels {
+.container_holder2 .clients32 .feedback .icons .labels {
   display: flex;
   justify-content: space-between;
 }
-.container_holder2 .clients3 .feedback .icons .labels a {
+.container_holder2 .clients32 .feedback .icons .labels a {
   width: 60%;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 17px;
   cursor: pointer;
 }
-.container_holder2 .clients3 .feedback .icons .labels i {
+.container_holder2 .clients32 .feedback .icons .labels i {
   font-size: 20px;
   cursor: pointer;
 }
-.container_holder2 .clients3 .feedback .icons .labels button {
+.container_holder2 .clients32 .feedback .icons .labels button {
   border: none;
   padding: 5px;
   width: 35%;
@@ -377,7 +377,7 @@
   font-family: Arial, Helvetica, sans-serif;
   background-color: #333;
 }
-.container_holder2 .clients3 .feedback .icons .is {
+.container_holder2 .clients32 .feedback .icons .is {
   position: absolute;
   border: 1px solid white;
   text-align: left;
@@ -387,7 +387,7 @@
   transition: ease-out 0.3s;
   display: none;
 }
-.container_holder2 .clients3 .feedback .icons .is h5 {
+.container_holder2 .clients32 .feedback .icons .is h5 {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: none;
@@ -396,29 +396,29 @@
   margin-left: 10px;
   cursor: help;
 }
-.container_holder2 .clients3 .feedback .icons .is h5:hover {
+.container_holder2 .clients32 .feedback .icons .is h5:hover {
   text-decoration: underline;
 }
-.container_holder2 .clients3 .feedback .img-div {
+.container_holder2 .clients32 .feedback .img-div {
   position: relative;
   z-index: 11;
 }
-.container_holder2 .clients3 .feedback .img-div #ss {
+.container_holder2 .clients32 .feedback .img-div #ss {
   display: block;
   position: relative;
   z-index: 1;
   transition: ease-in 0.2s;
 }
-.container_holder2 .clients3 .feedback .img-div #ss img {
+.container_holder2 .clients32 .feedback .img-div #ss img {
   width: 100%;
   border-radius: 5px;
   box-shadow: 0 0 20px #ffffff; /* Adjust the color as needed */
 }
-.container_holder2 .clients3 .feedback .img-div #ss:hover {
+.container_holder2 .clients32 .feedback .img-div #ss:hover {
   filter: brightness(0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.container_holder2 .clients3 .feedback .img-div .live-demo-button {
+.container_holder2 .clients32 .feedback .img-div .live-demo-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -426,7 +426,7 @@
   display: none;
   z-index: 2;
 }
-.container_holder2 .clients3 .feedback .img-div .live-demo-button a button {
+.container_holder2 .clients32 .feedback .img-div .live-demo-button a button {
   padding: 10px;
   border: none;
   background-color: white;
@@ -434,26 +434,786 @@
   font-weight: bold;
   border-radius: 10px;
 }
-.container_holder2 .clients3 .feedback .img-div:hover .live-demo-button {
+.container_holder2 .clients32 .feedback .img-div:hover .live-demo-button {
   display: block;
 }
-.container_holder2 .clients3 .feedback .img-div:hover #ss {
+.container_holder2 .clients32 .feedback .img-div:hover #ss {
   filter: brightness(0.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.container_holder2 .clients3 .feedback i {
+.container_holder2 .clients32 .feedback i {
   font-size: 30px;
 }
-.container_holder2 .clients3 .feedback #title {
+.container_holder2 .clients32 .feedback #title {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin-left: 5px;
 }
-.container_holder2 .clients3.slideIn .feedback {
+.container_holder2 .clients32.slideIn .feedback {
   transform: translateX(0);
 }
-.container_holder2 .clients3.slideOut .feedback {
+.container_holder2 .clients32.slideOut .feedback {
   transform: translateX(-100%);
+}
+.container_holder2 .clients4 {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-columns: 1fr;
+  transition: transform 1.2s ease;
+  display: none;
+}
+.container_holder2 .clients4 .feedback {
+  justify-self: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.775);
+  width: 80%;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+.container_holder2 .clients4 .feedback .icons {
+  margin-bottom: 5px;
+  position: relative;
+}
+.container_holder2 .clients4 .feedback .icons .labels {
+  display: flex;
+  justify-content: space-between;
+}
+.container_holder2 .clients4 .feedback .icons .labels a {
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+.container_holder2 .clients4 .feedback .icons .labels i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.container_holder2 .clients4 .feedback .icons .labels button {
+  border: none;
+  padding: 5px;
+  width: 35%;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+}
+.container_holder2 .clients4 .feedback .icons .is {
+  position: absolute;
+  border: 1px solid white;
+  text-align: left;
+  width: 50%;
+  padding-top: 10px;
+  background-color: black;
+  transition: ease-out 0.3s;
+  display: none;
+}
+.container_holder2 .clients4 .feedback .icons .is h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: help;
+}
+.container_holder2 .clients4 .feedback .icons .is h5:hover {
+  text-decoration: underline;
+}
+.container_holder2 .clients4 .feedback .img-div {
+  position: relative;
+  z-index: 11;
+}
+.container_holder2 .clients4 .feedback .img-div #ss {
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: ease-in 0.2s;
+}
+.container_holder2 .clients4 .feedback .img-div #ss img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #ffffff; /* Adjust the color as needed */
+}
+.container_holder2 .clients4 .feedback .img-div #ss:hover {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients4 .feedback .img-div .live-demo-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2;
+}
+.container_holder2 .clients4 .feedback .img-div .live-demo-button a button {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.container_holder2 .clients4 .feedback .img-div:hover .live-demo-button {
+  display: block;
+}
+.container_holder2 .clients4 .feedback .img-div:hover #ss {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients4 .feedback i {
+  font-size: 30px;
+}
+.container_holder2 .clients4 .feedback #title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.container_holder2 .clients4.slideIn .feedback {
+  transform: translateX(0);
+}
+.container_holder2 .clients4.slideOut .feedback {
+  transform: translateX(-100%);
+}
+.container_holder2 .clients5 {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-columns: 1fr;
+  transition: transform 1.2s ease;
+  display: none;
+}
+.container_holder2 .clients5 .feedback {
+  justify-self: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.775);
+  width: 80%;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+.container_holder2 .clients5 .feedback .icons {
+  margin-bottom: 5px;
+  position: relative;
+}
+.container_holder2 .clients5 .feedback .icons .labels {
+  display: flex;
+  justify-content: space-between;
+}
+.container_holder2 .clients5 .feedback .icons .labels a {
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+.container_holder2 .clients5 .feedback .icons .labels i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.container_holder2 .clients5 .feedback .icons .labels button {
+  border: none;
+  padding: 5px;
+  width: 35%;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+}
+.container_holder2 .clients5 .feedback .icons .is {
+  position: absolute;
+  border: 1px solid white;
+  text-align: left;
+  width: 50%;
+  padding-top: 10px;
+  background-color: black;
+  transition: ease-out 0.3s;
+  display: none;
+}
+.container_holder2 .clients5 .feedback .icons .is h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: help;
+}
+.container_holder2 .clients5 .feedback .icons .is h5:hover {
+  text-decoration: underline;
+}
+.container_holder2 .clients5 .feedback .img-div {
+  position: relative;
+  z-index: 11;
+}
+.container_holder2 .clients5 .feedback .img-div #ss {
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: ease-in 0.2s;
+}
+.container_holder2 .clients5 .feedback .img-div #ss img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #ffffff; /* Adjust the color as needed */
+}
+.container_holder2 .clients5 .feedback .img-div #ss:hover {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients5 .feedback .img-div .live-demo-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2;
+}
+.container_holder2 .clients5 .feedback .img-div .live-demo-button a button {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.container_holder2 .clients5 .feedback .img-div:hover .live-demo-button {
+  display: block;
+}
+.container_holder2 .clients5 .feedback .img-div:hover #ss {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients5 .feedback i {
+  font-size: 30px;
+}
+.container_holder2 .clients5 .feedback #title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.container_holder2 .clients5.slideIn .feedback {
+  transform: translateX(0);
+}
+.container_holder2 .clients5.slideOut .feedback {
+  transform: translateX(-100%);
+}
+.container_holder2 .clients6 {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-columns: 1fr;
+  transition: transform 1.2s ease;
+  display: none;
+}
+.container_holder2 .clients6 .feedback {
+  justify-self: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.775);
+  width: 80%;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+.container_holder2 .clients6 .feedback .icons {
+  margin-bottom: 5px;
+  position: relative;
+}
+.container_holder2 .clients6 .feedback .icons .labels {
+  display: flex;
+  justify-content: space-between;
+}
+.container_holder2 .clients6 .feedback .icons .labels a {
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+.container_holder2 .clients6 .feedback .icons .labels i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.container_holder2 .clients6 .feedback .icons .labels button {
+  border: none;
+  padding: 5px;
+  width: 35%;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+}
+.container_holder2 .clients6 .feedback .icons .is {
+  position: absolute;
+  border: 1px solid white;
+  text-align: left;
+  width: 50%;
+  padding-top: 10px;
+  background-color: black;
+  transition: ease-out 0.3s;
+  display: none;
+}
+.container_holder2 .clients6 .feedback .icons .is h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: help;
+}
+.container_holder2 .clients6 .feedback .icons .is h5:hover {
+  text-decoration: underline;
+}
+.container_holder2 .clients6 .feedback .img-div {
+  position: relative;
+  z-index: 11;
+}
+.container_holder2 .clients6 .feedback .img-div #ss {
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: ease-in 0.2s;
+}
+.container_holder2 .clients6 .feedback .img-div #ss img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #ffffff; /* Adjust the color as needed */
+}
+.container_holder2 .clients6 .feedback .img-div #ss:hover {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients6 .feedback .img-div .live-demo-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2;
+}
+.container_holder2 .clients6 .feedback .img-div .live-demo-button a button {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.container_holder2 .clients6 .feedback .img-div:hover .live-demo-button {
+  display: block;
+}
+.container_holder2 .clients6 .feedback .img-div:hover #ss {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients6 .feedback i {
+  font-size: 30px;
+}
+.container_holder2 .clients6 .feedback #title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.container_holder2 .clients6.slideIn .feedback {
+  transform: translateX(0);
+}
+.container_holder2 .clients6.slideOut .feedback {
+  transform: translateX(-100%);
+}
+.container_holder2 .clients7 {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-columns: 1fr;
+  transition: transform 1.2s ease;
+  display: none;
+}
+.container_holder2 .clients7 .feedback {
+  justify-self: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.775);
+  width: 80%;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+.container_holder2 .clients7 .feedback .icons {
+  margin-bottom: 5px;
+  position: relative;
+}
+.container_holder2 .clients7 .feedback .icons .labels {
+  display: flex;
+  justify-content: space-between;
+}
+.container_holder2 .clients7 .feedback .icons .labels a {
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+.container_holder2 .clients7 .feedback .icons .labels i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.container_holder2 .clients7 .feedback .icons .labels button {
+  border: none;
+  padding: 5px;
+  width: 35%;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+}
+.container_holder2 .clients7 .feedback .icons .is {
+  position: absolute;
+  border: 1px solid white;
+  text-align: left;
+  width: 50%;
+  padding-top: 10px;
+  background-color: black;
+  transition: ease-out 0.3s;
+  display: none;
+}
+.container_holder2 .clients7 .feedback .icons .is h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: help;
+}
+.container_holder2 .clients7 .feedback .icons .is h5:hover {
+  text-decoration: underline;
+}
+.container_holder2 .clients7 .feedback .img-div {
+  position: relative;
+  z-index: 11;
+}
+.container_holder2 .clients7 .feedback .img-div #ss {
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: ease-in 0.2s;
+}
+.container_holder2 .clients7 .feedback .img-div #ss img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #ffffff; /* Adjust the color as needed */
+}
+.container_holder2 .clients7 .feedback .img-div #ss:hover {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients7 .feedback .img-div .live-demo-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2;
+}
+.container_holder2 .clients7 .feedback .img-div .live-demo-button a button {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.container_holder2 .clients7 .feedback .img-div:hover .live-demo-button {
+  display: block;
+}
+.container_holder2 .clients7 .feedback .img-div:hover #ss {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients7 .feedback i {
+  font-size: 30px;
+}
+.container_holder2 .clients7 .feedback #title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.container_holder2 .clients7.slideIn .feedback {
+  transform: translateX(0);
+}
+.container_holder2 .clients7.slideOut .feedback {
+  transform: translateX(-100%);
+}
+.container_holder2 .clients8 {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-columns: 1fr;
+  transition: transform 1.2s ease;
+  display: none;
+}
+.container_holder2 .clients8 .feedback {
+  justify-self: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.775);
+  width: 80%;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+.container_holder2 .clients8 .feedback .icons {
+  margin-bottom: 5px;
+  position: relative;
+}
+.container_holder2 .clients8 .feedback .icons .labels {
+  display: flex;
+  justify-content: space-between;
+}
+.container_holder2 .clients8 .feedback .icons .labels a {
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+.container_holder2 .clients8 .feedback .icons .labels i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.container_holder2 .clients8 .feedback .icons .labels button {
+  border: none;
+  padding: 5px;
+  width: 35%;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+}
+.container_holder2 .clients8 .feedback .icons .is {
+  position: absolute;
+  border: 1px solid white;
+  text-align: left;
+  width: 50%;
+  padding-top: 10px;
+  background-color: black;
+  transition: ease-out 0.3s;
+  display: none;
+}
+.container_holder2 .clients8 .feedback .icons .is h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: help;
+}
+.container_holder2 .clients8 .feedback .icons .is h5:hover {
+  text-decoration: underline;
+}
+.container_holder2 .clients8 .feedback .img-div {
+  position: relative;
+  z-index: 11;
+}
+.container_holder2 .clients8 .feedback .img-div #ss {
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: ease-in 0.2s;
+}
+.container_holder2 .clients8 .feedback .img-div #ss img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #ffffff; /* Adjust the color as needed */
+}
+.container_holder2 .clients8 .feedback .img-div #ss:hover {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients8 .feedback .img-div .live-demo-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2;
+}
+.container_holder2 .clients8 .feedback .img-div .live-demo-button a button {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.container_holder2 .clients8 .feedback .img-div:hover .live-demo-button {
+  display: block;
+}
+.container_holder2 .clients8 .feedback .img-div:hover #ss {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients8 .feedback i {
+  font-size: 30px;
+}
+.container_holder2 .clients8 .feedback #title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.container_holder2 .clients8.slideIn .feedback {
+  transform: translateX(0);
+}
+.container_holder2 .clients8.slideOut .feedback {
+  transform: translateX(-100%);
+}
+.container_holder2 .clients9 {
+  display: grid;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  grid-template-columns: 1fr;
+  transition: transform 1.2s ease;
+  display: none;
+}
+.container_holder2 .clients9 .feedback {
+  justify-self: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.775);
+  width: 80%;
+  color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgb(161, 163, 164);
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+.container_holder2 .clients9 .feedback .icons {
+  margin-bottom: 5px;
+  position: relative;
+}
+.container_holder2 .clients9 .feedback .icons .labels {
+  display: flex;
+  justify-content: space-between;
+}
+.container_holder2 .clients9 .feedback .icons .labels a {
+  width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+.container_holder2 .clients9 .feedback .icons .labels i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.container_holder2 .clients9 .feedback .icons .labels button {
+  border: none;
+  padding: 5px;
+  width: 35%;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #333;
+}
+.container_holder2 .clients9 .feedback .icons .is {
+  position: absolute;
+  border: 1px solid white;
+  text-align: left;
+  width: 50%;
+  padding-top: 10px;
+  background-color: black;
+  transition: ease-out 0.3s;
+  display: none;
+}
+.container_holder2 .clients9 .feedback .icons .is h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: help;
+}
+.container_holder2 .clients9 .feedback .icons .is h5:hover {
+  text-decoration: underline;
+}
+.container_holder2 .clients9 .feedback .img-div {
+  position: relative;
+  z-index: 11;
+}
+.container_holder2 .clients9 .feedback .img-div #ss {
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: ease-in 0.2s;
+}
+.container_holder2 .clients9 .feedback .img-div #ss img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #ffffff; /* Adjust the color as needed */
+}
+.container_holder2 .clients9 .feedback .img-div #ss:hover {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients9 .feedback .img-div .live-demo-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 2;
+}
+.container_holder2 .clients9 .feedback .img-div .live-demo-button a button {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.container_holder2 .clients9 .feedback .img-div:hover .live-demo-button {
+  display: block;
+}
+.container_holder2 .clients9 .feedback .img-div:hover #ss {
+  filter: brightness(0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container_holder2 .clients9 .feedback i {
+  font-size: 30px;
+}
+.container_holder2 .clients9 .feedback #title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.container_holder2 .clients9.slideIn .feedback {
+  transform: translateX(0);
+}
+.container_holder2 .clients9.slideOut .feedback {
+  transform: translateX(-100%);
+}
+
+.smaller_switch_arrows {
+  display: none;
 }
 
 .switch_buttons2 {
@@ -485,6 +1245,98 @@
   cursor: pointer;
   color: rgb(255, 255, 255);
 }
+.switch_buttons2 .fourth {
+  display: none;
+}
+.switch_buttons2 .fourth i {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+.switch_buttons2 .fifth {
+  display: none;
+}
+.switch_buttons2 .fifth i {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+.switch_buttons2 .sixth {
+  display: none;
+}
+.switch_buttons2 .sixth i {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+.switch_buttons2 .sevenD {
+  display: none;
+}
+.switch_buttons2 .sevenD i {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+.switch_buttons2 .eight {
+  display: none;
+}
+.switch_buttons2 .eight i {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+.switch_buttons2 .nine {
+  display: none;
+}
+.switch_buttons2 .nine i {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.techines_now {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.937254902);
+  z-index: 20;
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  display: none;
+}
+.techines_now .xbutton {
+  display: flex;
+  justify-content: space-between;
+}
+.techines_now .xbutton button {
+  border: none;
+  background-color: rgba(51, 51, 51, 0);
+  color: white;
+}
+.techines_now .xbutton #backbutton {
+  visibility: hidden;
+}
+.techines_now .things h5 {
+  color: white;
+  font-size: 30px;
+  cursor: help;
+  margin-bottom: 20px;
+}
+.techines_now .things2 {
+  display: none;
+}
+.techines_now .things2 p {
+  margin-top: 30px;
+  color: white;
+}
 
 .techies {
   cursor: pointer;
@@ -508,9 +1360,451 @@
 
 @media (max-width: 663px) {
   .container_holder2 {
+    color: white;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    border: 2px dotted white;
     display: block;
+  }
+  .container_holder2 .left-arrow {
+    position: absolute;
+    color: white;
+    top: 50%;
+    z-index: 1;
+    left: 6%; /* Adjust left to 50% */
+    transform: translate(-50%); /* Update transform property */
+  }
+  .container_holder2 .left-arrow i {
+    font-size: 70px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .container_holder2 .right-arrow {
+    position: absolute;
+    color: white;
+    top: 50%;
+    z-index: 1;
+    right: -4%; /* Adjust left to 50% */
+    transform: translate(-50%); /* Update transform property */
+  }
+  .container_holder2 .right-arrow i {
+    font-size: 70px;
+    cursor: pointer;
+  }
+  .container_holder2 .clients {
+    display: grid;
+    z-index: 2;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+  }
+  .container_holder2 .clients .feedback .icons {
+    margin-bottom: 5px;
+    position: relative;
+  }
+  .container_holder2 .clients .feedback .icons .labels {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container_holder2 .clients .feedback .icons .labels a {
+    width: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  .container_holder2 .clients .feedback .icons .labels i {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .container_holder2 .clients .feedback .icons .labels button {
+    border: none;
+    padding: 5px;
+    width: 35%;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+  }
+  .container_holder2 .clients .feedback .icons .is {
+    position: absolute;
+    border: 1px solid white;
+    text-align: left;
+    width: 50%;
+    padding-top: 10px;
+    background-color: black;
+    transition: ease-out 0.3s;
+    display: none;
+  }
+  .container_holder2 .clients .feedback .icons .is h5 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: none;
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    cursor: help;
+  }
+  .container_holder2 .clients .feedback .icons .is h5:hover {
+    text-decoration: underline;
+  }
+  .container_holder2 .clients .feedback .img-div {
+    position: relative;
+    z-index: 11;
+  }
+  .container_holder2 .clients .feedback .img-div #ss {
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: ease-in 0.2s;
+  }
+  .container_holder2 .clients .feedback .img-div #ss img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #ffffff; /* Adjust the color as needed */
+  }
+  .container_holder2 .clients .feedback .img-div #ss:hover {
+    filter: brightness(0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .container_holder2 .clients .feedback .img-div .live-demo-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 2;
+  }
+  .container_holder2 .clients .feedback .img-div .live-demo-button a button {
+    padding: 10px;
+    border: none;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  .container_holder2 .clients .feedback .img-div:hover .live-demo-button {
+    display: block;
+  }
+  .container_holder2 .clients .feedback .img-div:hover #ss {
+    filter: brightness(0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .container_holder2 .clients22 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    border: 2px dotted white;
+    display: none;
+  }
+  .container_holder2 .clients22 .feedback {
+    width: 80%;
+  }
+  .container_holder2 .clients33 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients33 .feedback {
+    width: 80%;
+  }
+  .container_holder2 .clients4 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients4 .feedback {
+    width: 80%;
+  }
+  .container_holder2 .clients5 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients5 .feedback {
+    width: 80%;
+  }
+  .container_holder2 .clients6 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients6 .feedback {
+    width: 80%;
+  }
+  .container_holder2 .clients7 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients7 .feedback {
+    width: 80%;
+  }
+  .container_holder2 .clients8 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients8 .feedback {
+    width: 80%;
+  }
+  .container_holder2 .clients9 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients9 .feedback {
+    width: 80%;
   }
   .switch_buttons2 {
     display: block;
+  }
+}
+@media (max-width: 615px) {
+  .container_holder2 {
+    color: white;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    margin: 0;
+    position: relative;
+    display: block;
+  }
+  .container_holder2 h1 {
+    margin-bottom: 10px;
+    border: 2px dotted white;
+  }
+  .container_holder2 .left-arrow {
+    display: none;
+  }
+  .container_holder2 .right-arrow {
+    display: none;
+  }
+  .container_holder2 .clients {
+    display: grid;
+    z-index: 2;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+  }
+  .container_holder2 .clients .feedback {
+    width: 90%;
+  }
+  .container_holder2 .clients22 {
+    display: grid;
+    z-index: 2;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients22 .feedback {
+    width: 90%;
+  }
+  .container_holder2 .clients32 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients32 .feedback {
+    width: 90%;
+  }
+  .container_holder2 .clients4 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients4 .feedback {
+    width: 90%;
+  }
+  .container_holder2 .clients5 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients5 .feedback {
+    width: 90%;
+  }
+  .container_holder2 .clients6 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients6 .feedback {
+    width: 90%;
+  }
+  .container_holder2 .clients7 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients7 .feedback {
+    width: 90%;
+  }
+  .container_holder2 .clients8 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients8 .feedback {
+    width: 90%;
+  }
+  .container_holder2 .clients9 {
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: 1fr;
+    transition: transform 1.2s ease;
+    display: none;
+  }
+  .container_holder2 .clients9 .feedback {
+    width: 90%;
+  }
+  .switch_buttons2 {
+    margin-top: 0px;
+    display: block;
+    cursor: default;
+  }
+  .switch_buttons2 i {
+    cursor: default;
+  }
+  .smaller_switch_arrows {
+    margin-top: 10px;
+    display: block;
+    display: flex;
+    justify-content: space-around;
+  }
+  .smaller_switch_arrows button {
+    z-index: 200;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.884);
+    font-size: 70px;
+    border: none;
+    background-color: rgba(51, 51, 51, 0);
+  }
+}
+@media (max-width: 540px) {
+  .techines_now {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.937254902);
+    z-index: 20;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    display: none;
+  }
+  .techines_now .xbutton {
+    display: flex;
+    justify-content: space-between;
+  }
+  .techines_now .xbutton button {
+    border: none;
+    background-color: rgba(51, 51, 51, 0);
+    color: white;
+  }
+  .techines_now .xbutton #backbutton {
+    visibility: hidden;
+  }
+  .techines_now .things h5 {
+    color: white;
+    font-size: 20px;
+    cursor: help;
+    margin-bottom: 20px;
+  }
+  .techines_now .things2 {
+    display: none;
+  }
+  .techines_now .things2 p {
+    margin-top: 30px;
+    color: white;
+  }
+}
+@media (max-width: 410px) {
+  .techines_now {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.937254902);
+    z-index: 20;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    display: none;
+  }
+  .techines_now .xbutton {
+    display: flex;
+    justify-content: space-between;
+  }
+  .techines_now .xbutton button {
+    border: none;
+    background-color: rgba(51, 51, 51, 0);
+    color: white;
+  }
+  .techines_now .xbutton #backbutton {
+    visibility: hidden;
+  }
+  .techines_now .things h5 {
+    color: white;
+    font-size: 15px;
+    cursor: help;
+    margin-bottom: 20px;
+  }
+  .techines_now .things2 {
+    display: none;
+  }
+  .techines_now .things2 p {
+    margin-top: 30px;
+    color: white;
   }
 }/*# sourceMappingURL=smaller_slide.css.map */

@@ -174,7 +174,7 @@ $transparent_color: rgba(255, 255, 255, 0);
     text-align: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.858);
-    z-index: 6;
+    z-index: 1000;
     display: none;
 
     .x-button {
