@@ -81,6 +81,5 @@ window.onscroll = function() {
         const scroll_navbar = document.getElementById('scroll-navbarID');
 
         scroll_navbar.style.display = 'none';
-
     }
 };

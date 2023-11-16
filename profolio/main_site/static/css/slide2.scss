@@ -150,6 +150,7 @@ body {
             .icons {
                 margin-bottom: 5px;
                 position: relative;
+                z-index: 200;
 
                 .labels {
                     display: flex;
@@ -187,6 +188,7 @@ body {
                     padding-top: 10px;
                     background-color: black;
                     transition: ease-out 0.3s;
+                    z-index: 209;
                     display: none;
 
                     h5 {
@@ -635,7 +637,7 @@ body {
         i {
             font-size: 20px;
             margin-left: 10px;
-            cursor: pointer;
+            cursor: default;
             color: rgb(255, 255, 255);
         }
     }
@@ -645,7 +647,7 @@ body {
         i {
             font-size: 20px;
             margin-left: 10px;
-            cursor: pointer;
+            cursor: default;
             color: rgb(255, 255, 255);
         }
     }
@@ -656,7 +658,7 @@ body {
         i {
             font-size: 20px;
             margin-left: 10px;
-            cursor: pointer;
+            cursor: default;
             color: rgb(255, 255, 255);
         }
     }
@@ -672,23 +674,32 @@ body {
 
 
 
-// CSS for see more of client testionials
-.see-more-display {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 40px;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.5s ease-out, transform 0.7s ease-out;
+.info_popup_lan {
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 50%; /* Adjust left to 50% */
+    transform: translate(-50%, -50%); /* Update transform property */
+    z-index: 11;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
 
-    a {
-        text-decoration: none;
-        color: white;
-        background-color: black;
-        padding: 10px;
-        border-radius: 10px;
+    label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    .xbutton2 {
+        margin-bottom: 10px;
+        button {
+            background-color: black;
+            border: none;
+            color: white;
+        }
     }
 }
+
 
 
 
@@ -710,9 +721,35 @@ body {
             transition: transform 1.2s ease;
             row-gap: 10px;
 
+            #feedbackID3 {
+                display: none;
+            }
+
         }
 
+        .clients2 {
+            column-gap: 0px;
+            grid-template-columns: 1fr 1fr;
+            transition: transform 1.2s ease;
+            row-gap: 10px;
 
+            #feedbackID34 {
+                display: none;
+            }
+
+        }
+
+        .clients3 {
+            column-gap: 0px;
+            grid-template-columns: 1fr 1fr;
+            transition: transform 1.2s ease;
+            row-gap: 10px;
+
+            #feedbackID33 {
+                display: none;
+            }
+
+        }
         
     }
 

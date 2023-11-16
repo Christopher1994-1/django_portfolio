@@ -619,249 +619,160 @@ function close_thingys(what) {
 
 
 
+let hasBeenClicked = false
 
 
 
 // Function called when -> button is pressed
-function goForward23(event) {
-    console.log(event)
-
+function goForward23() {
     if (current_display_number_ === 1) {
-        // display leaving
-        firstDisplay.classList.remove('slide-forward');
-        firstDisplay.classList.remove('slide-backk');
-        firstDisplay.classList.add('slide-forward');
-
-        setTimeout(() => {
-            firstDisplay.style.display = 'none';
-            // display coming
-            secondDisplay.classList.add('slide-left');
-            secondDisplay.style.display = 'grid';
-    
-            // // display leaving
-            firstDisplay.classList.remove('slide-forward');
-            firstDisplay.classList.remove('slide-back');
-            firstDisplay.classList.remove('slide-right');
-            firstDisplay.classList.remove('slide-left');
-    
-            // firstDisplay.style.display = 'none';
-    
-            // // Remove the class here
-        }, 700);
-    
+        firstDisplay.style.display = 'none';
+        secondDisplay.style.display = 'grid';
         changeDots(dotOne, dotTwo);
         current_display_number_ = 2;
         num = 2;
-        console.log(event)
+    }
+
+    else if (current_display_number_ === 2) {
+        secondDisplay.style.display = 'none';
+        thirdDisplay.style.display = 'grid';
+        changeDots(dotTwo, dotThree);
+        current_display_number_ = 3;
+        num = 3;
+    }
+
+    else if (current_display_number_ === 3) {
+        thirdDisplay.style.display = 'none';
+        fourthDisplay.style.display = 'grid';
+        changeDots(dotThree, dot4);
+        current_display_number_ = 4;
+        num = 4;
+    }
+
+    else if (current_display_number_ === 4) {
+        fourthDisplay.style.display = 'none';
+        fifthDisplay.style.display = 'grid';
+        changeDots(dot4, dot5);
+        current_display_number_ = 5;
+        num = 6;
+    }
+
+    else if (current_display_number_ === 5) {
+        fifthDisplay.style.display = 'none';
+        sixthDisplay.style.display = 'grid';
+        changeDots(dot5, dot6);
+        current_display_number_ = 6;
+        num = 6;
+    }
+
+    else if (current_display_number_ === 6) {
+        sixthDisplay.style.display = 'none';
+        sevenDisplay.style.display = 'grid';
+        changeDots(dot6, dot7);
+        current_display_number_ = 7;
+        num = 7;
     }
     
-    // else if (current_display_number_ == 2) {
-    //     // display leaving
-    //     secondDisplay.classList.remove('slide-back');
-    //     secondDisplay.classList.remove('slide-backk');
-    //     secondDisplay.classList.add('slide-forward');
+    else if (current_display_number_ === 7) {
+        sevenDisplay.style.display = 'none';
+        eightDisplay.style.display = 'grid';
+        changeDots(dot7, dot8);
+        current_display_number_ = 8;
+        num = 8;
+    }
 
-    //     setTimeout(() => {
-    //         // display coming
-    //         thirdDisplay.style.display = 'grid';
-    //         thirdDisplay.classList.add('slide-left');
-    
-    //         // display leaving
-    //         secondDisplay.classList.remove('slide-forward');
-    //         secondDisplay.classList.remove('slide-back');
-    //         secondDisplay.classList.remove('slide-right');
-    //         secondDisplay.classList.remove('slide-left');
-    
-    //         secondDisplay.style.display = 'none';
-    
-    //         // Remove the class here
-    //     }, 700);
-    
-    //     changeDots(dotTwo, dotThree);
-    //     current_display_number_ = 3;
-    //     num = 3;
-    // }
-    // else if (current_display_number_ == 3) {
-    //     // display leaving
-    //     thirdDisplay.classList.remove('slide-back');
-    //     thirdDisplay.classList.add('slide-forward');
+    else if (current_display_number_ === 8) {
+        eightDisplay.style.display = 'none';
+        nineDisplay.style.display = 'grid';
+        changeDots(dot8, dot9);
+        current_display_number_ = 9;
+        num = 9;
+    }
 
-    //     setTimeout(() => {
-    //         // display coming
-    //         fourthDisplay.style.display = 'grid';
-    //         fourthDisplay.classList.add('slide-left');
-    
-    //         // display leaving
-    //         thirdDisplay.classList.remove('slide-forward');
-    //         thirdDisplay.classList.remove('slide-backk');
-    //         thirdDisplay.classList.remove('slide-right');
-    //         thirdDisplay.classList.remove('slide-left');
-    
-    //         thirdDisplay.style.display = 'none';
-    
-    //         // Remove the class here
-    //     }, 700);
-    
-    //     changeDots(dotThree, dot4);
-    //     current_display_number_ = 4;
-    //     num = 4;
+    else if (current_display_number_ === 9) {
+        nineDisplay.style.display = 'none';
+        firstDisplay.style.display = 'grid';
+        changeDots(dot9, dotOne);
+        current_display_number_ = 1;
+        num = 1;
+    }
 
-    // }
-    // else if (current_display_number_ == 4) {
-    //     // display leaving
-    //     fourthDisplay.classList.remove('slide-back');
-    //     fourthDisplay.classList.add('slide-forward');
-
-    //     setTimeout(() => {
-    //         // display coming
-    //         fifthDisplay.style.display = 'grid';
-    //         fifthDisplay.classList.add('slide-left');
-    
-    //         // display leaving
-    //         fourthDisplay.classList.remove('slide-forward');
-    //         fourthDisplay.classList.remove('slide-backk');
-    //         fourthDisplay.classList.remove('slide-right');
-    //         fourthDisplay.classList.remove('slide-left');
-    
-    //         fourthDisplay.style.display = 'none';
-    
-    //         // Remove the class here
-    //     }, 700);
-    
-    //     changeDots(dot4, dot5);
-    //     current_display_number_ = 5;
-    //     num = 5;
-
-    // }
-    // else if (current_display_number_ == 5) {
-    //     // display leaving
-    //     fifthDisplay.classList.remove('slide-back');
-    //     fifthDisplay.classList.add('slide-forward');
-
-    //     setTimeout(() => {
-    //         // display coming
-    //         sixthDisplay.style.display = 'grid';
-    //         sixthDisplay.classList.add('slide-left');
-    
-    //         // display leaving
-    //         fifthDisplay.classList.remove('slide-forward');
-    //         fifthDisplay.classList.remove('slide-backs');
-    //         fifthDisplay.classList.remove('slide-right');
-    //         fifthDisplay.classList.remove('slide-left');
-    
-    //         fifthDisplay.style.display = 'none';
-    
-    //         // Remove the class here
-    //     }, 700);
-    
-    //     changeDots(dot5, dot6);
-    //     current_display_number_ = 6;
-    //     num = 6;
-
-    // }
-    // else if (current_display_number_ == 6) {
-    //     // display leaving
-    //     sixthDisplay.classList.remove('slide-back');
-    //     sixthDisplay.classList.add('slide-forward');
-
-    //     setTimeout(() => {
-    //         // display coming
-    //         sevenDisplay.style.display = 'grid';
-    //         sevenDisplay.classList.add('slide-left');
-    
-    //         // display leaving
-    //         sixthDisplay.classList.remove('slide-forward');
-    //         sixthDisplay.classList.remove('slide-backk');
-    //         sixthDisplay.classList.remove('slide-right');
-    //         sixthDisplay.classList.remove('slide-left');
-    
-    //         sixthDisplay.style.display = 'none';
-    
-    //         // Remove the class here
-    //     }, 700);
-    
-    //     changeDots(dot6, dot7);
-    //     current_display_number_ = 7;
-    //     num = 7;
-
-    // }
-    // else if (current_display_number_ == 7) {
-    //     // display leaving
-    //     sevenDisplay.classList.remove('slide-back');
-    //     sevenDisplay.classList.add('slide-forward');
-
-    //     setTimeout(() => {
-    //         // display coming
-    //         eightDisplay.style.display = 'grid';
-    //         eightDisplay.classList.add('slide-left');
-    
-    //         // display leaving
-    //         sevenDisplay.classList.remove('slide-forward');
-    //         sevenDisplay.classList.remove('slide-backk');
-    //         sevenDisplay.classList.remove('slide-right');
-    //         sevenDisplay.classList.remove('slide-left');
-    
-    //         sevenDisplay.style.display = 'none';
-    
-    //         // Remove the class here
-    //     }, 700);
-    
-    //     changeDots(dot7, dot8);
-    //     current_display_number_ = 8;
-    //     num = 8;
- 
-    // }
-    // else if (current_display_number_ == 8) {
-    //     // display leaving
-    //     eightDisplay.classList.remove('slide-back');
-    //     eightDisplay.classList.add('slide-forward');
-
-    //     setTimeout(() => {
-    //         // display coming
-    //         nineDisplay.style.display = 'grid';
-    //         nineDisplay.classList.add('slide-left');
-    
-    //         // display leaving
-    //         eightDisplay.classList.remove('slide-forward');
-    //         eightDisplay.classList.remove('slide-backk');
-    //         eightDisplay.classList.remove('slide-right');
-    //         eightDisplay.classList.remove('slide-left');
-    
-    //         eightDisplay.style.display = 'none';
-    
-    //         // Remove the class here
-    //     }, 700);
-    
-    //     changeDots(dot8, dot9);
-    //     current_display_number_ = 9;
-    //     num = 9;
-
-
-    // }
-    // else if (current_display_number_ == 9) {
-    //     // display leaving
-    //     nineDisplay.classList.remove('slide-back');
-    //     nineDisplay.classList.add('slide-forward');
-
-    //     setTimeout(() => {
-    //         // display coming
-    //         firstDisplay.style.display = 'grid';
-    //         firstDisplay.classList.add('slide-left');
-    
-    //         // display leaving
-    //         nineDisplay.classList.remove('slide-forward');
-    //         nineDisplay.classList.remove('slide-backk');
-    //         nineDisplay.classList.remove('slide-right');
-    //         nineDisplay.classList.remove('slide-left');
-    
-    //         nineDisplay.style.display = 'none';
-    
-    //         // Remove the class here
-    //     }, 700);
-    
-    //     changeDots(dot9, dotOne);
-    //     current_display_number_ = 1;
-    //     num = 1;
-
-    // }
 }
+
+
+function goBack23() {
+    if (current_display_number_ == 9) {
+        nineDisplay.style.display = 'none';
+        eightDisplay.style.display = 'grid';
+        changeDots(dot9, dot8);
+        current_display_number_ = 8;
+        num = 8;
+    }
+
+    else if (current_display_number_ == 8) {
+        eightDisplay.style.display = 'none';
+        sevenDisplay.style.display = 'grid';
+        changeDots(dot8, dot7);
+        current_display_number_ = 7;
+        num = 7;
+    }
+
+        else if (current_display_number_ == 7) {
+        sevenDisplay.style.display = 'none';
+        sixthDisplay.style.display = 'grid';
+        changeDots(dot7, dot6);
+        current_display_number_ = 6;
+        num = 6;
+    }
+
+    else if (current_display_number_ == 6) {
+        sixthDisplay.style.display = 'none';
+        fifthDisplay.style.display = 'grid';
+        changeDots(dot6, dot5);
+        current_display_number_ = 5;
+        num = 5;
+    }
+
+    else if (current_display_number_ == 5) {
+        fifthDisplay.style.display = 'none';
+        fourthDisplay.style.display = 'grid';
+        changeDots(dot5, dot4);
+        current_display_number_ = 4;
+        num = 4;
+    }
+
+    else if (current_display_number_ == 4) {
+        fourthDisplay.style.display = 'none';
+        thirdDisplay.style.display = 'grid';
+        changeDots(dot4, dotThree);
+        current_display_number_ = 3;
+        num = 3;
+    }
+
+    else if (current_display_number_ == 3) {
+        thirdDisplay.style.display = 'none';
+        secondDisplay.style.display = 'grid';
+        changeDots(dotThree, dotTwo);
+        current_display_number_ = 2;
+        num = 2;
+    }
+
+    else if (current_display_number_ == 2) {
+        secondDisplay.style.display = 'none';
+        firstDisplay.style.display = 'grid';
+        changeDots(dotTwo, dotOne);
+        current_display_number_ = 1;
+        num = 1;
+    }
+
+    else if (current_display_number_ == 1) {
+        firstDisplay.style.display = 'none';
+        nineDisplay.style.display = 'grid';
+        changeDots(dotOne, dot9);
+        current_display_number_ = 9;
+        num = 9;
+    }
+}
+
+
+

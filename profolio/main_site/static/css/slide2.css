@@ -104,6 +104,7 @@ body {
 .container_holder .clients .feedback .icons {
   margin-bottom: 5px;
   position: relative;
+  z-index: 200;
 }
 .container_holder .clients .feedback .icons .labels {
   display: flex;
@@ -138,6 +139,7 @@ body {
   padding-top: 10px;
   background-color: black;
   transition: ease-out 0.3s;
+  z-index: 209;
   display: none;
 }
 .container_holder .clients .feedback .icons .is h5 {
@@ -468,7 +470,7 @@ body {
 .switch_buttons .first i {
   font-size: 20px;
   margin-left: 10px;
-  cursor: pointer;
+  cursor: default;
   color: rgb(255, 255, 255);
 }
 .switch_buttons .second {
@@ -477,7 +479,7 @@ body {
 .switch_buttons .second i {
   font-size: 20px;
   margin-left: 10px;
-  cursor: pointer;
+  cursor: default;
   color: rgb(255, 255, 255);
 }
 .switch_buttons .third {
@@ -486,7 +488,7 @@ body {
 .switch_buttons .third i {
   font-size: 20px;
   margin-left: 10px;
-  cursor: pointer;
+  cursor: default;
   color: rgb(255, 255, 255);
 }
 
@@ -494,20 +496,28 @@ body {
   cursor: pointer;
 }
 
-.see-more-display {
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 40px;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: opacity 0.5s ease-out, transform 0.7s ease-out;
-}
-.see-more-display a {
-  text-decoration: none;
-  color: white;
+.info_popup_lan {
+  position: absolute;
   background-color: black;
+  top: 50%;
+  left: 50%; /* Adjust left to 50% */
+  transform: translate(-50%, -50%); /* Update transform property */
+  z-index: 11;
   padding: 10px;
   border-radius: 10px;
+  display: none;
+}
+.info_popup_lan label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.info_popup_lan .xbutton2 {
+  margin-bottom: 10px;
+}
+.info_popup_lan .xbutton2 button {
+  background-color: black;
+  border: none;
+  color: white;
 }
 
 @media (max-width: 989px) {
@@ -525,6 +535,29 @@ body {
     grid-template-columns: 1fr 1fr;
     transition: transform 1.2s ease;
     row-gap: 10px;
+  }
+  .container_holder .clients #feedbackID3 {
+    display: none;
+  }
+  .container_holder .clients2 {
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    transition: transform 1.2s ease;
+    row-gap: 10px;
+  }
+  .container_holder .clients2 #feedbackID34 {
+    display: none;
+  }
+  .container_holder .clients3 {
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    transition: transform 1.2s ease;
+    row-gap: 10px;
+  }
+  .container_holder .clients3 #feedbackID33 {
+    display: none;
   }
 }
 @media (max-width: 663px) {

@@ -4,8 +4,22 @@
     let num = 1
 </script>
 
+
+
 <div class="container_holder">
     <h1>Projects Showcase</h1>
+
+    <div class="info_popup_lan" id="normal_buttons_displayID">
+        <div class="xbutton2">
+            <button onclick="close_thingys2()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="paraa">
+            <label for="inside_html">Description:</label>
+            <p id="inside_html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quas quod hic vel rerum illum atque numquam labore.</p>
+            <label for="second_inside_html">Usecases:</label>
+            <p id="inside_html2">none</p>
+        </div>
+    </div>
     
     <div class="left-arrow">
         <i class="fa-solid fa-circle-left" onclick="goBack()" onmouseover="end_opens()"></i>
@@ -37,11 +51,11 @@
                     </div>
 
                     <div class="is" id="isID">
-                        <h5>Python</h5>
-                        <h5>Sass</h5>
-                        <h5>HTML5</h5>
-                        <h5>JavaScript</h5>
-                        <h5>Flask</h5>
+                        <h5 onclick="open_info_boxy('python')">Python</h5>
+                        <h5 onclick="open_info_boxy('sass')">Sass</h5>
+                        <h5 onclick="open_info_boxy('html5')">HTML5</h5>
+                        <h5 onclick="open_info_boxy('js')">JavaScript</h5>
+                        <h5 onclick="open_info_boxy('flask')">Flask</h5>
                     </div>
                 </div>
 
@@ -80,7 +94,7 @@
 
             </div>
 
-            <div class="feedback" id="feedbackID">
+            <div class="feedback" id="feedbackID3">
                 <h5 id="title">Starbucks Mock Up</h5>
                 
                 <div class="img-div">
@@ -118,6 +132,8 @@
 
         <div class="clients2" id="clientsID2">
 
+            <!-- onclick="open_info_boxy('python')" -->
+            <!-- be sure to add this to every one  -->
             <div class="feedback" id="feedbackID">
                 <h5 id="title">Starbucks Mock Up2</h5>
                 
@@ -184,7 +200,7 @@
 
             </div>
 
-            <div class="feedback" id="feedbackID">
+            <div class="feedback" id="feedbackID34">
                 <h5 id="title">Starbucks Mock Up</h5>
                 
                 <div class="img-div">
@@ -288,7 +304,7 @@
 
             </div>
 
-            <div class="feedback" id="feedbackID">
+            <div class="feedback" id="feedbackID33">
                 <h5 id="title">Starbucks Mock Up</h5>
                 
                 <div class="img-div">
@@ -323,7 +339,7 @@
             
         </div>
 
-        <div class="right-arrow">
+        <div class="right-arrow" id="no_right">
             <i class="fa-solid fa-circle-right" onclick="goForward()" onmouseover="end_opens2()"></i>
         </div>
 </div>
@@ -332,28 +348,21 @@
 <div class="switch_buttons" id="switch_buttonsID">
 
     <div class="first" id="firstDots">
-        <i class="fa-solid fa-circle" style="cursor: pointer;"></i>
-        <i class="fa-regular fa-circle" onclick="dotTwo_clicked('2')"></i>
-        <i class="fa-regular fa-circle" onclick="dotTwo_clicked('3')"></i>
+        <i class="fa-solid fa-circle"></i>
+        <i class="fa-regular fa-circle"></i>
+        <i class="fa-regular fa-circle"></i>
     </div>
 
     <div class="second" id="secondDots">
-        <i class="fa-regular fa-circle" onclick="dot_backwards('1')"></i>
+        <i class="fa-regular fa-circle"></i>
         <i class="fa-solid fa-circle"></i>
-        <i class="fa-regular fa-circle" onclick="dotTwo_clicked('3')"></i>
+        <i class="fa-regular fa-circle"></i>
     </div>
 
     <div class="third" id="thirdDots">
-        <i class="fa-regular fa-circle" onclick="dot_backwards('1')"></i>
-        <i class="fa-regular fa-circle" onclick="dot_backwards('2')"></i>
+        <i class="fa-regular fa-circle"></i>
+        <i class="fa-regular fa-circle"></i>
         <i class="fa-solid fa-circle"></i>
     </div>
 
-</div>
-
-
-
-
-<div class="see-more-display" id="see-more-displayID">
-    <a href="#">See More</a>
 </div>
