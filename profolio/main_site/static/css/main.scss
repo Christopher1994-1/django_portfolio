@@ -458,6 +458,32 @@ $transparent_color: rgba(255, 255, 255, 0);
 
 
 
+// CSS for the footer
+.footer {
+    border: $border-white-dotted;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    .footer-left {
+        border: $border-white;
+        width: 30%;
+    }
+
+
+    .footer-center {
+        border: $border-white;
+        width: 30%;
+    }
+
+
+    .footer-right {
+        border: $border-white;
+        width: 30%;
+    }
+}
+
+
 
 
 

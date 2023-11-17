@@ -1606,6 +1606,23 @@ $transparent_color: rgba(255, 255, 255, 0);
 
 
 
+.seeAll_projects2 {
+    margin-top: 35px;
+    text-align: center;
+    display: none;
+
+    a {
+        background-color: black;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: $text-color;
+        transition: 0.4s ease-in;
+    }
+}
+
 
 
 .smaller_switch_arrows {
@@ -1772,26 +1789,6 @@ $transparent_color: rgba(255, 255, 255, 0);
     cursor: pointer;
 }
 
-
-
-
-// CSS for see more of client testionials
-.see-more-display {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 40px;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.5s ease-out, transform 0.7s ease-out;
-
-    a {
-        text-decoration: none;
-        color: white;
-        background-color: black;
-        padding: 10px;
-        border-radius: 10px;
-    }
-}
 
 
 
@@ -2096,6 +2093,10 @@ $transparent_color: rgba(255, 255, 255, 0);
     }
 
     .switch_buttons2 {
+        display: block;
+    }
+
+    .seeAll_projects2 {
         display: block;
     }
 

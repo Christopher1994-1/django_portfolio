@@ -38,8 +38,17 @@ let info_panel2 = {
     "pandas": {
         description: "Pandas is a Python library for data manipulation and analysis. It provides data structures like DataFrame and Series, along with tools for cleaning, aggregating, and analyzing data.",
         useCases: 'Commonly used in data science and analysis tasks, working with structured data, and handling missing or incomplete data.'
+    },
+    "reactNative": {
+        description: "React Native is a JavaScript framework for building natively-rendered mobile applications. It allows developers to use React and JavaScript to create mobile applications for iOS and Android platforms.",
+        useCases: 'Ideal for developing cross-platform mobile applications with a single codebase, enabling efficient and consistent development for multiple platforms.'
+    },
+    "apis": {
+        description: "APIs (Application Programming Interfaces) are a set of rules that enable one software application to interact with another. They define the methods and data formats that applications can use to communicate with each other.",
+        useCases: 'Used for integrating different software systems, accessing third-party services, and enabling communication between different components of a software application.'
     }
 }
+
 
 
 // default is set to true

@@ -520,6 +520,21 @@ body {
   color: white;
 }
 
+.seeAll_projects {
+  margin-top: 35px;
+  text-align: center;
+}
+.seeAll_projects a {
+  background-color: black;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.884);
+  transition: 0.4s ease-in;
+}
+
 @media (max-width: 989px) {
   .container_holder {
     color: white;
@@ -570,6 +585,9 @@ body {
     display: none;
   }
   .switch_buttons {
+    display: none;
+  }
+  .seeAll_projects {
     display: none;
   }
 }/*# sourceMappingURL=slide2.css.map */

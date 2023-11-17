@@ -5,10 +5,6 @@ from . import app_functions
 
 
 
-
-
-
-
 def index(request):
     ip_address = request.META['REMOTE_ADDR'] # change to get IP in pythonanywhere
     app_functions.lol2(ip_address)

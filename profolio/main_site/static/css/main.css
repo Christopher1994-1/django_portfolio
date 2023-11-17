@@ -360,6 +360,25 @@
   height: auto;
 }
 
+.footer {
+  border: 2px dotted white;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.footer .footer-left {
+  border: 2px solid white;
+  width: 30%;
+}
+.footer .footer-center {
+  border: 2px solid white;
+  width: 30%;
+}
+.footer .footer-right {
+  border: 2px solid white;
+  width: 30%;
+}
+
 .container {
   position: relative;
   overflow: hidden;
