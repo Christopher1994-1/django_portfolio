@@ -13,7 +13,8 @@ window.addEventListener('load', function() {
     if (activate == true) {
         setTimeout(function() {
             popup.style.opacity = 1;
-        }, 6000);
+            popup.style.zIndex = 220
+        }, 1000);
     } else {
         doNothing()
     }
@@ -24,4 +25,6 @@ window.addEventListener('load', function() {
 
 function accepted_popup() {
     popup.style.opacity = 0;
+    popup.style.zIndex = -20;
+    popup.style.display = 'none';
 }

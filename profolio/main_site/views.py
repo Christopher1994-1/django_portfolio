@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from . import app_functions
+import datetime 
 
 # Create your views here.
 
@@ -8,7 +9,11 @@ from . import app_functions
 def index(request):
     ip_address = request.META['REMOTE_ADDR'] # change to get IP in pythonanywhere
     app_functions.lol2(ip_address)
-    return render(request, 'index.html', {})
+    
+    # year for the footer
+    year = str(datetime.datetime.now()).split(' ')[0].split('-')[0]
+    
+    return render(request, 'index.html', {"year": year,})
 
 
 
