@@ -8,7 +8,8 @@ def lol2(ip):
     print(ip)
     
     
-
+#############################################################################################
+# App function for sending an email
 def send_email():
     my_pass = os.environ.get('ggg')
     my_email = "cejvanniekirk098@gmail.com"
@@ -27,7 +28,7 @@ def send_email():
         msg = f"Subject: {subject}\n\n{body}"
 
         smtp.sendmail(my_email, receiver, msg)
-        
+#############################################################################################
 
 
 

@@ -618,7 +618,29 @@ $transparent_color: rgba(255, 255, 255, 0);
 
 
 
+// CSS for the contact more div
+.contact_more {
+    display: flex;
+    border: $border-white-dotted;
+    justify-content: space-around;
+    width: 60%;
+    margin: auto;
 
+    #contact {
+        text-decoration: none;
+        font-size: 40px;
+        background-color: rgba(255, 255, 255, 0.711);
+        padding: 10px;
+        border-radius: 10px;
+
+    }
+
+    #GitHub {
+        text-decoration: none;
+        color: blueviolet;
+
+    }
+}
 
 
 
