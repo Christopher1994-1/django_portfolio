@@ -37,8 +37,8 @@ let isHovering = false
 function showPopup() {
     isHovering = true;
     document.getElementById("popup-element").style.display = "block";
-    document.getElementById("popup-element").style.display = "flex";
-    document.getElementById("popup-element").style.flexDirection = "column";
+    document.getElementById("popup-element").style.display = "grid";
+    document.getElementById("popup-element").style.gridTemplateColumns = '1fr 1fr 1fr';
 }
 
 function hidePopup() {

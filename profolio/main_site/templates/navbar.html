@@ -7,12 +7,6 @@
         <a href="#" id="about-page">About Me</a>
         <div class="driodiwb">
             <a  onmouseover="showPopup()" onmouseout="hidePopup()" id="projects-page">Projects <span><i class="fa-solid fa-caret-down"></i></span></a>
-            <div class="dropdown_menu" id="popup-element" style="display: none;" onmouseover="showPopup()" onmouseout="hidePopup()">
-                <a href="#">Web Development</a>
-                <a href="#">Backend</a>
-                <a href="#">Applications</a>
-                <a href="{% url 'tests' %}">tests</a>
-            </div>
         </div>
         <a href="#" id="contact-page">Contact</a>
     </div>
@@ -52,6 +46,53 @@
         <a href="#">Backend</a>
         <a href="#">Applications</a>
     </div>
+
+</div>
+
+
+<div class="dropdown_menu" id="popup-element" style="display: none;" onmouseover="showPopup()" onmouseout="hidePopup()">
+    <div class="item">
+
+        
+        <h5>Web Development</h5>
+        <a href="#">Starbucks Remake</a>
+        <a href="#">Washington</a>
+        <a href="#">Ofdream</a>
+
+        <hr class="navbar_dropdownHR">
+
+        <div class="info_dropdown">
+            <p>My web development consists mainly of frontend technologies such as HTML, SCSS/CSS, JavaScript, and TypeScript, focusing on crafting engaging and responsive user interfaces to enhance the overall user experience.</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <h5>Backend Development</h5>
+        <a href="#">Stripe Payment API</a>
+        <a href="#">ChatGPT Remake</a>
+        <a href="#">Bigfoot Dataset Visualization</a>
+
+        <hr class="navbar_dropdownHR">
+
+        <div class="info_dropdown">
+            <p>In my backend development journey, I've harnessed the power of Python, utilizing web frameworks such as Django and Flask. My experience also extends to C# and ASP.NET Core. I have worked on various API integrations and have hands-on experience with different database systems, including MySQL, SQLite3, and MongoDB. Additionally, I've successfully managed and processed data using Python's Pandas library to handle and visualize large datasets in a user-friendly manner</p>
+        </div>
+    </div>
+
+
+    <div class="item">
+        <h5>Application Development</h5>
+        <a href="#">Desktop Calculator</a>
+        <a href="#">Voice Assistant</a>
+        <a href="#">Automated Program</a>
+
+        <hr class="navbar_dropdownHR">
+
+        <div class="info_dropdown">
+            <p>This includes desktop applications, Automated programs, web scrapping and other miscellaneous programming.</p>
+        </div>
+    </div>
+
 
 </div>
 

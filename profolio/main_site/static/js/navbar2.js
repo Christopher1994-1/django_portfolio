@@ -2,8 +2,8 @@ let isHovering2 = false;
 
 function showPopup2Scroll() {
     isHovering2 = true;
-    document.getElementById("popup-element2").style.display = "flex";
-    document.getElementById("popup-element2").style.flexDirection = "column";
+    document.getElementById("popup-element2").style.display = "grid";
+    document.getElementById("popup-element2").style.gridTemplateColumns = '1fr 1fr 1fr';
 }
 
 function hidePopup2Scroll() {
@@ -21,3 +21,16 @@ document.getElementById("popup-element2").addEventListener("mouseout", function 
     hidePopup2Scroll();
 });
 
+
+function showPopup2() {
+    isHovering = true;
+    document.getElementById("popup-element2").style.display = "block";
+    document.getElementById("popup-element2").style.display = "grid";
+    document.getElementById("popup-element2").style.gridTemplateColumns = '1fr 1fr 1fr';
+}
+
+function hidePopup2() {
+    if (!isHovering) {
+        document.getElementById("popup-element2").style.display = "none";
+    }
+}

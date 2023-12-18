@@ -5,6 +5,8 @@ $border-black: 2px solid black;
 $border-white-dotted: 2px dotted white;
 $hover-color: rgb(184, 36, 36);
 
+$greyLeftRightBorder:2px solid rgba(255, 255, 255, 0.381);
+
 // $co: rgb(204, 204, 204);
 
 $table-bg: #999999;
@@ -18,6 +20,8 @@ $jumbo_ptag_background: rgba(255, 255, 255, 0.842);
 $transparent_color: rgba(255, 255, 255, 0);
 
 
+
+$jumbotron_image: url('/static/images/site_images/main.jpg');
 
 
 .overlay {
@@ -112,21 +116,6 @@ $transparent_color: rgba(255, 255, 255, 0);
             text-decoration: underline;
         }
 
-        .dropdown_menu {
-            position: absolute;
-            border: 1px solid white;
-            text-align: left;
-            width: 17%;
-            padding-top: 10px;
-            background-color: black;
-            display: none;
-
-            a {
-                font-size: 13px;
-                margin-bottom: 20px;
-                margin-left: 10px;
-            }
-        }
 
         #home-page {
             opacity: 0;
@@ -286,6 +275,70 @@ $transparent_color: rgba(255, 255, 255, 0);
 
     }
 }
+.dropdown_menu {
+    position: absolute;
+    text-align: left;
+    width: 90%;
+    padding-top: 10px;
+    padding: 10px;
+    background-color: black;
+    top: 45%;
+    left: 50%; /* Adjust left to 50% */
+    transform: translate(-50%, -50%); /* Update transform property */
+    z-index: 10;
+    height: 500px;
+    text-align: left;
+    // display: none;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        border-left: $greyLeftRightBorder;
+        border-right: $greyLeftRightBorder;
+        padding-top: 10px;
+        padding: 10px;
+
+        h5 {
+            color: rgba(255, 255, 255, 0.381);
+            cursor: default;
+            font-size: 21px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    
+        a {
+            width: auto;
+            font-weight: 700;
+            border: none;
+            color: white;
+            text-decoration: none;
+            margin: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .navbar_dropdownHR {
+            color: white;
+            
+
+        }
+
+        .info_dropdown {
+            overflow: auto;
+            max-height: 200px;
+            p {
+                color: rgba(255, 255, 255, 0.381);
+                cursor: default;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+
+    }
+    
+}
 
 
 // CSS for the first navbar
@@ -338,22 +391,6 @@ $transparent_color: rgba(255, 255, 255, 0);
             cursor: pointer;
         }
 
-        .dropdown_menu {
-            position: absolute;
-            border: 1px solid white;
-            text-align: left;
-            width: 17%;
-            padding-top: 10px;
-            background-color: black;
-            display: none;
-
-            a {
-                font-size: 13px;
-                margin-bottom: 20px;
-                margin-left: 10px;
-            }
-        }
-
     }
 
     .hamburgerMenu {
@@ -368,6 +405,70 @@ $transparent_color: rgba(255, 255, 255, 0);
     }
 
 }
+.dropdown_menu2 {
+    position: fixed;
+    text-align: left;
+    width: 90%;
+    padding-top: 10px;
+    padding: 10px;
+    background-color: black;
+    top: 45%;
+    left: 50%; /* Adjust left to 50% */
+    transform: translate(-50%, -50%); /* Update transform property */
+    z-index: 100;
+    height: 500px;
+    text-align: left;
+    // display: none;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        border-left: $greyLeftRightBorder;
+        border-right: $greyLeftRightBorder;
+        padding-top: 10px;
+        padding: 10px;
+
+        h5 {
+            color: rgba(255, 255, 255, 0.381);
+            cursor: default;
+            font-size: 21px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    
+        a {
+            width: auto;
+            font-weight: 700;
+            border: none;
+            color: white;
+            text-decoration: none;
+            margin: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .navbar_dropdownHR {
+            color: white;
+            
+
+        }
+
+        .info_dropdown {
+            overflow: auto;
+            max-height: 200px;
+            p {
+                color: rgba(255, 255, 255, 0.381);
+                cursor: default;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+
+    }
+    
+}
 
 
 // Main CSS for the Jumbotron
@@ -376,15 +477,9 @@ $transparent_color: rgba(255, 255, 255, 0);
     background-color: rgba(0, 0, 0, 0);
     overflow: hidden;
     margin-bottom: 0px;
-
-    .back-video {
-        position: absolute;
-        z-index: -1;
-        bottom: 0;
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-    }
+    background-image: $jumbotron_image;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 
     .main_stuff {
@@ -429,7 +524,7 @@ $transparent_color: rgba(255, 255, 255, 0);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 0px;
+    margin-top: 2%;
     margin-bottom: 20px;
 
 
@@ -682,3 +777,28 @@ $transparent_color: rgba(255, 255, 255, 0);
     background-color: blue;
 }
 
+
+
+
+
+//= scss for the dropdown navbar scroll bar
+/* For WebKit browsers like Chrome and Safari */
+.info_dropdown::-webkit-scrollbar {
+    width: 8px; /* You can change this to make the scrollbar wider or narrower */
+}
+
+.info_dropdown::-webkit-scrollbar-thumb {
+    background-color: blue; /* This is the color of the thumb (the moving part of the scrollbar) */
+    border-radius: 6px; /* This makes the thumb rounded */
+}
+
+/* For Firefox */
+.info_dropdown {
+    scrollbar-width: thin; /* 'thin' or 'auto' depending on your preference */
+    scrollbar-color: blue #f0f0f0; /* The first color is for the thumb, the second one is for the track (the background of the scrollbar) */
+}
+
+/* For Microsoft Edge */
+.info_dropdown {
+    scrollbar-color: blue #f0f0f0;
+}
