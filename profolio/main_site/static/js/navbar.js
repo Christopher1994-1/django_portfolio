@@ -64,6 +64,29 @@ function showPopup2() {
 
 
 
+function open_arrow(thing) {
+    let arrowkeySTR = 'arrowkey' + thing;
+    let arrowkey = document.getElementById(arrowkeySTR);
+
+    arrowkey.style.opacity = 1;
+    arrowkey.style.transform = 'translateY(0)';
+}
+
+
+
+function close_arrow(thing) {
+    let arrowkeySTR = 'arrowkey' + thing;
+    let arrowkey = document.getElementById(arrowkeySTR);
+
+    arrowkey.style.transform = 'translateX(-100%)';
+    arrowkey.style.opacity = 0;
+}
+
+
+
+
+
+
 
 window.onscroll = function() {
     // function that handles the scroll bar, when pageOffset is over 250px scroll navbar appears

@@ -238,7 +238,6 @@ function close_thingys2() {
 
 
 function end_opens101() {
-    console.log('janaj')
     if (num == 1) {
         var div1 = document.getElementById('isID');
         var div2 = document.getElementById('isID2');

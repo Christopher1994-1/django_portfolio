@@ -34,3 +34,25 @@ function hidePopup2() {
         document.getElementById("popup-element2").style.display = "none";
     }
 }
+
+
+
+
+function open_arrow2(thing) {
+    let arrowkeySTR = 'arrowkeyq' + thing;
+    let arrowkey = document.getElementById(arrowkeySTR);
+
+    arrowkey.style.opacity = 1;
+    arrowkey.style.transform = 'translateY(0)';
+}
+
+
+
+function close_arrow2(thing) {
+    let arrowkeySTR = 'arrowkeyq' + thing;
+    let arrowkey = document.getElementById(arrowkeySTR);
+
+    arrowkey.style.transform = 'translateX(-100%)';
+    arrowkey.style.opacity = 0;
+}
+

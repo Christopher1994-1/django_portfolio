@@ -1,6 +1,56 @@
-<div class="contact_more">
+<div class="contact_area">
 
-    <a href="#" id="contact">Contact Me</a>
 
-    <a href="#" id="GitHub">GitHub</a>
+    <div class="side_one">
+
+        <h5>Get In Contect With Me</h5>
+
+        <div class="input_boxes">
+            <form action="">
+                {% csrf_token %}
+
+                <div class="input_container">
+                    <label for="client_name">Name</label>
+                    <input type="text" name="client_name" id="client_name" placeholder="Richard Joe">
+                </div>
+
+                <div class="input_container">
+                    <label for="client_email">Email</label>
+                    <input type="email" name="client_email" id="client_email" placeholder="richardjoey@gmail.com">
+                </div>
+
+
+                <div class="input_container">
+                    <label for="client_msg">Message</label>
+                    <textarea name="client_msg" id="client_msg" cols="30" rows="3" placeholder="Type Your Message Here."></textarea>
+                </div>
+
+                <div class="button_container">
+                    <button type="submit">Send Message</button>
+                </div>
+
+            </form>
+        </div>
+
+        
+
+    </div>
+
+
+    <div class="side_two">
+
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d89188.68830193253!2d-122.6391962747579!3d45.688031742180506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smaps!5e0!3m2!1sen!2sus!4v1702932738104!5m2!1sen!2sus" 
+        height="430" 
+        width="500"
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        class="google_map"
+        >
+    </iframe>
+    </div>
+
+
 </div>

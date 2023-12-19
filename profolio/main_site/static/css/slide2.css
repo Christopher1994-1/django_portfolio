@@ -53,6 +53,7 @@ body {
   margin-top: 40px;
   margin-bottom: 20px;
   position: relative;
+  background-color: black;
 }
 .container_holder h1 {
   text-align: center;
@@ -93,7 +94,7 @@ body {
 .container_holder .clients .feedback {
   justify-self: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -221,7 +222,7 @@ body {
 .container_holder .clients2 .feedback {
   justify-self: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -347,7 +348,7 @@ body {
 .container_holder .clients3 .feedback {
   justify-self: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -463,9 +464,15 @@ body {
   transform: translateX(-100%);
 }
 
+.all-project-stuff {
+  background-color: black;
+  padding-bottom: 20px;
+}
+
 .switch_buttons {
   text-align: center;
   z-index: 200;
+  background-color: black;
 }
 .switch_buttons .first i {
   font-size: 20px;
@@ -505,6 +512,8 @@ body {
   z-index: 11;
   padding: 10px;
   border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 0 0 20px 0 rgb(0, 0, 0);
   display: none;
 }
 .info_popup_lan label {
@@ -524,15 +533,15 @@ body {
   margin-top: 35px;
   text-align: center;
 }
-.seeAll_projects a {
-  background-color: black;
-  padding: 15px;
+.seeAll_projects a button {
+  width: 20%;
   border-radius: 10px;
-  font-size: 20px;
+  padding: 10px;
+  background-color: white;
+  border: none;
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.884);
-  transition: 0.4s ease-in;
+  font-weight: 700;
 }
 
 @media (max-width: 989px) {
@@ -576,6 +585,9 @@ body {
   }
 }
 @media (max-width: 663px) {
+  .all-project-stuff {
+    display: none;
+  }
   .container_holder {
     color: white;
     padding: 10px;

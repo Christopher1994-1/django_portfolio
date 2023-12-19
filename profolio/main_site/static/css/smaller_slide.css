@@ -94,7 +94,7 @@
   justify-self: center;
   border-radius: 10px;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -218,7 +218,7 @@
 .container_holder2 .clients22 .feedback {
   justify-self: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -344,7 +344,7 @@
 .container_holder2 .clients32 .feedback {
   justify-self: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -470,7 +470,7 @@
 .container_holder2 .clients4 .feedback {
   justify-self: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -596,7 +596,7 @@
 .container_holder2 .clients5 .feedback {
   justify-self: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -722,7 +722,7 @@
 .container_holder2 .clients6 .feedback {
   justify-self: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -848,7 +848,7 @@
 .container_holder2 .clients7 .feedback {
   justify-self: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -974,7 +974,7 @@
 .container_holder2 .clients8 .feedback {
   justify-self: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -1100,7 +1100,7 @@
 .container_holder2 .clients9 .feedback {
   justify-self: center;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.775);
+  background-color: rgb(255, 255, 255);
   width: 80%;
   color: black;
   padding: 20px;
@@ -1222,13 +1222,15 @@
   display: none;
 }
 .seeAll_projects2 a {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   padding: 15px;
   border-radius: 10px;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.884);
+  color: black;
+  font-weight: 700;
+  width: 200px;
   transition: 0.4s ease-in;
 }
 
@@ -1363,6 +1365,11 @@
 }
 
 @media (max-width: 663px) {
+  .biggger {
+    background-color: black;
+    padding-bottom: 20px;
+    margin-bottom: 2%;
+  }
   .container_holder2 {
     color: white;
     padding: 10px;

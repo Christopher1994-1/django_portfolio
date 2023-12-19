@@ -1,9 +1,9 @@
 <div class="navbar" id="oldNav">
     <div class="firstSide">
-        <a href="#"><h1>CEJ Kirk</h1></a>
+        <a href="{% url 'index' %}"><h1>CEJ Kirk</h1></a>
     </div>
     <div class="links">
-        <a href="#" id="home-page">Home</a>
+        <a href="{% url 'index' %}" id="home-page">Home</a>
         <a href="#" id="about-page">About Me</a>
         <div class="driodiwb">
             <a  onmouseover="showPopup()" onmouseout="hidePopup()" id="projects-page">Projects <span><i class="fa-solid fa-caret-down"></i></span></a>
@@ -51,47 +51,98 @@
 
 
 <div class="dropdown_menu" id="popup-element" style="display: none;" onmouseover="showPopup()" onmouseout="hidePopup()">
-    <div class="item">
 
-        
-        <h5>Web Development</h5>
-        <a href="#">Starbucks Remake</a>
-        <a href="#">Washington</a>
-        <a href="#">Ofdream</a>
+        <div class="item">
 
-        <hr class="navbar_dropdownHR">
+            <h5>Web Development</h5>
+            <hr class="navbar_dropdownHR">
+            
+            <div class="slidepart">
+                <a href="#" onmouseover="open_arrow('1')" onmouseout="close_arrow('1')">Starbucks Remake</a>
+                <i class="fa-solid fa-arrow-right arrowkey" id="arrowkey1"></i>
+            </div>
+            <div class="slidepart">
+                <a href="#" onmouseover="open_arrow('2')" onmouseout="close_arrow('2')">Washington</a>
+                <i class="fa-solid fa-arrow-right arrowkey" id="arrowkey2"></i>
+            </div>
 
-        <div class="info_dropdown">
-            <p>My web development consists mainly of frontend technologies such as HTML, SCSS/CSS, JavaScript, and TypeScript, focusing on crafting engaging and responsive user interfaces to enhance the overall user experience.</p>
+            <div class="slidepart">
+                <a href="#" onmouseover="open_arrow('3')" onmouseout="close_arrow('3')">Ofdream</a>
+                <i class="fa-solid fa-arrow-right arrowkey" id="arrowkey3"></i>
+            </div>
+
+            <hr class="navbar_dropdownHR">
+
+            <div class="info_dropdown">
+                <p>My web development consists mainly of frontend technologies such as HTML, SCSS/CSS, JavaScript, and TypeScript, focusing on crafting engaging and responsive user interfaces to enhance the overall user experience.</p>
+            </div>
+
+            <div class="skills" id="skills1">
+                <h5>Skills:</h5>
+                <p>HTML5, CSS, Scss, JavaScript, TypeScript</p>
+            </div>
         </div>
-    </div>
 
-    <div class="item">
-        <h5>Backend Development</h5>
-        <a href="#">Stripe Payment API</a>
-        <a href="#">ChatGPT Remake</a>
-        <a href="#">Bigfoot Dataset Visualization</a>
+        <div class="item">
+            <h5>Backend Development</h5>
+            <hr class="navbar_dropdownHR">
+            <div class="slidepart">
+                <a href="#" onmouseover="open_arrow('4')" onmouseout="close_arrow('4')">Stripe Payment API</a>
+                <i class="fa-solid fa-arrow-right arrowkey" id="arrowkey4"></i>
+            </div>
+            <div class="slidepart">
+                <a href="#" onmouseover="open_arrow('5')" onmouseout="close_arrow('5')">ChatGPT Remake</a>
+                <i class="fa-solid fa-arrow-right arrowkey" id="arrowkey5"></i>
+            </div>
 
-        <hr class="navbar_dropdownHR">
+            <div class="slidepart">
+                <a href="#" onmouseover="open_arrow('6')" onmouseout="close_arrow('6')">Bigfoot Dataset Visualization</a>
+                <i class="fa-solid fa-arrow-right arrowkey" id="arrowkey6"></i>
+            </div>
 
-        <div class="info_dropdown">
-            <p>In my backend development journey, I've harnessed the power of Python, utilizing web frameworks such as Django and Flask. My experience also extends to C# and ASP.NET Core. I have worked on various API integrations and have hands-on experience with different database systems, including MySQL, SQLite3, and MongoDB. Additionally, I've successfully managed and processed data using Python's Pandas library to handle and visualize large datasets in a user-friendly manner</p>
+            <hr class="navbar_dropdownHR">
+
+            <div class="info_dropdown" id="backendINFO">
+                <p>In my backend development journey, I've harnessed the power of Python, utilizing web frameworks such as Django and Flask. My experience also extends to C# and ASP.NET Core. I have worked on various API integrations and have hands-on experience with different database systems, including MySQL, SQLite3, and MongoDB. Additionally, I've successfully managed and processed data using Python's Pandas library to handle and visualize large datasets in a user-friendly manner</p>
+            </div>
+
+            <div class="skills" id="skills2">
+                <h5>Skills:</h5>
+                <p>Python, APIs, Data handling and Visualization, Authentication, MySQL</p>
+            </div>
         </div>
-    </div>
 
 
-    <div class="item">
-        <h5>Application Development</h5>
-        <a href="#">Desktop Calculator</a>
-        <a href="#">Voice Assistant</a>
-        <a href="#">Automated Program</a>
+        <div class="item">
+            <h5>Application Development</h5>
+            <hr class="navbar_dropdownHR">
+            <div class="slidepart">
+                <a href="#" onmouseover="open_arrow('7')" onmouseout="close_arrow('7')">Desktop Calculator</a>
+                <i class="fa-solid fa-arrow-right arrowkey" id="arrowkey7"></i>
+            </div>
 
-        <hr class="navbar_dropdownHR">
+            <div class="slidepart">
+                <a href="#" onmouseover="open_arrow('8')" onmouseout="close_arrow('8')">Voice Assistant</a>
+                <i class="fa-solid fa-arrow-right arrowkey" id="arrowkey8"></i>
+            </div>
 
-        <div class="info_dropdown">
-            <p>This includes desktop applications, Automated programs, web scrapping and other miscellaneous programming.</p>
+            <div class="slidepart">
+                <a href="#" onmouseover="open_arrow('9')" onmouseout="close_arrow('9')">Automated Program</a>
+                <i class="fa-solid fa-arrow-right arrowkey" id="arrowkey9"></i>
+            </div>
+
+
+            <hr class="navbar_dropdownHR">
+
+            <div class="info_dropdown">
+                <p>This includes desktop applications, Automated programs, web scrapping and other miscellaneous programming.</p>
+            </div>
+
+            <div class="skills" id="skills3">
+                <h5>Skills:</h5>
+                <p>Web Scrapping, Automation, Desktop Application, OOP</p>
+            </div>
         </div>
-    </div>
 
 
 </div>

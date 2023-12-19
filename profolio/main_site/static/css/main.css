@@ -27,14 +27,17 @@
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   z-index: -29;
 }
+.popup_cookies .first h5 {
+  font-size: 15px;
+}
 .popup_cookies .second {
   width: 30%;
   text-align: center;
 }
 .popup_cookies .second button {
-  width: 80%;
+  width: 60%;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   background-color: #333;
   color: white;
@@ -216,11 +219,11 @@
   padding-top: 10px;
   padding: 10px;
   background-color: black;
-  top: 45%;
+  top: 50%;
   left: 50%; /* Adjust left to 50% */
   transform: translate(-50%, -50%); /* Update transform property */
   z-index: 10;
-  height: 500px;
+  height: 550px;
   text-align: left;
 }
 .dropdown_menu .item {
@@ -237,7 +240,18 @@
   font-size: 21px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.dropdown_menu .item a {
+.dropdown_menu .item .slidepart {
+  display: flex;
+  align-items: center;
+}
+.dropdown_menu .item .slidepart .arrowkey {
+  color: white;
+  margin-left: 0;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.dropdown_menu .item .slidepart a {
   width: auto;
   font-weight: 700;
   border: none;
@@ -246,7 +260,7 @@
   margin: 5px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.dropdown_menu .item a:hover {
+.dropdown_menu .item .slidepart a:hover {
   text-decoration: underline;
 }
 .dropdown_menu .item .navbar_dropdownHR {
@@ -260,6 +274,39 @@
   color: rgba(255, 255, 255, 0.381);
   cursor: default;
   font-family: Arial, Helvetica, sans-serif;
+}
+.dropdown_menu .item #backendINFO {
+  border-bottom: 1px solid white;
+}
+
+#skills1 {
+  margin-top: 80px;
+}
+#skills1 h5 {
+  color: white;
+}
+#skills1 p {
+  color: #6088EE;
+  font-weight: 600;
+}
+
+#skills2 h5 {
+  color: white;
+}
+#skills2 p {
+  color: #6088EE;
+  font-weight: 600;
+}
+
+#skills3 {
+  margin-top: 110px;
+}
+#skills3 h5 {
+  color: white;
+}
+#skills3 p {
+  color: #6088EE;
+  font-weight: 600;
 }
 
 .navbar2 {
@@ -343,7 +390,18 @@
   font-size: 21px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.dropdown_menu2 .item a {
+.dropdown_menu2 .item .slidepart {
+  display: flex;
+  align-items: center;
+}
+.dropdown_menu2 .item .slidepart .arrowkey {
+  color: white;
+  margin-left: 0;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.dropdown_menu2 .item .slidepart a {
   width: auto;
   font-weight: 700;
   border: none;
@@ -352,7 +410,7 @@
   margin: 5px;
   font-family: Arial, Helvetica, sans-serif;
 }
-.dropdown_menu2 .item a:hover {
+.dropdown_menu2 .item .slidepart a:hover {
   text-decoration: underline;
 }
 .dropdown_menu2 .item .navbar_dropdownHR {
@@ -366,6 +424,36 @@
   color: rgba(255, 255, 255, 0.381);
   cursor: default;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#skills_1 {
+  margin-top: 80px;
+}
+#skills_1 h5 {
+  color: white;
+}
+#skills_1 p {
+  color: #6088EE;
+  font-weight: 600;
+}
+
+#skills_2 h5 {
+  color: white;
+}
+#skills_2 p {
+  color: #6088EE;
+  font-weight: 600;
+}
+
+#skills_3 {
+  margin-top: 110px;
+}
+#skills_3 h5 {
+  color: white;
+}
+#skills_3 p {
+  color: #6088EE;
+  font-weight: 600;
 }
 
 .jumbotron {
@@ -627,4 +715,226 @@
 /* For Microsoft Edge */
 .info_dropdown {
   scrollbar-color: blue #f0f0f0;
+}
+
+.contact_area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+.contact_area h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+.contact_area .side_one {
+  padding: 20px;
+  background-color: #201F1F;
+  text-align: center;
+}
+.contact_area .side_one .input_boxes .input_container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+}
+.contact_area .side_one .input_boxes .input_container label {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  cursor: default;
+}
+.contact_area .side_one .input_boxes .input_container input {
+  border: none;
+  background-color: #464646;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.contact_area .side_one .input_boxes .input_container input:focus {
+  outline: none;
+}
+.contact_area .side_one .input_boxes .input_container input::-moz-placeholder {
+  color: #8c8c8c;
+}
+.contact_area .side_one .input_boxes .input_container input::placeholder {
+  color: #8c8c8c;
+}
+.contact_area .side_one .input_boxes .input_container textarea {
+  border: none;
+  background-color: #464646;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  resize: none;
+}
+.contact_area .side_one .input_boxes .button_container {
+  margin-top: 4%;
+}
+.contact_area .side_one .input_boxes .button_container button {
+  padding: 10px;
+  background-color: #6088EE;
+  border: none;
+  border-radius: 10px;
+  width: 65%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.contact_area .side_two .google_map {
+  filter: grayscale(100%) invert(100%);
+  width: 500;
+}
+
+.icon1 i {
+  background-color: white;
+  background: linear-gradient(to bottom, #6088EE 0%, #201F1F 100%);
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ii {
+  background-color: rgba(255, 255, 255, 0.7529411765);
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers vertically */
+  text-align: center; /* Centers horizontally */
+}
+.ii i {
+  font-size: 120px;
+  /* Additional styles for the icon if needed */
+}
+
+.icon2 i {
+  font-size: 40px;
+  background-color: white;
+  background: linear-gradient(to bottom, #6088EE 0%, #201F1F 100%);
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ii2 {
+  background-color: rgba(255, 255, 255, 0.7529411765);
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers vertically */
+  text-align: center; /* Centers horizontally */
+}
+.ii2 i {
+  font-size: 100px;
+  /* Additional styles for the icon if needed */
+}
+
+.github_conatiner {
+  background-image: url("/static/images/site_images/github.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 4%;
+  padding: 10px;
+}
+.github_conatiner .things1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+.github_conatiner .things1 .side1 a {
+  text-decoration: none;
+  color: white;
+}
+.github_conatiner .things1 .side1 a h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+}
+.github_conatiner .things1 .side1 a:hover {
+  text-decoration: underline;
+}
+
+.jumbotron1 {
+  height: 700px;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  margin-bottom: 0px;
+  background-image: url("/static/images/site_images/github.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron1 .main_stuff {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%; /* Adjust left to 50% */
+  transform: translate(-50%, -50%); /* Update transform property */
+  text-align: center; /* Center-align the text horizontally */
+  width: 100%;
+}
+.jumbotron1 .main_stuff h1 {
+  color: white;
+  font-size: 100px;
+  text-shadow: 3px 3px black;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  cursor: default;
+}
+.jumbotron1 .main_stuff h5 {
+  color: white;
+  font-size: 60px;
+  cursor: default;
+  text-shadow: 3px 3px black;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.privacy {
+  background-color: white;
+  padding-bottom: 10px;
+  padding: 20px;
+}
+.privacy h5 {
+  cursor: default;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.privacy p {
+  cursor: default;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.privacy h1 {
+  cursor: default;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.privacy ol {
+  cursor: default;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }/*# sourceMappingURL=main.css.map */

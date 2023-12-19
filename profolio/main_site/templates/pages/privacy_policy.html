@@ -1,32 +1,82 @@
-<p>
-    Privacy Policy
-Last updated: [Date]
+{% extends 'base.html' %}
 
-Thank you for visiting [Your Name]'s Portfolio website. This Privacy Policy outlines how your personal information is collected, used, and disclosed when you use this website.
 
-Information We Collect
-Personal Information
-When you visit the site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the site, and information about how you interact with the site.
 
-Usage Information
-We collect information about your usage of the site, including the time, frequency, and duration of your visits.
+{% block title %}
+    <title>Privacy Policy | CEJ Kirk</title>
+{% endblock title%}
 
-How We Use Your Information
-We use the collected information for various purposes, including:
+{% block content %}
+<h1 id="index_pageID">pp</h1>
 
-Analytics: We use the collected data to analyze and understand how our visitors engage with the site. This information helps us improve the reach, content, and performance of the site.
 
-Site Improvement: Understanding how visitors navigate the site helps us make improvements to enhance user experience.
+<div class="jumbotron1">
+    {% load static %}   
 
-Sharing Your Personal Information
-We do not share your personal information with third parties. The information collected is used solely for the purposes outlined in this Privacy Policy.
+    
+      <div class="main_stuff">
+        <h1 id="jumbotron_h1">Privacy Policy</h1>
+        <h5 id="jumbotron_h5">Infomation</h5>
+      </div>
+    
 
-Your Choices
-You can choose to disable cookies through your browser settings, but please note that some features of the site may not function properly if cookies are disabled.
+</div>
 
-Changes to This Privacy Policy
-We may update this Privacy Policy from time to time to reflect changes to our practices or for other operational, legal, or regulatory reasons.
 
-Contact Us
-For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us at [Your Email Address].
-</p>
+<div class="privacy">
+    <h1>Privacy Policy</h1>
+    <p>Effective Date: August 18th, 2023</p>
+
+    <p>The existence of this Privacy Policy is a commitment to respect and protect any visitor, potential client, or any other persons personal data or information through this web application. This privacy policy is intended to provide visitors, potential clients, or any other persons with information regarding how this web application undertakes the collection, processing, transformation, disclosure, retention, securing, analysis, erasure, and/or destruction of personal data.</p>
+
+    <h5>The Type of Data I Collect.</h5>
+    <p>When you browse this website, I may gather and store certain information about your visit. I automatically collect and store the following infomration about your visit:</p>
+
+    <ol>
+        <li>The internet domain and network address you use to access this site;</li>
+        <li>The type of web browser and operating system you are using;</li>
+        <li>The date and time of your visit;</li>
+        <li>The pages you visit on this website and the duration of your visit;</li>
+        <li>The website you visited before coming here if any;</li>
+        <li>IP address;</li>
+        <li>Other IP related data;</li>
+        <li>ISP provider and ASN;</li>
+        <li>General location;</li>
+    </ol>
+
+
+    <h5>Additional conditional collection;</h5>
+    <ol>
+        <li>Name;</li>
+        <li>Email;</li>
+        <li>Message;</li>
+    </ol>
+    <p>This data is only collected when/if you contact</p>
+
+    <h5>How I Use Your Information:</h5>
+    <p>Analytics: The collected data is used to analyze and understand how the visitors engage with the site. This information helps the site improve its reach, content, and performance of the site.</p>
+    <p>Site Improvement: Understanding how visitors navigate the site helps make improvements to enhance user experience.</p>
+
+    <h5>Sharing Your Personal Information:</h5>
+    <p>I do not share your personal information with third parties. The information collected is used solely for the purposes outlined in this Privacy Policy.</p>
+
+    <h5>Your Rights:</h5>
+    <p>You have the right to contact me and request the following;</p>
+
+    <ol>
+        <li>Deletion of your personal data;</li>
+        <li>Correction of your personal data;</li>
+        <li>Obtain and view data;</li>
+        <li>Right to confirm;</li>
+    </ol>
+
+    <h5>Applicable Laws:</h5>
+    <p>This site functions in accordance with Washington State laws, including SB 5376 - 2019-20, regarding the collection of personal data.</p>
+
+    <h5>Contact:</h5>
+    <p>You make contact through clicking this link and messaging. <a href="#">Contact</a></p>
+
+</div>
+
+{% endblock content %}
+
