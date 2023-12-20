@@ -1,12 +1,8 @@
-import smtplib
-import datetime
-import os
+from django.test import TestCase
 import datetime
 import sqlite3
 
-
-
-
+# Create your tests here
 
 
 #= ------------------------------------------------ #
@@ -20,7 +16,129 @@ else:
 #= ------------------------------------------------ #
     
     
+#. Returned Value
+#= http://127.0.0.1:8000/privacy-policy/ # maybe add a IF statement to check if pages or other
+#= Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+
+
+
+def handle_http_referer(ip, http):
+    pass
+
+
+
+#* name IF
+#* email IF
+#* ip
+#* ip stuff
+#* location stuff
+#* asn
+#* os
+#* browser
+#* referers + duration []
+#* total_duration
+#* time_stamp
+
+
+
+
+#! code for converting '[]' into []
+import json
+
+# my_list = json.loads()
+
+'country, statee, city, zipCode'
+
+import time
+
+
+
+def timeaa(a):
+    b = time.time()
+    e = str(time.time() - a).split('.')[0]
+    # Convert the duration to a timedelta object
+    print(e)
+
+
+def tt():
+    a = time.time()
+    time.sleep(120)
+    timeaa(a)
+
+
+
+
+tt()
+
+
+
+fakeIP = '71.63.255.244'
+
+
+
+#. Function to create a new table within the main DB
+def create_new_table(table):
+    db = sqlite3.connect('main_profolioDB.db')
+    cur = db.cursor()
+    cur.execute(f"""CREATE TABLE IF NOT EXISTS {table} 
+                (id INTEGER PRIMARY KEY, 
+                name TEXT,
+                email TEXT,
+                ip TEXT,
+                country TEXT,
+                state TEXT, 
+                city TEXT,
+                zip_code TEXT,
+                asn TEXT, 
+                os TEXT,
+                browser TEXT,
+                refs_dur TEXT,
+                total_duration TEXT,
+                timestamp TEXT
+                )"""
+                )
+    db.commit()
+    db.close()
+
+
+#. List all the tables inside main DB
+def list_tables_sqlite(database_name):
+    conn = sqlite3.connect(database_name)
+    cursor = conn.cursor()
+
+    # Query to retrieve a list of all tables
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+    tables = cursor.fetchall()
+
+    conn.close()
+
+    table_names = [table[0] for table in tables]
+    for i in table_names:
+        print(i)
+
+
+
+#. Checking all the data within said table
+def checking_table(database_name, table):
+    db = sqlite3.connect(database_name)
+    cur = db.cursor()
+    cur.execute(f'SELECT * FROM {table}')
+    result = cur.fetchall()
+    db.commit()
+    db.close()
     
+    for i in result:
+        print('-' * 40)
+        print(i)
+
+
+
+
+
+
+
+
+
 
 
 
@@ -100,7 +218,7 @@ def addSessionLogFor_UniqueVisitor(ip, startime, current_page, last_page, browse
     print(last_page)
     start_time = f"start: {current_page} - {startime} | {last_page}"
     
-    
+    #TODO we need condional statements to check if last_page is None and if so put in some logic to handle that
     
     
     
@@ -151,53 +269,26 @@ def start_session(ip, startime, current_page, last_page, browser):
         addSessionLogFor_UniqueVisitor(ip, startime, current_page, last_page, browser)
         
     
-        
-
-
-
-
-#. Function that handles when visitor starts
-def handling_time_session(ip:str, starttime:str, current_page:str, last_page:str):
-    print(ip)
-    print(starttime)
-    print(current_page)
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-#############################################################################################
-# App function for sending an email
-def send_email():
-    my_pass = os.environ.get('ggg')
-    my_email = "cejvanniekirk098@gmail.com"
-    receiver = "kirko190255@gmail.com" # TODO change to os after restart
-    message = f""""""
 
-    with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
-        smtp.ehlo()
-        smtp.starttls()
-        smtp.ehlo()
 
-        smtp.login(my_email, my_pass)
-        subject = "New Employer!"
-        body = message
 
-        msg = f"Subject: {subject}\n\n{body}"
+start_session(fakeIP, '', '')
 
-        smtp.sendmail(my_email, receiver, msg)
-#############################################################################################
+
+
+# returning_visitors
+# unique_visitors
+
+
+
+
+
+# create_new_table('unique_visitors')
+
+# list_tables_sqlite(db_name)
+
+# checking_table(db_name, 'unique_visitors')
 
 
 
@@ -205,5 +296,11 @@ def send_email():
 
 
 
-
-
+# def dri():
+#     db = sqlite3.connect(db_name)
+#     cur = db.cursor()
+#     cur.execute('drop table returning_visitors')
+#     db.commit()
+#     db.close()
+    
+# dri()
