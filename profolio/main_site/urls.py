@@ -17,5 +17,7 @@ urlpatterns = [
     
     
     #! view functions
-    path('user_left_site/', route_functions.user_left_site, name="user_left_site")
+    path('update_visitor_activity/', route_functions.update_visitor_activity, name='update_visitor_activity'),
+    path('userArrival/', route_functions.userArrival, name='userArrival'),
+    path('userleft/', route_functions.userleft, name='userleft'),
 ]   

@@ -68,7 +68,7 @@ def tt():
 
 
 
-tt()
+
 
 
 
@@ -215,8 +215,16 @@ def addSessionLogFor_UniqueVisitor(ip, startime, current_page, last_page, browse
     # data = api_request_ip_details(ip)
     print(startime)
     print(current_page)
-    print(last_page)
-    start_time = f"start: {current_page} - {startime} | {last_page}"
+    print(type(last_page))
+    
+    
+    start_time = ''
+    if last_page == None:
+        start_time = f"start: {current_page} - {str(startime).split('.')[0]} | ~ Arrival ~"
+        print(start_time)
+    else:
+        start_time = f"start: {current_page} - {str(startime).split('.')[0]} | {last_page}"
+        print(start_time)
     
     #TODO we need condional statements to check if last_page is None and if so put in some logic to handle that
     
@@ -270,10 +278,16 @@ def start_session(ip, startime, current_page, last_page, browser):
         
     
     
+    
+#. start: index - 1703077041.3099735 | ~ Arrival ~ :: start time - start of next is total time on first
+#. start: privacyPolicy - 1703077050.4775982 | http://127.0.0.1:8000/
 
 
+#. start: privacyPolicy - 1703077050.4775982 | http://127.0.0.1:8000/
+#. start: index - 1703077056.2225685 | http://127.0.0.1:8000/privacy-policy/
 
-start_session(fakeIP, '', '')
+
+# start_session(fakeIP, '', '')
 
 
 
@@ -281,7 +295,9 @@ start_session(fakeIP, '', '')
 # unique_visitors
 
 
+# a = api_request_ip_details(fakeIP)
 
+# print(a)
 
 
 # create_new_table('unique_visitors')

@@ -1,27 +1,7 @@
+
 <script>
-    window.addEventListener("beforeunload", function(event) {
 
-        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]');
-            const csrfValue = csrfToken.value;
-const dataToSend = { key1: 'true'};
 
-// Make an AJAX request to the Django backend
-fetch('/user_left_site/', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        "X-CSRFToken": csrfValue,
-        // Add any other headers as needed
-    },
-    body: JSON.stringify(dataToSend),
-})
-.then(response => response.json())
-.then(data => {
-    // Handle the response data
-    console.log(data.message);
-})
-.catch(error => {
-    console.error('Error:', error);
-});
-});
+
+
 </script>

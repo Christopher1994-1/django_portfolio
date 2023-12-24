@@ -10,8 +10,8 @@
 
 {% block content %}
 {% load static %}
-{% csrf_token %}
 
+    <input type="hidden" value="index" class="input_page">
 
     <h1 id="index_pageID">index</h1>
 
@@ -36,10 +36,8 @@
     {% include 'index_things/popup.html' %}
 
 
-
-    {% include 'index_things/unload_leave.html' %}
     <script src="{% static 'js/projects.js' %}"></script>
     <script src="{% static 'js/projectsHover.js' %}"></script>
-    <script src="{% static 'js/index_contact.js' %}"></script>
+    <script src="{% static 'js/index_.js' %}"></script>
 
 {% endblock content %}

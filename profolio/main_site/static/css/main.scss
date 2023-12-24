@@ -637,8 +637,9 @@ $github_image: url('/static/images/site_images/github.jpg');
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 2%;
-    margin-bottom: 20px;
+    background-color: #4B4D52;
+    padding-top: 2%;
+    padding-bottom: 2%;
 
 
     .info-side {
@@ -987,11 +988,11 @@ $github_image: url('/static/images/site_images/github.jpg');
 
                 button {
                     padding: 10px;
-                    background-color: #6088EE;
+                    background-color: #A2CFCD;
                     border: none;
                     border-radius: 10px;
                     width: 65%;
-                    color: white;
+                    color: #201F1F;
                     font-family: Arial, Helvetica, sans-serif;
                     font-weight: 600;
 

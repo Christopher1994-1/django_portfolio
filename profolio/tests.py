@@ -1,4 +1,5 @@
 import sqlite3
+import time
 
 
 
@@ -13,70 +14,6 @@ else:
 #= ------------------------------------------------ #
 
 fakeIP = '71.63.255.244'
-
-
-
-#. Function to create a new table within the main DB
-def create_new_table(table):
-    db = sqlite3.connect('main_profolioDB.db')
-    cur = db.cursor()
-    cur.execute(f"""CREATE TABLE IF NOT EXISTS {table} 
-                (id INTEGER PRIMARY KEY, 
-                name TEXT,
-                email TEXT,
-                ip TEXT,
-                country TEXT,
-                state TEXT, 
-                city TEXT,
-                zip_code TEXT,
-                asn TEXT, 
-                os TEXT,
-                browser TEXT,
-                refs_dur TEXT,
-                total_duration TEXT,
-                timestamp TEXT
-                )"""
-                )
-    db.commit()
-    db.close()
-
-
-#. List all the tables inside main DB
-def list_tables_sqlite(database_name):
-    conn = sqlite3.connect(database_name)
-    cursor = conn.cursor()
-
-    # Query to retrieve a list of all tables
-    cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
-    tables = cursor.fetchall()
-
-    conn.close()
-
-    table_names = [table[0] for table in tables]
-    for i in table_names:
-        print(i)
-
-
-
-#. Checking all the data within said table
-def checking_table(database_name, table):
-    db = sqlite3.connect(database_name)
-    cur = db.cursor()
-    cur.execute(f'SELECT * FROM {table}')
-    result = cur.fetchall()
-    db.commit()
-    db.close()
-    
-    for i in result:
-        print('-' * 40)
-        print(i)
-
-
-
-
-
-
-
 
 
 
@@ -207,40 +144,25 @@ def start_session(ip, startime, current_page, last_page, browser):
     #* If vistior has never been to the site before
     else:
         addSessionLogFor_UniqueVisitor(ip, startime, current_page)
-        
+
+
+
+
+a = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+b = a.split(' ')
+
+
+
+# try:
+#     browserSplit = 
+#     os_s = str(b[1]).replace('(', "")
+#     os_V = b[2]
+#     os_v2 = b[3]
+#     os_e = b[4]
+#     systemInfo = str((os_s, os_V, os_v2, os_e))
+#     browserType = str(b[10])
+#     print(browserType)
+# except:
+#     systemInfo = "Unknown"
+#     browserType = "Unknown"
     
-    
-
-
-
-start_session(fakeIP, '', '')
-
-
-
-# returning_visitors
-# unique_visitors
-
-
-
-
-
-# create_new_table('unique_visitors')
-
-# list_tables_sqlite(db_name)
-
-# checking_table(db_name, 'unique_visitors')
-
-
-
-
-
-
-
-# def dri():
-#     db = sqlite3.connect(db_name)
-#     cur = db.cursor()
-#     cur.execute('drop table returning_visitors')
-#     db.commit()
-#     db.close()
-    
-# dri()

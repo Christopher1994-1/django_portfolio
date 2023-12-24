@@ -23,7 +23,6 @@ def index(request):
     browser_type = request.META['HTTP_USER_AGENT']
 
     
-    
     #= making app function call to handle all above info
     app_functions.start_session(client_ip, starttime, current_page, last_page, browser_type)
     
@@ -67,7 +66,10 @@ def privacy_policy(request):
     last_page = request.META.get("HTTP_REFERER")
     browser_type = request.META['HTTP_USER_AGENT']
     current_page = "privacyPolicy"
-    starttime = str(datetime.datetime.now().strftime('%I:%M:%S %p')).split(' ')[0]
+    starttime = time.time()
+    client_ip, _ = get_client_ip(request)
+    
+    app_functions.start_session(client_ip, starttime, current_page, last_page, browser_type)
     
     return render(request, 'pages/privacy_policy.html', {})
 #.############################################################################################
