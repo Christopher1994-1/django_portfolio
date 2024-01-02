@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . import app_functions
+from . import app_functions, session_tracking
 import datetime 
 from django.template import *
 from django.http import HttpRequest, JsonResponse, HttpResponse
@@ -47,7 +47,11 @@ def userArrival(request):
         client_ip, _ = get_client_ip(request)
         activity = request.POST.get('popup_username') 
         visitor_activity = f"{activity} - {timestamp}"
-        app_functions.visitor_activity(visitor_activity, client_ip)
+        
+        browser_type = request.META['HTTP_USER_AGENT']
+        
+        
+        session_tracking.visitor_activity(visitor_activity, client_ip, browser_type)
     worked = ''
     return HttpResponse('Received data: {}'.format(worked))
 #.############################################################################################
@@ -77,7 +81,7 @@ def userleft(request):
         client_ip, _ = get_client_ip(request)
         activity = request.POST.get('popup_username') 
         visitor_activity = f"{activity} - {timestamp}"
-        app_functions.visitor_activity2(visitor_activity, client_ip)
+        session_tracking.visitor_activity2(visitor_activity, client_ip)
     worked = ''
     return HttpResponse('Received data: {}'.format(worked))
 #.############################################################################################

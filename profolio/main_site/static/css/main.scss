@@ -123,32 +123,6 @@ $github_image: url('/static/images/site_images/github.jpg');
             text-decoration: underline;
         }
 
-
-        #home-page {
-            opacity: 0;
-            transform: translateX(-100%);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        #about-page {
-            opacity: 0;
-            transform: translateX(-100%);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        #projects-page {
-            opacity: 0;
-            transform: translateX(-100%);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        #projects-page:hover {
-            color: white;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-        #contact-page {
-            opacity: 0;
-            transform: translateX(-100%);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
     }
 
     .hamburgerMenu {
@@ -441,6 +415,7 @@ $github_image: url('/static/images/site_images/github.jpg');
             font-family: Arial, Helvetica, sans-serif;
             font-weight: 500;
             text-decoration: none;
+            opacity: 1;
 
         }
         a:hover {
@@ -610,10 +585,8 @@ $github_image: url('/static/images/site_images/github.jpg');
             text-shadow: 3px 3px black;
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
-            opacity: 0;
-            transform: translateY(100%);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
             cursor: default;
+            opacity: 1;
         }
 
         h5 {
@@ -623,9 +596,6 @@ $github_image: url('/static/images/site_images/github.jpg');
             text-shadow: 3px 3px black;
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
-            opacity: 0;
-            transform: translateY(100%);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
     }
 }
@@ -1142,9 +1112,6 @@ $github_image: url('/static/images/site_images/github.jpg');
             text-shadow: 3px 3px black;
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
-            opacity: 0;
-            transform: translateY(100%);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
             cursor: default;
         }
 
@@ -1155,9 +1122,6 @@ $github_image: url('/static/images/site_images/github.jpg');
             text-shadow: 3px 3px black;
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
-            opacity: 0;
-            transform: translateY(100%);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
     }
 }

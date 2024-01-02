@@ -10,6 +10,8 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('tests/', views.tests, name='tests'),
     path('privacy-policy/', views.privacy_policy, name="privacy_policy"),
+    path('projects/', views.projects, name="projects"),
+    
     
     
     

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+    <title>Projects | CEJ Kirk</title>
+{% endblock title%}
+
+{% block content %}
+<h1 id="index_pageID">privacyPage</h1>
+
+<input type="hidden" value="projects" class="input_page">
+
+
+<div class="jumbotron1">
+    {% load static %}   
+
+    
+      <div class="main_stuff">
+        <h1 id="jumbotron_h1">See all projects</h1>
+        <h5 id="jumbotron_h5">Frontend - Backend</h5>
+      </div>
+    
+
+</div>
+
+
+
+<script src="{% static 'js/index_.js' %}"></script>
+
+{% endblock content %}
+

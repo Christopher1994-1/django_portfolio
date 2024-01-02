@@ -26,7 +26,8 @@ def create_new_table(table):
                 browser TEXT,
                 refs_dur TEXT,
                 total_duration TEXT,
-                timestamp TEXT
+                timestamp TEXT,
+                visits TEXT
                 )"""
                 )
     db.commit()
@@ -128,59 +129,8 @@ rt = "returning_visitors"
 un=  'unique_visitors'
 
 
-activity = '[(index loaded - 6)],(index loaded - 2)],(index loaded - 8)]',
 
-
-def update_leavingActivity(activity):
-    #! removing Bracets and isloating values
-    removingBrackets = activity.strip('[]').split(',')
-
-
-    # empty list to grab only the latest activity
-    new_list = []
-
-    for i in removingBrackets:
-        if i == ' ' or i == '':
-            pass
-        else:
-            new_list.append(i.strip())
-
-    #! grabbing last index number of list, so that we always edit the latest activity
-    lastListIndex = int(len(new_list)) - 1
-
-    #| code to get the time of the page activity
-    latestActivity = new_list[lastListIndex]
-    LA_time = int(str(latestActivity).split('-')[1].replace(')', '').strip())
-    now = int(str(time.time()).split('.')[0])
-    time_Spent_On_Page = now - LA_time
-
-    #= code to get the page details of the latest activity
-    page = str(latestActivity).split('-')[0].replace('(', '').strip()
-
-    #, formatting the final str to add to db
-    formattedString = f"({page} - {time_Spent_On_Page})"
-    new_list.pop(lastListIndex)
-    new_list.append(formattedString)
-    list_to_Str = ','.join(new_list)
-    updatedActivity = list_to_Str
-    
-    return updatedActivity
-
-#, calcuate the time.time() with LA_time
-#, then format it into a new string
-
-
-
-
-
-
-selectingALL(db_name, un)
 # deleteFromTable(db_name, un)
-
-
-
-
-a = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-
+selectingALL(db_name, un)
 
 

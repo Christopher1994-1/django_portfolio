@@ -2,7 +2,7 @@
 window.addEventListener('load', () => {
     const on_page = document.querySelector('.input_page');
     const on_pageValue = on_page.value;
-    let returnValue = `${on_pageValue} loaded`;
+    let returnValue = `${on_pageValue} `;
     let returnValue2 = `${on_pageValue} closed`;
     userLeftSite(returnValue);
     window.addEventListener('beforeunload', () => {

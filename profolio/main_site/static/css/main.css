@@ -77,31 +77,6 @@
 .navbar .links a:hover {
   text-decoration: underline;
 }
-.navbar .links #home-page {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.navbar .links #about-page {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.navbar .links #projects-page {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.navbar .links #projects-page:hover {
-  color: white;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.navbar .links #contact-page {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
 .navbar .hamburgerMenu {
   display: none;
 }
@@ -343,6 +318,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   text-decoration: none;
+  opacity: 1;
 }
 .navbar2 .links a:hover {
   text-decoration: underline;
@@ -480,10 +456,8 @@
   text-shadow: 3px 3px black;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   cursor: default;
+  opacity: 1;
 }
 .jumbotron .main_stuff h5 {
   color: white;
@@ -492,9 +466,6 @@
   text-shadow: 3px 3px black;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .info-area {
@@ -897,9 +868,6 @@
   text-shadow: 3px 3px black;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   cursor: default;
 }
 .jumbotron1 .main_stuff h5 {
@@ -909,9 +877,6 @@
   text-shadow: 3px 3px black;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .privacy {
