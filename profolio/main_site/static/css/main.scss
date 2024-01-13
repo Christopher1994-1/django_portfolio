@@ -1158,3 +1158,138 @@ $github_image: url('/static/images/site_images/github.jpg');
         font-weight: 500;
     }
 }
+
+
+
+
+
+
+
+
+
+.projects2_container {
+    width: 95%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+
+    #projects_paragraphID {
+        width: 80%;
+    }
+
+
+    .top_section {
+        text-align: end;
+        display: flex;
+        width: 11%;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: auto;
+        margin-bottom: 0;
+
+        p {
+            cursor: pointer;
+            padding: 0;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        } 
+        i {
+            cursor: pointer;
+        }
+    }
+
+    hr {
+        margin-top: 0;
+    }
+
+
+    .project_area {
+        border: $border-white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 10px;
+        overflow: auto;
+        max-height: 400px;
+
+        .project {
+            border: $border-white-dotted;
+            width: 74%;
+            border-radius: 10px;
+
+            img {
+                object-fit: cover;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+
+
+            .info_stuff {
+                padding: 5px;
+                background-color: #FAF8FF;
+                
+
+                h5 {
+                    color: rgb(0, 0, 0);
+                }
+
+                .tags {
+                    display: flex;
+
+                    p {
+                        background-color: #d7d7d7;
+                        padding: 2px;
+                        border-radius: 10px;
+                        cursor: default;
+                        color: black;
+                        width: 50px;
+                        text-align: center;
+                        margin-right: 5px;
+
+                    }
+                }
+
+                p {
+                    font-size: 12px;
+                    width: 90%;
+                    margin-top: 10px;
+                    color: black;
+                    
+                }
+
+            }
+
+            .button {
+                text-align: end;
+                padding: 0;
+                margin: 0;
+                background-color: #FAF8FF;
+
+                a {
+                    margin-right: 10px;
+
+                    button {
+                        border: none;
+                        margin-bottom: 10px;
+                        background-color: #B7E4EE;
+                        border-radius: 10px;
+                        font-size: 15px;
+                        color: rgb(0, 0, 0);
+                        font-weight: 500;
+                        padding: 5px;
+                        width: 35%;
+    
+                    }
+                }
+
+            }
+
+
+        }
+
+    }
+}

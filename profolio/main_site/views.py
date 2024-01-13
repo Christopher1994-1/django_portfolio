@@ -6,6 +6,7 @@ from django.http import HttpRequest, JsonResponse
 import json
 from ipware import get_client_ip
 import time
+from .models import Projects
 
 
 # Create your views here.
@@ -22,7 +23,12 @@ def index(request):
     #! year for the footer
     year = str(datetime.datetime.now()).split(' ')[0].split('-')[0]
     
-    return render(request, 'index.html', {"year": year,})
+
+    posts = Projects.objects.all()
+    
+    context = {"year": year, "posts":posts}
+    
+    return render(request, 'index.html', context)
 #.############################################################################################
 
 

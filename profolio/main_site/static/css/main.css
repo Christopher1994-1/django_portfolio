@@ -903,4 +903,104 @@
   cursor: default;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
+}
+
+.projects2_container {
+  width: 95%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.projects2_container #projects_paragraphID {
+  width: 80%;
+}
+.projects2_container .top_section {
+  text-align: end;
+  display: flex;
+  width: 11%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  margin-bottom: 0;
+}
+.projects2_container .top_section p {
+  cursor: pointer;
+  padding: 0;
+}
+.projects2_container .top_section p:hover {
+  text-decoration: underline;
+}
+.projects2_container .top_section i {
+  cursor: pointer;
+}
+.projects2_container hr {
+  margin-top: 0;
+}
+.projects2_container .project_area {
+  border: 2px solid white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+  overflow: auto;
+  max-height: 400px;
+}
+.projects2_container .project_area .project {
+  border: 2px dotted white;
+  width: 74%;
+  border-radius: 10px;
+}
+.projects2_container .project_area .project img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.projects2_container .project_area .project .info_stuff {
+  padding: 5px;
+  background-color: #FAF8FF;
+}
+.projects2_container .project_area .project .info_stuff h5 {
+  color: rgb(0, 0, 0);
+}
+.projects2_container .project_area .project .info_stuff .tags {
+  display: flex;
+}
+.projects2_container .project_area .project .info_stuff .tags p {
+  background-color: #d7d7d7;
+  padding: 2px;
+  border-radius: 10px;
+  cursor: default;
+  color: black;
+  width: 50px;
+  text-align: center;
+  margin-right: 5px;
+}
+.projects2_container .project_area .project .info_stuff p {
+  font-size: 12px;
+  width: 90%;
+  margin-top: 10px;
+  color: black;
+}
+.projects2_container .project_area .project .button {
+  text-align: end;
+  padding: 0;
+  margin: 0;
+  background-color: #FAF8FF;
+}
+.projects2_container .project_area .project .button a {
+  margin-right: 10px;
+}
+.projects2_container .project_area .project .button a button {
+  border: none;
+  margin-bottom: 10px;
+  background-color: #B7E4EE;
+  border-radius: 10px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  padding: 5px;
+  width: 35%;
 }/*# sourceMappingURL=main.css.map */
