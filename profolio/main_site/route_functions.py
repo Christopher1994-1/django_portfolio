@@ -7,7 +7,10 @@ import json
 from . import views
 import time
 from ipware import get_client_ip
+import sqlite3
 
+
+db_path = 'db.sqlite3'
 
 
 
@@ -85,3 +88,32 @@ def userleft(request):
     worked = ''
     return HttpResponse('Received data: {}'.format(worked))
 #.############################################################################################
+
+
+
+
+
+#==============================================================================================
+#! Function
+#* Function that searches the Projects table for given id
+def quickshot_search_query(request):
+    post_id = int(request.GET.get('id', ''))
+    tableName = 'main_site_projects'
+    
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+
+    # Use multiple LIKE conditions for each column
+    cursor.execute(f"SELECT * FROM {tableName} WHERE id = ?", (post_id,))
+
+    result = cursor.fetchall()[0]
+
+    conn.commit()
+    conn.close()
+
+    print(result)
+    
+    data = {'data': result}
+    
+    
+    return JsonResponse(data)

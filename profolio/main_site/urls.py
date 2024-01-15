@@ -22,4 +22,5 @@ urlpatterns = [
     path('update_visitor_activity/', route_functions.update_visitor_activity, name='update_visitor_activity'),
     path('userArrival/', route_functions.userArrival, name='userArrival'),
     path('userleft/', route_functions.userleft, name='userleft'),
+    path('quickshot_search_query/', route_functions.quickshot_search_query, name='quickshot_search_query'),
 ]   

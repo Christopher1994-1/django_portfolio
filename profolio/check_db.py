@@ -4,6 +4,7 @@ import time
 
 
 db_name = "main_profolioDB.db"
+db_name2 = 'db.sqlite3'
 
 
 
@@ -131,6 +132,12 @@ un=  'unique_visitors'
 
 
 # deleteFromTable(db_name, un)
-selectingALL(db_name, un)
+# selectingALL(db_name, un)
+
+
+check_columns_sqlite('db.sqlite3', 'main_site_projects')
+
+
+
 
 

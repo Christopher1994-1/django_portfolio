@@ -3,23 +3,38 @@
     {% for project in posts %}
 
     <div class="project_container">
-        <!-- .project_container has the style of display grid-->
+
             <div class="project">
-                <!-- .project has a width and i want it to match the size of the image -->
+
                 <img src="{{ project.imageCover }}" alt="{{ project.title }} image">
             
                 <div class="info_stuff">
-                    <h5>{{ project.title }}</h5>
+                    <div class="title-bolt">
+                        <h5>{{ project.title }}</h5>
+                        <i class="fa-solid fa-bolt-lightning" style="cursor: pointer;" onclick="open_quickshot_project('{{project.id}}')"></i>
+                    </div>
         
                     <div class="tags">
-                        {% for tag in project.technologies_used.split %}
-                            <p id="tags">{{ tag.title }}</p >
-                        {% endfor %}
+
+                        {% if project.technologies_used.split|length > 4 %}
+
+                            {% for tag in project.technologies_used.split|slice:":4" %}
+                                <p id="tags">{{ tag.title }}</p >
+                            {% endfor %}
+                            <i class="fa-solid fa-plus smallplus"></i>
+                            
+                        {% else %}
+                            {% for tag in project.technologies_used.split %}
+                                <p id="tags">{{ tag.title }}</p >
+                            {% endfor %}
+                        {% endif %}
+
                     </div>
                     <p>{{ project.short_description }}</p>
                 </div>
     
                 <div class="button">
+                    <p>{{ project.project_type.title }}</p>
                     <a href="#"><button>Learn More</button></a>
                 </div>
 
@@ -31,3 +46,6 @@
 
     {% endfor %}
 </div>
+
+
+
