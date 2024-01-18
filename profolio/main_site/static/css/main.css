@@ -9,6 +9,19 @@
   display: none;
 }
 
+.quickshot-button-class {
+  background-color: #6088EE;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: ease-out 0.5s;
+}
+.quickshot-button-class:hover {
+  background-color: #4763ac;
+}
+
 #index_pageID {
   position: absolute;
   visibility: hidden;
@@ -993,7 +1006,10 @@
   border-radius: 10px;
   cursor: default;
   color: black;
-  width: 50px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
   margin-right: 5px;
 }
@@ -1110,6 +1126,7 @@
 .entryWarning .popup-content .image_div_tags .tagsandMore h5 {
   margin-bottom: 0px;
   color: black;
+  cursor: default;
 }
 .entryWarning .popup-content .image_div_tags .tagsandMore .tags {
   display: flex;
@@ -1145,14 +1162,11 @@
   margin-left: 40px;
   margin-bottom: 20px;
 }
-.entryWarning .popup-content .buttons_stuff button {
-  background-color: #6088EE;
-  border-radius: 10px;
-  padding: 10px;
-  color: white;
-  border: none;
+.entryWarning .popup-content .buttons_stuff #link2gitubID {
   width: 10%;
-  font-weight: 600;
+}
+.entryWarning .popup-content .buttons_stuff #learnMoreQuickShot {
+  width: 15%;
 }
 .entryWarning .close {
   position: absolute;

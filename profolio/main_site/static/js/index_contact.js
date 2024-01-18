@@ -3,6 +3,21 @@ let project_quickView = document.getElementById('entryWarningID');
 let project_title = document.getElementById('project_titleID');
 let projectImage = document.getElementById('popupImageID');
 let projectImageLink = document.getElementById('imageLINKID');
+function add_links(links_array) {
+    let gitHubButton = document.getElementById('link2gitubID');
+    let gitHubLink = links_array[0];
+    gitHubButton.href = gitHubLink;
+    gitHubButton.target = "_blank";
+}
+function add_useCaes(data) {
+    let useCaes_container = document.getElementById('casesID');
+    data.forEach(function (value, index) {
+        var newElement = document.createElement('p');
+        newElement.textContent = `#${value.trim()}`;
+        useCaes_container.appendChild(newElement);
+    });
+}
+;
 function add_tags(data) {
     let tags_container = document.getElementById('tagsID');
     data.forEach(function (value, index) {
@@ -14,13 +29,13 @@ function add_tags(data) {
 }
 function add_para(data) {
     let value = data;
-    console.log(value);
     let paraContainer = document.getElementById('shortDID');
     var newElement = document.createElement('p');
     newElement.textContent = `${value}`;
     paraContainer.appendChild(newElement);
 }
 function open_quickshot_projectHTML(data) {
+    var _a;
     project_quickView.style.display = 'flex';
     project_title.innerHTML = data[1];
     projectImageLink.href = '';
@@ -28,10 +43,16 @@ function open_quickshot_projectHTML(data) {
     projectImage.alt = data[1];
     document.getElementById('tagsID').innerHTML = '';
     document.getElementById('shortDID').innerHTML = '';
+    (_a = document.getElementById('casesID')) === null || _a === void 0 ? void 0 : _a.innerHTML = '';
     let tags = `${data[3]}`.split(',');
     let para = data[8];
+    let useCases = `${data[13]}`.split(',');
+    let githubLink = data[7];
+    let links_array = [githubLink,];
     add_tags(tags);
     add_para(para);
+    add_useCaes(useCases);
+    add_links(links_array);
 }
 function closePopup() {
     project_quickView.style.display = 'none';

@@ -40,6 +40,20 @@ $github_image: url('/static/images/site_images/github.jpg');
 
 
 
+.quickshot-button-class {
+    background-color: #6088EE;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    border: none;
+    font-weight: 600;
+    transition: ease-out 0.5s;
+
+    &:hover {
+        background-color: #4763ac;
+    }
+}
+
 
 
 // to prove we are on index page
@@ -1277,7 +1291,9 @@ $memberPopup: 401;
                         border-radius: 10px;
                         cursor: default;
                         color: black;
-                        width: 50px;
+                        width: fit-content;
+                        padding-left: 10px;
+                        padding-right: 10px;
                         text-align: center;
                         margin-right: 5px;
 
@@ -1425,6 +1441,7 @@ $memberPopup: 401;
                 h5 {
                     margin-bottom: 0px;
                     color: black;
+                    cursor: default;
 
                 }
 
@@ -1455,6 +1472,8 @@ $memberPopup: 401;
 
                 }
 
+
+
             }
 
         }
@@ -1479,14 +1498,12 @@ $memberPopup: 401;
             margin-left: 40px;
             margin-bottom: 20px;
 
-            button {
-                background-color: #6088EE;
-                border-radius: 10px;
-                padding: 10px;
-                color: white;
-                border: none;
+            #link2gitubID {
                 width: 10%;
-                font-weight: 600;
+            }
+
+            #learnMoreQuickShot {
+                width: 15%;
             }
 
         }

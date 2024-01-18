@@ -129,13 +129,21 @@ def deleteFromTable(db, name):
 rt = "returning_visitors"
 un=  'unique_visitors'
 
+#.
+#=
+#,
+#!
+#3
+#*
+#| 
+
 
 
 # deleteFromTable(db_name, un)
 # selectingALL(db_name, un)
 
 
-check_columns_sqlite('db.sqlite3', 'main_site_projects')
+# check_columns_sqlite('db.sqlite3', 'main_site_projects')
 
 
 
