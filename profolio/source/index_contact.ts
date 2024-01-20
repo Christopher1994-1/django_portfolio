@@ -161,3 +161,241 @@ img.addEventListener("mouseout", () => {
   liveDemoButton.style.display = "none";
   img.style.filter = 'brightness(1)';
 });
+
+
+//======================================================================================================================
+//, Filter Logic
+
+
+//* filter button
+let filterButton:any = document.getElementById('filterID');
+
+//* filter popup container
+let filterContainer:any = document.getElementById('filter_popupID');
+
+
+//* filter close button id
+let filterCloseButton:any = document.getElementById('filterCloseID');
+
+
+//* logic that handles when user clicks filter button
+filterButton.addEventListener('click', () => {
+    filterContainer.style.display = 'flex';
+});
+
+
+//* logic that handles when user clicks fliter CLOSE button
+filterCloseButton.addEventListener('click', () => {
+    filterContainer.style.display = 'none';
+});
+
+
+//, logic for when filtered things clicked
+
+
+let filtered:any = [];
+let IDs_clicked:any = [];
+
+
+//====================================================================
+//, USE CASES
+// APIs use cases
+let api_thing:any = document.getElementById('useCases_filter_APIs');
+api_thing.addEventListener('click', () => {
+    api_thing.style.backgroundColor = 'grey';
+    filtered.push('apis');
+    IDs_clicked.push("useCases_filter_APIs");
+});
+
+// Data Focused
+let dataFocused:any = document.getElementById('useCases_filter_data-focused');
+dataFocused.addEventListener('click', () => {
+    dataFocused.style.backgroundColor = 'grey';
+    filtered.push('data focused');
+    IDs_clicked.push('useCases_filter_data-focused');
+});
+
+// Error Handling
+let errorHandling_:any = document.getElementById('useCases_filter_error-handling');
+errorHandling_.addEventListener('click', () => {
+    errorHandling_.style.backgroundColor = 'grey';
+    filtered.push('error handling');
+    IDs_clicked.push('useCases_filter_error-handling');
+});
+
+// Online Payment
+let onlinePayments_:any = document.getElementById('useCases_filter_online-payments');
+onlinePayments_.addEventListener('click', () => {
+    onlinePayments_.style.backgroundColor = 'grey';
+    filtered.push('online payment');
+    IDs_clicked.push('useCases_filter_online-payments');
+});
+
+// Data Collecting
+let dataCollecting_:any = document.getElementById('useCases_filter_data-collecting');
+dataCollecting_.addEventListener('click', () => {
+    dataCollecting_.style.backgroundColor = 'grey';
+    filtered.push('data collecting');
+    IDs_clicked.push('useCases_filter_data-collecting');
+});
+
+// Web Frameworks
+let webFrameworks_:any = document.getElementById('useCases_filter_web-frameworks');
+webFrameworks_.addEventListener('click', () => {
+    webFrameworks_.style.backgroundColor = 'grey';
+    filtered.push('web frameworks');
+    IDs_clicked.push('useCases_filter_web-frameworks');
+});
+
+// Desktop Development
+let desktopDev_:any = document.getElementById('useCases_filter_desktop-development');
+desktopDev_.addEventListener('click', () => {
+    desktopDev_.style.backgroundColor = 'grey';
+    filtered.push('desktop development');
+    IDs_clicked.push('useCases_filter_desktop-development');
+});
+//============================================================================
+
+
+
+
+
+
+//=============================================================================
+//, TECH USED
+
+//* Python
+let python__:any = document.getElementById('techUsed_filter_python');
+python__.addEventListener('click', () => {
+    python__.style.backgroundColor = 'grey';
+    filtered.push('python');
+    IDs_clicked.push('techUsed_filter_python');
+});
+
+//* TypeScript
+let ts_:any = document.getElementById('techUsed_filter_typescript');
+ts_.addEventListener('click', () => {
+    ts_.style.backgroundColor = 'grey';
+    filtered.push('typescript');
+    IDs_clicked.push('techUsed_filter_typescript');
+});
+
+//* JavaScript
+let js__:any = document.getElementById('techUsed_filter_javascript');
+js__.addEventListener('click', () => {
+    js__.style.backgroundColor = 'grey';
+    filtered.push('javascript');
+    IDs_clicked.push('techUsed_filter_javascript');
+});
+
+//* SCSS
+let scss_:any = document.getElementById('techUsed_filter_scss');
+scss_.addEventListener('click', () => {
+    scss_.style.backgroundColor = 'grey';
+    filtered.push('scss');
+    IDs_clicked.push('techUsed_filter_scss');
+});
+
+//* CSS
+let css_:any = document.getElementById('techUsed_filter_css');
+css_.addEventListener('click', () => {
+    css_.style.backgroundColor = 'grey';
+    filtered.push('css');
+    IDs_clicked.push('techUsed_filter_css');
+});
+
+//* Django
+let django_:any = document.getElementById('techUsed_filter_django');
+django_.addEventListener('click', () => {
+    django_.style.backgroundColor = 'grey';
+    filtered.push('django');
+    IDs_clicked.push('techUsed_filter_django');
+});
+
+//* flask
+let flask_:any = document.getElementById('techUsed_filter_flask');
+flask_.addEventListener('click', () => {
+    flask_.style.backgroundColor = 'grey';
+    filtered.push('flask');
+    IDs_clicked.push('techUsed_filter_flask');
+});
+
+//==============================================================================
+
+
+
+
+
+
+
+
+//==============================================================================
+//, Type
+
+//* Full Stack App
+let fullStackAPp_:any = document.getElementById('type_full-stack-app');
+fullStackAPp_.addEventListener('click', () => {
+    fullStackAPp_.style.backgroundColor = 'grey';
+    filtered.push('full stack app');
+    IDs_clicked.push('type_full-stack-app');
+});
+
+
+//* Server Side App
+let serverSideApp_:any = document.getElementById('type_server-side-app');
+serverSideApp_.addEventListener('click', () => {
+    serverSideApp_.style.backgroundColor = 'grey';
+    filtered.push('server side app');
+    IDs_clicked.push('type_server-side-app');
+});
+
+
+//* Client Side App
+let clientSideApp_:any = document.getElementById('type_client-side-app');
+clientSideApp_.addEventListener('click', () => {
+    clientSideApp_.style.backgroundColor = 'grey';
+    filtered.push('client side app');
+    IDs_clicked.push('type_client-side-app');
+});
+
+
+//==============================================================================
+
+
+
+
+
+
+
+
+
+
+
+//============================================================================================
+//, Handling REST or FILTER buttons
+
+//* reset button
+let resetFilterButton:any = document.getElementById('reset_filter_button');
+
+//* filter button
+let filterFilterButton:any = document.getElementById('filter_filter_button')
+
+
+//* action that happens when reset button is clicked
+resetFilterButton.addEventListener('click', () => {
+    filtered.length = '';
+
+    for (let clicked of IDs_clicked) {
+        let dd:any = document.getElementById(`${clicked}`)
+        dd.style.backgroundColor = '#333'; 
+    }
+    IDs_clicked.length = '';
+})
+
+
+//* action that happens when filter button is clicked
+filterFilterButton.addEventListener('click', () => {
+    filterContainer.style.display = 'none';
+})
+
+

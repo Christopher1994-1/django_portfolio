@@ -110,8 +110,6 @@ def quickshot_search_query(request):
 
     conn.commit()
     conn.close()
-
-    print(result)
     
     data = {'data': result}
     
