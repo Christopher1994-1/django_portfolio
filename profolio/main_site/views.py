@@ -77,14 +77,25 @@ def privacy_policy(request):
 
 #=============================================================================================
 #* Route for the all projects page
-def projects(request):
-
+def projects(request, filters):
+    context = {}
+    
+    if filters == 'all':
+        projects_ = Projects.objects.all()
+        context = {'projects':projects_}
+        
+    else:
+        filterTerms = str(filters).split(',')
+        
+    
+    print(filters)
+        
     browser_type = request.META['HTTP_USER_AGENT']
     client_ip, _ = get_client_ip(request)
     
     app_functions.start_session(client_ip, browser_type)
     
-    return render(request, 'pages/projects.html', {})
+    return render(request, 'pages/projects.html', context)
 #.############################################################################################
 
 

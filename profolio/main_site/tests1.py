@@ -1,6 +1,7 @@
 from django.test import TestCase
 import datetime
 import sqlite3
+from .models import Projects
 
 # Create your tests here
 
@@ -320,3 +321,19 @@ def start_session(ip, startime, current_page, last_page, browser):
 #     db.close()
     
 # dri()
+
+
+
+
+def filter_UseCases(useCases):
+    queryset = ''
+    
+    for case in useCases:
+        queryset = Projects.objects.filter(use_cases__in=case)
+    
+    print(queryset)
+    
+    
+fd = ['data focused', 'error handling']
+    
+filter_UseCases(fd)

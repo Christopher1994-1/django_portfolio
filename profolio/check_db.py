@@ -1,6 +1,7 @@
 import sqlite3
 import datetime
 import time
+# from main_site import models
 
 
 db_name = "main_profolioDB.db"
@@ -139,6 +140,7 @@ un=  'unique_visitors'
 
 
 
+
 # deleteFromTable(db_name, un)
 # selectingALL(db_name, un)
 
@@ -146,6 +148,34 @@ un=  'unique_visitors'
 # check_columns_sqlite('db.sqlite3', 'main_site_projects')
 
 
+def clean_filter_string(listee):
+    mainT = []
+    round1 = str(stringg).split('|')
+    useCases = str(round1[1]).split(',')
+    for i in useCases:
+        if i == ',':
+            pass
+        elif i == ' ':
+            pass
+        elif i == '':
+            pass
+        else:
+            mainT.append(str(i).strip())
+    return mainT
 
 
 
+
+def filter_UseCases(useCases):
+    for case in useCases:
+        # queryset = models.Projects.objects.filter(use_cases__in=case)
+        pass
+    
+
+#! Need to send 
+
+
+stringg = '|, data focused, error handling, |, typescript, scss, |'
+
+a = clean_filter_string(stringg)
+print(a)

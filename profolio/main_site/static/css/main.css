@@ -1276,7 +1276,19 @@
   margin-top: 2%;
   justify-content: end;
 }
-.filter_popup .popup-content .buttons button {
+.filter_popup .popup-content .buttons a button {
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #89AAA9;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: black;
+  width: 120px;
+}
+.filter_popup .popup-content .buttons #reset_filter_button {
   margin-right: 10px;
   border: none;
   border-radius: 10px;
@@ -1287,5 +1299,5 @@
   font-weight: 600;
   font-size: 12px;
   color: black;
-  width: 15%;
+  width: 120px;
 }/*# sourceMappingURL=main.css.map */
