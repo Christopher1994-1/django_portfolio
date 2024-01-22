@@ -1,7 +1,6 @@
 from django.test import TestCase
 import datetime
 import sqlite3
-from .models import Projects
 
 # Create your tests here
 
@@ -323,13 +322,14 @@ def start_session(ip, startime, current_page, last_page, browser):
 # dri()
 
 
-
+from main_site.models import Projects
 
 def filter_UseCases(useCases):
     queryset = ''
     
     for case in useCases:
-        queryset = Projects.objects.filter(use_cases__in=case)
+        # queryset = Projects.objects.filter(use_cases__in=case)
+        pass
     
     print(queryset)
     

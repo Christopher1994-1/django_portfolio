@@ -75,20 +75,56 @@ def privacy_policy(request):
 
 
 
+
+
+
+
+#=============================================================================================
+#* Function to filter out projects based on lists
+
+def filter_projects(stringgg):
+    queryset1 = ''
+    if stringgg:
+        #! maybe do manuel sql commands to search for the ones that contain data and then get those IDs and do a filter search with that to 
+        #! return query object
+        queryset1 = Projects.objects.filter(use_cases__contains=stringgg)
+        if queryset1:
+            return queryset1
+        else:
+            queryset2 = Projects.objects.filter(technologies_used__icontains=stringgg)
+            return queryset2
+
+    else:
+        print('bad')
+    
+#.############################################################################################
+
+
+
+
+
+
+
 #=============================================================================================
 #* Route for the all projects page
 def projects(request, filters):
     context = {}
+
     
     if filters == 'all':
         projects_ = Projects.objects.all()
-        context = {'projects':projects_}
+        title = 'See all Projects'
+        secondTitle = 'Frontend - Backend'
+        context = {'project':projects_, 'pageTitle': title, 'secondTitle': secondTitle}
         
     else:
-        filterTerms = str(filters).split(',')
+        projects1 = filter_projects(filters)
+        title = 'Filtered Projects'
+        secondTitle = str(filters).split(',')[:4]
+        secondTitle2 = ''.join(secondTitle) + '...'
+        context = {'project':projects1, 'pageTitle': title, 'secondTitle': secondTitle2}
         
     
-    print(filters)
         
     browser_type = request.META['HTTP_USER_AGENT']
     client_ip, _ = get_client_ip(request)

@@ -1,0 +1,52 @@
+<div class="project_area">
+
+    {% if project %}
+        {% for project1 in project %}
+
+        <div class="project_container">
+
+                <div class="project">
+
+                    <img src="{{ project1.imageCover }}" alt="{{ project1.title }} image">
+                
+                    <div class="info_stuff">
+                        <div class="title-bolt">
+                            <h5>{{ project1.title }}</h5>
+                            <i class="fa-solid fa-bolt-lightning" style="cursor: pointer;" onclick="open_quickshot_project('{{project1.id}}')"></i>
+                        </div>
+            
+                        <div class="tags">
+
+                            {% if project1.technologies_used.split|length > 4 %}
+
+                                {% for tag in project1.technologies_used.split|slice:":4" %}
+                                    <p id="tags">{{ tag.title }}</p >
+                                {% endfor %}
+                                <i class="fa-solid fa-plus smallplus"></i>
+                                
+                            {% else %}
+                                {% for tag in project1.technologies_used.split %}
+                                    <p id="tags">{{ tag.title }}</p >
+                                {% endfor %}
+                            {% endif %}
+
+                        </div>
+                        <p>{{ project1.short_description }}</p>
+                    </div>
+        
+                    <div class="button">
+                        <p>{{ project1.project_type.title }}</p>
+                        <a href="#"><button>Learn More</button></a>
+                    </div>
+
+                </div>
+
+
+        </div>
+    {% endfor %}
+    {% else %}
+        <h1 style="color: white; font-family: Arial, Helvetica, sans-serif; width: 100%;">Sorry, but there was no projects with your filtered criteria</h1>
+    {% endif %}
+
+
+</div>

@@ -17,16 +17,53 @@
 
     
       <div class="main_stuff">
-        <h1 id="jumbotron_h1">See all projects</h1>
-        <h5 id="jumbotron_h5">Frontend - Backend</h5>
+        <h1 id="jumbotron_h1">{{ pageTitle }}</h1>
+        <h5 id="jumbotron_h5">{{ secondTitle }}</h5>
       </div>
     
 
 </div>
 
 
+<div class="projects2_container">
+  <h3 id="project_showcase_headerID">Project Showcase Center</h3>
+  <p id="projects_paragraphID">
+      Step into my project showcase hub an easy and intuitive space designed 
+      to help you connect to the expertise you are looking for. Effortlessly 
+      navigate through them or refine your search based on specific criteria 
+      such as technologies, frameworks, backend or frontend experience. Click 
+      through them or filter and search for specific technologies, frameworks, 
+      backend or frontend ability etc. 
+  </p>
+
+  <div class="top_section">
+      <div class="info">
+          <small>Click <i class="fa-solid fa-bolt-lightning"></i> to get quick snap of the project.</small>
+      </div>
+
+      <div class="otherstuff">
+          <p id="filterID">Filter</p>
+          <p>Sort</p>
+          <p><i class="fa-solid fa-magnifying-glass"></i></p>
+
+      </div>
+  </div>
+  <hr>
+
+  {% include 'miscellaneous/projects_projects.html' %}
+
+</div>
+
+
+
+{% include 'miscellaneous/project_quickview.html' %}
+
+{% include 'miscellaneous/filter_popup.html' %}
+
+
 
 <script src="{% static 'js/index_.js' %}"></script>
+<script src="{% static 'js/index_contact.js' %}"></script>
 
 {% endblock content %}
 

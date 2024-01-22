@@ -107,104 +107,104 @@ let techUsed_ = ['|'];
 let api_thing = document.getElementById('useCases_filter_APIs');
 api_thing.addEventListener('click', () => {
     api_thing.style.backgroundColor = 'grey';
-    useCases_.push('apis');
+    filtered.push('apis');
     IDs_clicked.push("useCases_filter_APIs");
 });
 let dataFocused = document.getElementById('useCases_filter_data-focused');
 dataFocused.addEventListener('click', () => {
     dataFocused.style.backgroundColor = 'grey';
-    useCases_.push('data focused');
+    filtered.push('data focused');
     IDs_clicked.push('useCases_filter_data-focused');
 });
 let errorHandling_ = document.getElementById('useCases_filter_error-handling');
 errorHandling_.addEventListener('click', () => {
     errorHandling_.style.backgroundColor = 'grey';
-    useCases_.push('error handling');
+    filtered.push('error handling');
     IDs_clicked.push('useCases_filter_error-handling');
 });
 let onlinePayments_ = document.getElementById('useCases_filter_online-payments');
 onlinePayments_.addEventListener('click', () => {
     onlinePayments_.style.backgroundColor = 'grey';
-    useCases_.push('online payment');
+    filtered.push('online payment');
     IDs_clicked.push('useCases_filter_online-payments');
 });
 let dataCollecting_ = document.getElementById('useCases_filter_data-collecting');
 dataCollecting_.addEventListener('click', () => {
     dataCollecting_.style.backgroundColor = 'grey';
-    useCases_.push('data collecting');
+    filtered.push('data collecting');
     IDs_clicked.push('useCases_filter_data-collecting');
 });
 let webFrameworks_ = document.getElementById('useCases_filter_web-frameworks');
 webFrameworks_.addEventListener('click', () => {
     webFrameworks_.style.backgroundColor = 'grey';
-    useCases_.push('web frameworks');
+    filtered.push('web frameworks');
     IDs_clicked.push('useCases_filter_web-frameworks');
 });
 let desktopDev_ = document.getElementById('useCases_filter_desktop-development');
 desktopDev_.addEventListener('click', () => {
     desktopDev_.style.backgroundColor = 'grey';
-    useCases_.push('desktop development');
+    filtered.push('desktop development');
     IDs_clicked.push('useCases_filter_desktop-development');
 });
 let python__ = document.getElementById('techUsed_filter_python');
 python__.addEventListener('click', () => {
     python__.style.backgroundColor = 'grey';
-    techUsed_.push('python');
+    filtered.push('python');
     IDs_clicked.push('techUsed_filter_python');
 });
 let ts_ = document.getElementById('techUsed_filter_typescript');
 ts_.addEventListener('click', () => {
     ts_.style.backgroundColor = 'grey';
-    techUsed_.push('typescript');
+    filtered.push('typescript');
     IDs_clicked.push('techUsed_filter_typescript');
 });
 let js__ = document.getElementById('techUsed_filter_javascript');
 js__.addEventListener('click', () => {
     js__.style.backgroundColor = 'grey';
-    techUsed_.push('javascript');
+    filtered.push('javascript');
     IDs_clicked.push('techUsed_filter_javascript');
 });
 let scss_ = document.getElementById('techUsed_filter_scss');
 scss_.addEventListener('click', () => {
     scss_.style.backgroundColor = 'grey';
-    techUsed_.push('scss');
+    filtered.push('scss');
     IDs_clicked.push('techUsed_filter_scss');
 });
 let css_ = document.getElementById('techUsed_filter_css');
 css_.addEventListener('click', () => {
     css_.style.backgroundColor = 'grey';
-    techUsed_.push('css');
+    filtered.push('css');
     IDs_clicked.push('techUsed_filter_css');
 });
 let django_ = document.getElementById('techUsed_filter_django');
 django_.addEventListener('click', () => {
     django_.style.backgroundColor = 'grey';
-    techUsed_.push('django');
+    filtered.push('django');
     IDs_clicked.push('techUsed_filter_django');
 });
 let flask_ = document.getElementById('techUsed_filter_flask');
 flask_.addEventListener('click', () => {
     flask_.style.backgroundColor = 'grey';
-    techUsed_.push('flask');
+    filtered.push('flask');
     IDs_clicked.push('techUsed_filter_flask');
 });
 let Type_ = ['|'];
 let fullStackAPp_ = document.getElementById('type_full-stack-app');
 fullStackAPp_.addEventListener('click', () => {
     fullStackAPp_.style.backgroundColor = 'grey';
-    Type_.push('full stack app');
+    filtered.push('full stack app');
     IDs_clicked.push('type_full-stack-app');
 });
 let serverSideApp_ = document.getElementById('type_server-side-app');
 serverSideApp_.addEventListener('click', () => {
     serverSideApp_.style.backgroundColor = 'grey';
-    Type_.push('server side app');
+    filtered.push('server side app');
     IDs_clicked.push('type_server-side-app');
 });
 let clientSideApp_ = document.getElementById('type_client-side-app');
 clientSideApp_.addEventListener('click', () => {
     clientSideApp_.style.backgroundColor = 'grey';
-    Type_.push('client side app');
+    filtered.push('client side app');
     IDs_clicked.push('type_client-side-app');
 });
 let resetFilterButton = document.getElementById('reset_filter_button');
@@ -219,8 +219,7 @@ resetFilterButton.addEventListener('click', () => {
     IDs_clicked.length = '';
 });
 filterFilterButton.addEventListener('click', () => {
-    const joinedArray = useCases_.concat(techUsed_, Type_);
-    let hrefString = joinedArray.join(', ');
+    let hrefString = filtered.join(', ');
     let fullURL = `${projects_url}${hrefString}/`;
     window.location.href = fullURL;
     filterContainer.style.display = 'none';

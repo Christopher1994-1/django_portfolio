@@ -145,13 +145,31 @@ un=  'unique_visitors'
 # selectingALL(db_name, un)
 
 
-# check_columns_sqlite('db.sqlite3', 'main_site_projects')
+check_columns_sqlite('db.sqlite3', 'main_site_projects')
 
 
-def clean_filter_string(listee):
+def clean_filter_string_USEcases(listee):
     mainT = []
     round1 = str(stringg).split('|')
     useCases = str(round1[1]).split(',')
+    for i in useCases:
+        if i == ',':
+            pass
+        elif i == ' ':
+            pass
+        elif i == '':
+            pass
+        else:
+            mainT.append(str(i).strip())
+    return ''.join(mainT)
+
+
+
+
+def clean_filter_string_TechUsed(listee):
+    mainT = []
+    round1 = str(stringg).split('|')
+    useCases = str(round1[2]).split(',')
     for i in useCases:
         if i == ',':
             pass
@@ -165,17 +183,37 @@ def clean_filter_string(listee):
 
 
 
+def clean_filter_string_Type(listee):
+    mainT = []
+    round1 = str(stringg).split('|')
+    useCases = str(round1[3]).split(',')
+    for i in useCases:
+        if i == ',':
+            pass
+        elif i == ' ':
+            pass
+        elif i == '':
+            pass
+        else:
+            mainT.append(str(i).strip())
+    return mainT
 
-def filter_UseCases(useCases):
-    for case in useCases:
-        # queryset = models.Projects.objects.filter(use_cases__in=case)
-        pass
+
+
+def filter_projects(usecaseList, techUsedList, type_list):
+    if usecaseList:
+        print('good')
+    else:
+        print('bad')
     
 
-#! Need to send 
+#! Need to send li
 
 
-stringg = '|, data focused, error handling, |, typescript, scss, |'
+stringg = ' data focused, error handling, typescript, scss,'
 
-a = clean_filter_string(stringg)
-print(a)
+useCases_list = clean_filter_string_USEcases(stringg)
+techUsed_list = clean_filter_string_TechUsed(stringg)
+type_list = clean_filter_string_Type(stringg)
+
+

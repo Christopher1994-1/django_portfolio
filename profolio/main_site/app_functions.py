@@ -330,3 +330,66 @@ def start_session(ip, browser):
     
         
 #========================================================================================
+
+
+
+
+
+
+
+
+#=========================================================================================
+#| functions that clean filter projects strings
+
+
+def clean_filter_string_USEcases(listee):
+    mainT = []
+    round1 = str(listee).split('|')
+    useCases = str(round1[1]).split(',')
+    for i in useCases:
+        if i == ',':
+            pass
+        elif i == ' ':
+            pass
+        elif i == '':
+            pass
+        else:
+            mainT.append(str(i).strip())
+    return mainT
+
+
+
+def clean_filter_string_TechUsed(listee):
+    mainT = []
+    round1 = str(listee).split('|')
+    useCases = str(round1[2]).split(',')
+    for i in useCases:
+        if i == ',':
+            pass
+        elif i == ' ':
+            pass
+        elif i == '':
+            pass
+        else:
+            mainT.append(str(i).strip())
+    return mainT
+
+
+
+def clean_filter_string_Type(listee):
+    mainT = []
+    round1 = str(listee).split('|')
+    useCases = str(round1[3]).split(',')
+    for i in useCases:
+        if i == ',':
+            pass
+        elif i == ' ':
+            pass
+        elif i == '':
+            pass
+        else:
+            mainT.append(str(i).strip())
+    return mainT
+
+
+#==========================================================================================
