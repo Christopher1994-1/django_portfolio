@@ -7,6 +7,8 @@
 
 # TODO change navbar so that when scrolling down it disappears and reappears when you scroll up
 
+# TODO add feature to where filter is clicked once highlighted it is un-selected
+
 
 
 

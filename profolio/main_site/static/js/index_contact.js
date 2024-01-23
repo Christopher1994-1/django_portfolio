@@ -103,108 +103,108 @@ filterCloseButton.addEventListener('click', () => {
 let filtered = [];
 let IDs_clicked = [];
 let useCases_ = ['|'];
-let techUsed_ = ['|'];
 let api_thing = document.getElementById('useCases_filter_APIs');
 api_thing.addEventListener('click', () => {
     api_thing.style.backgroundColor = 'grey';
-    filtered.push('apis');
+    useCases_.push('apis');
     IDs_clicked.push("useCases_filter_APIs");
 });
 let dataFocused = document.getElementById('useCases_filter_data-focused');
 dataFocused.addEventListener('click', () => {
     dataFocused.style.backgroundColor = 'grey';
-    filtered.push('data focused');
+    useCases_.push('data focused');
     IDs_clicked.push('useCases_filter_data-focused');
 });
 let errorHandling_ = document.getElementById('useCases_filter_error-handling');
 errorHandling_.addEventListener('click', () => {
     errorHandling_.style.backgroundColor = 'grey';
-    filtered.push('error handling');
+    useCases_.push('error handling');
     IDs_clicked.push('useCases_filter_error-handling');
 });
 let onlinePayments_ = document.getElementById('useCases_filter_online-payments');
 onlinePayments_.addEventListener('click', () => {
     onlinePayments_.style.backgroundColor = 'grey';
-    filtered.push('online payment');
+    useCases_.push('online payment');
     IDs_clicked.push('useCases_filter_online-payments');
 });
 let dataCollecting_ = document.getElementById('useCases_filter_data-collecting');
 dataCollecting_.addEventListener('click', () => {
     dataCollecting_.style.backgroundColor = 'grey';
-    filtered.push('data collecting');
+    useCases_.push('data collecting');
     IDs_clicked.push('useCases_filter_data-collecting');
 });
 let webFrameworks_ = document.getElementById('useCases_filter_web-frameworks');
 webFrameworks_.addEventListener('click', () => {
     webFrameworks_.style.backgroundColor = 'grey';
-    filtered.push('web frameworks');
+    useCases_.push('web frameworks');
     IDs_clicked.push('useCases_filter_web-frameworks');
 });
 let desktopDev_ = document.getElementById('useCases_filter_desktop-development');
 desktopDev_.addEventListener('click', () => {
     desktopDev_.style.backgroundColor = 'grey';
-    filtered.push('desktop development');
+    useCases_.push('desktop development');
     IDs_clicked.push('useCases_filter_desktop-development');
 });
+let techUsed_ = ['|'];
 let python__ = document.getElementById('techUsed_filter_python');
 python__.addEventListener('click', () => {
     python__.style.backgroundColor = 'grey';
-    filtered.push('python');
+    techUsed_.push('python');
     IDs_clicked.push('techUsed_filter_python');
 });
 let ts_ = document.getElementById('techUsed_filter_typescript');
 ts_.addEventListener('click', () => {
     ts_.style.backgroundColor = 'grey';
-    filtered.push('typescript');
+    techUsed_.push('typescript');
     IDs_clicked.push('techUsed_filter_typescript');
 });
 let js__ = document.getElementById('techUsed_filter_javascript');
 js__.addEventListener('click', () => {
     js__.style.backgroundColor = 'grey';
-    filtered.push('javascript');
+    techUsed_.push('javascript');
     IDs_clicked.push('techUsed_filter_javascript');
 });
 let scss_ = document.getElementById('techUsed_filter_scss');
 scss_.addEventListener('click', () => {
     scss_.style.backgroundColor = 'grey';
-    filtered.push('scss');
+    techUsed_.push('scss');
     IDs_clicked.push('techUsed_filter_scss');
 });
 let css_ = document.getElementById('techUsed_filter_css');
 css_.addEventListener('click', () => {
     css_.style.backgroundColor = 'grey';
-    filtered.push('css');
+    techUsed_.push('css');
     IDs_clicked.push('techUsed_filter_css');
 });
 let django_ = document.getElementById('techUsed_filter_django');
 django_.addEventListener('click', () => {
     django_.style.backgroundColor = 'grey';
-    filtered.push('django');
+    techUsed_.push('django');
     IDs_clicked.push('techUsed_filter_django');
 });
 let flask_ = document.getElementById('techUsed_filter_flask');
 flask_.addEventListener('click', () => {
     flask_.style.backgroundColor = 'grey';
-    filtered.push('flask');
+    techUsed_.push('flask');
     IDs_clicked.push('techUsed_filter_flask');
 });
 let Type_ = ['|'];
 let fullStackAPp_ = document.getElementById('type_full-stack-app');
 fullStackAPp_.addEventListener('click', () => {
     fullStackAPp_.style.backgroundColor = 'grey';
-    filtered.push('full stack app');
+    Type_.push('full stack app');
     IDs_clicked.push('type_full-stack-app');
 });
 let serverSideApp_ = document.getElementById('type_server-side-app');
 serverSideApp_.addEventListener('click', () => {
     serverSideApp_.style.backgroundColor = 'grey';
-    filtered.push('server side app');
+    Type_.push('server side app');
     IDs_clicked.push('type_server-side-app');
 });
 let clientSideApp_ = document.getElementById('type_client-side-app');
 clientSideApp_.addEventListener('click', () => {
     clientSideApp_.style.backgroundColor = 'grey';
-    filtered.push('client side app');
+    Type_.push('client side app');
     IDs_clicked.push('type_client-side-app');
 });
 let resetFilterButton = document.getElementById('reset_filter_button');
@@ -219,7 +219,8 @@ resetFilterButton.addEventListener('click', () => {
     IDs_clicked.length = '';
 });
 filterFilterButton.addEventListener('click', () => {
-    let hrefString = filtered.join(', ');
+    let combinedArray = useCases_.concat(techUsed_, Type_);
+    let hrefString = combinedArray.join(', ');
     let fullURL = `${projects_url}${hrefString}/`;
     window.location.href = fullURL;
     filterContainer.style.display = 'none';

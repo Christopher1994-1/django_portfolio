@@ -2,6 +2,7 @@ import sqlite3
 import datetime
 import time
 # from main_site import models
+import unittest
 
 
 db_name = "main_profolioDB.db"
@@ -145,75 +146,95 @@ un=  'unique_visitors'
 # selectingALL(db_name, un)
 
 
-check_columns_sqlite('db.sqlite3', 'main_site_projects')
+# check_columns_sqlite('db.sqlite3', 'main_site_projects')
 
 
-def clean_filter_string_USEcases(listee):
-    mainT = []
-    round1 = str(stringg).split('|')
-    useCases = str(round1[1]).split(',')
-    for i in useCases:
-        if i == ',':
-            pass
-        elif i == ' ':
-            pass
-        elif i == '':
-            pass
-        else:
-            mainT.append(str(i).strip())
-    return ''.join(mainT)
+test_string = '|, apis, data focused, error handling, online payment, data collecting, web frameworks, |, python, javascript, django, |, full stack app'
 
 
-
-
-def clean_filter_string_TechUsed(listee):
-    mainT = []
-    round1 = str(stringg).split('|')
-    useCases = str(round1[2]).split(',')
-    for i in useCases:
-        if i == ',':
-            pass
-        elif i == ' ':
+#* function to seperate string and get only set values
+def string_seperator(string, number):
+    newString = str(string).split('|')
+    type_selection = str(newString[number]).split(',')
+    
+    final_result = []
+    
+    for i in type_selection:
+        if i == ' ':
             pass
         elif i == '':
             pass
-        else:
-            mainT.append(str(i).strip())
-    return mainT
-
-
-
-def clean_filter_string_Type(listee):
-    mainT = []
-    round1 = str(stringg).split('|')
-    useCases = str(round1[3]).split(',')
-    for i in useCases:
-        if i == ',':
-            pass
-        elif i == ' ':
-            pass
-        elif i == '':
+        elif i == ',':
             pass
         else:
-            mainT.append(str(i).strip())
-    return mainT
+            final_result.append(str(i).strip())
+            
+    return final_result
 
 
 
-def filter_projects(usecaseList, techUsedList, type_list):
-    if usecaseList:
-        print('good')
+
+
+#* standard SQL select query function
+def standard_sql(term, table):
+    db = sqlite3.connect(db_name2)
+    cur = db.cursor()
+    cur.execute(f"SELECT id FROM main_site_projects WHERE {table} LIKE '%{term}%'")
+    result = cur.fetchall()
+    db.commit()
+    db.close()
+
+    if result:
+        return result
     else:
-        print('bad')
+        pass
     
 
-#! Need to send li
+
+#= Main filtering function
+def filter_algo(string):
+    #| step one we need to seperate each list of filters. ie, use_cases, tech_used and type
+    
+    #* getting use cases in list format
+    first_iteration = string_seperator(string, 1)
+    
+    #| then we can iterate over each list of filters, adding the filtered ones that match the filter to a seperate list
+    
+    #* seperate list to store filtered results 
+    filtered_results = []
+    
+    for i in first_iteration:
+        a = standard_sql(i, 'use_cases') # returns a number
+        if a == None:
+            pass
+        else:
+            filtered_results.append(a[0][0])
+        
+        
+    print(filtered_results)
+    #| make a second iteration of the second list 'tech used'
+    
+    #| add the second iterations results to another list 
+    
+    filtered_results2 = []
+    
+    #| then do some logic to determine if the values in both lists match up and if so combine them to one list, if not disgard the ones that dont
+    
+    
+    pass
 
 
-stringg = ' data focused, error handling, typescript, scss,'
 
-useCases_list = clean_filter_string_USEcases(stringg)
-techUsed_list = clean_filter_string_TechUsed(stringg)
-type_list = clean_filter_string_Type(stringg)
+result = filter_algo(test_string)
 
 
+
+# class TestStringSeperator(unittest.TestCase):
+#     def test_string_seperator_case1(self):
+#         string1 = '|, apis, data focused, error handling, online payment, data collecting, web frameworks, |, python, javascript, django, |, full stack app'
+#         result1 = string_seperator(string1, 3)
+#         self.assertEqual(result1, ['full stack app'])
+
+
+# if __name__ == '__main__':
+#     unittest.main()

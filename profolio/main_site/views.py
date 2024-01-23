@@ -124,7 +124,11 @@ def projects(request, filters):
         secondTitle2 = ''.join(secondTitle) + '...'
         context = {'project':projects1, 'pageTitle': title, 'secondTitle': secondTitle2}
         
-    
+    print()
+    print('=' * 45)
+    print(filters)
+    print('=' * 45)
+    print()
         
     browser_type = request.META['HTTP_USER_AGENT']
     client_ip, _ = get_client_ip(request)

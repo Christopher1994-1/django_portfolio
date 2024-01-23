@@ -1,7 +1,7 @@
 import sqlite3
 import time
-
-
+import unittest
+from . import check_db
 
 #= ------------------------------------------------ #
 is_production = False
@@ -166,3 +166,16 @@ b = a.split(' ')
 #     systemInfo = "Unknown"
 #     browserType = "Unknown"
     
+    
+    
+
+
+class TestStringSeperator(unittest.TestCase):
+    def test_string_seperator_case1(self):
+        string1 = '|, apis, data focused, error handling, online payment, data collecting, web frameworks, |, python, javascript, django, |, full stack app'
+        result1 = check_db.string_seperator(string1, 3)
+        self.assertEqual(result1, ['full stack app'])
+
+
+if __name__ == '__main__':
+    unittest.main()

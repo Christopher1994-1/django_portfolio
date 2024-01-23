@@ -199,7 +199,7 @@ let filtered:any = [];
 let IDs_clicked:any = [];
 
 let useCases_:any = ['|'];
-let techUsed_:any = ['|'];
+
 
 
 
@@ -209,7 +209,7 @@ let techUsed_:any = ['|'];
 let api_thing:any = document.getElementById('useCases_filter_APIs');
 api_thing.addEventListener('click', () => {
     api_thing.style.backgroundColor = 'grey';
-    filtered.push('apis');
+    useCases_.push('apis');
     IDs_clicked.push("useCases_filter_APIs");
 });
 
@@ -217,7 +217,7 @@ api_thing.addEventListener('click', () => {
 let dataFocused:any = document.getElementById('useCases_filter_data-focused');
 dataFocused.addEventListener('click', () => {
     dataFocused.style.backgroundColor = 'grey';
-    filtered.push('data focused');
+    useCases_.push('data focused');
     IDs_clicked.push('useCases_filter_data-focused');
 });
 
@@ -225,7 +225,7 @@ dataFocused.addEventListener('click', () => {
 let errorHandling_:any = document.getElementById('useCases_filter_error-handling');
 errorHandling_.addEventListener('click', () => {
     errorHandling_.style.backgroundColor = 'grey';
-    filtered.push('error handling');
+    useCases_.push('error handling');
     IDs_clicked.push('useCases_filter_error-handling');
 });
 
@@ -233,7 +233,7 @@ errorHandling_.addEventListener('click', () => {
 let onlinePayments_:any = document.getElementById('useCases_filter_online-payments');
 onlinePayments_.addEventListener('click', () => {
     onlinePayments_.style.backgroundColor = 'grey';
-    filtered.push('online payment');
+    useCases_.push('online payment');
     IDs_clicked.push('useCases_filter_online-payments');
 });
 
@@ -241,7 +241,7 @@ onlinePayments_.addEventListener('click', () => {
 let dataCollecting_:any = document.getElementById('useCases_filter_data-collecting');
 dataCollecting_.addEventListener('click', () => {
     dataCollecting_.style.backgroundColor = 'grey';
-    filtered.push('data collecting');
+    useCases_.push('data collecting');
     IDs_clicked.push('useCases_filter_data-collecting');
 });
 
@@ -249,7 +249,7 @@ dataCollecting_.addEventListener('click', () => {
 let webFrameworks_:any = document.getElementById('useCases_filter_web-frameworks');
 webFrameworks_.addEventListener('click', () => {
     webFrameworks_.style.backgroundColor = 'grey';
-    filtered.push('web frameworks');
+    useCases_.push('web frameworks');
     IDs_clicked.push('useCases_filter_web-frameworks');
 });
 
@@ -257,7 +257,7 @@ webFrameworks_.addEventListener('click', () => {
 let desktopDev_:any = document.getElementById('useCases_filter_desktop-development');
 desktopDev_.addEventListener('click', () => {
     desktopDev_.style.backgroundColor = 'grey';
-    filtered.push('desktop development');
+    useCases_.push('desktop development');
     IDs_clicked.push('useCases_filter_desktop-development');
 });
 //============================================================================
@@ -266,6 +266,7 @@ desktopDev_.addEventListener('click', () => {
 
 
 
+let techUsed_:any = ['|'];
 
 //=============================================================================
 //, TECH USED
@@ -274,7 +275,7 @@ desktopDev_.addEventListener('click', () => {
 let python__:any = document.getElementById('techUsed_filter_python');
 python__.addEventListener('click', () => {
     python__.style.backgroundColor = 'grey';
-    filtered.push('python');
+    techUsed_.push('python');
     IDs_clicked.push('techUsed_filter_python');
 });
 
@@ -282,7 +283,7 @@ python__.addEventListener('click', () => {
 let ts_:any = document.getElementById('techUsed_filter_typescript');
 ts_.addEventListener('click', () => {
     ts_.style.backgroundColor = 'grey';
-    filtered.push('typescript');
+    techUsed_.push('typescript');
     IDs_clicked.push('techUsed_filter_typescript');
 });
 
@@ -290,7 +291,7 @@ ts_.addEventListener('click', () => {
 let js__:any = document.getElementById('techUsed_filter_javascript');
 js__.addEventListener('click', () => {
     js__.style.backgroundColor = 'grey';
-    filtered.push('javascript');
+    techUsed_.push('javascript');
     IDs_clicked.push('techUsed_filter_javascript');
 });
 
@@ -298,7 +299,7 @@ js__.addEventListener('click', () => {
 let scss_:any = document.getElementById('techUsed_filter_scss');
 scss_.addEventListener('click', () => {
     scss_.style.backgroundColor = 'grey';
-    filtered.push('scss');
+    techUsed_.push('scss');
     IDs_clicked.push('techUsed_filter_scss');
 });
 
@@ -306,7 +307,7 @@ scss_.addEventListener('click', () => {
 let css_:any = document.getElementById('techUsed_filter_css');
 css_.addEventListener('click', () => {
     css_.style.backgroundColor = 'grey';
-    filtered.push('css');
+    techUsed_.push('css');
     IDs_clicked.push('techUsed_filter_css');
 });
 
@@ -314,7 +315,7 @@ css_.addEventListener('click', () => {
 let django_:any = document.getElementById('techUsed_filter_django');
 django_.addEventListener('click', () => {
     django_.style.backgroundColor = 'grey';
-    filtered.push('django');
+    techUsed_.push('django');
     IDs_clicked.push('techUsed_filter_django');
 });
 
@@ -322,7 +323,7 @@ django_.addEventListener('click', () => {
 let flask_:any = document.getElementById('techUsed_filter_flask');
 flask_.addEventListener('click', () => {
     flask_.style.backgroundColor = 'grey';
-    filtered.push('flask');
+    techUsed_.push('flask');
     IDs_clicked.push('techUsed_filter_flask');
 });
 
@@ -342,7 +343,7 @@ let Type_:any = ['|']
 let fullStackAPp_:any = document.getElementById('type_full-stack-app');
 fullStackAPp_.addEventListener('click', () => {
     fullStackAPp_.style.backgroundColor = 'grey';
-    filtered.push('full stack app');
+    Type_.push('full stack app');
     IDs_clicked.push('type_full-stack-app');
 });
 
@@ -351,7 +352,7 @@ fullStackAPp_.addEventListener('click', () => {
 let serverSideApp_:any = document.getElementById('type_server-side-app');
 serverSideApp_.addEventListener('click', () => {
     serverSideApp_.style.backgroundColor = 'grey';
-    filtered.push('server side app');
+    Type_.push('server side app');
     IDs_clicked.push('type_server-side-app');
 });
 
@@ -360,7 +361,7 @@ serverSideApp_.addEventListener('click', () => {
 let clientSideApp_:any = document.getElementById('type_client-side-app');
 clientSideApp_.addEventListener('click', () => {
     clientSideApp_.style.backgroundColor = 'grey';
-    filtered.push('client side app');
+    Type_.push('client side app');
     IDs_clicked.push('type_client-side-app');
 });
 
@@ -404,7 +405,9 @@ resetFilterButton.addEventListener('click', () => {
 
 //* action that happens when filter button is clicked
 filterFilterButton.addEventListener('click', () => {
-    let hrefString:string = filtered.join(', ');
+    
+    let combinedArray = useCases_.concat(techUsed_, Type_);
+    let hrefString:string = combinedArray.join(', ');
 
     let fullURL = `${projects_url}${hrefString}/`
     // steps
