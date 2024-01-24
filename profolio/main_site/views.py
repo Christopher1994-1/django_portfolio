@@ -87,15 +87,10 @@ def filter_projects(stringgg):
     if stringgg:
         #! maybe do manuel sql commands to search for the ones that contain data and then get those IDs and do a filter search with that to 
         #! return query object
-        queryset1 = Projects.objects.filter(use_cases__contains=stringgg)
-        if queryset1:
-            return queryset1
-        else:
-            queryset2 = Projects.objects.filter(technologies_used__icontains=stringgg)
-            return queryset2
-
-    else:
-        print('bad')
+        queryset1 = Projects.objects.filter(id__in=stringgg)
+        print(stringgg)
+        print(queryset1)
+        return queryset1
     
 #.############################################################################################
 
@@ -118,17 +113,16 @@ def projects(request, filters):
         context = {'project':projects_, 'pageTitle': title, 'secondTitle': secondTitle}
         
     else:
-        projects1 = filter_projects(filters)
-        title = 'Filtered Projects'
-        secondTitle = str(filters).split(',')[:4]
-        secondTitle2 = ''.join(secondTitle) + '...'
-        context = {'project':projects1, 'pageTitle': title, 'secondTitle': secondTitle2}
+        stringg = str(filters)
+        print(stringg)
+        projects_selection = app_functions.filter_algo(stringg)
+        print(projects_selection)
         
-    print()
-    print('=' * 45)
-    print(filters)
-    print('=' * 45)
-    print()
+        projects1 = filter_projects(projects_selection)
+        title = 'Filtered Projects'
+        secondTitle2 = app_functions.handle_jumbo_wording(filters)
+        
+        context = {'project':projects1, 'pageTitle': title, 'secondTitle': secondTitle2}
         
     browser_type = request.META['HTTP_USER_AGENT']
     client_ip, _ = get_client_ip(request)

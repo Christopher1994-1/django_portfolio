@@ -343,7 +343,7 @@ let Type_:any = ['|']
 let fullStackAPp_:any = document.getElementById('type_full-stack-app');
 fullStackAPp_.addEventListener('click', () => {
     fullStackAPp_.style.backgroundColor = 'grey';
-    Type_.push('full stack app');
+    Type_.push('full stack apps');
     IDs_clicked.push('type_full-stack-app');
 });
 
@@ -352,7 +352,7 @@ fullStackAPp_.addEventListener('click', () => {
 let serverSideApp_:any = document.getElementById('type_server-side-app');
 serverSideApp_.addEventListener('click', () => {
     serverSideApp_.style.backgroundColor = 'grey';
-    Type_.push('server side app');
+    Type_.push('server side apps');
     IDs_clicked.push('type_server-side-app');
 });
 
@@ -361,7 +361,7 @@ serverSideApp_.addEventListener('click', () => {
 let clientSideApp_:any = document.getElementById('type_client-side-app');
 clientSideApp_.addEventListener('click', () => {
     clientSideApp_.style.backgroundColor = 'grey';
-    Type_.push('client side app');
+    Type_.push('client side apps');
     IDs_clicked.push('type_client-side-app');
 });
 

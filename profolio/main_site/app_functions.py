@@ -11,11 +11,14 @@ import time
 #= ------------------------------------------------ #
 is_production = False
 db_name = ''
+other_db = ''
 
 if is_production:
     db_name = "/home/kirko190255/avrlinetech/unique_vistors.db" # add path to db in pythonanywhere
+    other_db = "/home/kirko190255/avrlinetech/unique_vistors.db"
 else:
     db_name = "main_profolioDB.db"
+    other_db = 'db.sqlite3'
     
     
     
@@ -342,54 +345,134 @@ def start_session(ip, browser):
 #| functions that clean filter projects strings
 
 
-def clean_filter_string_USEcases(listee):
-    mainT = []
-    round1 = str(listee).split('|')
-    useCases = str(round1[1]).split(',')
-    for i in useCases:
-        if i == ',':
-            pass
-        elif i == ' ':
+
+#* function to seperate string and get only set values
+def string_seperator(string, number):
+    newString = str(string).split('|')
+    type_selection = str(newString[number]).split(',')
+    
+    final_result = []
+    
+    for i in type_selection:
+        if i == ' ':
             pass
         elif i == '':
             pass
+        elif i == ',':
+            pass
         else:
-            mainT.append(str(i).strip())
-    return mainT
+            final_result.append(str(i).strip())
+            
+    return final_result
 
 
 
-def clean_filter_string_TechUsed(listee):
-    mainT = []
-    round1 = str(listee).split('|')
-    useCases = str(round1[2]).split(',')
-    for i in useCases:
-        if i == ',':
+#* standard SQL select query function
+def standard_sql(term, table):
+    db = sqlite3.connect(other_db)
+    cur = db.cursor()
+    cur.execute(f"SELECT id FROM main_site_projects WHERE {table} LIKE '%{term}%'")
+    result = cur.fetchall()
+    db.commit()
+    db.close()
+
+    if result:
+        return result
+    else:
+        pass
+    
+
+
+#* removing duplicates from list
+def removing_duplicates(liste):
+    unique_list = []
+    
+    for item in liste:
+        if item not in unique_list:
+            unique_list.append(item)
+            
+    return unique_list
+
+
+
+#* function that takes the filters and returns a version to be put on the jumbo
+def handle_jumbo_wording(string):
+    newString = str(string).split('|')
+    newString = ''.join(newString).split(',')
+    final = []
+    for i in newString:
+        if i == '':
+            pass
+        elif i == ',':
             pass
         elif i == ' ':
             pass
-        elif i == '':
+        else:
+            final.append(str(i).strip())
+    
+    newFinial = final[:4] # ['apis', 'data focused', 'error handling', 'online payment']
+    ss = ', '.join(newFinial) + '...' # apisdata focusederror handlingonline payment
+    
+    return ss
+
+
+
+#= Main filtering function
+def filter_algo(string):
+    #. step one we need to seperate each list of filters. ie, use_cases, tech_used and type
+    
+    #* getting use cases in list format
+    first_iteration = string_seperator(string, 1)
+    
+    #| then we can iterate over each list of filters, adding the filtered ones that match the filter to a seperate list
+    
+    #* seperate list to store filtered results 
+    filtered_results = []
+    
+    for term1 in first_iteration:
+        num1 = standard_sql(term1, 'use_cases') # returns a number
+        if num1 == None:
             pass
         else:
-            mainT.append(str(i).strip())
-    return mainT
+            filtered_results.append(num1[0][0])
+        
 
-
-
-def clean_filter_string_Type(listee):
-    mainT = []
-    round1 = str(listee).split('|')
-    useCases = str(round1[3]).split(',')
-    for i in useCases:
-        if i == ',':
-            pass
-        elif i == ' ':
-            pass
-        elif i == '':
+    
+    #| make a second iteration of the second list 'tech used'
+    
+    second_iteration = string_seperator(string, 2)
+    
+    filtered_results2 = []
+    
+    for term2 in second_iteration:
+        num2 = standard_sql(term2, 'technologies_used')
+        if num2 == None:
             pass
         else:
-            mainT.append(str(i).strip())
-    return mainT
+            filtered_results2.append(num2[0][0])
+            
 
+    #| add the second iterations results to another list 
+    
+    third_iteration = string_seperator(string, 3)
+    
+    filtered_results3 = []
+    
+    
+    for term3 in third_iteration:
+        num3 = standard_sql(term3, 'project_type')
+        if num3 == None:
+            pass
+        else:
+            filtered_results3.append(num3[0][0])
 
+    
+    #| then do some logic to determine if the values in both lists match up and if so combine them to one list, if not disgard the ones that dont
+    
+    final = filtered_results + filtered_results2 + filtered_results3
+    
+    final_result = removing_duplicates(final)
+    
+    return final_result
+    
 #==========================================================================================

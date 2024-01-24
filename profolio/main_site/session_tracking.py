@@ -218,11 +218,7 @@ def update_leavingActivity(activity):
     #| code to get the time of the page activity
     latestActivity = new_list[lastListIndex]
     LA_time = int(str(latestActivity).split('-')[1].replace(')', '').strip())
-    print()
-    print('-' * 45)
-    print(LA_time)
-    print('-' * 45)
-    print()
+    
     now = int(str(time.time()).split('.')[0])
     time_Spent_On_Page = now - LA_time
 

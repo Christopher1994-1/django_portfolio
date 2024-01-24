@@ -152,6 +152,8 @@ un=  'unique_visitors'
 test_string = '|, apis, data focused, error handling, online payment, data collecting, web frameworks, |, python, javascript, django, |, full stack app'
 
 
+
+
 #* function to seperate string and get only set values
 def string_seperator(string, number):
     newString = str(string).split('|')
@@ -173,8 +175,6 @@ def string_seperator(string, number):
 
 
 
-
-
 #* standard SQL select query function
 def standard_sql(term, table):
     db = sqlite3.connect(db_name2)
@@ -191,43 +191,97 @@ def standard_sql(term, table):
     
 
 
+#* removing duplicates from list
+def removing_duplicates(liste):
+    unique_list = []
+    
+    for item in liste:
+        if item not in unique_list:
+            unique_list.append(item)
+            
+    return unique_list
+
+
+#* function that checks if any hard filters are true
+def extreme_filter(data_list, filters2):
+    ft1 = 'client side apps'
+    ft2 = 'server side apps'
+    ft3 = 'full stack apps'
+    ft4 = 'web development'
+    ft5 = 'desktop development'
+    
+    print(data_list)
+    print(filters2)
+    
+
+
 #= Main filtering function
 def filter_algo(string):
-    #| step one we need to seperate each list of filters. ie, use_cases, tech_used and type
+    #. step one we need to seperate each list of filters. ie, use_cases, tech_used and type
     
     #* getting use cases in list format
     first_iteration = string_seperator(string, 1)
+    
+    extremeFilters = []
     
     #| then we can iterate over each list of filters, adding the filtered ones that match the filter to a seperate list
     
     #* seperate list to store filtered results 
     filtered_results = []
     
-    for i in first_iteration:
-        a = standard_sql(i, 'use_cases') # returns a number
-        if a == None:
+    for term1 in first_iteration:
+        num1 = standard_sql(term1, 'use_cases') # returns a number
+        if term1 == 'web frameworks' or term1 == 'desktop development':
+            extremeFilters.append(term1)
+            
+        if num1 == None:
             pass
         else:
-            filtered_results.append(a[0][0])
-        
-        
-    print(filtered_results)
+            filtered_results.append(num1[0][0])
+    
+    
     #| make a second iteration of the second list 'tech used'
     
-    #| add the second iterations results to another list 
+    second_iteration = string_seperator(string, 2)
     
     filtered_results2 = []
     
+    for term2 in second_iteration:
+        num2 = standard_sql(term2, 'technologies_used')
+        if num2 == None:
+            pass
+        else:
+            filtered_results2.append(num2[0][0])
+            
+
+    #| add the second iterations results to another list 
+    
+    third_iteration = string_seperator(string, 3)
+    
+    filtered_results3 = []
+    
+    
+    for term3 in third_iteration:
+        num3 = standard_sql(term3, 'project_type')
+        extremeFilters.append(term3)
+        if num3 == None:
+            pass
+        else:
+            filtered_results3.append(num3[0][0])
+
+    
     #| then do some logic to determine if the values in both lists match up and if so combine them to one list, if not disgard the ones that dont
     
+    final = filtered_results + filtered_results2 + filtered_results3
     
-    pass
+    final_result = removing_duplicates(final)
+    filter_extreme = extreme_filter(final_result, extremeFilters)
+    
+    # return final_result
+    
 
 
-
-result = filter_algo(test_string)
-
-
+filter_algo(test_string)
 
 # class TestStringSeperator(unittest.TestCase):
 #     def test_string_seperator_case1(self):
