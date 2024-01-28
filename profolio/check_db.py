@@ -53,7 +53,6 @@ def list_tables_sqlite(database_name):
         print(i)
 
 
-
 # Function to check all columns in a specified table
 def check_columns_sqlite(database_name, table_name):
     conn = sqlite3.connect(database_name)
@@ -128,6 +127,9 @@ def deleteFromTable(db, name):
     selectingALL(db_name, name)
             
         
+        
+        
+        
 rt = "returning_visitors"
 un=  'unique_visitors'
 
@@ -140,16 +142,33 @@ un=  'unique_visitors'
 #| 
 
 
+"""
+id
+title
+short_description
+technologies_used
+imageCover
+images
+demo_url
+gitHub
+long_description
+has_video
+video_url
+site_url
+project_type
+use_cases
+"""
+
 
 
 # deleteFromTable(db_name, un)
-# selectingALL(db_name, un)
+# selectingALL(db_name2, 'auth_user')
 
 
-# check_columns_sqlite('db.sqlite3', 'main_site_projects')
+# check_columns_sqlite('db.sqlite3', 'auth_user')
 
 
-test_string = '|, apis, data focused, error handling, online payment, data collecting, web frameworks, |, python, javascript, django, |, full stack app'
+test_string = '|, apis, data focused, error handling, online payment, data collecting, web development, |, python, javascript, django, |, full stack app'
 
 
 
@@ -191,6 +210,35 @@ def standard_sql(term, table):
     
 
 
+#* hard SQL select query function
+def hard_sql(term:str, column:str, tt:int ) -> int:
+    result = ''
+    
+    if tt == 0:
+        db = sqlite3.connect(db_name2)
+        cur = db.cursor()
+        cur.execute(f"SELECT id FROM main_site_projects WHERE {column} = ?", (term,))
+        result = cur.fetchall()
+        db.commit()
+        db.close()
+    else:
+        db = sqlite3.connect(db_name2)
+        cur = db.cursor()
+        cur.execute(f"SELECT id FROM main_site_projects WHERE {column} LIKE '%{term}%'")
+        result = cur.fetchall()
+        db.commit()
+        db.close()
+        print(result) #| returns [(1,), (2,)]
+        #! change the example test to have 'client side app' so we can test [[(1,), (2,)], None] and how to isolate the nums
+        
+
+    if result:
+        return result
+    else:
+        pass
+    
+
+
 #* removing duplicates from list
 def removing_duplicates(liste):
     unique_list = []
@@ -202,17 +250,33 @@ def removing_duplicates(liste):
     return unique_list
 
 
+
+
+
 #* function that checks if any hard filters are true
 def extreme_filter(data_list, filters2):
-    ft1 = 'client side apps'
-    ft2 = 'server side apps'
-    ft3 = 'full stack apps'
-    ft4 = 'web development'
-    ft5 = 'desktop development'
+
+    types = ['full stack apps', 'server side apps', 'client side apps']
+    use_cases = ['desktop development', 'web development']
     
-    print(data_list)
-    print(filters2)
     
+    # list that holds all updated values
+    new_values = []
+
+    for term in filters2:
+        if term in use_cases:
+            a = hard_sql(term, 'use_cases', 1)
+            new_values.append(a)
+        else:
+            b = hard_sql(term, 'project_type', 0)
+            new_values.append(b)
+    
+    
+    print(new_values) # returns || [[(1,), (2,)], None]
+    
+    
+
+
 
 
 #= Main filtering function
@@ -231,7 +295,7 @@ def filter_algo(string):
     
     for term1 in first_iteration:
         num1 = standard_sql(term1, 'use_cases') # returns a number
-        if term1 == 'web frameworks' or term1 == 'desktop development':
+        if term1 == 'web development' or term1 == 'desktop development':
             extremeFilters.append(term1)
             
         if num1 == None:
@@ -292,3 +356,5 @@ filter_algo(test_string)
 
 # if __name__ == '__main__':
 #     unittest.main()
+
+

@@ -322,18 +322,14 @@ def start_session(ip, startime, current_page, last_page, browser):
 # dri()
 
 
-from main_site.models import Projects
+from django.contrib.auth.models import User
 
-def filter_UseCases(useCases):
-    queryset = ''
-    
-    for case in useCases:
-        # queryset = Projects.objects.filter(use_cases__in=case)
-        pass
-    
-    print(queryset)
-    
-    
-fd = ['data focused', 'error handling']
-    
-filter_UseCases(fd)
+# Get the user instance
+user = User.objects.get(username='cej')  # Replace 'username' with the actual username
+
+# Set the new password
+new_password = 'new_password'  # Replace 'new_password' with the desired new password
+user.set_password(new_password)
+
+# Save the user instance to update the password in the database
+user.save()
