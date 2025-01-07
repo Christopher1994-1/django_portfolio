@@ -9,10 +9,8 @@ import time
 from .models import Projects
 
 
-# Create your views here.
 
-#=############################################################################################
-# route for the home page
+#. ROUTE FOR THE HOME PAGE
 def index(request):
 
     client_ip, _ = get_client_ip(request)
@@ -29,7 +27,7 @@ def index(request):
     context = {"year": year, "posts":posts}
     
     return render(request, 'index.html', context)
-#.############################################################################################
+
 
 
 
@@ -102,7 +100,7 @@ def filter_projects(stringgg):
 
 #=============================================================================================
 #* Route for the all projects page
-def projects(request, filters):
+def search_projects(request, filters):
     context = {}
 
     

@@ -4,6 +4,6 @@ from django.shortcuts import render
 
 
 
-def some_project(request):
-    ip_address = request.META['REMOTE_ADDR'] # change to get IP in pythonanywhere
-    return render(request, 'some_project.html', {})
+def stripe_payment(request):
+    
+    return render(request, 'stripe_payment/stripe_payment.html', {})

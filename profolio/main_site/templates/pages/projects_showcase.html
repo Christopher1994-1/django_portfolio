@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - Project Showcase</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/project_showcase.css' %}">
+    <link rel="icon" href="{% static '/images/site_images/second.ico' %}" type="image/x-icon">
+    <link rel="stylesheet preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+    <a href="/" id="home-page"><i class="fa-solid fa-arrow-left"></i> Home</a>
+    <div class="project-container">
+        
+        <div class="project-header">
+            <h1 class="project-title">{{title}}</h1>
+            <p class="project-short-description">{{short_description}}</p>
+            <p class="project-type">Type: {{project_type}}</p>
+            <div class="project-links">
+                <a href="{% url 'stripe_payment' %}" class="btn demo-btn" target="_blank">View Demo</a>
+                <a href="{{gitHub_url}}" class="btn github-btn" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <div class="project-image-cover" id="mainCoverPhoto_Container" data-url="{{imageCover}}">
+            <img src="{{imageCover}}" alt="Project Cover" class="cover-image" id="mainCoverPhoto">
+        </div>
+
+        <div class="project-details">
+            <h2>Technologies Used</h2>
+            <ul class="technologies-list">
+                {% for tech_used in technologies_used %}
+                    <li>{{tech_used}}</li>
+                {% endfor%}
+            </ul>
+
+            <h2>Long Description</h2>
+            <p class="long-description">{{long_description}}.</p>
+
+            <h2>Use Cases</h2>
+            <ul class="use-cases-list">
+                {% for use_case in use_cases %}
+                    <li>{{use_case.title}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="project-gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-images">
+                {% for img in images %}
+                    <img src="{{img}}" alt="Gallery Image">
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="project-video" style="display: none;">
+            <h2>Project Video</h2>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="project-footer">
+            <a href="{{demo_url}}" class="site-url" target="_blank"><i class="fa-solid fa-arrow-right"></i> Visit Live Site <i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+    </div>
+
+    <script src="{% static 'js/project_showcase_page.js' %}"></script>
+</body>
+</html>

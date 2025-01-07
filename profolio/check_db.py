@@ -128,6 +128,11 @@ def deleteFromTable(db, name):
             
         
         
+# list_tables_sqlite(db_name2)
+
+
+check_columns_sqlite(db_name2, "main_site_projects")
+        
         
         
 rt = "returning_visitors"
@@ -345,16 +350,16 @@ def filter_algo(string):
     
 
 
-filter_algo(test_string)
+# filter_algo(test_string)
 
-# class TestStringSeperator(unittest.TestCase):
-#     def test_string_seperator_case1(self):
-#         string1 = '|, apis, data focused, error handling, online payment, data collecting, web frameworks, |, python, javascript, django, |, full stack app'
-#         result1 = string_seperator(string1, 3)
-#         self.assertEqual(result1, ['full stack app'])
+# # class TestStringSeperator(unittest.TestCase):
+# #     def test_string_seperator_case1(self):
+# #         string1 = '|, apis, data focused, error handling, online payment, data collecting, web frameworks, |, python, javascript, django, |, full stack app'
+# #         result1 = string_seperator(string1, 3)
+# #         self.assertEqual(result1, ['full stack app'])
 
 
-# if __name__ == '__main__':
-#     unittest.main()
+# # if __name__ == '__main__':
+# #     unittest.main()
 
 

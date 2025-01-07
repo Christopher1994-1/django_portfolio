@@ -3,7 +3,7 @@
     {% if project %}
         {% for project1 in project %}
 
-        <div class="project_container">
+        <div class="project_container" style="border: 2px solid red;">
 
                 <div class="project">
 
@@ -34,9 +34,9 @@
                         <p>{{ project1.short_description }}</p>
                     </div>
         
-                    <div class="button">
+                    <div class="button" style="color: black;">
                         <p>{{ project1.project_type.title }}</p>
-                        <a href="#"><button>Learn More</button></a>
+                        <a href="{% url 'projects_showcase' project=project1.id %}"><button>Learn More</button></a>
                     </div>
 
                 </div>

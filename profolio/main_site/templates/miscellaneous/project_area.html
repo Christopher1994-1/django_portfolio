@@ -35,7 +35,7 @@
     
                 <div class="button">
                     <p>{{ project.project_type.title }}</p>
-                    <a href="#"><button>Learn More</button></a>
+                    <a href="{% url 'projects_showcase' project=project.title %}"><button>Learn More</button></a>
                 </div>
 
             </div>

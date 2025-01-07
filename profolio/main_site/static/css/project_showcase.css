@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.project-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.project-header .project-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.project-header .project-short-description {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+.project-header .project-type {
+  font-style: italic;
+  margin: 10px 0;
+  color: #aaaaaa;
+}
+.project-header .project-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.project-header .project-links .btn {
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.project-header .project-links .btn.demo-btn {
+  background-color: #1e90ff;
+  color: #fff;
+}
+.project-header .project-links .btn.demo-btn:hover {
+  background-color: #1c7ed6;
+}
+.project-header .project-links .btn.github-btn {
+  background-color: #333;
+  color: #fff;
+}
+.project-header .project-links .btn.github-btn:hover {
+  background-color: #555;
+}
+
+.project-image-cover {
+  text-align: center;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+.project-image-cover .cover-image {
+  max-width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.project-details {
+  margin: 20px 0;
+}
+.project-details h2 {
+  border-bottom: 2px solid #1e90ff;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.project-details .long-description {
+  line-height: 1.6;
+  color: #dddddd;
+}
+.project-details ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+.project-details ul li {
+  margin: 5px 0;
+}
+
+.project-gallery {
+  margin: 20px 0;
+}
+.project-gallery .gallery-images {
+  display: flex;
+  gap: 10px;
+}
+.project-gallery .gallery-images img {
+  max-width: 100px;
+  border: 2px solid #1e90ff;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.project-gallery .gallery-images img:hover {
+  transform: scale(1.1);
+}
+
+.project-video {
+  margin: 20px 0;
+}
+.project-video video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+.project-footer .site-url {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #1e90ff;
+  font-weight: bold;
+}
+.project-footer .site-url:hover {
+  color: #1c7ed6;
+}
+.project-footer i {
+  font-size: 12px;
+  font-weight: 1000;
+}
+
+#home-page {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #1e90ff;
+  font-weight: 600;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+#mainImageCoverIcon {
+  font-size: 32px;
+  color: #1c7ed6;
+}/*# sourceMappingURL=project_showcase.css.map */
