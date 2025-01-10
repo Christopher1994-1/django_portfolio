@@ -19,10 +19,12 @@ def projects_showcase(request, project):
     has_video = main_project.has_video
     project_type: str = main_project.project_type
     technologies_used: str = main_project.technologies_used
-    imageCover: str = main_project.imageCover
+    imageCover_large: str = main_project.imageCover_large
     images: str = main_project.images
     use_cases: str = main_project.use_cases
+    imageCover_small: str = main_project.imageCover_small
     
+    #! add in the other images to make gallery
     
     images_list: list = [z for z in images.split(';')]
     
@@ -45,7 +47,8 @@ def projects_showcase(request, project):
         "long_description": long_description,
         "demo_url": demo_url,
         "project_type": project_type,
-        "imageCover": imageCover,
+        "imageCover": imageCover_large,
+        "imageCover2": imageCover_small,
         "images": images_list,
         "gitHub_url": gitHub_url,
         "use_cases": use_cases_list
