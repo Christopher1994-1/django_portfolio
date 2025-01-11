@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updating - {{title}}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/project_selection.css' %}">
+</head>
+<body style="background-color: #333;">
+
+
+    <div class="project-container">
+        <form action="{% url 'update_project_finished' %}" method="post">
+            {% csrf_token %}
+
+            <input type="hidden" value="{{project_id}}" name="hiddenID" id="hiddenID">
+
+            <div class="n_input">
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" value="{{title}}">
+            </div>
+    
+            <div class="n_input">
+                <label for="short_d">Short Description:</label>
+                <input type="text" name="short_d" id="short_d" value="{{short_d}}">
+            </div>
+
+            <div class="n_input">
+                <label for="tech_used">Technologies Used:</label>
+                <input type="text" name="tech_used" id="tech_used" value="{{technologies_used}}">
+            </div>
+
+            <div class="m_input">
+                <label for="images">Images:</label>
+                <textarea name="images" id="images" placeholder="{{images}}">{{images}}</textarea>
+            </div>
+
+            <div class="m_input">
+                <label for="long_d">Long Description:</label>
+                <textarea name="long_d" id="long_d" placeholder="{{long_d}}">{{long_d}}</textarea>
+            </div>
+
+            <div class="n_input">
+                <label for="small_image_url">Small Image URL:</label>
+                <input type="text" name="small_image_url" id="small_image_url" value="{{small_image_url}}">
+            </div>
+
+            <div class="n_input">
+                <label for="big_image_url">Big Image URL:</label>
+                <input type="text" name="big_image_url" id="big_image_url" value="{{big_image_url}}">
+            </div>
+
+            <div class="n_input">
+                <label for="use_cases">Use Cases:</label>
+                <input type="text" name="use_cases" id="use_cases" value="{{use_cases}}">
+            </div>
+
+            <div class="n_input">
+                <label for="github_url">GitHub URL:</label>
+                <input type="text" name="github_url" id="github_url" value="{{github_url}}">
+            </div>
+
+            <div class="n_input">
+                <label for="demo_url">Demo URL:</label>
+                <input type="text" name="demo_url" id="demo_url" value="{{demo_url}}">
+            </div>
+
+            <div class="n_input">
+                <label for="project_type">Project Type:</label>
+                <input type="text" name="project_type" id="project_type" value="{{project_type}}">
+            </div>
+
+
+
+            <button type="submit">Update & Finish..</button>
+
+        </form>
+
+    </div>
+    
+    
+</body>
+</html>

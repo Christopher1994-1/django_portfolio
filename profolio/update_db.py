@@ -3,7 +3,7 @@ import sqlite3
 MAIN_DATABASE: str = 'db.sqlite3'
 PROJECT_TABLE: str = "main_site_projects"
 l = "https://main553.b-cdn.net/portfolio/stripe%20backend%20payment/stripe_payment_large_image.png"
-s = 'https://res.cloudinary.com/dyzidhqli/image/upload/v1705547635/stripe_backend2_ue3qve.png'
+s = 'https://res.cloudinary.com/dyzidhqli/image/upload/v1705088437/portfolio/star1_zh2zgu.png'
 
 
 
@@ -83,13 +83,12 @@ def get_table_columns(db_name: str, table_name: str) -> None:
 
     
 
-# update(MAIN_DATABASE, PROJECT_TABLE, s, 'imageCover_small', "2")
+#update(MAIN_DATABASE, PROJECT_TABLE, s, 'imageCover_small', "1")
 
 
-# select_all(MAIN_DATABASE, PROJECT_TABLE, 0, 0, False)
+select_all(MAIN_DATABASE, PROJECT_TABLE, 0, 0, False)
 
 
-get_table_columns(MAIN_DATABASE, PROJECT_TABLE)
 
 
 """

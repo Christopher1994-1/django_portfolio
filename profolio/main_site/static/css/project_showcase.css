@@ -176,7 +176,7 @@ body {
   padding: 10px;
   margin-right: 3px;
   border-radius: 7px;
-  background-color: aquamarine;
+  background-color: #ffffff;
   border: none;
   font-size: 23px;
   padding-left: 15px;
@@ -185,6 +185,43 @@ body {
 }
 #image_viewer img {
   width: 80%;
+}
+
+#left-side-button {
+  position: fixed;
+  left: 5px;
+  display: none;
+}
+#left-side-button button {
+  padding: 10px;
+  background-color: #ffffff;
+  border: none;
+  padding-left: 20px;
+  border-radius: 10px;
+  padding-right: 20px;
+  font-size: 21px;
+  cursor: pointer;
+}
+#left-side-button button:hover {
+  background-color: #3859ff;
+}
+
+#right-side-button {
+  position: fixed;
+  right: 5px;
+}
+#right-side-button button {
+  padding: 10px;
+  background-color: #ffffff;
+  border: none;
+  padding-left: 20px;
+  border-radius: 10px;
+  padding-right: 20px;
+  font-size: 21px;
+  cursor: pointer;
+}
+#right-side-button button:hover {
+  background-color: #3859ff;
 }
 
 #mainImageCoverIcon {

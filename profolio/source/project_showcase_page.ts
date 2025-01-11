@@ -54,6 +54,17 @@ if (mainImage) {
 
 
 
+//. FUNCTION THAT CHANGES MAIN IMAGE VIEWER
+function change_main_viewer(image:string): void {
+    //. GET THE MAIN IMAGE VIEWER ELEMENT
+    let main_image_viewer: any = document.getElementById('main_image');
+    //. CHANGING SOURCE OF IMAGE
+    main_image_viewer.src = image;
+    console.log(image)
+};
+
+
+
 
 //. FUNCTION THAT OPENS THE MAIN IMAGE
 function main_image_viewer(image:any): void {
@@ -67,7 +78,15 @@ function main_image_viewer(image:any): void {
     <div id="xbutton">
         <button onclick="close_main_image_viewer()"><i class="fa-solid fa-xmark"></i></button>
     </div>
-    <img src="${image}">
+    <img src="${image}" id="main_image">
+
+    <div id="left-side-button">
+        <button onclick="leftSideButton()"><i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+
+    <div id="right-side-button">
+        <button onclick="rightSideButton()"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
     `;
 
 
@@ -81,6 +100,45 @@ function close_main_image_viewer(): void {
     let overlay: any = document.getElementById('image_overlay');
     document.body.removeChild(overlay);
     document.body.removeChild(mainViewer);
+};
+
+
+
+
+//. FUNCTION THAT FIGURES OUT THE NEXT INDEX FOR MAIN IMAGE VIEWER
+function index_figured(stringList: string[]): number {
+    //. GET THE MAIN IMAGE VIEWER ELEMENT
+    let main_image_viewer: any = document.getElementById('main_image');
+    //. GET THE MAIN IMAGE SOURCE
+    let main_image_viewer_src: string = main_image_viewer.src;
+    //. GETTING THE FIRST INDEX FROM PASSED LIST
+    let firstIndex: string = stringList[0];
+
+    //! do a local storage thing fuck it
+
+    //. CHECKING IF THE FIRST INDEX AND THE MAIN IMAGE SRC IS THE SAME, IF SO GET THE NEXT INDEX
+    if (main_image_viewer_src == firstIndex) {
+        return 1
+    }
+    else {
+        return 0
+    }
+
+};
+
+
+//. FUNCTION THAT HANDLES RIGHT SIDE ARROW - IMAGE FLIPPING -
+function rightSideButton(): void {
+    //. GET INPUT VALUE OF IMAGES
+    let inputImages: any = document.getElementById('listofimages');
+    //. GET THE INPUT VALUE OF IMAGES VALUE
+    let inputImages_value: string = inputImages.value;
+    //. SPLITING THE STRING VALUE INTO A LIST []
+    let stringList: string[] = inputImages_value.split(';');
+    //. GET THE NEXT INDEX
+    let nextIndex: number = index_figured(stringList);
+    //. CHANGE THE MAIN IMAGE VIEWER
+    change_main_viewer(stringList[nextIndex]);
 };
 
 

@@ -11,6 +11,7 @@
     
 </head>
 <body>
+    <input type="hidden" name="listofimages" id="listofimages" value="{{images2}}">
     <a href="/" id="home-page"><i class="fa-solid fa-arrow-left"></i> Home</a>
     <div class="project-container">
         
@@ -39,7 +40,9 @@
             </ul>
 
             <h2>Long Description</h2>
-            <p class="long-description">{{long_description}}.</p>
+            <div class="long-description">
+                {{ long_description|safe }}
+            </div>
 
             <h2>Use Cases</h2>
             <ul class="use-cases-list">

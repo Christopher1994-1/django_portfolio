@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Project</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/project_selection.css'%}">
+</head>
+<body style="background-color: #333;">
+
+    <div class="projection-selection">
+        {% for project in projects %}
+            <a href="{% url 'update_project_are' project_id=project.id %}">{{project.title}}</a>
+        {% endfor %}
+    </div>
+
+    
+</body>
+</html>

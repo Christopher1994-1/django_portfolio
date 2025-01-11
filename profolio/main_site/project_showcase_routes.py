@@ -51,7 +51,8 @@ def projects_showcase(request, project):
         "imageCover2": imageCover_small,
         "images": images_list,
         "gitHub_url": gitHub_url,
-        "use_cases": use_cases_list
+        "use_cases": use_cases_list,
+        "images2": images
     }
     
     

@@ -1,0 +1,66 @@
+
+
+
+
+.projection-selection {
+    border: 2px solid white;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+
+    a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 32px;
+        padding: 10px;
+        width: 60%;
+        margin: auto;
+        background-color: white;
+        font-family: math;
+        margin-bottom: 16px;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.702);
+        }
+    }
+}
+
+
+
+
+.project-container {
+    padding: 10px;
+
+
+    .n_input {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-bottom: 10px;
+
+        input {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.712);
+            border: none;
+            border-radius: 10px;
+        }
+    }
+
+
+    .m_input {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-bottom: 10px;
+
+        textarea {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.712);
+            border: none;
+            border-radius: 10px;
+        }
+    }
+}
