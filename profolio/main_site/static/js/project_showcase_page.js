@@ -1,6 +1,11 @@
 "use strict";
 let mainImage = document.getElementById('mmi');
 let mainImageContainer = document.getElementById('mainCoverPhoto_Container');
+function left_show_button(state) {
+    let leftSideButton = document.getElementById('left-side-button');
+    leftSideButton.style.display = state;
+}
+;
 if (mainImage) {
     mainImage.addEventListener("mouseenter", function () {
         mainImage.style.filter = "brightness(40%)";
@@ -27,7 +32,6 @@ if (mainImage) {
 function change_main_viewer(image) {
     let main_image_viewer = document.getElementById('main_image');
     main_image_viewer.src = image;
-    console.log(image);
 }
 ;
 function main_image_viewer(image) {
@@ -58,14 +62,30 @@ function close_main_image_viewer() {
 }
 ;
 function index_figured(stringList) {
+    var _a;
     let main_image_viewer = document.getElementById('main_image');
     let main_image_viewer_src = main_image_viewer.src;
     let firstIndex = stringList[0];
+    let length_of_list = stringList.length;
+    let ss_name = "next-image-in-hoster";
     if (main_image_viewer_src == firstIndex) {
+        localStorage.setItem(ss_name, '1');
+        left_show_button('block');
         return 1;
     }
     else {
-        return 0;
+        let lastIndex = (_a = localStorage.getItem(ss_name)) !== null && _a !== void 0 ? _a : '';
+        let intergerIndex = Number(lastIndex) + 1;
+        if (length_of_list === intergerIndex) {
+            localStorage.removeItem(ss_name);
+            left_show_button('none');
+            return 0;
+        }
+        else {
+            localStorage.setItem(ss_name, intergerIndex.toString());
+            left_show_button('block');
+            return intergerIndex;
+        }
     }
 }
 ;
@@ -75,6 +95,28 @@ function rightSideButton() {
     let stringList = inputImages_value.split(';');
     let nextIndex = index_figured(stringList);
     change_main_viewer(stringList[nextIndex]);
+}
+;
+function leftSideButton() {
+    let current_index = Number(localStorage.getItem("next-image-in-hoster"));
+    let inputImages = document.getElementById('listofimages');
+    let inputImages_value = inputImages.value;
+    let stringList = inputImages_value.split(';');
+    let current_now_index = current_index - 1;
+    if (current_now_index === 0) {
+        localStorage.setItem("next-image-in-hoster", current_now_index.toString());
+        let image = stringList[current_now_index];
+        let main_image_viewer = document.getElementById('main_image');
+        main_image_viewer.src = image;
+        left_show_button("none");
+    }
+    else {
+        localStorage.setItem("next-image-in-hoster", current_now_index.toString());
+        let image = stringList[current_now_index];
+        let main_image_viewer = document.getElementById('main_image');
+        main_image_viewer.src = image;
+    }
+    ;
 }
 ;
 mainImage.addEventListener("click", function () {
@@ -91,4 +133,8 @@ mainImage.addEventListener("click", function () {
         let imageCover = element.getAttribute("data-image");
         main_image_viewer(imageCover);
     }
+    ;
+});
+window.addEventListener('beforeunload', (event) => {
+    localStorage.removeItem('next-image-in-hoster');
 });

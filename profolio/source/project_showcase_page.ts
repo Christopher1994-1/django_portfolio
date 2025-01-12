@@ -10,6 +10,14 @@ let mainImageContainer: any = document.getElementById('mainCoverPhoto_Container'
 
 
 
+//. FUNCTION THAT SHOWS AND HIDES LEFT SIDE ARROW BUTTON
+function left_show_button(state: string): void {
+    let leftSideButton: any = document.getElementById('left-side-button');
+    leftSideButton.style.display = state;
+};
+
+
+
 
 //. HANDLING WHEN MAIN IMAGE COVER IS HOVERED OVER
 if (mainImage) {
@@ -60,7 +68,6 @@ function change_main_viewer(image:string): void {
     let main_image_viewer: any = document.getElementById('main_image');
     //. CHANGING SOURCE OF IMAGE
     main_image_viewer.src = image;
-    console.log(image)
 };
 
 
@@ -113,15 +120,39 @@ function index_figured(stringList: string[]): number {
     let main_image_viewer_src: string = main_image_viewer.src;
     //. GETTING THE FIRST INDEX FROM PASSED LIST
     let firstIndex: string = stringList[0];
+    //. GET THE LENGTH OF THE LIST
+    let length_of_list: number = stringList.length;
 
-    //! do a local storage thing fuck it
+    //. NAME OF THE LOCAL STORAGE VALUE
+    let ss_name: string = "next-image-in-hoster";
 
-    //. CHECKING IF THE FIRST INDEX AND THE MAIN IMAGE SRC IS THE SAME, IF SO GET THE NEXT INDEX
     if (main_image_viewer_src == firstIndex) {
+        localStorage.setItem(ss_name, '1');
+        //. SHOW THE LEFT SIDE ARROW BUTTON
+        left_show_button('block');
         return 1
-    }
-    else {
-        return 0
+    } else {
+        //. GETTING THE LOCAL STORAGE VAR
+        let lastIndex: string = localStorage.getItem(ss_name) ?? '';
+        //. CONVERTING THE LAST INDEX INTO NUMBER THAN ADDING 1
+        let intergerIndex: number = Number(lastIndex) + 1;
+
+        if (length_of_list === intergerIndex) {
+            
+            localStorage.removeItem(ss_name);
+            left_show_button('none');
+            return 0;
+        }
+
+        else {
+            //. SETTING THE NEW LOCAL STORAGE TO THE NEW VALUE
+            localStorage.setItem(ss_name, intergerIndex.toString());
+            //. SHOW THE LEFT SIDE ARROW BUTTON
+            left_show_button('block');
+            return intergerIndex;
+
+        }
+        
     }
 
 };
@@ -144,9 +175,56 @@ function rightSideButton(): void {
 
 
 
+
+//. FUNCTION THAT HANDLES THE LEFT SIDE ARROW - IMAGE FLIPPING -
+function leftSideButton(): void {
+    //. GRAB THE LOCAL STORAGE INDEX STRING AND CONVERT TO INTERGER
+    let current_index: number = Number(localStorage.getItem("next-image-in-hoster"));
+    //. GET INPUT VALUE OF IMAGES
+    let inputImages: any = document.getElementById('listofimages');
+    //. GET THE INPUT VALUE OF IMAGES VALUE
+    let inputImages_value: string = inputImages.value;
+    //. SPLITING THE STRING VALUE INTO A LIST []
+    let stringList: string[] = inputImages_value.split(';');
+
+    //. THE NEW INDEX
+    let current_now_index: number = current_index - 1;
+
+    if (current_now_index === 0) {
+        //. UPDATE THE LOCAL STORAGE
+        localStorage.setItem("next-image-in-hoster", current_now_index.toString());
+
+        //. INDEXED IMAGE THE CLIENT WANTS
+        let image: string = stringList[current_now_index];
+
+        //. GET THE MAIN IMAGE VIEWER ELEMENT
+        let main_image_viewer: any = document.getElementById('main_image');
+
+        main_image_viewer.src = image;
+
+        left_show_button("none");
+    } 
+    
+    else {
+        //. UPDATE THE LOCAL STORAGE
+        localStorage.setItem("next-image-in-hoster", current_now_index.toString());
+
+        //. INDEXED IMAGE THE CLIENT WANTS
+        let image: string = stringList[current_now_index];
+
+        //. GET THE MAIN IMAGE VIEWER ELEMENT
+        let main_image_viewer: any = document.getElementById('main_image');
+
+        main_image_viewer.src = image;
+    };
+
+};
+
+
+
+
 //. HANDLING WHEN MAIN IMAGE OR ICON IS CLICKED -- OPEN OVERLAY
 mainImage.addEventListener("click", function() {
-
 
     //. CREATE NEW DIV THAT IS THE OVERLAY
     const newDiv = document.createElement('div');
@@ -168,12 +246,16 @@ mainImage.addEventListener("click", function() {
     if (element) {
         let imageCover: any = element.getAttribute("data-image");
         main_image_viewer(imageCover);
-    }
+    };
 
 
-    // make the popup for the image
-    // tranfer all the images etc to bunny
-    // maybe add in two columns to the projects class for smaller/larger images
-    // need a module to update rows
 });
 
+
+
+
+
+//. ENSURE THE LOCAL STROAGE IS CLEARED WHEN USER LEAVES THE PAGE
+window.addEventListener('beforeunload', (event) => {
+    localStorage.removeItem('next-image-in-hoster');
+});

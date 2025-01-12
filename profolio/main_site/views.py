@@ -24,7 +24,11 @@ def index(request):
 
     posts = Projects.objects.all()
     
-    context = {"year": year, "posts":posts}
+    
+    context = {
+        "year": year, 
+        "posts":posts
+    }
     
     return render(request, 'index.html', context)
 
