@@ -1,9 +1,11 @@
 from django.shortcuts import render
+import json
+from .stripe_payment import products, dd, subtotal
+from django.http import JsonResponse
 
 # Create your views here.
 
 
 
-def stripe_payment(request):
-    
-    return render(request, 'stripe_payment/stripe_payment.html', {})
+
+

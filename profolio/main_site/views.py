@@ -7,7 +7,7 @@ import json
 from ipware import get_client_ip
 import time
 from .models import Projects
-
+from projects import stripe_payment
 
 
 #. ROUTE FOR THE HOME PAGE
@@ -37,7 +37,18 @@ def index(request):
 
 
 
-
+def update_card(request):
+    if request.method == 'POST':
+        # Assuming the data is sent as JSON in the request body
+        data = json.loads(request.body)
+        cart_item_count = data.get('cartItemCount')
+        data191 = stripe_payment.products(cart_item_count)[0]
+        total = stripe_payment.products(cart_item_count)[1]
+        
+        for i in data191:
+            stripe_payment.dd.append(i)
+        stripe_payment.subtotal.append(total)
+        return JsonResponse({'status': 'success', 'message': 'Cart updated successfully'})
 
 
 

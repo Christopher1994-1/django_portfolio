@@ -1,0 +1,47 @@
+<div class="navbar" id="oldNav">
+
+    <div class="firstSide">
+        <a href="{% url 'index' %}"><h1>CEJ Kirk</h1></a>
+
+        <div class="links">
+            {% include 'stripe_payment/navbar_things/home_dropdown.html'%}
+
+            {% include 'stripe_payment/navbar_things/about_dropdown.html'%}
+
+            <a href="#" id="about-page">Others <i class="fa-solid fa-caret-down"></i></a>
+            <a href="#" id="contact-page">Contact</a>
+        </div>
+    </div>
+
+
+    <div class="cart">      
+        <!-- <a href="#"><i class="fa-solid fa-cart-shopping"></i></a> -->
+        <a href="{% url 'cart' %}" id="cartbutton"><button><i class="fa-solid fa-cart-shopping"></i> Cart <span id="cartNum">0</span></button></a>
+        <!-- <span class="dot" id="cart_itemsID">{{items}}</span> -->
+    </div>
+
+
+</div>
+
+
+
+<div class="navbar2" id="navbar2">
+
+    <div class="hamburgerMenu">
+        <i class="fa-solid fa-bars" onclick="open_menu()"></i>
+    </div>
+
+
+    <div class="firstSide">
+        <a href="{% url 'index' %}"><h1>CEJ Kirk</h1></a>
+    </div>
+
+
+    <div class="cart">
+        <a href="{% url 'cart' %}" id="cartbutton1"><button><i class="fa-solid fa-cart-shopping"></i> Cart <span id="cartNum2">0</span></button></a>
+    </div>
+
+
+</div>
+
+

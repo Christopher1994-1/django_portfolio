@@ -28,6 +28,12 @@ urlpatterns = [
     path('update_project/<str:project_id>/', updating_projects.update_project_are, name="update_project_are"),
     path('update_project_finished/', updating_projects.update_project_finished, name="update_project_finished"),
     path('update_success/', updating_projects.update_success, name="update_success"),
-    path('update_fail/', updating_projects.update_fail, name="update_fail")
+    path('update_fail/', updating_projects.update_fail, name="update_fail"),
+    
+    
+    
+    
+    
+    path('update_cart', views.update_card, name='update_cart'),
     
 ]   

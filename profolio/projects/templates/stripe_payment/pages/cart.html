@@ -1,0 +1,21 @@
+{% extends 'stripe_payment/base.html' %}
+
+
+
+
+{% block content %}
+
+{% load static %}
+
+{% if empty == 'n' %}
+    {% include 'stripe_payment/page_things/normal_cart.html' %}
+{% else %}
+    {% include 'stripe_payment/page_things/empty_cart.html' %}
+{% endif %}
+
+
+<input type="text" value="{{total}}" id='this' style="visibility: hidden; position: absolute;">
+
+<script src="{% static 'js/stripe_payment2.js' %}"></script>
+
+{% endblock content %}

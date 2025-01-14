@@ -1,0 +1,149 @@
+{% extends 'stripe_payment/base.html' %}
+
+
+
+{% block content %}
+
+{% load static %}
+<div class="banner">
+    <h1>Choose a product</h1>
+</div>
+
+
+<div class="products_showcase">
+
+    <div class="product">
+        <img src="https://main553.b-cdn.net/portfolio/stripe%20backend%20payment/product1.png" alt="">
+        <div class="info">
+            <h5>Product 1</h5>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit modi cum a quae, sit ut nisi sapiente deserunt temporibus dolorum labore similique et beatae consequatur nesciunt necessitatibus officiis? Adipisci, soluta.</p>
+            <div class="button-price">
+                <button onclick="add_product('1')" id="btn1">Add to Cart</button>
+                <button id="added1" class="added">Added</button>
+                <h5>$19.99</h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="product">
+        <img src="https://main553.b-cdn.net/portfolio/stripe%20backend%20payment/product2.png" alt="">
+        <div class="info">
+            <h5>Product 2</h5>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit modi cum a quae, sit ut nisi sapiente deserunt temporibus dolorum labore similique et beatae consequatur nesciunt necessitatibus officiis? Adipisci, soluta.</p>
+            <div class="button-price">
+                <button onclick="add_product('2')"  id="btn2">Add to Cart</button>
+                <button id="added2" class="added">Added</button>
+                <h5>$9.99</h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="product">
+        <img src="https://main553.b-cdn.net/portfolio/stripe%20backend%20payment/product3.png" alt="">
+        <div class="info">
+            <h5>Product 3</h5>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit modi cum a quae, sit ut nisi sapiente deserunt temporibus dolorum labore similique et beatae consequatur nesciunt necessitatibus officiis? Adipisci, soluta.</p>
+            <div class="button-price">
+                <button onclick="add_product('3')" id="btn3">Add to Cart</button>
+                <button id="added3" class="added">Added</button>
+                <h5>$59.99</h5>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="product">
+        <img src="https://main553.b-cdn.net/portfolio/stripe%20backend%20payment/product4.png" alt="">
+        <div class="info">
+            <h5>Product 4</h5>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit modi cum a quae, sit ut nisi sapiente deserunt temporibus dolorum labore similique et beatae consequatur nesciunt necessitatibus officiis? Adipisci, soluta.</p>
+            <div class="button-price">
+                <button onclick="add_product('4')" id="btn4">Add to Cart</button>
+                <button id="added4" class="added">Added</button>
+                <h5>$39.99</h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="product">
+        <img src="https://main553.b-cdn.net/portfolio/stripe%20backend%20payment/product5.png" alt="">
+        <div class="info">
+            <h5>Product 5</h5>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit modi cum a quae, sit ut nisi sapiente deserunt temporibus dolorum labore similique et beatae consequatur nesciunt necessitatibus officiis? Adipisci, soluta.</p>
+            <div class="button-price">
+                <button onclick="add_product('5')" id="btn5">Add to Cart</button>
+                <button id="added5" class="added">Added</button>
+                <h5>$79.99</h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="product">
+        <img src="https://main553.b-cdn.net/portfolio/stripe%20backend%20payment/product6.png" alt="">
+        <div class="info">
+            <h5>Product 6</h5>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit modi cum a quae, sit ut nisi sapiente deserunt temporibus dolorum labore similique et beatae consequatur nesciunt necessitatibus officiis? Adipisci, soluta.</p>
+            <div class="button-price">
+                <button onclick="add_product('6')" id="btn6">Add to Cart</button>
+                <button id="added6" class="added">Added</button>
+                <h5>$199.99</h5>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock content %}

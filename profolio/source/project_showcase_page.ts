@@ -7,6 +7,8 @@ let mainImage: any = document.getElementById('mmi');
 //. MAIN IMAGE COVER CONTAINER
 let mainImageContainer: any = document.getElementById('mainCoverPhoto_Container');
 
+const LOCAL_STORGE_INDEX_NAME: string = "next-image-in-hoster";
+
 
 
 
@@ -113,6 +115,7 @@ function close_main_image_viewer(): void {
 
 
 //. FUNCTION THAT FIGURES OUT THE NEXT INDEX FOR MAIN IMAGE VIEWER
+//. ONLY FOR MAIN IMAGE VIEWER NOT GALLERY
 function index_figured(stringList: string[]): number {
     //. GET THE MAIN IMAGE VIEWER ELEMENT
     let main_image_viewer: any = document.getElementById('main_image');
@@ -123,30 +126,28 @@ function index_figured(stringList: string[]): number {
     //. GET THE LENGTH OF THE LIST
     let length_of_list: number = stringList.length;
 
-    //. NAME OF THE LOCAL STORAGE VALUE
-    let ss_name: string = "next-image-in-hoster";
 
     if (main_image_viewer_src == firstIndex) {
-        localStorage.setItem(ss_name, '1');
+        localStorage.setItem(LOCAL_STORGE_INDEX_NAME, '1');
         //. SHOW THE LEFT SIDE ARROW BUTTON
         left_show_button('block');
         return 1
     } else {
         //. GETTING THE LOCAL STORAGE VAR
-        let lastIndex: string = localStorage.getItem(ss_name) ?? '';
+        let lastIndex: string = localStorage.getItem(LOCAL_STORGE_INDEX_NAME) ?? '';
         //. CONVERTING THE LAST INDEX INTO NUMBER THAN ADDING 1
         let intergerIndex: number = Number(lastIndex) + 1;
 
         if (length_of_list === intergerIndex) {
             
-            localStorage.removeItem(ss_name);
+            localStorage.removeItem(LOCAL_STORGE_INDEX_NAME);
             left_show_button('none');
             return 0;
         }
 
         else {
             //. SETTING THE NEW LOCAL STORAGE TO THE NEW VALUE
-            localStorage.setItem(ss_name, intergerIndex.toString());
+            localStorage.setItem(LOCAL_STORGE_INDEX_NAME, intergerIndex.toString());
             //. SHOW THE LEFT SIDE ARROW BUTTON
             left_show_button('block');
             return intergerIndex;
@@ -179,7 +180,7 @@ function rightSideButton(): void {
 //. FUNCTION THAT HANDLES THE LEFT SIDE ARROW - IMAGE FLIPPING -
 function leftSideButton(): void {
     //. GRAB THE LOCAL STORAGE INDEX STRING AND CONVERT TO INTERGER
-    let current_index: number = Number(localStorage.getItem("next-image-in-hoster"));
+    let current_index: number = Number(localStorage.getItem(LOCAL_STORGE_INDEX_NAME));
     //. GET INPUT VALUE OF IMAGES
     let inputImages: any = document.getElementById('listofimages');
     //. GET THE INPUT VALUE OF IMAGES VALUE
@@ -192,7 +193,7 @@ function leftSideButton(): void {
 
     if (current_now_index === 0) {
         //. UPDATE THE LOCAL STORAGE
-        localStorage.setItem("next-image-in-hoster", current_now_index.toString());
+        localStorage.setItem(LOCAL_STORGE_INDEX_NAME, current_now_index.toString());
 
         //. INDEXED IMAGE THE CLIENT WANTS
         let image: string = stringList[current_now_index];
@@ -207,7 +208,7 @@ function leftSideButton(): void {
     
     else {
         //. UPDATE THE LOCAL STORAGE
-        localStorage.setItem("next-image-in-hoster", current_now_index.toString());
+        localStorage.setItem(LOCAL_STORGE_INDEX_NAME, current_now_index.toString());
 
         //. INDEXED IMAGE THE CLIENT WANTS
         let image: string = stringList[current_now_index];
@@ -257,5 +258,132 @@ mainImage.addEventListener("click", function() {
 
 //. ENSURE THE LOCAL STROAGE IS CLEARED WHEN USER LEAVES THE PAGE
 window.addEventListener('beforeunload', (event) => {
-    localStorage.removeItem('next-image-in-hoster');
+    localStorage.removeItem(LOCAL_STORGE_INDEX_NAME);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//. FUNCTION FOR FINDING THE INDEX OF THE CURRENT INDEX
+//. ONLY FOR GALLERY IMAGE VIEWER NOT MAIN IMAGE VIEWER
+function find_current_index(image:string, listOfImages: string[]): number {
+
+    //. GET THE INDEX NUMBER OF THE IMAGE PASSED IN PLUS ONE
+    let currentIndex: number = listOfImages.indexOf(image) + 1;
+
+    //. GET THE NEXT IMAGE IN LINE
+    let nextImage: string = listOfImages[currentIndex]
+
+    //. ELEMENT OF THE MAIN IMAGE
+    let main_image: any = document.getElementById('main_image');
+    main_image.src = nextImage;
+
+
+
+    //. UPDATE LOCAL STORAGE WITH THE NEW INDEX
+    
+
+    return 0
+
+};
+
+
+
+
+
+
+
+
+//. FUNCTION THAT OPENS THE MAIN IMAGE FOR THE GALLERY
+function main_image_viewer_gallery(image:any): void {
+
+    //. CREATE NEW DIV THAT IS THE IMAGE VIEWER
+    const newDiv = document.createElement('div');
+    newDiv.id = "image_viewer2";
+
+
+    newDiv.innerHTML = `
+    <div id="xbutton">
+        <button onclick="close_main_image_viewer2()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <img src="${image}" id="main_image">
+
+    <div id="left-side-button">
+        <button onclick="leftSideButton2('${image}')"><i class="fa-solid fa-arrow-left"></i></button>
+    </div>
+
+    <div id="right-side-button">
+        <button onclick="rightSideButton2('${image}')"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    `;
+
+
+    document.body.appendChild(newDiv);
+
+    localStorage.removeItem(LOCAL_STORGE_INDEX_NAME);
+
+
+};
+
+
+
+//. FUNCTION THAT CLOSES THE MAIN IMAGE VIEWER FOR GALLERY
+function close_main_image_viewer2(): void {
+    let overlay: any = document.getElementById('image_overlay');
+    let imageViewer:any = document.getElementById('image_viewer2');
+    document.body.removeChild(overlay);
+    document.body.removeChild(imageViewer);
+};
+
+
+
+//. FUNCTION THAT HANDLES THE LEFT SIDE CLICK WHEN GALLERY IS OPEN
+function leftSideButton2(image:string): void {
+
+
+};
+
+
+//. FUNCTION THAT HANDLES THE RIGHT SIDE CLICK WHEN GALLERY IS OPEN
+function rightSideButton2(image:string): void {
+    //. GET THE LIST OF IMAGES ELEMENT
+    let loi: any = document.getElementById('listofimages')
+    //. GET THE LIST OF IMAGES AND CONVERT TO LIST
+    let listOfImages: string[] = loi.value.split(';');
+   
+    //. CURRENT INDEX OF THE PASSED IMAGE
+    let currentIndex: number = find_current_index(image, listOfImages);
+};
+
+
+
+//. FUNCTION THAT OPENS THE GALLERY IMAGE 
+function open_gallery_image(image: string): void {
+    //. CREATE NEW DIV THAT IS THE OVERLAY
+    const newDiv = document.createElement('div');
+    newDiv.id = "image_overlay";
+
+
+    newDiv.style.position = 'fixed';
+    newDiv.style.width = '100%';
+    newDiv.style.height = '100%';
+    newDiv.style.top = '0';
+    newDiv.style.backgroundColor = '#0000007d';
+
+
+
+    document.body.appendChild(newDiv);
+
+
+    main_image_viewer_gallery(image);
+};

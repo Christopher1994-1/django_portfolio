@@ -56,7 +56,7 @@
             <h2>Gallery</h2>
             <div class="gallery-images">
                 {% for img in images %}
-                    <img src="{{img}}" alt="Gallery Image">
+                    <img src="{{img}}" alt="Gallery Image" onclick="open_gallery_image('{{img}}')">
                 {% endfor %}
             </div>
         </div>
