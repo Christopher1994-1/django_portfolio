@@ -1,12 +1,26 @@
 <div class="navbar" id="oldNav">
 
     <div class="firstSide">
-        <a href="{% url 'index' %}"><h1>CEJ Kirk</h1></a>
+        <a href="{% url 'stripe_payment' %}"><h1>CEJ Kirk</h1></a>
 
         <div class="links">
-            {% include 'stripe_payment/navbar_things/home_dropdown.html'%}
+            <div class="homeDropdown" id="homeDrops1">
+                <a href="#" id="home-page1">Home <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown" id="dropdownID1">
+                    <a href="{% url 'index' %}">Portfolio Home</a>
+                    <a href="#">Backend Projects</a>
+                    <a href="{% url 'index' %}">This Project Home</a>
+                </div>
+            </div>
 
-            {% include 'stripe_payment/navbar_things/about_dropdown.html'%}
+            <div class="aboutDropdown" id="aboutDrops1">
+                <a href="#" id="home-page1">About <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown" id="dropdownID2">
+                    <a href="#">About Project</a>
+                    <a href="#">How It Works</a>
+                    <a href="https://stripe.com/" target="_blank">Stripe API</a>
+                </div>
+            </div>
 
             <a href="#" id="about-page">Others <i class="fa-solid fa-caret-down"></i></a>
             <a href="#" id="contact-page">Contact</a>
