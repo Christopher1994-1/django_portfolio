@@ -1,4 +1,33 @@
-let returnURL:string = 'http://127.0.0.1:8000/successful_pay'
+// let returnURL:string = 'http://127.0.0.1:8000/successful_pay'
+
+
+
+//. MAIN FUNCTION TAHT CHECKS THE SERVER STATUS
+function check_server_status(): boolean {
+    let l: any = document.getElementById('serverStatus');
+    const SERVER_STATUS: any = l.value;
+    return SERVER_STATUS.toLowerCase() === "true";
+}
+
+
+
+//. FUNCTION THAT DECIDES URL FOR SUCCESSFUL PAY PAGE
+function successful_pay(): string {
+    let bool: boolean = check_server_status();
+
+    if (bool) {
+        return "http://cejkirk.com/projects/successful_pay";
+    }
+
+    else {
+        return "http://127.0.0.1:8000/projects/successful_pay";
+    };
+};
+
+
+
+
+let return_url: string = successful_pay();
 
 
 //= ==/////===================================================================================================================
@@ -87,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
           elements,
           confirmParams: {
             // Make sure to change this to your payment completion page
-            return_url: returnURL,
+            return_url: return_url,
             receipt_email: emailAddress,
           },
         });

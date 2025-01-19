@@ -33,7 +33,10 @@ urlpatterns = [
     
     
     
-    
+    #. STRIPE PAYMENT PROJECT
     path('update_cart', views.update_card, name='update_cart'),
+    path('stripeIntentView', views.stripeIntentView, name='stripeIntentView'),
+    # path('successful_pay', views.successful_pay, name="successful_pay"),
+    
     
 ]   

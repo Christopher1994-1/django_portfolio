@@ -8,6 +8,23 @@ from ipware import get_client_ip
 import time
 from .models import Projects
 from projects import stripe_payment
+import stripe
+import os
+
+
+
+
+#. SERVER LIVE / OFF
+SERVER_STATUS:str = "false"
+
+
+
+#= stripe api keys
+STRIPE_SECRET_KEY = os.getenv('stripe_secret_key')
+STRIPE_PUBLISH_KEY = os.getenv('stripe_publish_key')
+
+
+
 
 
 #. ROUTE FOR THE HOME PAGE
@@ -54,17 +71,39 @@ def update_card(request):
 
 
 
+stripe.api_key = STRIPE_SECRET_KEY
+#. ROUTE FUNCTION FOR THE STRIPE PAYMENT INTENT (STRIPE_PAYMENT PROJECT)
+def stripeIntentView(request):
+    intent = stripe.PaymentIntent.create(
+        amount=100,
+        currency='usd',
+        # In the latest version of the API, specifying the `automatic_payment_methods` parameter is optional because Stripe enables its functionality by default.
+        automatic_payment_methods={
+            'enabled': True,
+        },
+        metadata={
+            'tax_calculation': ''
+        },
+        )
+    return JsonResponse({
+            'clientSecret': intent['client_secret']
+        })
+
+
+
+
+# #. ROUTE FOR SUCCESSFUL PAYMENT (STRIPE_PAYMENT PROJECT)
+# def successful_pay(request):
+#     return render(request, "pages/successful.html", {})
 
 
 
 
 
-
-#=############################################################################################
-# route for the test page
+#. ROUTE FOR THE TEST PAGE
 def tests(request):
     return render(request, 'pages/tests2.html', {})
-#.############################################################################################
+
 
 
 

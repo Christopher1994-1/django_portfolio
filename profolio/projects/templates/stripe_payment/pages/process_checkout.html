@@ -1,0 +1,25 @@
+{% extends 'stripe_payment/base.html' %}
+
+
+
+{% block content %}
+
+{% load static %}
+
+
+<br><br>
+
+{% include 'stripe_payment/page_things/old_checkout.html' %}
+
+
+<input type="hidden" id="serverStatus" value="{{serverStatus}}">
+
+
+<script src="https://js.stripe.com/v3/"></script>
+
+
+<script src="{% static 'js/stripe_payment3.js' %}"></script>
+
+
+
+{% endblock content %}

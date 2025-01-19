@@ -16,7 +16,7 @@
                 <tbody>
                     {% for i in data %}
                         <tr>
-                            <td> <img src="{% static i.2%}" alt=""> {{i.0}}</td>
+                            <td> <img src="{{i.2}}" alt=""> {{i.0}}</td>
                             <td>${{i.1}}</td>
                             <td>1</td>
                             <td>${{i.1}}</td>
@@ -57,7 +57,7 @@
 
             <div class="submitbutton">
                 <input type="hidden" value="{{total}}, {{data}}">
-                <a href="#" id="checkoutbtn" onclick="processBtn()">PROCEED TO CHECKOUT</a>
+                <a href="{% url 'process_payment' %}" id="checkoutbtn" onclick="processBtn()">PROCEED TO CHECKOUT!</a>
             </div>
     </div>
     

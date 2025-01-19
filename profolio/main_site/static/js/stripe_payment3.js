@@ -8,7 +8,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-let returnURL = 'http://127.0.0.1:8000/successful_pay';
+function check_server_status() {
+    let l = document.getElementById('serverStatus');
+    const SERVER_STATUS = l.value;
+    return SERVER_STATUS.toLowerCase() === "true";
+}
+function successful_pay() {
+    let bool = check_server_status();
+    if (bool) {
+        return "http://cejkirk.com/projects/successful_pay";
+    }
+    else {
+        return "http://127.0.0.1:8000/projects/successful_pay";
+    }
+    ;
+}
+;
+let return_url = successful_pay();
 document.addEventListener('DOMContentLoaded', function () {
     var stripe = Stripe('pk_test_51OF1EMH12wPbXhJ68EXbZb8FX8jjVv5JyuHndUyjiBj8bSnpWd5LvrfYy1WLLCuQkKkjDBGx3ZVPXcrZYVgznJ66002dk659Z8');
     var elements = stripe.elements();
@@ -57,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const { error } = yield stripe.confirmPayment({
                 elements,
                 confirmParams: {
-                    return_url: returnURL,
+                    return_url: return_url,
                     receipt_email: emailAddress,
                 },
             });
