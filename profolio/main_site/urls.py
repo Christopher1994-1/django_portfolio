@@ -10,6 +10,10 @@ urlpatterns = [
     path('tests/', views.tests, name='tests'),
     path('privacy-policy/', views.privacy_policy, name="privacy_policy"),
     path('search_projects/<str:filters>/', views.search_projects, name="search_projects"),
+    path('contact_page/', views.contact_page, name="contact_page"),
+    
+    #. ROUTE FUNCTIONS
+    path('contact_info/', views.contact_info, name="contact_info"),
     
     
     #! view functions

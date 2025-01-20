@@ -92,9 +92,8 @@ def stripeIntentView(request):
 
 
 
-# #. ROUTE FOR SUCCESSFUL PAYMENT (STRIPE_PAYMENT PROJECT)
-# def successful_pay(request):
-#     return render(request, "pages/successful.html", {})
+
+
 
 
 
@@ -186,3 +185,29 @@ def search_projects(request, filters):
 
 
 
+
+
+
+
+
+#. ROUTE FOR THE CONTACT PAGE
+def contact_page(request):
+    context = {}
+    return render(request, 'pages/contact.html', context)
+
+
+
+#. ROUTE FUNCTION FOR HANDLING TYPESCRIPT MESSAGE
+def contact_info(request):
+    name: str = request.POST.get('name')
+    email: str = request.POST.get('email')
+    message: str = request.POST.get('message')
+    
+    
+    msg2Send: str = f"\nName: {name}\nEmail: {email}\n\nMessage:\n{message}"
+    
+    app_functions.send_email(msg2Send, "New Portfolio Email!!")
+    
+    response_data = {'status': 'success', 'values': ''}   
+    return JsonResponse(response_data)
+    

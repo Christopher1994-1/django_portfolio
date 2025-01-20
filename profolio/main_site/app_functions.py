@@ -31,6 +31,33 @@ compareDate = str(now.strftime("%m/%d/%Y"))
 #= ------------------------------------------------ #
 
 
+#. FUNCTION THAT IS USED TO EMAIL MYSELF ABOUT THINGS
+def send_email(message: str, subject1: str) -> None:
+    """ function that is used to send an email
+
+    Args:
+        message (str): the message body you want to send
+        subject1 (str): the subject of the message
+    """
+    SENDER: str = "supersweet098@gmail.com"
+    RECEIVER: str = "kirko190255@gmail.com"
+    APP_PASS: str = "erwrvoczzqsrxrsu"
+    
+
+    with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
+        smtp.ehlo()
+        smtp.starttls()
+        smtp.ehlo()
+
+        smtp.login(SENDER, APP_PASS)
+        subject = subject1
+        body = message
+
+        msg = f"Subject: {subject}\n\n{body}"
+
+        smtp.sendmail(SENDER, RECEIVER, msg)
+
+
 #3
 #3
 #3
@@ -476,3 +503,7 @@ def filter_algo(string):
     return final_result
     
 #==========================================================================================
+
+
+# if __name__ == "__main__":
+#     send_email('fucking', 'test')

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - CEJ Kirk</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/all.css' %}">
+    <link rel="icon" href="https://main553.b-cdn.net/portfolio/stripe%20backend%20payment/second.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/smaller_screens.css' %}">
+</head>
+<body style="background-color: #121212">
+
+
+    <div class="contact-page">
+        <a href="/" id="home_page_indi">Home <i class="fa-solid fa-arrow-left"></i></a>
+        <div class="contact-header" id="contact-container">
+            <h1>Get in Touch</h1>
+            <p>Feel free to reach out to me via the form below!</p>
+        </div>
+        <form class="contact-form" id="contactFormID">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name:" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email:" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message:" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </div>
+
+    
+
+
+
+    <script src="{% static 'js/contact_information.js' %}"></script>
+    
+</body>
+</html>
