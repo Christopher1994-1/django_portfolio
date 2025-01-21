@@ -21,6 +21,30 @@ function open_thank_you() {
 }
 ;
 function say_thank_you() {
+    let name = document.getElementById('client_name');
+    name.value = '';
+    let email = document.getElementById('client_email');
+    email.value = '';
+    let message = document.getElementById('client_msg');
+    message.value = '';
+    const thankYouDiv = document.createElement('div');
+    thankYouDiv.style.position = 'fixed';
+    thankYouDiv.style.top = '7%';
+    thankYouDiv.style.left = '50%';
+    thankYouDiv.style.transform = 'translate(-50%, -50%)';
+    thankYouDiv.style.padding = '20px';
+    thankYouDiv.style.backgroundColor = '#f9f9f9';
+    thankYouDiv.style.border = '1px solid #ccc';
+    thankYouDiv.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+    thankYouDiv.style.zIndex = '1000';
+    thankYouDiv.textContent = 'Thank you for your submission!';
+    thankYouDiv.id = 'thank-you-div';
+    document.body.appendChild(thankYouDiv);
+    setTimeout(function () {
+        let thankYouDiv2 = document.getElementById('thank-you-div');
+        thankYouDiv2.style.display = 'none';
+        document.body.removeChild(thankYouDiv);
+    }, 3000);
 }
 ;
 function message_backend(name, email, message) {
@@ -38,6 +62,7 @@ function message_backend(name, email, message) {
         body: formData
     });
 }
+;
 if (contactFormElement) {
     contactFormElement.addEventListener('submit', function (event) {
         var _a, _b, _c, _d, _e, _f;
@@ -58,6 +83,7 @@ if (indexContactFormElement) {
         let email = (_d = (_c = document.getElementById('client_email')) === null || _c === void 0 ? void 0 : _c.value) !== null && _d !== void 0 ? _d : '';
         let message = (_f = (_e = document.getElementById('client_msg')) === null || _e === void 0 ? void 0 : _e.value) !== null && _f !== void 0 ? _f : '';
         message_backend(name, email, message);
+        say_thank_you();
     });
 }
 ;
