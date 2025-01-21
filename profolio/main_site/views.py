@@ -19,7 +19,7 @@ SERVER_STATUS:str = "false"
 
 
 
-#= stripe api keys
+#. STRIPE API KEYS
 STRIPE_SECRET_KEY = os.getenv('stripe_secret_key')
 STRIPE_PUBLISH_KEY = os.getenv('stripe_publish_key')
 
@@ -211,3 +211,7 @@ def contact_info(request):
     response_data = {'status': 'success', 'values': ''}   
     return JsonResponse(response_data)
     
+
+
+
+

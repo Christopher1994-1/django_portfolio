@@ -1,5 +1,3 @@
-// let returnURL:string = 'http://127.0.0.1:8000/successful_pay'
-
 
 
 //. MAIN FUNCTION TAHT CHECKS THE SERVER STATUS

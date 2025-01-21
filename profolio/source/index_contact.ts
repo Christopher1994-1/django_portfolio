@@ -1,5 +1,25 @@
-let projects_url:string = 'http://127.0.0.1:8000/projects/'
 
+
+//. MAIN FUNCTION TAHT CHECKS THE SERVER STATUS
+function check_server_status1(): boolean {
+    let l: any = document.getElementById('serverStatus');
+    const SERVER_STATUS: any = l.value;
+    return SERVER_STATUS.toLowerCase() === "true";
+}
+
+
+//. FUNCTION THAT DECIDES URL FOR SUCCESSFUL PAY PAGE
+function get_url(): string {
+    let bool: boolean = check_server_status();
+
+    if (bool) {
+        return "http://cejkirk.com/projects/";
+    }
+
+    else {
+        return "http://127.0.0.1:8000/projects/";
+    };
+};
 
 
 let project_quickView:any = document.getElementById('entryWarningID');
@@ -12,20 +32,34 @@ let projectImageLink:any = document.getElementById('imageLINKID');
 
 
 
-//* adding links to quick shot
-function add_links(links_array:any) {
+//. ADDING LINKS TO QUICK SHOT
+function add_links(links_array:any): void {
     //= ID's for links
     let gitHubButton:any = document.getElementById('link2gitubID');
+    let liveDemoButton:any = document.getElementById('live-demo-a-tag-button');
+    let liveDemoCoverImage:any = document.getElementById('imageLINKID');
+    let LearnMoreButton:any = document.getElementById('learnMoreQuickShot');
 
     let gitHubLink:string = links_array[0];
+    let liveDemoLink: string = links_array[1];
+    let projectShowCase: string = `projects_showcase/${links_array[2]}`;
 
     gitHubButton.href = gitHubLink;
     gitHubButton.target = "_blank";
+
+
+    liveDemoButton.href = liveDemoLink;
+    liveDemoButton.target = "_blank";
+
+    liveDemoCoverImage.href = liveDemoLink;
+    liveDemoCoverImage.target = "_blank";
+
+    LearnMoreButton.href = projectShowCase;
 }
 
 
-//* adding use cases to quick shot
-function add_useCaes(data:any) {
+//. ADDING USE CASES TO QUICK SHOT
+function add_useCaes(data:any): void {
     let useCaes_container:any = document.getElementById('casesID');
 
     data.forEach(function(value:string, index:number) {
@@ -72,36 +106,52 @@ function add_para(data:any) {
 
 
 
-//* main function to open quickshot
-function open_quickshot_projectHTML(data:any) {
+
+
+
+
+//. MAIN FUNCTION TO OPEN QUICKSHOT
+function open_quickshot_projectHTML(data:any): void {
 
     project_quickView.style.display = 'flex';
 
-    project_title.innerHTML = data[1]
+    project_title.innerHTML = data[1];
 
-    projectImageLink.href = ''
-    projectImage.src = data[5];
-    projectImage.alt = data[1];
+    projectImageLink.href = '';
+    projectImage.src = data[14];
+    projectImage.alt = data[1]; //. MAKE THE ALT THE TITLE OF THE PROJECT
 
     // Clear existing content
-    document.getElementById('tagsID').innerHTML = '';
-    document.getElementById('shortDID').innerHTML = '';
-    document.getElementById('casesID')?.innerHTML = '';
-
-    let tags:any = `${data[3]}`.split(',')
-    let para:any = data[8]
-
-    let useCases:any = `${data[13]}`.split(',')
-
-    let githubLink:string = data[7]
+    const tagsElement = document.getElementById('tagsID');
+    if (tagsElement) {
+        tagsElement.innerHTML = '';
+    };
     
-    let links_array:any = [githubLink, ]
+    const shortDElement = document.getElementById('shortDID');
+    if (shortDElement) {
+        shortDElement.innerHTML = '';
+    };
+    
+    const casesElement = document.getElementById('casesID');
+    if (casesElement) {
+        casesElement.innerHTML = '';
+    };
+
+    let tags:any = `${data[3]}`.split(',');
+    let para:any = data[2];
+
+    let useCases:any = `${data[12]}`.split(',');
+
+    let githubLink:string = data[6];
+    let liveDemoLink: string = `projects/${data[5]}`;
+    
+    let links_array:any = [githubLink, liveDemoLink, data[1]];
 
 
-    add_tags(tags)
-    add_para(para)
-    add_useCaes(useCases)
-    add_links(links_array)
+    add_tags(tags);
+    add_para(para);
+    add_useCaes(useCases);
+    add_links(links_array);
 }
 
 
@@ -112,8 +162,8 @@ function closePopup() {
 }
 
 
-//, function to send and receive quickshot project
-function open_quickshot_project(id:string) {
+//. FUNCTION TO SEND AND RECEIVE QUICKSHOT PROJECT
+function open_quickshot_project(id:string): void {
     // AJAX request
     $.ajax({
         url: '/quickshot_search_query/',
@@ -131,6 +181,12 @@ function open_quickshot_project(id:string) {
         }
     });
 }
+
+
+
+
+
+
 
 
 
@@ -403,11 +459,13 @@ resetFilterButton.addEventListener('click', () => {
 })
 
 
-//* action that happens when filter button is clicked
+//. ACTION THAT HAPPENS WHEN FILTER BUTTON IS CLICKED
 filterFilterButton.addEventListener('click', () => {
     
     let combinedArray = useCases_.concat(techUsed_, Type_);
     let hrefString:string = combinedArray.join(', ');
+
+    let projects_url: string = get_url();
 
     let fullURL = `${projects_url}${hrefString}/`
     // steps

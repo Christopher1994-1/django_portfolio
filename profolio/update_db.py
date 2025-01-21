@@ -30,9 +30,9 @@ def select_all(db_name: str, table_name: str, limit:int, offset:int, set_all:boo
     query = ''
     
     if set_all:
-        query = f"SELECT * FROM {table_name} LIMIT {limit} OFFSET {offset}"
+        query = f"SELECT demo_url FROM {table_name} LIMIT {limit} OFFSET {offset}"
     else:
-        query = f"SELECT * FROM {table_name}"
+        query = f"SELECT demo_url FROM {table_name}"
     
     cursor.execute(query)
     tables = cursor.fetchall()

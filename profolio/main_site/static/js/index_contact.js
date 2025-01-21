@@ -1,14 +1,39 @@
 "use strict";
-let projects_url = 'http://127.0.0.1:8000/projects/';
+function check_server_status1() {
+    let l = document.getElementById('serverStatus');
+    const SERVER_STATUS = l.value;
+    return SERVER_STATUS.toLowerCase() === "true";
+}
+function get_url() {
+    let bool = check_server_status();
+    if (bool) {
+        return "http://cejkirk.com/projects/";
+    }
+    else {
+        return "http://127.0.0.1:8000/projects/";
+    }
+    ;
+}
+;
 let project_quickView = document.getElementById('entryWarningID');
 let project_title = document.getElementById('project_titleID');
 let projectImage = document.getElementById('popupImageID');
 let projectImageLink = document.getElementById('imageLINKID');
 function add_links(links_array) {
     let gitHubButton = document.getElementById('link2gitubID');
+    let liveDemoButton = document.getElementById('live-demo-a-tag-button');
+    let liveDemoCoverImage = document.getElementById('imageLINKID');
+    let LearnMoreButton = document.getElementById('learnMoreQuickShot');
     let gitHubLink = links_array[0];
+    let liveDemoLink = links_array[1];
+    let projectShowCase = `projects_showcase/${links_array[2]}`;
     gitHubButton.href = gitHubLink;
     gitHubButton.target = "_blank";
+    liveDemoButton.href = liveDemoLink;
+    liveDemoButton.target = "_blank";
+    liveDemoCoverImage.href = liveDemoLink;
+    liveDemoCoverImage.target = "_blank";
+    LearnMoreButton.href = projectShowCase;
 }
 function add_useCaes(data) {
     let useCaes_container = document.getElementById('casesID');
@@ -36,20 +61,32 @@ function add_para(data) {
     paraContainer.appendChild(newElement);
 }
 function open_quickshot_projectHTML(data) {
-    var _a;
     project_quickView.style.display = 'flex';
     project_title.innerHTML = data[1];
     projectImageLink.href = '';
-    projectImage.src = data[5];
+    projectImage.src = data[14];
     projectImage.alt = data[1];
-    document.getElementById('tagsID').innerHTML = '';
-    document.getElementById('shortDID').innerHTML = '';
-    (_a = document.getElementById('casesID')) === null || _a === void 0 ? void 0 : _a.innerHTML = '';
+    const tagsElement = document.getElementById('tagsID');
+    if (tagsElement) {
+        tagsElement.innerHTML = '';
+    }
+    ;
+    const shortDElement = document.getElementById('shortDID');
+    if (shortDElement) {
+        shortDElement.innerHTML = '';
+    }
+    ;
+    const casesElement = document.getElementById('casesID');
+    if (casesElement) {
+        casesElement.innerHTML = '';
+    }
+    ;
     let tags = `${data[3]}`.split(',');
-    let para = data[8];
-    let useCases = `${data[13]}`.split(',');
-    let githubLink = data[7];
-    let links_array = [githubLink,];
+    let para = data[2];
+    let useCases = `${data[12]}`.split(',');
+    let githubLink = data[6];
+    let liveDemoLink = `projects/${data[5]}`;
+    let links_array = [githubLink, liveDemoLink, data[1]];
     add_tags(tags);
     add_para(para);
     add_useCaes(useCases);
@@ -221,6 +258,7 @@ resetFilterButton.addEventListener('click', () => {
 filterFilterButton.addEventListener('click', () => {
     let combinedArray = useCases_.concat(techUsed_, Type_);
     let hrefString = combinedArray.join(', ');
+    let projects_url = get_url();
     let fullURL = `${projects_url}${hrefString}/`;
     window.location.href = fullURL;
     filterContainer.style.display = 'none';
