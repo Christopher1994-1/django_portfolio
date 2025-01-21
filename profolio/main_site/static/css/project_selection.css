@@ -48,4 +48,104 @@
   background-color: rgba(255, 255, 255, 0.712);
   border: none;
   border-radius: 10px;
+}
+
+.add-project-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #313131;
+  color: #cccccc;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+.add-project-form h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #000000;
+  font-family: math;
+}
+.add-project-form .form-group {
+  margin-bottom: 1.5rem;
+}
+.add-project-form .form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.add-project-form .form-group input[type=text],
+.add-project-form .form-group input[type=url],
+.add-project-form .form-group textarea,
+.add-project-form .form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #313131;
+  color: #cccccc;
+  transition: all 0.3s ease;
+}
+.add-project-form .form-group input[type=text]:focus,
+.add-project-form .form-group input[type=url]:focus,
+.add-project-form .form-group textarea:focus,
+.add-project-form .form-group select:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 4px #000000;
+}
+.add-project-form .form-group textarea {
+  resize: vertical;
+}
+.add-project-form button[type=submit] {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.add-project-form button[type=submit]:hover {
+  background-color: black;
+}
+
+body.dark-mode .add-project-form {
+  background-color: #1e1e2e;
+  color: #f5f5f5;
+  border-color: #444;
+}
+body.dark-mode .add-project-form h2 {
+  color: #4dabf7;
+}
+body.dark-mode .add-project-form input[type=text],
+body.dark-mode .add-project-form input[type=url],
+body.dark-mode .add-project-form input[type=file],
+body.dark-mode .add-project-form textarea,
+body.dark-mode .add-project-form select {
+  background-color: #1e1e2e;
+  color: #f5f5f5;
+  border-color: #444;
+}
+body.dark-mode .add-project-form input[type=text]:focus,
+body.dark-mode .add-project-form input[type=url]:focus,
+body.dark-mode .add-project-form input[type=file]:focus,
+body.dark-mode .add-project-form textarea:focus,
+body.dark-mode .add-project-form select:focus {
+  border-color: #4dabf7;
+  box-shadow: 0 0 4px #4dabf7;
+}
+body.dark-mode .add-project-form button[type=submit] {
+  background-color: #4dabf7;
+}
+body.dark-mode .add-project-form button[type=submit]:hover {
+  background-color: #7ec2f9;
 }/*# sourceMappingURL=project_selection.css.map */

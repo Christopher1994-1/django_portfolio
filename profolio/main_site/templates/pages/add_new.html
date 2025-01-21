@@ -8,6 +8,8 @@
 </head>
 <body style="background-color: #333;">
 
+    <a href="{% url 'new_project' %}">+</a>
+
     <div class="projection-selection">
         {% for project in projects %}
             <a href="{% url 'update_project_are' project_id=project.id %}">{{project.title}}</a>

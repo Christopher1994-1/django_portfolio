@@ -64,3 +64,133 @@
         }
     }
 }
+
+
+
+
+
+// Variables for theme colors
+$light-bg: #313131;
+$light-text: #cccccc;
+$light-border: #ddd;
+$light-accent: #000000;
+
+$dark-bg: #1e1e2e;
+$dark-text: #f5f5f5;
+$dark-border: #444;
+$dark-accent: #4dabf7;
+
+// Mixin for smooth transitions
+@mixin smooth-transition {
+  transition: all 0.3s ease;
+}
+
+// Base styles for the form
+.add-project-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: $light-bg;
+  color: $light-text;
+  border: 1px solid $light-border;
+  @include smooth-transition;
+
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    color: $light-accent;
+    font-family: math;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    input[type="text"],
+    input[type="url"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid $light-border;
+      border-radius: 6px;
+      background-color: $light-bg;
+      color: $light-text;
+      @include smooth-transition;
+
+      &:focus {
+        outline: none;
+        border-color: $light-accent;
+        box-shadow: 0 0 4px $light-accent;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: $light-accent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    @include smooth-transition;
+
+    &:hover {
+      background-color: darken($light-accent, 10%);
+    }
+  }
+}
+
+// Dark mode styles
+body.dark-mode {
+  .add-project-form {
+    background-color: $dark-bg;
+    color: $dark-text;
+    border-color: $dark-border;
+
+    h2 {
+      color: $dark-accent;
+    }
+
+    input[type="text"],
+    input[type="url"],
+    input[type="file"],
+    textarea,
+    select {
+      background-color: $dark-bg;
+      color: $dark-text;
+      border-color: $dark-border;
+
+      &:focus {
+        border-color: $dark-accent;
+        box-shadow: 0 0 4px $dark-accent;
+      }
+    }
+
+    button[type="submit"] {
+      background-color: $dark-accent;
+
+      &:hover {
+        background-color: lighten($dark-accent, 10%);
+      }
+    }
+  }
+}

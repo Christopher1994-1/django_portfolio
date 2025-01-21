@@ -1,8 +1,59 @@
 from django.shortcuts import render, redirect
 from . import models
-from django.contrib import messages
+from django.http import JsonResponse
 
 
+
+
+
+
+#. ROUTE FOR PAGE TO ACTUALLY ADD NEW PROJECTS
+def new_project(request):
+    context = {}
+    return render(request, "pages/new_project.html", context)
+
+
+
+#. ROUTE FUNCTION FOR ADDING NEW PROJECT TO DB
+def add_new_project(request) -> JsonResponse:
+    
+    title: str = request.POST.get('title')
+    short_description: str = request.POST.get('short_description')
+    technologies_used: str = request.POST.get('technologies_used')
+    images: str = request.POST.get('images')
+    demo_url: str = request.POST.get('demo_url')
+    gitHub: str = request.POST.get('gitHub')
+    long_description: str = request.POST.get('long_description')
+
+    video_url: str = request.POST.get('video_url')
+    site_url: str = request.POST.get('site_url')
+    project_type: str = request.POST.get('project_type')
+    use_cases: str = request.POST.get('use_cases')
+
+    imageCover_large: str = request.POST.get('imageCover_large')
+    imageCover_small: str = request.POST.get('imageCover_small')
+    
+    
+    new_project_ = models.Projects(
+        title=title,
+        short_description=short_description,
+        technologies_used=technologies_used,
+        images=images,
+        demo_url=demo_url,
+        gitHub=gitHub,
+        long_description=long_description,
+        video_url=video_url,
+        site_url=site_url,
+        project_type=project_type,
+        use_cases=use_cases,
+        imageCover_large=imageCover_large,
+        imageCover_small=imageCover_small
+    )
+    
+    new_project_.save()
+    
+    response_data = {'status': 'success', 'values': ''} 
+    return JsonResponse(response_data)
 
 
 

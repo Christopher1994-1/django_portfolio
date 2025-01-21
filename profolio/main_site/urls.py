@@ -33,8 +33,8 @@ urlpatterns = [
     path('update_project_finished/', updating_projects.update_project_finished, name="update_project_finished"),
     path('update_success/', updating_projects.update_success, name="update_success"),
     path('update_fail/', updating_projects.update_fail, name="update_fail"),
-    
-    
+    path('new_project/', updating_projects.new_project, name="new_project"),
+    path('add_new_project/', updating_projects.add_new_project, name="add_new_project"),
     
     
     #. STRIPE PAYMENT PROJECT
