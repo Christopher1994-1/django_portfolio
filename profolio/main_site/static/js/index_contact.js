@@ -64,7 +64,7 @@ function open_quickshot_projectHTML(data) {
     project_quickView.style.display = 'flex';
     project_title.innerHTML = data[1];
     projectImageLink.href = '';
-    projectImage.src = data[14];
+    projectImage.src = data[12];
     projectImage.alt = data[1];
     const tagsElement = document.getElementById('tagsID');
     if (tagsElement) {
@@ -83,10 +83,11 @@ function open_quickshot_projectHTML(data) {
     ;
     let tags = `${data[3]}`.split(',');
     let para = data[2];
-    let useCases = `${data[12]}`.split(',');
+    let useCases = `${data[11]}`.split(',');
     let githubLink = data[6];
     let liveDemoLink = `projects/${data[5]}`;
     let links_array = [githubLink, liveDemoLink, data[1]];
+    console.log(data);
     add_tags(tags);
     add_para(para);
     add_useCaes(useCases);

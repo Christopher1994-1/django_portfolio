@@ -118,7 +118,7 @@ function open_quickshot_projectHTML(data:any): void {
     project_title.innerHTML = data[1];
 
     projectImageLink.href = '';
-    projectImage.src = data[14];
+    projectImage.src = data[12];
     projectImage.alt = data[1]; //. MAKE THE ALT THE TITLE OF THE PROJECT
 
     // Clear existing content
@@ -140,12 +140,14 @@ function open_quickshot_projectHTML(data:any): void {
     let tags:any = `${data[3]}`.split(',');
     let para:any = data[2];
 
-    let useCases:any = `${data[12]}`.split(',');
+    let useCases:any = `${data[11]}`.split(',');
 
     let githubLink:string = data[6];
     let liveDemoLink: string = `projects/${data[5]}`;
     
     let links_array:any = [githubLink, liveDemoLink, data[1]];
+
+    console.log(data)
 
 
     add_tags(tags);

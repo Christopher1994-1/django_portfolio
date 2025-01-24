@@ -194,3 +194,35 @@ body.dark-mode {
     }
   }
 }
+
+
+
+.project-container {
+  background-color: #cccccc;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    background-color: transparent;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: #891616;
+    font-size: 27px;
+    cursor: pointer;
+
+    &:hover {
+      color: #681010;
+    }
+  }
+}
+
+
+.updateProjectClass {
+  width: 100%;
+}

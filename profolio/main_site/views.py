@@ -211,7 +211,3 @@ def contact_info(request):
     response_data = {'status': 'success', 'values': ''}   
     return JsonResponse(response_data)
     
-
-
-
-

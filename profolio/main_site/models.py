@@ -14,7 +14,7 @@ class Projects(models.Model):
     demo_url = models.TextField(default='none')
     gitHub = models.TextField(default='none')
     long_description = models.TextField(default='none')
-    has_video = models.BooleanField()
+    has_video = models.TextField(default="none")
     video_url = models.TextField(default='none')
     site_url = models.TextField(default='none')
     project_type = models.TextField(default='none')

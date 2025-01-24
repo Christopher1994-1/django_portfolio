@@ -148,4 +148,30 @@ body.dark-mode .add-project-form button[type=submit] {
 }
 body.dark-mode .add-project-form button[type=submit]:hover {
   background-color: #7ec2f9;
+}
+
+.project-container {
+  background-color: #cccccc;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.project-container a {
+  background-color: transparent;
+}
+.project-container button {
+  border: none;
+  background-color: transparent;
+  color: #891616;
+  font-size: 27px;
+  cursor: pointer;
+}
+.project-container button:hover {
+  color: #681010;
+}
+
+.updateProjectClass {
+  width: 100%;
 }/*# sourceMappingURL=project_selection.css.map */

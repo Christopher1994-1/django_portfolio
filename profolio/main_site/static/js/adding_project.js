@@ -1,11 +1,11 @@
 "use strict";
 const newProjectForm = document.getElementById('newProjectForm');
-function backendReach(data) {
+function backendReach(data, route_function) {
     const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]');
     let csrfToken_ = csrfToken.value;
     const formData = new FormData();
-    formData.append('title', data[0]);
-    fetch('/add_new_project/', {
+    formData.append('data', data);
+    fetch(`/${route_function}/`, {
         method: 'POST',
         headers: {
             'X-CSRFToken': csrfToken_
@@ -80,16 +80,21 @@ if (newProjectForm) {
         if (has_video == "yes") {
             has_video2 = 1;
         }
-        let video_url = (_t = (_s = document.getElementById('video_url')) === null || _s === void 0 ? void 0 : _s.value) !== null && _t !== void 0 ? _t : '';
-        let site_url = (_v = (_u = document.getElementById('site_url')) === null || _u === void 0 ? void 0 : _u.value) !== null && _v !== void 0 ? _v : '';
+        let video_url = (_t = (_s = document.getElementById('video_url')) === null || _s === void 0 ? void 0 : _s.value) !== null && _t !== void 0 ? _t : 'none';
+        let site_url = (_v = (_u = document.getElementById('site_url')) === null || _u === void 0 ? void 0 : _u.value) !== null && _v !== void 0 ? _v : 'none';
         let project_type = (_x = (_w = document.getElementById('project_type')) === null || _w === void 0 ? void 0 : _w.value) !== null && _x !== void 0 ? _x : '';
         let use_cases = (_z = (_y = document.getElementById('use_cases')) === null || _y === void 0 ? void 0 : _y.value) !== null && _z !== void 0 ? _z : '';
         let imageCover_large = (_1 = (_0 = document.getElementById('imageCover_large')) === null || _0 === void 0 ? void 0 : _0.value) !== null && _1 !== void 0 ? _1 : '';
         let imageCover_small = (_3 = (_2 = document.getElementById('imageCover_small')) === null || _2 === void 0 ? void 0 : _2.value) !== null && _3 !== void 0 ? _3 : '';
-        let data = [title, short_description, technologies_used, images, demo_url, gitHub, long_description, has_video2, video_url, site_url, project_type, use_cases, imageCover_large, imageCover_small];
-        backendReach(data);
+        let data = `${title}&&${short_description}&&${technologies_used}&&${images}&&${demo_url}&&${gitHub}&&${long_description}&&${has_video2}&&${video_url}&&${site_url}&&${project_type}&&${use_cases}&&${imageCover_large}&&${imageCover_small}`;
+        backendReach(data, "add_new_project");
         clear_inputs();
         say_thank_you1("New Project Added!!");
     });
+}
+;
+function deleteProject(projectID) {
+    backendReach(projectID, "delete_projectIO");
+    say_thank_you1("Project has been deleted...");
 }
 ;

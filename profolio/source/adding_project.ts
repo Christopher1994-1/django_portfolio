@@ -4,14 +4,14 @@ const newProjectForm = document.getElementById('newProjectForm') as HTMLFormElem
 
 
 //. FUNCTION THAT EXECUTES BACKEND FUNCTION
-function backendReach(data:any): void {
+function backendReach(data:any, route_function:string): void {
     const csrfToken:any = document.querySelector('[name=csrfmiddlewaretoken]');
     let csrfToken_ = csrfToken.value;
 
     const formData = new FormData();
-    formData.append('title', data[0]);
+    formData.append('data', data);
 
-    fetch('/add_new_project/', {
+    fetch(`/${route_function}/`, {
         method: 'POST',
         headers: {
             'X-CSRFToken': csrfToken_
@@ -112,8 +112,8 @@ if (newProjectForm) {
         } 
 
 
-        let video_url: string = (document.getElementById('video_url') as HTMLInputElement)?.value ?? '';
-        let site_url: string = (document.getElementById('site_url') as HTMLInputElement)?.value ?? '';
+        let video_url: string = (document.getElementById('video_url') as HTMLInputElement)?.value ?? 'none';
+        let site_url: string = (document.getElementById('site_url') as HTMLInputElement)?.value ?? 'none';
         let project_type: string = (document.getElementById('project_type') as HTMLInputElement)?.value ?? '';
         let use_cases: string = (document.getElementById('use_cases') as HTMLInputElement)?.value ?? '';
 
@@ -121,12 +121,23 @@ if (newProjectForm) {
         let imageCover_small: string = (document.getElementById('imageCover_small') as HTMLInputElement)?.value ?? '';
 
 
-        let data: any = [title, short_description, technologies_used, images, demo_url, gitHub, long_description, has_video2, video_url, site_url, project_type, use_cases, imageCover_large, imageCover_small];
+        let data: string = `${title}&&${short_description}&&${technologies_used}&&${images}&&${demo_url}&&${gitHub}&&${long_description}&&${has_video2}&&${video_url}&&${site_url}&&${project_type}&&${use_cases}&&${imageCover_large}&&${imageCover_small}`;
 
-        backendReach(data);
+        backendReach(data, "add_new_project");
 
         clear_inputs();
 
         say_thank_you1("New Project Added!!");
     });
+};
+
+
+
+
+
+
+//. FUNCTION TO DELETE PROJECT
+function deleteProject(projectID:string): void {
+    backendReach(projectID, "delete_projectIO");
+    say_thank_you1("Project has been deleted...")
 };

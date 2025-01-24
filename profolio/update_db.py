@@ -30,9 +30,9 @@ def select_all(db_name: str, table_name: str, limit:int, offset:int, set_all:boo
     query = ''
     
     if set_all:
-        query = f"SELECT demo_url FROM {table_name} LIMIT {limit} OFFSET {offset}"
+        query = f"SELECT title FROM {table_name} LIMIT {limit} OFFSET {offset}"
     else:
-        query = f"SELECT demo_url FROM {table_name}"
+        query = f"SELECT title FROM {table_name}"
     
     cursor.execute(query)
     tables = cursor.fetchall()
@@ -87,6 +87,9 @@ def get_table_columns(db_name: str, table_name: str) -> None:
 
 
 select_all(MAIN_DATABASE, PROJECT_TABLE, 0, 0, False)
+
+
+
 
 
 

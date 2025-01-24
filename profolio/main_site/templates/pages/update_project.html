@@ -10,7 +10,7 @@
 
 
     <div class="project-container">
-        <form action="{% url 'update_project_finished' %}" method="post">
+        <form action="{% url 'update_project_finished' %}" method="post" class="updateProjectClass">
             {% csrf_token %}
 
             <input type="hidden" value="{{project_id}}" name="hiddenID" id="hiddenID">
