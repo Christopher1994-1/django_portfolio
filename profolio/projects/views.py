@@ -9,3 +9,7 @@ from django.http import JsonResponse
 
 
 
+
+
+def starbucks_remake(request):
+    return render(request, "starbucks/index.html", {})

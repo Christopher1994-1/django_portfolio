@@ -27,4 +27,4 @@ class Projects(models.Model):
     #. ENSURE THAT THE SHORT DESCRIPTION RETURNS ONLY 20 WORDS
     def short_d_short(self):
         split_words: list[str] = self.short_description.split(' ')
-        return ' '.join(split_words[:20])
+        return ' '.join(split_words[:10])
