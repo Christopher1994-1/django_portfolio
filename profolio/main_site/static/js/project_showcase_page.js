@@ -138,14 +138,6 @@ mainImage.addEventListener("click", function () {
 window.addEventListener('beforeunload', (event) => {
     localStorage.removeItem(LOCAL_STORGE_INDEX_NAME);
 });
-function find_current_index(image, listOfImages) {
-    let currentIndex = listOfImages.indexOf(image) + 1;
-    let nextImage = listOfImages[currentIndex];
-    let main_image = document.getElementById('main_image');
-    main_image.src = nextImage;
-    return 0;
-}
-;
 function main_image_viewer_gallery(image) {
     const newDiv = document.createElement('div');
     newDiv.id = "image_viewer2";
@@ -178,9 +170,31 @@ function leftSideButton2(image) {
 }
 ;
 function rightSideButton2(image) {
+    let lastIndex = localStorage.getItem(LOCAL_STORGE_INDEX_NAME);
     let loi = document.getElementById('listofimages');
     let listOfImages = loi.value.split(';');
-    let currentIndex = find_current_index(image, listOfImages);
+    if (listOfImages.length - 1 === Number(lastIndex)) {
+        localStorage.removeItem(LOCAL_STORGE_INDEX_NAME);
+        let nextImage = listOfImages[0];
+        let main_image = document.getElementById('main_image');
+        main_image.src = nextImage;
+    }
+    else if (lastIndex) {
+        let lastIndex_Number = Number(lastIndex);
+        let currentIndex = lastIndex_Number + 1;
+        let nextImage = listOfImages[currentIndex];
+        let main_image = document.getElementById('main_image');
+        main_image.src = nextImage;
+        localStorage.setItem(LOCAL_STORGE_INDEX_NAME, currentIndex.toString());
+    }
+    else {
+        let currentIndex = listOfImages.indexOf(image) + 1;
+        let nextImage = listOfImages[currentIndex];
+        let main_image = document.getElementById('main_image');
+        main_image.src = nextImage;
+        localStorage.setItem(LOCAL_STORGE_INDEX_NAME, currentIndex.toString());
+    }
+    ;
 }
 ;
 function open_gallery_image(image) {

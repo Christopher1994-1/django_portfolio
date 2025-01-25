@@ -274,33 +274,6 @@ window.addEventListener('beforeunload', (event) => {
 
 
 
-//. FUNCTION FOR FINDING THE INDEX OF THE CURRENT INDEX
-//. ONLY FOR GALLERY IMAGE VIEWER NOT MAIN IMAGE VIEWER
-function find_current_index(image:string, listOfImages: string[]): number {
-
-    //. GET THE INDEX NUMBER OF THE IMAGE PASSED IN PLUS ONE
-    let currentIndex: number = listOfImages.indexOf(image) + 1;
-
-    //. GET THE NEXT IMAGE IN LINE
-    let nextImage: string = listOfImages[currentIndex]
-
-    //. ELEMENT OF THE MAIN IMAGE
-    let main_image: any = document.getElementById('main_image');
-    main_image.src = nextImage;
-
-
-
-    //. UPDATE LOCAL STORAGE WITH THE NEW INDEX
-    
-
-    return 0
-
-};
-
-
-
-
-
 
 
 
@@ -356,13 +329,57 @@ function leftSideButton2(image:string): void {
 
 //. FUNCTION THAT HANDLES THE RIGHT SIDE CLICK WHEN GALLERY IS OPEN
 function rightSideButton2(image:string): void {
+    //. GET THE INDEX OF THE LAST IMAGE IF THERE IS ONE
+    let lastIndex: any = localStorage.getItem(LOCAL_STORGE_INDEX_NAME);
+
     //. GET THE LIST OF IMAGES ELEMENT
-    let loi: any = document.getElementById('listofimages')
+    let loi: any = document.getElementById('listofimages');
+
     //. GET THE LIST OF IMAGES AND CONVERT TO LIST
     let listOfImages: string[] = loi.value.split(';');
+
+    if (listOfImages.length-1 === Number(lastIndex)) {
+        localStorage.removeItem(LOCAL_STORGE_INDEX_NAME);
+        let nextImage: string = listOfImages[0];
+        let main_image: any = document.getElementById('main_image');
+        main_image.src = nextImage;
+
+    }
+
+    else if (lastIndex) {
+
+        //. CONVERT THE LAST INDEX INTO INTERGER
+        let lastIndex_Number: number = Number(lastIndex);
+
+        //. GET THE INDEX NUMBER OF THE IMAGE PASSED IN PLUS ONE
+        let currentIndex: number = lastIndex_Number + 1;
+
+        //. GET THE NEXT IMAGE IN LINE
+        let nextImage: string = listOfImages[currentIndex];
+
+        //. ELEMENT OF THE MAIN IMAGE
+        let main_image: any = document.getElementById('main_image');
+        main_image.src = nextImage;
+
+        //. UPDATE THE LOCAL STORAGE OF THE NEW INDEX
+        localStorage.setItem(LOCAL_STORGE_INDEX_NAME, currentIndex.toString());
+    }
+
+    else {
+        //. GET THE INDEX NUMBER OF THE IMAGE PASSED IN PLUS ONE
+        let currentIndex: number = listOfImages.indexOf(image) + 1;
+
+        //. GET THE NEXT IMAGE IN LINE
+        let nextImage: string = listOfImages[currentIndex];
+
+        //. ELEMENT OF THE MAIN IMAGE
+        let main_image: any = document.getElementById('main_image');
+        main_image.src = nextImage;
+
+        //. UPDATE THE LOCAL STORAGE OF THE NEW INDEX
+        localStorage.setItem(LOCAL_STORGE_INDEX_NAME, currentIndex.toString());
+    };
    
-    //. CURRENT INDEX OF THE PASSED IMAGE
-    let currentIndex: number = find_current_index(image, listOfImages);
 };
 
 
