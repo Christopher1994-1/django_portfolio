@@ -44,4 +44,8 @@ urlpatterns = [
     # path('successful_pay', views.successful_pay, name="successful_pay"),
     
     
+    #. CHATGPT
+    path('my_backend_function/', views.my_backend_function, name="my_backend_function"),
+    
+    
 ]   

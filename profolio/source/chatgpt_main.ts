@@ -10,6 +10,10 @@ const new_chat_button = document.getElementById('new_chat_button') as HTMLElemen
 let TAB_P: string = "tab-cej-kirk-00282ka";
 
 
+//. FOR NEW CHAT URL
+let newChatURL: string = "/projects/chatgpt_replica";
+
+
 
 
 //! CHECKING IF SERVER IS ONLINE
@@ -103,7 +107,7 @@ if (close_tab_button) {
 
 //. OPENING NEW CHAT WHEN TAB IS CLOSED
 function new_chat(): void {
-    window.location.href = "/";
+    window.location.href = newChatURL;
 };
 
 
@@ -286,10 +290,10 @@ function openMobileMenu(): void {
         //. Use innerHTML to set the HTML content of the newly created <div>
         mobileMenu.innerHTML = `
         <div class="lists">
-            <a href="#">Portfilo Home</a>
-            <a href="#">Contact Me</a>
-            <a href="#">Other Projects</a>
-            <a href="#" >New Chat</a>
+            <a href="/">Portfilo Home</a>
+            <a href="/contact_page">Contact Me</a>
+            <a href="/search_projects/all/">Other Projects</a>
+            <a href="${newChatURL}" >New Chat</a>
         </div>
     
         `;
@@ -340,7 +344,7 @@ if (new_chat_button) {
 
 
     new_chat_button.addEventListener('click', (event: any) => {
-        window.location.href = "/";
+        window.location.href = newChatURL;
     });
 
 };

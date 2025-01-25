@@ -7,9 +7,10 @@ import json
 from ipware import get_client_ip
 import time
 from .models import Projects
-from projects import stripe_payment
+from projects import stripe_payment, chatgpt
 import stripe
 import os
+from django.views.decorators.csrf import csrf_exempt
 
 
 
@@ -210,4 +211,24 @@ def contact_info(request):
     
     response_data = {'status': 'success', 'values': ''}   
     return JsonResponse(response_data)
+    
+
+
+
+
+
+
+
+#. CHATGPT BACKEND ENDPOINT
+def my_backend_function(request) -> JsonResponse:
+    if request.method == 'POST':
+        try:
+            input_text = request.POST.get('text')
+            
+            api = chatgpt.main_api_call(input_text)  # Replace with your API call logic
+            
+            return JsonResponse({'result': api})
+
+        except json.JSONDecodeError:
+            return JsonResponse({'error': 'Invalid JSON'}, status=400)
     

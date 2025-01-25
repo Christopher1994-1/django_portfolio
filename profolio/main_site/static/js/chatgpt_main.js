@@ -2,6 +2,7 @@
 const close_tab_button = document.getElementById('close_tab_button');
 const new_chat_button = document.getElementById('new_chat_button');
 let TAB_P = "tab-cej-kirk-00282ka";
+let newChatURL = "/projects/chatgpt_replica";
 function update_tab_preference(mode) {
     localStorage.setItem(TAB_P, mode);
 }
@@ -56,7 +57,7 @@ if (close_tab_button) {
 }
 ;
 function new_chat() {
-    window.location.href = "/";
+    window.location.href = newChatURL;
 }
 ;
 function open_tab() {
@@ -175,10 +176,10 @@ function openMobileMenu() {
         mobileMenu.id = "mobileMenuID";
         mobileMenu.innerHTML = `
         <div class="lists">
-            <a href="#">Portfilo Home</a>
-            <a href="#">Contact Me</a>
-            <a href="#">Other Projects</a>
-            <a href="#" >New Chat</a>
+            <a href="/">Portfilo Home</a>
+            <a href="/contact_page">Contact Me</a>
+            <a href="/search_projects/all/">Other Projects</a>
+            <a href="${newChatURL}" >New Chat</a>
         </div>
     
         `;
@@ -212,7 +213,7 @@ if (new_chat_button) {
         new_chat_button.appendChild(popUpMessage);
     });
     new_chat_button.addEventListener('click', (event) => {
-        window.location.href = "/";
+        window.location.href = newChatURL;
     });
 }
 ;
