@@ -1,0 +1,53 @@
+<div class="customer_reviews_container">
+
+{% load static %}
+
+    <h5>What are others saying?</h5>
+
+    {% if main_reviews | length == 0 %}
+
+    <div class="review-container">
+        {% for row in reviews %}
+        <div class="review">
+
+            <div class="stars">
+                {% for star in row[1] %}
+                    <i class="fa-solid fa-star"></i>
+                {% endfor %}
+            </div>
+            
+            <p>{{ row[2] }}</p>
+            <h5>{{ row[3] }}</h5>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% else %}
+
+    <div class="review-container">
+        {% for r in main_reviews %}
+        <div class="review">
+
+            <div class="stars">
+                {% for star in r[2] %}
+                    <i class="fa-solid fa-star"></i>
+                {% endfor %}
+            </div>
+            
+            <p>{{ r[1] }}</p>
+            <h5>{{ r[0] }}</h5>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+
+    <div class="view-all">
+        <a href="#"><h1>View All</h1></a>
+    </div>
+
+
+</div>
+
+<script src="https://kit.fontawesome.com/89bc05284d.js" crossorigin="anonymous"></script>

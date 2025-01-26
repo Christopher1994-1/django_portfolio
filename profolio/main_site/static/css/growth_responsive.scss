@@ -1,0 +1,2450 @@
+$button-color: rgb(34, 180, 34);
+$button-hover-color: rgb(126, 247, 126);
+$border-black: 2px solid black;
+$border-white: 2px solid white;
+
+
+
+// Replace the 'dark-left.png' with the name of your image, remember to add the file extension
+// for the best effect be sure that your image is 3840x2160
+// And be sure that the image is inside the static/images folder
+
+$jumbotron_image: url('https://main553.b-cdn.net/portfolio/growth/dark-left.webp');
+
+
+
+
+// CSS for max-width ~ 1115px ~
+@media(max-width:1115px) {
+    // CSS for the main navbar container
+    .main-navbar-container {
+
+        .menu {
+            width: 10%;
+
+        }
+
+    }
+
+
+    // CSS for the our products section
+    .our-products {
+
+        // #h5-header {
+        //     padding-top: 10%;
+        //     color: $button-color;
+        //     font-size: 25px;
+        //     font-weight: bolder;
+        // }
+
+        // h1 {
+        //     width: 80%;
+        //     color: white;
+        //     margin: auto;
+        //     margin-bottom: 40px;
+        // }
+
+        .products {
+            // border: 2px dotted red;
+            // display: grid;
+            // grid-template-columns: 1fr 1fr 1fr;
+            // row-gap: 20px;
+            // padding: 10px;
+            // justify-items: center;
+
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                padding: 10px;
+
+                // h5 {
+                //     color: $button-color;
+                //     font-weight: bolder;
+                // }
+
+                img {
+                    width: 220px; 
+                    height: 120px;
+                }
+
+                small {
+                    font-size: 15px;
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                    font-weight: bolder;
+                    color: white;
+                }
+
+                a {
+                    width: 70%;
+                    padding-bottom: 10px;
+
+                    button {
+                        padding: 10px;
+                        background-color: rgba(255, 255, 255, 0);
+                        border: $border-white;
+                        font-weight: bolder;
+                        color: white;
+                        border-radius: 20px;
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    // CSS for the google maps embed section
+    .google_maps_embed {
+        align-items: center;
+
+        .embedd_words {
+            margin-left: 10px;
+            background-color: #1d1d1d;
+            padding: 20px;
+
+            h5 {
+                font-size: 25px;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+        }
+
+        .iframe {
+            width: fit-content;
+
+            iframe {
+                width: 500px; 
+                height: 350px;
+            }
+        }
+    }
+
+
+    // CSS for the contact us
+    .contact_us {
+
+        .contact {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            margin-bottom: 15%;
+
+            .message-form {
+                width: 70%;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                background-color: #111111a6;
+                padding: 10px;
+                border: none;
+
+                h5 {
+                    padding-top: 7%;
+                    margin-bottom: 6%;
+                    color: $button-color;
+                }
+        
+            }
+
+            .contact-form {
+                width: 30%;
+                text-align: left;
+                padding: 10px;
+                background-color: #111;
+
+                h5 {
+                    padding-top: 12%;
+                    margin-bottom: 40px;
+                }
+
+                h4 {
+                    color: $button-color;
+                    font-size: 20px;
+                }
+
+                p {
+                    color: white;
+                    font-size: 13px;
+                    width: 80%;
+                }
+
+                .socal-links {
+                    display: flex;
+                    width: 80%;
+                    padding-top: 5%;
+                    justify-content: space-around;
+                
+                    a {
+                        transition: ease-in 0.5s;
+                        i {
+                            color: white;
+                        }
+                    }
+
+                    a:hover {
+
+                        i {
+                            color: $button-color;
+                        }
+        
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    .product-container {
+    
+        .search-box {
+            width: 60%;
+    
+        }
+    
+        .products_paginate {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 20px;
+            column-gap: 20px;
+            background-color: rgba(255, 255, 255, 0.288);
+            padding: 20px;
+            border-radius: 10px;
+    
+            .product {
+                background-color: rgba(255, 255, 255, 0.678);
+                text-align: center;
+                border-radius: 20px;
+                position: relative;
+        
+                img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 10px;
+                }
+    
+                small {
+                    color: $button-color;
+                    font-weight: bolder;
+                    transition: ease-out 0.5;
+                }
+    
+    
+                .description {
+                    display: none;
+                }
+    
+    
+                // button to the right, sets description to display:block
+                .flip-d {
+                    right: -10;
+                }
+    
+                // button to the left, returns item details
+                .flip-items {
+                    left: 20;
+                }
+            }
+    
+        }
+    
+    
+        .pagination {
+            width: 25%;
+        
+            #btns {
+                font-size: 30px;
+            }
+        
+            #current-count {
+                font-size: 30px;
+            }
+        
+            #dots {
+                font-size: 30px;
+            }
+        
+        }
+    }
+
+
+}
+
+
+// CSS for max-width ~ 1078px ~
+@media(max-width:1078px) {
+    // CSS for the jumbotron
+    .main-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 25px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 65px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+
+
+
+            .social-links {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-content: space-around;
+                align-items: center;
+                height: 300px;
+
+                a {
+                    color: white;
+                    border: $border-white;
+                    padding: 10px;
+                    border-radius: 200%;
+                    position: relative;
+
+                    i {
+                        font-size: 20px;
+                    }
+
+                    span {
+                        position: absolute;
+                        right: 53;
+                        font-size: 17px;
+                        color: $button-color;
+                        font-weight: bolder;
+                        display: none;
+                    }
+                }
+
+                a:hover {
+
+                    span {
+                        display: block;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+    // CSS for the review jumbotron
+    .review-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 25px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 65px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+
+
+
+            .social-links {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-content: space-around;
+                align-items: center;
+                height: 300px;
+
+                a {
+                    color: white;
+                    border: $border-white;
+                    padding: 10px;
+                    border-radius: 200%;
+                    position: relative;
+
+                    i {
+                        font-size: 20px;
+                    }
+
+                    span {
+                        position: absolute;
+                        right: 53;
+                        font-size: 17px;
+                        color: $button-color;
+                        font-weight: bolder;
+                        display: none;
+                    }
+                }
+
+                a:hover {
+
+                    span {
+                        display: block;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+    // CSS for the review jumbotron
+    .about-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 25px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 65px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+
+
+
+            .social-links {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-content: space-around;
+                align-items: center;
+                height: 300px;
+
+                a {
+                    color: white;
+                    border: $border-white;
+                    padding: 10px;
+                    border-radius: 200%;
+                    position: relative;
+
+                    i {
+                        font-size: 20px;
+                    }
+
+                    span {
+                        position: absolute;
+                        right: 53;
+                        font-size: 17px;
+                        color: $button-color;
+                        font-weight: bolder;
+                        display: none;
+                    }
+                }
+
+                a:hover {
+
+                    span {
+                        display: block;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+    // CSS for the review jumbotron
+    .product-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 25px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 65px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+
+
+
+            .social-links {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-content: space-around;
+                align-items: center;
+                height: 300px;
+
+                a {
+                    color: white;
+                    border: $border-white;
+                    padding: 10px;
+                    border-radius: 200%;
+                    position: relative;
+
+                    i {
+                        font-size: 20px;
+                    }
+
+                    span {
+                        position: absolute;
+                        right: 53;
+                        font-size: 17px;
+                        color: $button-color;
+                        font-weight: bolder;
+                        display: none;
+                    }
+                }
+
+                a:hover {
+
+                    span {
+                        display: block;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+
+// CSS for max-width ~ 1063px ~
+@media(max-width:1063px) {
+    // CSS for the our products section
+    .our-products {
+
+        .products {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 20px;
+        }
+    }
+    
+}
+
+
+// CSS for max-width ~ 1021px ~
+@media(max-width:1021px) {
+    // CSS for the jumbotron
+    .main-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            
+
+            .jumbro-thing {
+                width: 80%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 25px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 65px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // CSS for the review jumbotron
+    .review-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            
+
+            .jumbro-thing {
+                width: 80%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 25px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 65px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // CSS for the review jumbotron
+    .about-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            
+
+            .jumbro-thing {
+                width: 80%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 25px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 65px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // CSS for the review jumbotron
+    .product-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            
+
+            .jumbro-thing {
+                width: 80%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 25px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 65px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // CSS for the google maps embed section
+    .google_maps_embed {
+        align-items: center;
+
+        .embedd_words {
+            margin-left: 10px;
+            background-color: #1d1d1d;
+            padding: 20px;
+
+            h5 {
+                font-size: 25px;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+
+        }
+
+        .iframe {
+            width: fit-content;
+
+            iframe {
+                width: 480px; 
+                height: 420px;
+            }
+        }
+    }
+}
+
+
+// CSS for max-width ~ 981px ~
+@media(max-width:981px) {
+    // CSS for the customer reviews 
+    .customer_reviews_container {
+
+        .review-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 20px;
+            width: 85%;
+
+        }
+
+    }
+
+}
+
+
+
+// CSS for max-width ~ 933px ~
+@media(max-width:933px) {
+    // CSS for the main footer
+    .main-footer-container {
+
+        .stuff-inside-footer {
+            width: 90%;
+        }
+    }
+  
+}
+
+
+
+// CSS for max-width ~ 904px ~
+@media(max-width:904px) {
+    // CSS for the jumbotron
+    .main-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 22px;
+                    color: #818181;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 45px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // CSS for the review jumbotron
+    .review-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 22px;
+                    color: #818181;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 45px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // CSS for the review jumbotron
+    .about-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 22px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 45px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // CSS for the review jumbotron
+    .product-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 22px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 45px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+
+                    a {
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // CSS for the google maps embed section
+    .google_maps_embed {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+
+        .embedd_words {
+            margin-left: 0;
+            width: 85%;
+            background-color: #1d1d1d;
+            padding: 20px;
+        }
+
+        .iframe {
+            width: 80%;
+
+            iframe {
+                width: 100%; 
+                height: 420px;
+            }
+        }
+    }
+
+}
+
+
+// CSS for the max-width ~ 896px ~
+@media(max-width:896px) {
+
+    // CSS for the under jumbotron section
+    .under-jumbro-container {
+        height: 800px;
+
+        .items {
+
+            h1 {
+                font-size: 70px;
+            }
+
+            p {
+                width: 80%;
+            }
+        }
+
+        .bottom-stuff {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 10px;
+            column-gap: 10px;
+            width: 85%;
+
+            .counter-box {
+                border-right: none;
+                border-bottom: 1px solid white;
+
+                h1 {
+                    color: white;
+                    font-size: 60px;
+                }
+
+                h5 {
+                    color: black;
+                }
+            }
+        }
+
+    }
+    
+}
+
+
+
+// CSS for max-width ~ 879px ~
+@media(max-width:879px) {
+    // CSS for the main navbar container
+    .main-navbar-container {
+
+        .menu {
+            width: 13%;
+
+        }
+
+    }
+
+}
+
+
+// CSS for max-width ~ 829px ~
+@media(max-width:829px) {
+
+    .product-container {
+    
+        .search-box {
+            width: 80%;
+    
+        }
+    
+        .products_paginate {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 20px;
+            column-gap: 20px;
+            background-color: rgba(255, 255, 255, 0.288);
+            padding: 20px;
+            border-radius: 10px;
+    
+            .product {
+                background-color: rgba(255, 255, 255, 0.678);
+                text-align: center;
+                border-radius: 20px;
+                position: relative;
+        
+                img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 10px;
+                }
+    
+                small {
+                    color: $button-color;
+                    font-weight: bolder;
+                    transition: ease-out 0.5;
+                }
+    
+    
+                .description {
+                    display: none;
+                }
+    
+    
+                // button to the right, sets description to display:block
+                .flip-d {
+                    right: -10;
+                }
+    
+                // button to the left, returns item details
+                .flip-items {
+                    left: 20;
+                }
+            }
+    
+        }
+    
+    
+        .pagination {
+            width: 45%;
+        
+            #btns {
+                font-size: 30px;
+            }
+        
+            #current-count {
+                font-size: 30px;
+            }
+        
+            #dots {
+                font-size: 30px;
+            }
+        
+        }
+    }
+
+}
+
+
+
+// CSS for max-width ~ 827px ~
+@media(max-width:827px) {
+    // CSS for the main footer
+    .main-footer-container {
+
+        .stuff-inside-footer {
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 0px;
+            row-gap: 30px;
+        }
+    }
+  
+}
+
+
+
+// CSS for max-width ~ 750px ~
+@media(max-width:750px) {
+    // CSS for the contact us
+    .contact_us {
+        height: 1300px;
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+
+            .message-form {
+                width: 100%;
+        
+            }
+
+
+            .thank-you-form {
+                width: 100%;
+            }
+
+            .contact-form {
+                width: 100%;
+
+            }
+        }
+
+    }
+}
+
+
+
+// CSS for max-width ~ 720px ~
+@media(max-width:720px) {
+    // CSS for the our products section
+    .our-products {
+
+        .products {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+
+            
+        }
+    }
+    
+}
+
+
+// CSS for max-width ~ 714px ~
+@media(max-width:714px) {
+    // CSS for the main navbar container
+    .main-navbar-container {
+
+        .menu {
+            width: 20%;
+
+        }
+
+    }
+
+}
+
+
+// CSS for the max-width ~ 689px ~
+@media(max-width:689px) {
+
+    // CSS for the under jumbotron section
+    .under-jumbro-container {
+        height: fit-content;
+
+        .items {
+
+            h1 {
+                font-size: 70px;
+            }
+
+            p {
+                width: 80%;
+            }
+        }
+
+        .bottom-stuff {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 10px;
+            column-gap: 10px;
+            width: 85%;
+
+            .counter-box {
+                border-right: none;
+                border-bottom: 1px solid white;
+                margin-bottom: 10px;
+
+                h1 {
+                    color: white;
+                    font-size: 80px;
+                }
+
+                h5 {
+                    color: black;
+                    font-size: 40px;
+                }
+            }
+        }
+
+    }
+    
+}
+
+
+
+// CSS for max-width ~ 684px ~
+@media(max-width:684px) {
+    // CSS for the jumbotron
+    .main-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // CSS for the review jumbotron
+    .review-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // CSS for the review jumbotron
+    .about-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // CSS for the review jumbotron
+    .product-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+
+// CSS for max-width ~ 590px ~
+@media(max-width:590px) {
+    // CSS for the jumbotron
+    .main-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+            .social-links {
+    
+                a {
+                    color: white;
+                    border: none;
+                    padding: 0px;
+                    border-radius: 200%;
+                    position: relative;
+    
+                    i {
+                        font-size: 20px;
+                    }
+    
+                    span {
+                        position: absolute;
+                        right: 30;
+                        font-size: 13px;
+                        color: $button-color;
+                        font-weight: bolder;
+                        display: none;
+                    }
+                }
+    
+                a:hover {
+    
+                    span {
+                        display: block;
+                    }
+                }
+    
+    
+            }
+        }
+    }
+
+    // CSS for the customer reviews 
+    .customer_reviews_container {
+        padding-top: 15%;
+
+        .review-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+            width: 85%;
+
+        }
+
+    }
+
+
+    // CSS for the jumbotron
+    .review-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+            .social-links {
+    
+                a {
+                    color: white;
+                    border: none;
+                    padding: 0px;
+                    border-radius: 200%;
+                    position: relative;
+    
+                    i {
+                        font-size: 20px;
+                    }
+    
+                    span {
+                        position: absolute;
+                        right: 30;
+                        font-size: 13px;
+                        color: $button-color;
+                        font-weight: bolder;
+                        display: none;
+                    }
+                }
+    
+                a:hover {
+    
+                    span {
+                        display: block;
+                    }
+                }
+    
+    
+            }
+        }
+    }
+
+    // CSS for the jumbotron
+    .about-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+            .social-links {
+    
+                a {
+                    color: white;
+                    border: none;
+                    padding: 0px;
+                    border-radius: 200%;
+                    position: relative;
+    
+                    i {
+                        font-size: 20px;
+                    }
+    
+                    span {
+                        position: absolute;
+                        right: 30;
+                        font-size: 13px;
+                        color: $button-color;
+                        font-weight: bolder;
+                        display: none;
+                    }
+                }
+    
+                a:hover {
+    
+                    span {
+                        display: block;
+                    }
+                }
+    
+    
+            }
+        }
+    }
+
+
+    // CSS for the jumbotron
+    .product-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 70%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+            .social-links {
+    
+                a {
+                    color: white;
+                    border: none;
+                    padding: 0px;
+                    border-radius: 200%;
+                    position: relative;
+    
+                    i {
+                        font-size: 20px;
+                    }
+    
+                    span {
+                        position: absolute;
+                        right: 30;
+                        font-size: 13px;
+                        color: $button-color;
+                        font-weight: bolder;
+                        display: none;
+                    }
+                }
+    
+                a:hover {
+    
+                    span {
+                        display: block;
+                    }
+                }
+    
+    
+            }
+        }
+    }
+    
+    // CSS for the customer reviews 
+    .all_reviews_container {
+        padding-top: 15%;
+
+        .review-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+            width: 85%;
+
+        }
+
+    }
+
+}
+
+
+
+// CSS for max-width ~ 558px ~
+@media(max-width:558px) {
+
+    .product-container {
+    
+        .search-box {
+            width: 100%;
+    
+        }
+    
+        .products_paginate {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+            column-gap: 0px;
+            background-color: rgba(255, 255, 255, 0.288);
+            padding: 20px;
+            border-radius: 10px;
+    
+            .product {
+                background-color: rgba(255, 255, 255, 0.678);
+                text-align: center;
+                border-radius: 20px;
+                position: relative;
+        
+                img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 10px;
+                }
+    
+                small {
+                    color: $button-color;
+                    font-weight: bolder;
+                    transition: ease-out 0.5;
+                }
+    
+    
+                .description {
+                    display: none;
+                }
+    
+    
+                // button to the right, sets description to display:block
+                .flip-d {
+                    right: -10;
+                }
+    
+                // button to the left, returns item details
+                .flip-items {
+                    left: 20;
+                }
+            }
+    
+        }
+    
+    
+        .pagination {
+            width: 65%;
+        
+            #btns {
+                font-size: 30px;
+            }
+        
+            #current-count {
+                font-size: 30px;
+            }
+        
+            #dots {
+                font-size: 30px;
+            }
+        
+        }
+    }
+
+}
+
+
+// CSS for max-width ~ 526px ~
+@media(max-width:526px) {
+    // CSS for the jumbotron
+    .main-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 100%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+            .social-links {
+                display: none;
+    
+            }
+        }
+    }
+
+
+    // CSS for the review jumbotron
+    .review-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 100%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+            .social-links {
+                display: none;
+    
+            }
+        }
+    }
+
+    // CSS for the review jumbotron
+    .about-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 100%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+            .social-links {
+                display: none;
+    
+            }
+        }
+    }
+
+    // CSS for the review jumbotron
+    .product-jumbotron-container {
+
+        .jumbo-items {
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+
+            .jumbro-thing {
+                width: 100%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 20px;
+                    color: $button-color;
+                }
+
+                h1 {
+                    color: white;
+                    font-size: 40px;
+                }
+
+                .buttons {
+                    margin-top: 3%;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        margin-top: 4%;
+
+                        button {
+                            padding: 10px;
+                            background-color: #11111100;
+                            border: $border-white;
+                            color: white;
+                            margin-left: 6px;
+                            transition: ease-in 0.5s ease;
+                            font-weight: bolder;
+                        }
+
+                    }
+
+                    a:hover {
+
+                        button {
+                            color: black;
+                            background-color: white;
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+            .social-links {
+                display: none;
+    
+            }
+        }
+    }
+}

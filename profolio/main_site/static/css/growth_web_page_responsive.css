@@ -1,0 +1,850 @@
+@media (max-width: 1078px) {
+  .review-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 25px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 65px;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .review-jumbotron-container .jumbo-items .social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+  }
+  .review-jumbotron-container .jumbo-items .social-links a {
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 200%;
+    position: relative;
+  }
+  .review-jumbotron-container .jumbo-items .social-links a i {
+    font-size: 20px;
+  }
+  .review-jumbotron-container .jumbo-items .social-links a span {
+    position: absolute;
+    right: 53;
+    font-size: 17px;
+    color: rgb(34, 180, 34);
+    font-weight: bolder;
+    display: none;
+  }
+  .review-jumbotron-container .jumbo-items .social-links a:hover span {
+    display: block;
+  }
+  .review-jumbotron-container2 .jumbo-items {
+    display: flex;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h5 {
+    font-size: 25px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 65px;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .review-jumbotron-container2 .jumbo-items .social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+  }
+  .review-jumbotron-container2 .jumbo-items .social-links a {
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 200%;
+    position: relative;
+  }
+  .review-jumbotron-container2 .jumbo-items .social-links a i {
+    font-size: 20px;
+  }
+  .review-jumbotron-container2 .jumbo-items .social-links a span {
+    position: absolute;
+    right: 53;
+    font-size: 17px;
+    color: rgb(34, 180, 34);
+    font-weight: bolder;
+    display: none;
+  }
+  .review-jumbotron-container2 .jumbo-items .social-links a:hover span {
+    display: block;
+  }
+  .error-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 25px;
+    color: rgb(34, 180, 34);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 65px;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .error-jumbotron-container .jumbo-items .social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+  }
+  .error-jumbotron-container .jumbo-items .social-links a {
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 200%;
+    position: relative;
+  }
+  .error-jumbotron-container .jumbo-items .social-links a i {
+    font-size: 20px;
+  }
+  .error-jumbotron-container .jumbo-items .social-links a span {
+    position: absolute;
+    right: 53;
+    font-size: 17px;
+    color: rgb(34, 180, 34);
+    font-weight: bolder;
+    display: none;
+  }
+  .error-jumbotron-container .jumbo-items .social-links a:hover span {
+    display: block;
+  }
+}
+@media (max-width: 1021px) {
+  .review-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 80%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 25px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 65px;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .review-jumbotron-container2 .jumbo-items {
+    display: flex;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing {
+    width: 80%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h5 {
+    font-size: 25px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 65px;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .error-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 80%;
+    margin-left: 5%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 25px;
+    color: rgb(34, 180, 34);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 65px;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+}
+@media (max-width: 981px) {
+  .all-reviews-container {
+    border: 2px solid black;
+  }
+  .all-reviews-container .review-container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 20px;
+    width: 85%;
+  }
+}
+@media (max-width: 904px) {
+  .review-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 22px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 45px;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .review-jumbotron-container2 .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h5 {
+    font-size: 22px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 45px;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .error-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 22px;
+    color: rgb(34, 180, 34);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 45px;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+}
+@media (max-width: 684px) {
+  .review-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 20px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 40px;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a {
+    margin-top: 4%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .review-jumbotron-container2 .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h5 {
+    font-size: 20px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 40px;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a {
+    margin-top: 4%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .error-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 20px;
+    color: rgb(34, 180, 34);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 40px;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a {
+    margin-top: 4%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+}
+@media (max-width: 590px) {
+  .review-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 20px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 40px;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a {
+    margin-top: 4%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .review-jumbotron-container .jumbo-items .social-links a {
+    color: white;
+    border: none;
+    padding: 0px;
+    border-radius: 200%;
+    position: relative;
+  }
+  .review-jumbotron-container .jumbo-items .social-links a i {
+    font-size: 20px;
+  }
+  .review-jumbotron-container .jumbo-items .social-links a span {
+    position: absolute;
+    right: 30;
+    font-size: 13px;
+    color: rgb(34, 180, 34);
+    font-weight: bolder;
+    display: none;
+  }
+  .review-jumbotron-container .jumbo-items .social-links a:hover span {
+    display: block;
+  }
+  .all-reviews-container {
+    padding-top: 15%;
+  }
+  .all-reviews-container .review-container1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    width: 85%;
+  }
+  .review-jumbotron-container2 .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h5 {
+    font-size: 20px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 40px;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a {
+    margin-top: 4%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .review-jumbotron-container2 .jumbo-items .social-links a {
+    color: white;
+    border: none;
+    padding: 0px;
+    border-radius: 200%;
+    position: relative;
+  }
+  .review-jumbotron-container2 .jumbo-items .social-links a i {
+    font-size: 20px;
+  }
+  .review-jumbotron-container2 .jumbo-items .social-links a span {
+    position: absolute;
+    right: 30;
+    font-size: 13px;
+    color: rgb(34, 180, 34);
+    font-weight: bolder;
+    display: none;
+  }
+  .review-jumbotron-container2 .jumbo-items .social-links a:hover span {
+    display: block;
+  }
+  .error-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 70%;
+    margin-left: 5%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 20px;
+    color: rgb(34, 180, 34);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 40px;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a {
+    margin-top: 4%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .error-jumbotron-container .jumbo-items .social-links a {
+    color: white;
+    border: none;
+    padding: 0px;
+    border-radius: 200%;
+    position: relative;
+  }
+  .error-jumbotron-container .jumbo-items .social-links a i {
+    font-size: 20px;
+  }
+  .error-jumbotron-container .jumbo-items .social-links a span {
+    position: absolute;
+    right: 30;
+    font-size: 13px;
+    color: rgb(34, 180, 34);
+    font-weight: bolder;
+    display: none;
+  }
+  .error-jumbotron-container .jumbo-items .social-links a:hover span {
+    display: block;
+  }
+}
+@media (max-width: 526px) {
+  .review-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 100%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 20px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 40px;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a {
+    margin-top: 4%;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .review-jumbotron-container .jumbo-items .social-links {
+    display: none;
+  }
+  .review-jumbotron-container2 .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing {
+    width: 100%;
+    margin-left: 5%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h5 {
+    font-size: 20px;
+    color: rgb(34, 180, 34);
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 40px;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a {
+    margin-top: 4%;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .review-jumbotron-container2 .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .review-jumbotron-container2 .jumbo-items .social-links {
+    display: none;
+  }
+  .error-jumbotron-container .jumbo-items {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing {
+    width: 100%;
+    margin-left: 5%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h5 {
+    font-size: 20px;
+    color: rgb(34, 180, 34);
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing h1 {
+    color: white;
+    font-size: 40px;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a {
+    margin-top: 4%;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a button {
+    padding: 10px;
+    background-color: rgba(17, 17, 17, 0);
+    border: 2px solid white;
+    color: white;
+    margin-left: 6px;
+    transition: ease-in 0.5s ease;
+    font-weight: bolder;
+  }
+  .error-jumbotron-container .jumbo-items .jumbro-thing .buttons a:hover button {
+    color: black;
+    background-color: white;
+  }
+  .error-jumbotron-container .jumbo-items .social-links {
+    display: none;
+  }
+}/*# sourceMappingURL=growth_web_page_responsive.css.map */

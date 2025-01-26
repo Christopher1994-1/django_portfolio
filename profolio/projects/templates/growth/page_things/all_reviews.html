@@ -1,0 +1,49 @@
+<div class="all-reviews-container">
+
+    <h5>See All Our Reviews</h5>
+    <h1>Our customers are awesome and amazing. We love them all!</h1>
+
+    {% if ifso > 0 %}
+        <!-- IF real reviews are inside the reviews db then this will happen -->
+        <div class="review-container1">
+
+            {% for row in real_reviews %}
+            <div class="review">
+
+                <div class="stars">
+                    {% for star in row[2] %}
+                        <i class="fa-solid fa-star"></i>
+                    {% endfor %}
+                </div>
+                
+                <div class="ptag">
+                    <p>{{ row[3] }}</p>
+                </div>
+                <h5>{{ row[1] }}</h5>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+        <!-- ELSE the demo reviews will fill the space -->
+        <div class="review-container1">
+
+            {% for row in demo_reviews %}
+            <div class="review">
+
+                <div class="stars">
+                    {% for star in row[1] %}
+                        <i class="fa-solid fa-star"></i>
+                    {% endfor %}
+                </div>
+                
+                <div class="ptag"><p>{{ row[2] }}</p></div>
+                <h5>{{ row[3] }}</h5>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    {% endif %}
+</div>

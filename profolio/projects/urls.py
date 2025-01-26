@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views, stripe_payment, chatgpt
+from . import views, stripe_payment, chatgpt, growth
 
 
 
@@ -17,6 +17,9 @@ urlpatterns = [
     
     
     #. starbucks
-    path("starbucks_remake/", views.starbucks_remake, name="starbucks_remake")
+    path("starbucks_remake/", views.starbucks_remake, name="starbucks_remake"),
+    
+    #. growth
+    path("growth_project/", growth.growth_project, name="growth_project")
     
 ] 

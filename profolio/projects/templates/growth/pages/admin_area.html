@@ -1,0 +1,471 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/admin.css">
+    <title>Admin Area</title>
+</head>
+<body>
+
+
+<div class="admin-area-navbar">
+
+    <div class="hamburger-menu" onclick="right_side_panel_open()">
+        <button><i class="fa-solid fa-bars"></i></button>
+    </div>
+
+
+    <h1>Admin Area</h1>
+
+
+    <div class="login-out">
+        <a href="/admin/out">Log Out</a>
+    </div>
+
+
+</div>
+
+
+<div id="mySidepanel" class="sidepanel">
+    <div class="links" id="all-links">
+        <a href="javascript:void(0)" class="closebtn" id="closebtn" onclick="closeNav()">×</a>
+        <a href="#" onclick="dash()"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+        <a href="#" onclick="sendMsg()"><i class="fa-regular fa-paper-plane"></i> Send Message</a>
+        <a href="#" onclick="products_clicked()"><i class="fa-solid fa-store"></i> Products</a>
+        <a href="#" onclick="res()"><i class="fa-solid fa-user"></i> Reviews</a>
+        <a href="#" onclick="guide()"><i class="fa-solid fa-circle-question"></i> Guide</a>
+        <a href="#" onclick="set()"><i class="fa-solid fa-gear"></i> Setting</a>
+    </div>
+</div>
+
+
+
+<!-- For the main box to hold both right and left sides -->
+<div class="admin-area-main-box">
+    <div class="left-side-panel">
+        <h1>General</h1>
+
+        <div class="links">
+            <a href="#" onclick="dash()" id="dashboard"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+            <a href="#" onclick="sendMsg()" id="msg"><i class="fa-regular fa-paper-plane"></i> Send Message</a>
+            <a href="#" onclick="products_clicked()" id="products1"><i class="fa-solid fa-store"></i> Products</a>
+            <a href="#" onclick="res()" id="resviers"><i class="fa-solid fa-user"></i> Reviews</a>
+            <a href="#" onclick="guide()" id="g"><i class="fa-solid fa-circle-question"></i> Guide</a>
+            <a href="#" onclick="set()" id="setter"><i class="fa-solid fa-gear"></i> Setting</a>
+        </div>
+    </div>
+
+
+    <div class="right-side">
+
+
+        <!-- Dashboard section div container -->
+        <div class="dashboard" id="dboard">
+            <h1>Your Dashboard</h1>
+
+            <div class="widgets">
+
+                <div class="subs">
+                    <h5>Total Subscribers</h5>
+                    <p>{{ count }}</p>
+                </div>
+
+                <div class="subs">
+                    <h5>Total Reviews</h5>
+                    <p>{{ re_count }}</p>
+                </div>
+
+                <div class="subs">
+                    <h5>Total Products</h5>
+                    <p>{{ product_count }}</p>
+                </div>
+
+            </div>
+
+
+            <div class="recent-reviews">
+                <h5>Recent Reviews</h5>
+
+                {% if recent_res == "None" %}
+                    <p>Using Demos</p>
+                    {% for row in demos %}
+                    <table>
+                        <thead>
+                          <tr>
+                            <th>Name:</th>
+                            <th>Date:</th>
+                            <th>Stars:</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>{{ row[3] }}</td>
+                            <td>Not use in demo</td>
+                            <td>
+                            {% for star in row[1] %}
+                                <i class="fa-solid fa-star"></i>
+                            {% endfor %}
+                          </tr>
+                        </tbody>
+                      </table>
+                    {% endfor %}  
+                    
+                    {% else %}
+                        {% for row in recent_res %}
+                        <table>
+                            <thead>
+                                <tr>
+                                <th>Name:</th>
+                                <th>Date:</th>
+                                <th>Stars:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>{{ row[1] }}</td>
+                                <td>{{ row[4] }}</td>
+                                <td>
+                                {% for star in row[2] %}
+                                    <i class="fa-solid fa-star"></i>
+                                {% endfor %}
+                                </tr>
+                            </tbody>
+                            </table>
+                            {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+
+
+        <!-- Send message section div container -->
+        <div class="send-message" id="msg-box">
+            <h1>Send Message to Subscribers</h1>
+    
+            <div class="input-box">
+                <form method="post" id="message-sent-form">
+                    <input type="text" name="msg-subject" id="msg-subject" placeholder="subject">
+                    <textarea name="msg-body-name" id="msg-body" cols="30" rows="10" placeholder="Message Body"></textarea>
+                    <input type="submit" value="Send" id="submit-button">
+                </form>
+            </div>
+            <h5>Total number of subscribers {{ count }}</h5>
+        </div>
+
+
+        <!-- Guide section div container -->
+        <div class="guide" id="guide">
+            <h1>Your Guide</h1>
+            <h5>A quick overview guide on using your admin area</h5>
+            <p>There are six different side panel items for you to choose from, each one has its own use and task.</p>
+
+            <ol>
+                <li><span style="font-weight: bolder;  font-size: 20px;">The Dashboard</span>
+                    <p>The dashboard is just an overview of your current email subscribers, total reviews and total products that you showcase.</p>
+                    <p>Along with showing you the most recent reviews your website has gotten.</p>
+                </li>
+
+                <li><span style="font-weight: bolder; font-size: 20px;" >Send Message</span>
+                    <p>In this section you have the option to send bulk messages to your email subscribers</p>
+                </li>
+
+                <li><span style="font-weight: bolder;  font-size: 20px;">Products</span>
+                    <p>In this section you have many options to display the products of your business, add new ones and edit the ones that are there.</p>
+
+                    <p>When adding a new product category you must also update the dropdown list for the filter next to the products search bar. More instructions can be found on 'all_products_container.html' file</p>
+
+                    <p><strong>Adding Images to Products</strong> When adding an image to a database it is a very complex thing to do, which is why we went to saving the image url to the database instead, find a hosting site that allows image hosting and add the direct image URL to the image_URL input field</p>
+                    <p>We recommend ImgBB to host your images but you can use which ever service you like as long as it provides a direct image URL</p>
+                </li>
+
+                <li><span style="font-weight: bolder;  font-size: 20px;">Reviews</span>
+                    <p>In this section you have the option to edit, remove or manually add reviews.</p>
+                </li>
+
+                <li><span style="font-weight: bolder;  font-size: 20px;">Guide</span>
+                    <p>This is the section you are currently on</p>
+                </li>
+
+                <li><span style="font-weight: bolder;  font-size: 20px;">Settings</span>
+                    <p>The last and final section of your admin area is where you can update your login info.</p>
+                    <p><strong>Default Login</strong>Your default login information is <i>admin1</i> for the username and <i>password0098</i> for the password</p>
+                    <p>You can change this once logined in and in the setting tab. Please remember your login information for after updating the admin infomation you want</p>
+                </li>
+            </ol>
+        </div>
+
+
+        <!-- Settings section div container -->
+        <div class="settings" id="settings">
+            <h1>Settings</h1>
+
+            <h5>Current Username and Password</h5>
+
+        {% if admin_info | length == 0 %}
+            <h5>You have not entered in a username or password</h5>
+
+            <div class="input_class_for_username_n_password">
+                <input type="text" id="username" name="username" placeholder="New Admin Username">
+                    <div class="password-container">
+                        <input type="password" name="passowrd" id="password" placeholder="New Admin Password:">
+                        <i class="fa-solid fa-eye" onclick="password_viewer()" id="view_on"></i>
+                        <i class="fa-sharp fa-solid fa-eye-slash"  id="view_off" style="display: none;" onclick="none_password_view()"></i>
+                    </div>
+                <a href="/admin/out" onclick="enter_admin_details()"><button>Update</button></a>
+            </div>
+        
+        {% else %}
+            {% for row in admin_info %}
+            <h5>Current Username <span style="font-weight: bolder; font-size: 20px;">{{ row[1] }}</span></h5>
+            <h5>Unable to show password details, if you forgot your password, change admin login information: But please remember your login credentials going forward</h5>
+            <button onclick="admin_password_reset()">Reset Password</button>
+            <p>once you hit <i>reset password</i> button the default login will be admin1 and password0098</p>
+            {% endfor %}
+        {% endif %}
+        </div>
+
+
+        <!-- Reviews section div container -->
+        <div class="reviews-section" id="reviews-id">
+            <h1>Add/Edit/Remove Reviews</h1>
+
+            <!-- deleted successfully message div container -->
+            <div class="deleted-successful" id="successful">
+                Review deleted, refresh
+            </div>
+
+            <!-- added successfully message div container -->
+            <div class="added-successful" id="add-successful">
+                Review added, refresh
+            </div>
+
+            <!-- edited successfully message div container -->
+            <div class="edit-successful" id="edit-successful">
+                Review edited, refresh
+            </div>
+
+            <!-- adding manuel review section conatiner -->
+            <div class="adding_manauel" id="manuel-add">
+                <h5>Adding Manuel Review</h5>
+                <input type="text" id="add_name" placeholder="Name:">
+                <textarea name="review" id="add-review" cols="30" rows="10" maxlength = "75" placeholder="Review Message (75 character limit)"></textarea>
+                <select name="dropdown" id="add-stars">
+                    <option value="1">One Star</option>
+                    <option value="11">Two Star</option>
+                    <option value="111">Three Star</option>
+                    <option value="1111">Four Star</option>
+                    <option value="11111">Five Star</option>
+                  </select>
+                  <input type="submit" value="Add Review" id="add-btn">
+            </div>
+
+            <!-- update and edit select review div container -->
+            <div class="update-review" id="update">
+                <input type="text" id="edit_name">
+                <textarea name="review" id="edit-review" cols="30" rows="10" maxlength = "75"></textarea>
+                <select name="dropdown" id="edit-stars">
+                    <option value="1">One Star</option>
+                    <option value="11">Two Star</option>
+                    <option value="111">Three Star</option>
+                    <option value="1111">Four Star</option>
+                    <option value="11111">Five Star</option>
+                  </select>
+                  <input type="submit" value="Done" id="done-btn">
+            </div>
+
+            <div class="reviews-container" id="review-table">
+                {% if all_res != "None" %}
+                {% for row in all_res %}
+                <table>
+                    <thead>
+                      <tr>
+                        <th>ID:</th>
+                        <th>Name:</th>
+                        <th>Review:</th>
+                        <th>Stars:</th>
+                        <th>Date:</th>
+                        <th>Action:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>
+                        {% for star in row[2] %}
+                            <i class="fa-solid fa-star"></i>
+                        {% endfor %}
+                        </td>
+                        <td> {{ row[4] }}</td>
+                        <td>
+                            <a href="#" onclick="edit_review('{{row[0]}}', '{{row[1]}}', '{{row[3]}}', '{{row[2]}}')"><button>Edit</button></a>
+                            <a href="#" onclick="delete_review('{{ row[0] }}')"><button>Delete</button></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  {% endfor %}
+                {% else %}
+                  <p>Reviews database is empty</p>
+                {% endif %}
+            </div>
+
+            <div class="add-manuel-button" id="manuel-button">
+                <a href="#" onclick="add_manual_review()"><button>Add Manual</button></a>
+            </div>
+            
+        </div>
+
+
+
+
+        <!-- Products section div container -->
+        <div class="products-section" id="product-id">
+
+            <h1 id="standard-header">Add/Edit/Remove Products</h1>
+
+            <div class="edit_successful" id="edit-successful1" style="display: none;"><h5>Update Successful, Refresh</h5></div>
+            <div class="del_successful" id="del-successful1" style="display: none;"><h5>Delete Successful, Refresh</h5></div>
+            <div class="add_successful" id="add-successful1" style="display: none;"><h5>Added New Product, Refresh</h5></div>
+
+            <div class="products-container" id="products_container">
+                {% if all_products != "None" %}
+                    {% for row in all_products %}
+                    <table>
+                        <thead>
+                          <tr>
+                            <th>Name:</th>
+                            <th>Price:</th>
+                            <th>Category:</th>
+                            <th>Description:</th>
+                            <th>Image URL:</th>
+                            <th>Action:</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ row[2] }}</td>
+                            <td> {{ row[3] }}</td>
+                            {% if row[4] | length > 45 %}
+                                <td> {{ row[4][:45] ~ ' ...' }}</td>
+                            {% else %}
+                                <td>{{ row[4] }}</td>
+                            {% endif %}
+                            <td> {{ row[5] }}</td>
+                            <td>
+                                <a href="#" onclick="product_edit(
+                                    '{{row[0]}}', '{{row[1]}}','{{row[2]}}',
+                                    '{{row[3]}}', '{{row[4]}}','{{row[5]}}'
+                                    )"><button>Edit</button></a>
+
+                                <a href="#"><button onclick="delete_product('{{row[0]}}')">Delete</button></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      {% endfor %}
+                    {% else %}
+                      <p>Reviews database is empty</p>
+                {% endif %}
+
+            </div>
+
+            <div class="add_new_product_button" id="new_product_button">
+                <a href="#" onclick="adding_new_product()"><button>Add Product</button></a>
+            </div>
+
+            <div class="editing-new-product" id="edit-product">
+                <h1>Editing Product</h1>
+                <label for="edit-product-name">Product Name:</label>
+                <input type="text" name="edit-product-name" id="edit-product-name">
+
+
+                <label for="edit-product-price">Product Price:</label>
+                <input type="text" name="edit-product-price" id="edit-product-price">
+
+
+                <label for="edit-product-category">Product Category:</label>
+                <input type="text" name="edit-product-category" id="edit-product-category">
+
+
+                <label for="edit-product-description">Product Description:</label>
+                <textarea name="edit-product-description" id="edit-product-description" cols="30" rows="10" maxlength="460" oninput="product_update_char_limit()"></textarea>
+                
+
+                <label for="edit-product-image-url">Image URL:</label>
+                <input type="text" name="edit-product-image-url" id="edit-product-image-url">
+
+
+                <button id="finish-edit-button" onclick="on_finish_edit()">Finish</button>
+                <div class="check-edit-des-char-limit"><h5>Description Character Limit: <span id="feedback1">460</span> Out of 460</h5></div>
+            </div>
+
+
+            <!-- New Product Container -->
+            <div class="adding_new_product_container" id="new_product_container" style="display: none;">
+                <h1>Adding New Product</h1>
+
+                <input type="text" name="new-product-name" id="new-product-name" placeholder="Product Name:">
+
+                <input type="text" name="new-product-price" id="new-product-price" placeholder="Product Price:">
+
+                <input type="text" name="new-product-category" id="new-product-category" placeholder="Product Category:">
+
+                <textarea name="new-product-description" id="new-product-description" cols="30" rows="10" maxlength="460" oninput="product_update_char_limit2()" placeholder="Product Description: Character Limit 460"></textarea>
+
+                <input type="text" name="new-product-image-url" id="new-product-image-url" placeholder="Image URL:">
+                <button onclick="add_new_product_finish()">Add New Product</button>
+
+                <div class="check-new-des-char-limit"><h5>Description Character Limit: <span id="feedback2">460</span> Out of 460</h5></div>
+
+                <p>When adding new product category, be sure to update the dropdown list on 'all_products_container.html' file, more instructions can be found inside the file</p>
+
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+    <div class="send-message" style="display: none;">
+        <h1>Send Message to Subscribers</h1>
+
+        <div class="input-box">
+            <form method="post" id="message-sent">
+                <input type="text" name="subject" id="subject" placeholder="subject">
+                <textarea name="body" id="body" cols="30" rows="10" placeholder="Message Body"></textarea>
+                <input type="submit" value="Send" id="button">
+            </form>
+        </div>
+        <h5>Total number of subscribers {{ count }}</h5>
+    </div>
+    
+    <div class="message-sent-popup">
+        <h1>Message has been sent!</h1>
+    </div>
+
+
+
+
+
+    <div class="add-product-area" style="display: none;">
+        <h1>Add/Remove/Edit Products</h1>
+
+
+    </div>
+
+    <script src="/static/js/admin_transfer.js"></script>
+    <script src="/static/js/admin_product.js"></script>
+    <script src="/static/js/admin_settings.js"></script>
+    <script src="https://kit.fontawesome.com/89bc05284d.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+
+<!-- Below please change the title of home page to your person needs -->
+{% block title %}
+    <!-- Change 'Growth' -->
+    <title>Leave A Review - Growth</title>
+    <!-- Change 'Growth' -->
+{% endblock title %}
+
+
+
+{% block content %}
+
+<div class="error-message" id="error-star">
+    <h5>Please fill out a star rating!</h5>
+</div>
+
+<div class="jumbro-thing"></div>
+
+<!-- Please change all of the fields to your personal or business needs -->
+
+<div class="review-jumbotron-container2">
+
+    <div class="leave-us-a-review-container" id="leave-us-a-review-container">
+        <h5>Leave us a review</h5>
+        <form action="" id="review-form">
+
+            <div class="form-contents">
+                {{ form.hidden_tag() }}
+                {{ form.name }}
+
+                    <div class="rate">
+                        <input type="radio" id="star1" name="rate" value="1" onclick="starOne()"/>
+                        <label for="star1" title="text">1 star</label>
+
+                        <input type="radio" id="star2" name="rate" value="2" onclick="starTwo()"/>
+                        <label for="star2" title="text">2 stars</label>
+                        
+                        <input type="radio" id="star3" name="rate" value="3" onclick="starThree()"/>
+                        <label for="star3" title="text">3 stars</label>
+
+                        <input type="radio" id="star4" name="rate" value="4" onclick="starFour()"/>
+                        <label for="star4" title="text">4 stars</label>
+
+                        <input type="radio" id="star5" name="rate" value="5" onclick="starFive()"/>
+                        <label for="star5" title="text">5 stars</label>
+                    </div>
+
+                {{ form.message }}
+
+                {{ form.submit }}
+
+                <div class="char-limit"><h5>Charcater Limit <span id="feedback">75</span></h5></div>
+            </div>
+        </form>
+
+    </div>
+
+
+
+    <div class="leave-us-a-review-container2" id="leave-us-a-review-container2">
+        <h5>Thank You for leaving a review</h5>
+
+        <i class="fa-solid fa-check"></i>
+        <!-- change below, we recommended you keep this or add something similar but keep to the character limit -->
+
+        <small>Again, thank you. Every review we get we appreciate all reviews good and bad!</small>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/static/js/review_submitted.js"></script>
+
+
+{% endblock content %}

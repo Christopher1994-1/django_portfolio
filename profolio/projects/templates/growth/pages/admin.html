@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/admin.css">
+    <title>Admin Area</title>
+</head>
+<body>
+
+    {% if login == 0 %}
+        <div class="unsuccessful-login" id="login">
+            <p id="paragraph">Login attempt failed due to incorrect credentials</p>
+            <p id="x" onclick="admin_login_x()"><i class="fa-solid fa-xmark"></i></p>
+        </div>
+    {% elif login == 2 %}
+        <div class="unsuccessful-login" id="login">
+            <p id="paragraph">You've been successfully logged out</p>
+            <p id="x" onclick="admin_login_x()"><i class="fa-solid fa-xmark"></i></p>
+        </div>
+    {% elif login == 4 %}
+        <div class="unsuccessful-login" id="login">
+            <p id="paragraph">Username and password updated</p>
+            <p id="x" onclick="admin_login_x()"><i class="fa-solid fa-xmark"></i></p>
+        </div>
+
+    {% elif login == 6 %}
+        <div class="unsuccessful-login" id="login">
+            <p id="paragraph">Admin info deleted, login in by clicking login</p>
+            <p id="x" onclick="admin_login_x()"><i class="fa-solid fa-xmark"></i></p>
+        </div>
+
+
+    {% endif %}
+
+
+    <div class="admin-login">
+
+        <h1>Admin Login</h1>
+
+        <div class="login-details">
+            <form action="/admin/area" method="POST">
+                <input type="text" name="username" id="username" placeholder="Username">
+                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="submit" id="btn" value="Sign In">
+            </form>
+        </div>
+
+
+        <p id="under">Please be sure to remember your username and password</p>
+
+    </div>
+
+    <a href="/" id="return">Return to site</a>
+
+
+    <script src="https://kit.fontawesome.com/89bc05284d.js" crossorigin="anonymous"></script>
+    <script src="/static/js/admin.js"></script>
+</body>
+</html>
