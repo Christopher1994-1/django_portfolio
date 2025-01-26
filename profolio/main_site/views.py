@@ -11,12 +11,20 @@ from projects import stripe_payment, chatgpt
 import stripe
 import os
 from django.views.decorators.csrf import csrf_exempt
+from . import random_stuff
 
 
 
 
 #. SERVER LIVE / OFF
 SERVER_STATUS:str = "false"
+
+
+
+basic_context = {
+    "footer_para": random_stuff.FOOTER_PARA,
+    "about_me": random_stuff.ABOUT_ME
+}
 
 
 
@@ -40,13 +48,14 @@ def index(request):
     year = str(datetime.datetime.now()).split(' ')[0].split('-')[0]
     
 
-    posts = Projects.objects.all()
+    posts = Projects.objects.all()[:6]
     
     
     context = {
         "year": year, 
         "posts":posts
     }
+    context.update(basic_context)
     
     return render(request, 'index.html', context)
 

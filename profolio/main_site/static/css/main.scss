@@ -1164,7 +1164,7 @@ $github_image: url('/static/images/site_images/github.jpg');
 
 
 .privacy {
-    background-color: white;
+    background-color: rgb(30, 30, 30);
     padding-bottom: 10px;
     padding: 20px;
 
@@ -1172,24 +1172,37 @@ $github_image: url('/static/images/site_images/github.jpg');
         cursor: default;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 700;
+        color: white;
     }
 
     p {
         cursor: default;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 500;
+        color: white;
     }
 
     h1 {
         cursor: default;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 700;
+        color: white;
     }
 
     ol {
         cursor: default;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 500;
+        color: white;
+    }
+
+
+    a {
+        color: white;
+
+        &:hover {
+            color: #007bff;
+        }
     }
 }
 
