@@ -108,21 +108,15 @@ def api_request_ip_details(ip):
     
     
     return [asn, state, city, country, poseCode, security, typee]
-#========================================================================================
 
 
-#3
-#3
-#3
-#3
-#3
-#3
-#3
-#3
 
 
-#========================================================================================
-#| function that checks if the visitor has been to the site before
+
+
+
+
+#. FUNCTION THAT CHECKS IF THE VISITOR HAS BEEN TO THE SITE BEFORE
 def hasVisitedSiteBefore(ip):
     """ function that checks if visitor has been on the site before. It will check the unique_visitors table to check if
     the IP is in there, if it is, the user has been to the site before if not its a new visitior.
@@ -164,17 +158,10 @@ def hasVisitedSiteBefore(ip):
         return 'no visitor exists'
 
         
-#========================================================================================  
 
 
-#3
-#3
-#3
-#3
-#3
-#3
-#3
-#3
+
+
 
 
 #========================================================================================

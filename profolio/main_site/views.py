@@ -149,8 +149,6 @@ def filter_projects(stringgg):
         #! maybe do manuel sql commands to search for the ones that contain data and then get those IDs and do a filter search with that to 
         #! return query object
         queryset1 = Projects.objects.filter(id__in=stringgg)
-        print(stringgg)
-        print(queryset1)
         return queryset1
     
 #.############################################################################################
@@ -175,9 +173,7 @@ def search_projects(request, filters):
         
     else:
         stringg = str(filters)
-        print(stringg)
         projects_selection = app_functions.filter_algo(stringg)
-        print(projects_selection)
         
         projects1 = filter_projects(projects_selection)
         title = 'Filtered Projects'

@@ -205,7 +205,6 @@ def addSessionLogFor_ReturningVisitor(ip):
     db.commit()
     db.close()
     
-    print(result)
 
 
 def addSessionLogFor_UniqueVisitor(ip, startime, current_page, last_page, browser):
@@ -213,9 +212,6 @@ def addSessionLogFor_UniqueVisitor(ip, startime, current_page, last_page, browse
     
     #* making api call for other data
     # data = api_request_ip_details(ip)
-    print(startime)
-    print(current_page)
-    print(type(last_page))
     
     
     start_time = ''
