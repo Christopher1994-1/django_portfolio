@@ -52,13 +52,14 @@
 
 <div class="dropdown_menu" id="popup-element" style="display: none;" onmouseover="showPopup()" onmouseout="hidePopup()">
 
+    
         <div class="item">
 
             <h5>Web Development</h5>
             <hr class="navbar_dropdownHR">
             
             <div class="slidepart">
-                <a href="#" onmouseover="open_arrow('1')" onmouseout="close_arrow('1')">Starbucks Remake</a>
+                <a href="{% url 'starbucks_remake' %}" onmouseover="open_arrow('1')" onmouseout="close_arrow('1')">Starbucks Remake</a>
                 <i class="fa-solid fa-arrow-right arrowkey" id="arrowkey1"></i>
             </div>
             <div class="slidepart">
@@ -82,6 +83,7 @@
                 <p>HTML5, CSS, Scss, JavaScript, TypeScript</p>
             </div>
         </div>
+
 
         <div class="item">
             <h5>Backend Development</h5>
