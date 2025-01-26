@@ -986,7 +986,6 @@
   border: 2px solid white;
   padding: 10px;
   overflow: auto;
-  max-height: 600px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -1000,7 +999,7 @@
 .projects2_container .project_area .project {
   width: 74%;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.306);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.13);
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Ensures content inside is spaced evenly */

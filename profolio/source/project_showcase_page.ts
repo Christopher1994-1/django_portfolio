@@ -159,6 +159,8 @@ function index_figured(stringList: string[]): number {
 };
 
 
+
+
 //. FUNCTION THAT HANDLES RIGHT SIDE ARROW - IMAGE FLIPPING -
 function rightSideButton(): void {
     //. GET INPUT VALUE OF IMAGES
@@ -278,26 +280,33 @@ window.addEventListener('beforeunload', (event) => {
 
 
 //. FUNCTION THAT OPENS THE MAIN IMAGE FOR THE GALLERY
-function main_image_viewer_gallery(image:any): void {
+function main_image_viewer_gallery(image:any, projectTitle:string): void {
 
     //. CREATE NEW DIV THAT IS THE IMAGE VIEWER
     const newDiv = document.createElement('div');
     newDiv.id = "image_viewer2";
+    console.log(projectTitle)
+
+    let imageID: string = `<img src="${image}" style="width:70%;">`;
+
+    if (projectTitle == "GUI Calculator App") {
+        imageID = `<img src="${image}" style="width:20%;">`;
+    }
 
 
     newDiv.innerHTML = `
-    <div id="xbutton">
-        <button onclick="close_main_image_viewer2()"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <img src="${image}" id="main_image">
+        <div id="xbutton">
+            <button onclick="close_main_image_viewer2()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        ${imageID}
 
-    <div id="left-side-button">
-        <button onclick="leftSideButton2('${image}')"><i class="fa-solid fa-arrow-left"></i></button>
-    </div>
+        <div id="left-side-button">
+            <button onclick="leftSideButton2('${image}')"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
 
-    <div id="right-side-button">
-        <button onclick="rightSideButton2('${image}')"><i class="fa-solid fa-arrow-right"></i></button>
-    </div>
+        <div id="right-side-button">
+            <button onclick="rightSideButton2('${image}')"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
     `;
 
 
@@ -390,6 +399,10 @@ function open_gallery_image(image: string): void {
     const newDiv = document.createElement('div');
     newDiv.id = "image_overlay";
 
+    //. GET PROJECT TITLE
+    let projectTitle:any = document.getElementById("project-titleID");
+    let projectTitle_ = projectTitle.innerHTML;
+
 
     newDiv.style.position = 'fixed';
     newDiv.style.width = '100%';
@@ -402,5 +415,5 @@ function open_gallery_image(image: string): void {
     document.body.appendChild(newDiv);
 
 
-    main_image_viewer_gallery(image);
+    main_image_viewer_gallery(image, projectTitle_);
 };

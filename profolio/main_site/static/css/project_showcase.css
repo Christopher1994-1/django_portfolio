@@ -219,9 +219,6 @@ body {
   padding-right: 15px;
   cursor: pointer;
 }
-#image_viewer2 img {
-  width: 80%;
-}
 
 #left-side-button {
   position: fixed;

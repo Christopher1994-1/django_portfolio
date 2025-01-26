@@ -16,11 +16,15 @@
     <div class="project-container">
         
         <div class="project-header">
-            <h1 class="project-title">{{title}}</h1>
+            <h1 class="project-title" id="project-titleID">{{title}}</h1>
             <p class="project-short-description">{{short_description}}</p>
             <p class="project-type">Type: {{project_type}}</p>
             <div class="project-links">
-                <a href="{% url demo_url %}" class="btn demo-btn" target="_blank">View Demo</a>
+                {% if demo_url == "none" %}
+                    <a class="btn demo-btn" target="_blank" style="cursor: default; background-color: grey; color: black;">View Demo</a>
+                {% else %}
+                    <a href="{% url demo_url %}" class="btn demo-btn" target="_blank">View Demo1</a>
+                {% endif %}
                 <a href="{{gitHub_url}}" class="btn github-btn" target="_blank">GitHub</a>
             </div>
         </div>

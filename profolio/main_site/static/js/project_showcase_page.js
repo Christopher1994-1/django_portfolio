@@ -138,22 +138,27 @@ mainImage.addEventListener("click", function () {
 window.addEventListener('beforeunload', (event) => {
     localStorage.removeItem(LOCAL_STORGE_INDEX_NAME);
 });
-function main_image_viewer_gallery(image) {
+function main_image_viewer_gallery(image, projectTitle) {
     const newDiv = document.createElement('div');
     newDiv.id = "image_viewer2";
+    console.log(projectTitle);
+    let imageID = `<img src="${image}" style="width:70%;">`;
+    if (projectTitle == "GUI Calculator App") {
+        imageID = `<img src="${image}" style="width:20%;">`;
+    }
     newDiv.innerHTML = `
-    <div id="xbutton">
-        <button onclick="close_main_image_viewer2()"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <img src="${image}" id="main_image">
+        <div id="xbutton">
+            <button onclick="close_main_image_viewer2()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        ${imageID}
 
-    <div id="left-side-button">
-        <button onclick="leftSideButton2('${image}')"><i class="fa-solid fa-arrow-left"></i></button>
-    </div>
+        <div id="left-side-button">
+            <button onclick="leftSideButton2('${image}')"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
 
-    <div id="right-side-button">
-        <button onclick="rightSideButton2('${image}')"><i class="fa-solid fa-arrow-right"></i></button>
-    </div>
+        <div id="right-side-button">
+            <button onclick="rightSideButton2('${image}')"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
     `;
     document.body.appendChild(newDiv);
     localStorage.removeItem(LOCAL_STORGE_INDEX_NAME);
@@ -200,12 +205,14 @@ function rightSideButton2(image) {
 function open_gallery_image(image) {
     const newDiv = document.createElement('div');
     newDiv.id = "image_overlay";
+    let projectTitle = document.getElementById("project-titleID");
+    let projectTitle_ = projectTitle.innerHTML;
     newDiv.style.position = 'fixed';
     newDiv.style.width = '100%';
     newDiv.style.height = '100%';
     newDiv.style.top = '0';
     newDiv.style.backgroundColor = '#0000007d';
     document.body.appendChild(newDiv);
-    main_image_viewer_gallery(image);
+    main_image_viewer_gallery(image, projectTitle_);
 }
 ;
