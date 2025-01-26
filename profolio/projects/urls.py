@@ -20,6 +20,9 @@ urlpatterns = [
     path("starbucks_remake/", views.starbucks_remake, name="starbucks_remake"),
     
     #. growth
-    path("growth_project/", growth.growth_project, name="growth_project")
+    path("growth_project/", growth.growth_project, name="growth_project"),
+    
+    #. washington
+    path('washington_project/', views.washington_project, name="washington_project")
     
 ] 

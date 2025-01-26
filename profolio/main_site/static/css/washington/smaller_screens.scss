@@ -1,0 +1,1250 @@
+// Global variables
+$button-color: rgba(71, 120, 133, 0.705);
+$text-color: rgba(255, 255, 255, 0.623);
+$header-color: linear-gradient(to top, #333333, #cccccc);
+$border-black: 2px solid black;
+$border-white: 2px solid white;
+$text-hover-color: rgba(255, 255, 255, 0.747);
+
+
+
+
+// CSS for max width ~ 1115px ~
+@media(max-width:1115px) {
+    // CSS for the div container under the jumbotron
+    .under_jumbo {
+
+        .inside-stuff {
+            width: 90%;
+            padding: 15px;
+
+            img {
+                width: 370px;
+                height: 582px;
+            }
+
+            p {
+                width: 50%;
+                font-size: 17px;
+                // font-weight: 500;
+                // line-height: 25px;
+            }
+
+        }
+    }
+
+    // CSS for the navbar 
+    .navbar2 {
+
+        .nav-links {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            justify-content: space-around;
+        }
+    }
+
+
+    // CSS for the navbar 
+    .navbar3 {
+
+        .nav-links {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            justify-content: space-around;
+        }
+    }
+
+
+    // CSS for the subscribe section
+    .subscribe {
+        position: relative;
+        text-align: center;
+
+
+        .sub-form {
+            position: absolute;
+            color: $text-color;
+            padding: 10px;
+
+            i {
+                font-size: 80px;
+                margin-bottom: 0;
+            }
+
+            h5 {
+                font-size: 50px;
+                letter-spacing: 2px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .input-button {
+                margin-top: 10;
+
+                input {
+                    padding: 20px;
+                    background-color: $text-color;
+                    border: none;
+                    border-radius: 10px;
+                    width: 50%;
+                }
+
+                input::placeholder {
+                    color: black;
+                }
+
+                a {
+                    button {
+                        padding: 20px;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: $button-color;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background-color: rgba(97, 155, 172, 0.705);
+        
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+// CSS for max width ~ 1024px ~
+@media(max-width:1024px) {
+    // CSS for the main footer container
+    .main-footer-container {
+
+        .footer-things {
+            display: flex;
+            width: 100%;
+            margin: auto;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 30px;
+
+            .box {
+                background-color: white;
+                padding: 30px;
+                border-radius: 5px;
+                width: 25%;
+                // border-bottom: 2px solid $button-color;
+
+                i {
+                    color: $button-color;
+                    font-size: 25px;
+                    margin-bottom: 15;
+                }
+
+                h5 {
+                    color: $button-color;
+                    font-size: 20px;
+                    margin-top: 0;
+                    margin-bottom: 20;
+                }
+
+                .line {
+                    border: 2px solid $button-color;
+                    margin-top: 0;
+                    width: 30%;
+                    margin: auto;
+                    margin-bottom: 20;
+                }
+
+                h4 {
+                    color: rgba(49, 84, 94, 0.705);
+                    font-size: 15px;
+                }
+
+                h4 {
+                    a {
+                        text-decoration: none;
+                        color: rgba(49, 84, 94, 0.705);
+                    }
+
+                    a:hover {
+                        color: rgba(34, 57, 63, 0.705);
+                    }
+                }
+            }
+        }
+
+        .social-links {
+            width: 20%;
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+
+            a {
+                color: $button-color;
+
+                i {
+                    font-size: 50px;
+                    background-color: rgb(32, 32, 32);
+                    padding: 10px;
+                    border-radius: 100px;
+                }
+            }
+        }
+
+        p {
+            margin-top: 10px;
+            width: 20%;
+            margin: auto;
+            margin-bottom: 20px;
+            color: $button-color;
+            font-weight: bolder;
+            color: rgba(49, 84, 94, 0.705);
+        }
+
+    }
+}
+
+
+// CSS for max width ~ 982px ~
+@media(max-width:982px) {
+    // CSS for the div container under the jumbotron
+    .under_jumbo {
+
+        .inside-stuff {
+            width: 90%;
+            padding: 15px;
+
+            img {
+                width: 340px;
+                height: 552px;
+            }
+
+            p {
+                width: 60%;
+                font-size: 15px;
+                // font-weight: 500;
+                // line-height: 25px;
+            }
+
+        }
+    }
+
+
+    // CSS for the subscribe section
+    .subscribe {
+        position: relative;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+
+        .sub-form {
+            position: absolute;
+            color: $text-color;
+            padding: 10px;
+
+            i {
+                font-size: 70px;
+                margin-bottom: 0;
+            }
+
+            h5 {
+                font-size: 40px;
+                letter-spacing: 2px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .input-button {
+                margin-top: 10;
+
+                input {
+                    padding: 20px;
+                    background-color: $text-color;
+                    border: none;
+                    border-radius: 10px;
+                    width: 50%;
+                }
+
+                input::placeholder {
+                    color: black;
+                }
+
+                a {
+                    button {
+                        padding: 20px;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: $button-color;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background-color: rgba(97, 155, 172, 0.705);
+        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// CSS for max width ~ 950px ~
+@media(max-width:950px) {
+    // CSS for the navbar 
+    .navbar {
+        width: 90%;
+
+        a {
+            text-decoration: none;
+
+            h1 {
+                color: $text-color;
+                letter-spacing: 5px;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            justify-content: space-around;
+
+            a {
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 23px;
+                color: $text-color;
+            }
+
+            a:hover {
+                color: $text-hover-color;
+            }
+        }
+    }
+
+    // CSS for the jumbotron that holds the image and the stuff inside
+    .jumbotron {
+        background-image: url('/static/images/image_example_one.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%; /* full width of the viewport */
+        height: 700px;
+        border: none;
+        margin: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .inside-jumbotron-info {
+            width: 90%;
+
+            h1 {
+                font-size: 90px;
+            }
+
+            p {
+                font-size: 25px;
+            }
+
+            
+        }
+    }
+}
+
+
+
+// CSS for max width ~ 939px ~
+@media(max-width:939px) {
+    // CSS for the jumbotron that holds the image and the stuff inside
+    .jumbotron {
+        background-image: url('/static/images/image_example_two.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .inside-jumbotron-info {
+
+
+            a {
+                button {
+                    width: 20%;
+                }
+
+            }
+
+            
+        }
+    }
+}
+
+
+// CSS for max width ~ 893px ~
+@media(max-width:893px) {
+    // CSS for the subscribe section
+    .subscribe {
+        position: relative;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+
+        .sub-form {
+            position: absolute;
+            color: $text-color;
+            padding: 10px;
+
+            i {
+                font-size: 70px;
+                margin-bottom: 0;
+            }
+
+            h5 {
+                font-size: 40px;
+                letter-spacing: 2px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .input-button {
+                margin-top: 10;
+
+                input {
+                    padding: 20px;
+                    background-color: $text-color;
+                    border: none;
+                    border-radius: 10px;
+                    width: 50%;
+                }
+
+                input::placeholder {
+                    color: black;
+                }
+
+                a {
+                    button {
+                        padding: 20px;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: $button-color;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background-color: rgba(97, 155, 172, 0.705);
+        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// CSS for max width ~ 868px ~
+@media(max-width:868px) {
+    // CSS for the div container under the jumbotron
+    .under_jumbo {
+
+        .inside-stuff {
+            width: 90%;
+            padding: 15px;
+
+            img {
+                width: 310px;
+                height: 522px;
+            }
+
+            p {
+                width: 60%;
+                font-size: 15px;
+                // font-weight: 500;
+                // line-height: 25px;
+            }
+
+        }
+    }
+
+
+    // CSS for the shoreline index thing
+    .shoreline-container {
+        padding: 20px;
+
+        .stuff-inside-container {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                height: 500px;
+            }
+
+            .header-and-paraprah-container {
+                width: 100%;
+                align-self: center;
+                text-align: center;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h4 {
+                    margin-bottom: 0;
+                    font-size: 55px;
+                    font-weight: bolder;
+                }
+
+                p {
+                    font-size: 20px;
+                    margin-top: 0;
+                    font-weight: bolder;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+    // CSS for the grid image thing
+    .grid-container {
+
+        .child-one {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+
+            .child-holder {
+                padding: 20px;
+            }
+        }
+
+
+
+        .child-two {
+            display: none;
+
+        }
+
+
+        .child-two-smaller {
+            display: block;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+    
+            img {
+                width: 100%;
+            }
+    
+    
+            .child-holder {
+                width: 50%;
+                align-self: center;
+                text-align: center;
+                color: $text-color;
+                padding: 20px;
+    
+                h4 {
+                    font-size: 30px;
+                    margin-bottom: 0;
+                }
+    
+                p {
+                    margin-top: 0;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+        }
+    
+
+
+
+    }
+}
+
+
+
+// CSS for max width ~ 893px ~
+@media(max-width:852px) {
+    // CSS for the subscribe section
+    .subscribe {
+        position: relative;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+
+        .sub-form {
+            position: absolute;
+            color: $text-color;
+            padding: 10px;
+
+            i {
+                font-size: 70px;
+                margin-bottom: 0;
+            }
+
+            h5 {
+                font-size: 40px;
+                letter-spacing: 2px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .input-button {
+                margin-top: 10;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                input {
+                    padding: 20px;
+                    background-color: $text-color;
+                    border: none;
+                    border-radius: 10px;
+                    width: 90%;
+                    margin-bottom: 10px;
+                }
+
+                input::placeholder {
+                    color: black;
+                }
+
+                a {
+                    button {
+                        padding: 20px;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: $button-color;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background-color: rgba(97, 155, 172, 0.705);
+        
+                    }
+                }
+            }
+        }
+    }
+
+
+    // CSS for the about us section
+    .about-us-section {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 40px;
+        }
+    }
+}
+
+
+
+
+// CSS for max width ~ 802px ~
+@media(max-width:802px) {
+    // CSS for the main footer container
+    .main-footer-container {
+
+        .footer-things {
+            display: flex;
+            flex-direction: column;
+
+            .box {
+                width: 80%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 10px;
+                margin-bottom: 20px;
+                align-self: center;
+                border-bottom: 4px solid $button-color;
+
+                i {
+                    color: $button-color;
+                    font-size: 25px;
+                    margin-bottom: 15;
+                }
+
+                h5 {
+                    color: $button-color;
+                    font-size: 20px;
+                    margin-top: 0;
+                    margin-bottom: 20;
+                }
+
+                .line {
+                    border: 2px solid $button-color;
+                    margin-top: 0;
+                    width: 30%;
+                    margin: auto;
+                    margin-bottom: 20;
+                }
+
+                h4 {
+                    color: rgba(49, 84, 94, 0.705);
+                    font-size: 15px;
+                }
+
+                h4 {
+                    a {
+                        text-decoration: none;
+                        color: rgba(49, 84, 94, 0.705);
+                    }
+
+                    a:hover {
+                        color: rgba(34, 57, 63, 0.705);
+                    }
+                }
+            }
+        }
+
+        .social-links {
+            width: 40%;
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+
+            a {
+                color: $button-color;
+
+                i {
+                    font-size: 50px;
+                    background-color: rgb(32, 32, 32);
+                    padding: 10px;
+                    border-radius: 100px;
+                }
+            }
+        }
+
+        p {
+            text-align: center;
+            width: 40%;
+        }
+
+    }
+}
+
+
+
+// CSS for max width ~ 782px ~
+@media(max-width:782px) {
+    // CSS for the subscribe section
+    .subscribe {
+        position: relative;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+
+        .sub-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $text-color;
+            padding: 10px;
+            width: 90%;
+
+            i {
+                font-size: 50px;
+                margin-bottom: 0;
+            }
+
+            h5 {
+                font-size: 30px;
+                letter-spacing: 2px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .input-button {
+                margin-top: 10;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                input {
+                    padding: 20px;
+                    background-color: $text-color;
+                    border: none;
+                    border-radius: 10px;
+                    width: 90%;
+                    margin-bottom: 10px;
+                }
+
+                input::placeholder {
+                    color: black;
+                }
+
+                a {
+                    button {
+                        padding: 20px;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: $button-color;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background-color: rgba(97, 155, 172, 0.705);
+        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// CSS for max width ~ 752px ~
+@media(max-width:752px) {
+    // CSS for the navbar 
+    .navbar {
+
+        .nav-links {
+            display: none;
+            
+        }
+
+
+        button {
+            display: block;
+        }
+
+    }
+
+
+    // CSS for the navbar 
+    .navbar2 {
+
+        .nav-links {
+            display: none;
+
+        }
+
+
+        #menu-btn {
+            display: block;
+        }
+    }
+
+
+    // CSS for the navbar 
+    .navbar3 {
+
+        .nav-links {
+            display: none;
+
+        }
+
+
+        #menu-btn {
+            display: block;
+        }
+    }
+}
+
+
+
+// CSS for max width ~ 735px ~
+@media(max-width:735px) {
+    // CSS for the navbar 
+    .navbar {
+
+
+
+        button {
+            border: 2px solid $text-color;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0);
+            width: 20%;
+            justify-content: center;
+            justify-content: space-around;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 500;
+            color: $text-color;
+        }
+
+    }
+
+}
+
+
+
+// CSS for max width ~ 709px ~
+@media(max-width:709px) {
+    // CSS for the jumbotron that holds the image and the stuff inside
+    .jumbotron {
+
+        .inside-jumbotron-info {
+
+
+            a {
+                button {
+                    width: 25%;
+                }
+
+            }
+
+            
+        }
+    }
+}
+
+
+// CSS for max width ~ 688px ~
+@media(max-width:688px) {
+    // CSS for the jumbotron that holds the image and the stuff inside
+    .jumbotron {
+
+        .inside-jumbotron-info {
+            width: 80%;
+
+            h1 {
+                font-size: 70px;
+            }
+
+            p {
+                font-size: 25px;
+                width: 100%;
+            }
+
+            a {
+                button {
+                    width: 25%;
+
+                }
+
+            }
+
+            
+        }
+    }
+
+
+}
+
+
+
+// CSS for max width ~ 671px ~
+@media (max-width:671px) {
+    // CSS for the shoreline index thing
+    .shoreline-container {
+
+        .stuff-inside-container {
+
+            img {
+                width: 100%;
+                height: 40%;
+            }
+        }
+    }
+
+    
+}
+
+
+// CSS for max width ~ 666px ~
+@media(max-width:666px) {
+    // CSS for the jumbotron that holds the image and the stuff inside
+    .jumbotron {
+
+        .inside-jumbotron-info {
+
+            a {
+                button {
+                    width: 25%;
+                }
+
+            }
+
+            
+        }
+    }
+
+    // CSS for the div container under the jumbotron
+    .under_jumbo {
+
+        .inside-stuff {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            padding: 15px;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 310px;
+                height: 522px;
+            }
+
+            p {
+                width: 100%;
+                font-size: 20px;
+                // font-weight: 500;
+                // line-height: 25px;
+            }
+
+        }
+    }
+    
+
+}
+
+
+
+// CSS for max width ~ 641px ~
+@media(max-width:641px) {
+    // CSS for the jumbotron that holds the image and the stuff inside
+    .jumbotron {
+
+        .inside-jumbotron-info {
+
+            a {
+                button {
+                    width: 30%;
+                }
+
+            }
+
+            
+        }
+    }
+
+
+}
+
+
+
+// CSS for max width ~ 638px ~
+@media(max-width:638px) {
+    // CSS for the subscribe section
+    .subscribe {
+        position: relative;
+        text-align: center;
+
+        img {
+            width: 100%;
+            height: 400px;
+        }
+
+        .sub-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $text-color;
+            padding: 10px;
+            width: 80%;
+
+            i {
+                font-size: 30px;
+                margin-bottom: 0;
+            }
+
+            h5 {
+                font-size: 15px;
+                letter-spacing: 2px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+        }
+    }
+}
+
+
+
+// CSS for max width ~ 627px ~
+@media(max-width:627px) {
+    // CSS for the jumbotron that holds the image and the stuff inside
+    .jumbotron {
+
+        .inside-jumbotron-info {
+            width: 98%;
+            padding: 0;
+            margin-top: 10%;
+
+            h1 {
+                font-size: 70px;
+                width: 98%;
+            }
+
+            p {
+                font-size: 25px;
+                width: 100%;
+            }
+
+
+            
+        }
+    }
+
+
+}
+
+
+
+
+// CSS for max width ~ 524px ~
+@media(max-width:524px) {
+    // CSS for the jumbotron that holds the image and the stuff inside
+    .jumbotron {
+
+        .inside-jumbotron-info {
+            width: 98%;
+
+            h1 {
+                font-size: 70px;
+                letter-spacing: 0;
+            }
+
+            
+        }
+    }
+
+
+}
+
+
+
+// CSS for max width ~ 476px ~
+@media(max-width:476px) {
+    // CSS for the jumbotron that holds the image and the stuff inside
+    .jumbotron {
+
+        .inside-jumbotron-info {
+            width: 98%;
+            margin-top: 10%;
+            padding: 0;
+
+            h1 {
+                font-size: 60px;
+                letter-spacing: 0;
+                width: 100%;
+
+            }
+
+            p {
+                font-size: 21px;
+            }
+
+            a {
+                button {
+                    width: 30%;
+                }
+            }
+
+            
+        }
+    }
+
+
+    // CSS for the subscribe section
+    .subscribe {
+        position: relative;
+        text-align: center;
+
+        img {
+            width: 100%;
+            height: 400px;
+        }
+
+        .sub-form {
+            position: absolute;
+            color: $text-color;
+            padding: 10px;
+            width: 90%;
+            margin: auto;
+
+            i {
+                font-size: 30px;
+                margin-bottom: 0;
+            }
+
+            h5 {
+                font-size: 17px;
+                letter-spacing: 2px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .input-button {
+                margin-top: 10;
+                text-align: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    padding: 10px;
+                    background-color: $text-color;
+                    border: none;
+                    border-radius: 10px;
+                    width: 90%;
+                    margin-bottom: 10px;
+                }
+
+                input::placeholder {
+                    color: black;
+                }
+
+                a {
+                    button {
+                        padding: 10px;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: $button-color;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        background-color: rgba(97, 155, 172, 0.705);
+        
+                    }
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,753 @@
+// Global variables
+$button-color: rgba(71, 120, 133, 0.705);
+$text-color: rgba(255, 255, 255, 0.623);
+$header-color: linear-gradient(to top, #333333, #cccccc);
+$border-black: 2px solid black;
+$border-white: 2px solid white;
+$text-hover-color: rgba(255, 255, 255, 0.747);
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(209, 209, 209);
+  }
+
+
+// CSS for the navbar 
+.navbar {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+
+    a {
+        text-decoration: none;
+
+        h1 {
+            color: $text-color;
+            letter-spacing: 5px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        width: 30%;
+        justify-content: center;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 23px;
+            color: $text-color;
+        }
+
+        a:hover {
+            color: $text-hover-color;
+        }
+    }
+
+
+    button {
+        border: 2px solid $text-color;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0);
+        width: 15%;
+        justify-content: center;
+        justify-content: space-around;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        color: $text-color;
+        display: none;
+    }
+}
+
+
+// CSS for the navbar 
+.navbar2 {
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+
+    a {
+        text-decoration: none;
+
+        h1 {
+            color: black;
+            letter-spacing: 5px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        width: 30%;
+        justify-content: center;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 23px;
+            color: black;
+        }
+
+        a:hover {
+            color: black;
+        }
+    }
+
+
+    // CSS for the nav links drop down menu click
+    #nav_links2 {
+        border: none;
+        width: 100%;
+        position: absolute;
+        display: grid;
+        border-top: 2px solid black;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        top: 167;
+        z-index: 100;
+        background-color: white;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        display: none;
+
+        a {
+            text-align: center;
+            text-decoration: none;
+            font-size: 30px;
+            color: black;
+        }
+    }
+
+
+    #menu-btn {
+        display: none;
+    }
+
+
+    button {
+        border: $border-black;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0);
+        width: 15%;
+        justify-content: center;
+        justify-content: space-around;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        color: black;
+        display: none;
+    }
+
+
+    #menu0x {
+        display: none;
+    }
+}
+
+
+// CSS for the navbar 
+.navbar3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+
+    a {
+        text-decoration: none;
+
+        h1 {
+            color: black;
+            letter-spacing: 5px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        width: 30%;
+        justify-content: center;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 23px;
+            color: black;
+        }
+
+        a:hover {
+            color: black;
+        }
+    }
+
+
+    // CSS for the nav links drop down menu click
+    #nav_links2 {
+        border: none;
+        width: 100%;
+        position: absolute;
+        display: grid;
+        border-top: 2px solid black;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        top: 167;
+        z-index: 100;
+        background-color: white;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        display: none;
+
+        a {
+            text-align: center;
+            text-decoration: none;
+            font-size: 30px;
+            color: black;
+        }
+    }
+
+
+    #menu-btn {
+        display: none;
+    }
+
+
+    button {
+        border: $border-black;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0);
+        width: 15%;
+        justify-content: center;
+        justify-content: space-around;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        color: black;
+        display: none;
+    }
+
+
+    #menu0x {
+        display: none;
+    }
+}
+
+
+
+
+
+// CSS for the nav links drop down menu click
+#nav_links {
+    border: none;
+    width: 90%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    top: 25%;
+    z-index: 100;
+    background-color: $text-color;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    display: none;
+
+    a {
+        text-align: center;
+        text-decoration: none;
+        font-size: 30px;
+        color: black;
+    }
+}
+
+
+
+// CSS for the jumbotron that holds the image and the stuff inside
+.jumbotron {
+    background-image: url('/static/images/image_example_two.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; /* full width of the viewport */
+    height: 700px;
+    border: none;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inside-jumbotron-info {
+        position: absolute;
+        text-align: center;
+        top: 15%;
+        padding: 30px;
+
+        h1 {
+            font-size: 100px;
+            letter-spacing: 7px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            background: linear-gradient(to top,#727272, #b1b0b0,);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 35px;
+        }
+
+        p {
+            font-size: 28px;
+            font-weight: bold;
+            color: $text-color;
+            width: 70%;
+            margin: auto;
+            background: linear-gradient(to top, #c4c4c4, #999999);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 35px;
+        }
+
+        a {
+            button {
+                padding: 20px;
+                border: none;
+                width: 15%;
+                border-radius: 10px;
+                background-color: $button-color;
+                font-size: 15px;
+                color: rgba(255, 255, 255, 0.904);
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: rgba(97, 155, 172, 0.705);
+
+            }
+        }
+
+        
+    }
+}
+
+
+// CSS for the div container under the jumbotron
+.under_jumbo {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #000000, #131313);
+
+    .inside-stuff {
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        padding: 20px;
+        justify-content: space-around;
+
+        // img {
+        // }
+
+        p {
+            align-self: center;
+            width: 50%;
+            text-align: center;
+            color: $text-color;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 25px;
+        }
+
+    }
+}
+
+
+
+// CSS for the shoreline index thing
+.shoreline-container {
+    padding: 20px;
+
+    .stuff-inside-container {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(233, 233, 233);
+
+        img {
+            width: 600px;
+            height: 500px;
+            width: 60%;
+        }
+
+        .header-and-paraprah-container {
+            width: 40%;
+            align-self: center;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h4 {
+                margin-bottom: 0;
+                font-size: 35px;
+                font-weight: bolder;
+            }
+
+            p {
+                margin-top: 0;
+                font-weight: bolder;
+                width: 60%;
+            }
+        }
+    }
+}
+
+
+
+// CSS for the grid image thing
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .child-one {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        background-color: black;
+
+        img {
+            width: 51%;
+            height: 400px;
+        }
+
+
+        .child-holder {
+            width: 49%;
+            align-self: center;
+            text-align: center;
+            color: $text-color;
+            padding: 10px;
+
+            h4 {
+                font-size: 30px;
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-top: 0;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+
+    .child-two {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        background-color: black;
+
+        img {
+            width: 50%;
+            height: 400px;
+        }
+
+
+        .child-holder {
+            width: 50%;
+            align-self: center;
+            text-align: center;
+            color: $text-color;
+
+            h4 {
+                font-size: 30px;
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-top: 0;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    .child-two-smaller {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        background-color: black;
+        display: none;
+
+        img {
+            width: 50%;
+            height: 400px;
+        }
+
+
+        .child-holder {
+            width: 50%;
+            align-self: center;
+            text-align: center;
+            color: $text-color;
+
+            h4 {
+                font-size: 30px;
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-top: 0;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+}
+
+
+
+// CSS for the subscribe section
+.subscribe {
+    position: relative;
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+
+    .sub-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $text-color;
+        padding: 10px;
+        width: 80%;
+
+        i {
+            font-size: 80px;
+            margin-bottom: 0;
+        }
+
+        h5 {
+            font-size: 50px;
+            letter-spacing: 2px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .input-button {
+            margin-top: 10;
+
+            input {
+                padding: 20px;
+                background-color: $text-color;
+                border: none;
+                border-radius: 10px;
+                width: 50%;
+            }
+
+            input::placeholder {
+                color: black;
+            }
+
+            a {
+                button {
+                    padding: 20px;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: $button-color;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    background-color: rgba(97, 155, 172, 0.705);
+    
+                }
+            }
+        }
+    }
+}
+
+
+// CSS for the main footer container
+.main-footer-container {
+    border: 2px solid #080808;
+    background-color: #080808;
+
+    .footer-things {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        justify-content: space-around;
+        text-align: center;
+        margin-top: 30px;
+
+        .box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            width: 25%;
+            border-bottom: 5px solid $button-color;
+
+            i {
+                color: $button-color;
+                font-size: 25px;
+                margin-bottom: 15;
+            }
+
+            h5 {
+                color: $button-color;
+                font-size: 20px;
+                margin-top: 0;
+                margin-bottom: 20;
+            }
+
+            .line {
+                border: 2px solid $button-color;
+                margin-top: 0;
+                width: 30%;
+                margin: auto;
+                margin-bottom: 20;
+            }
+
+            h4 {
+                color: rgba(49, 84, 94, 0.705);
+                font-size: 15px;
+            }
+
+            h4 {
+                a {
+                    text-decoration: none;
+                    color: rgba(49, 84, 94, 0.705);
+                }
+
+                a:hover {
+                    color: rgba(34, 57, 63, 0.705);
+                }
+            }
+        }
+    }
+
+    .social-links {
+        width: 20%;
+        margin: auto;
+        margin-top: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+
+        a {
+            color: $button-color;
+
+            i {
+                font-size: 50px;
+                background-color: rgb(32, 32, 32);
+                padding: 10px;
+                border-radius: 100px;
+            }
+        }
+    }
+
+    p {
+        margin-top: 10px;
+        width: 20%;
+        margin: auto;
+        margin-bottom: 20px;
+        color: $button-color;
+        font-weight: bolder;
+        color: rgba(49, 84, 94, 0.705);
+    }
+
+}
+
+
+// css for the new sep 
+#new-sep {
+    width: 70%; 
+    margin: auto;
+    height: 26px; 
+    border-bottom: 2px solid black; 
+    text-align: center;
+
+    span {
+        font-size: 40px; 
+        background-color: rgb(209, 209, 209);; 
+        padding: 0 10px;
+        font-weight: 200;
+        color: black;
+    }
+}
+
+
+
+// CSS for the about us section
+.about-us-section {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+
+    p {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 40px;
+    }
+}
+
+
+
+
+// CSS for the image gallery
+.image-gallery {
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 15px;
+
+    .image {
+        width: 100%;
+
+        img {
+            width: 100%;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
