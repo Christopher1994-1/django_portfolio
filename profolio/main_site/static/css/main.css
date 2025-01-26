@@ -984,16 +984,28 @@
 }
 .projects2_container .project_area {
   border: 2px solid white;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
   overflow: auto;
   max-height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.projects2_container .project_area .project_container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
 }
 .projects2_container .project_area .project {
   width: 74%;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.306);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content inside is spaced evenly */
+  height: 100%; /* Makes sure the project fills the available height */
+  background-color: white;
 }
 .projects2_container .project_area .project img {
   width: 100%;
@@ -1001,6 +1013,7 @@
      object-fit: cover;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  height: auto;
 }
 .projects2_container .project_area .project .info_stuff {
   padding: 5px;
