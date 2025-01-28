@@ -1,13 +1,15 @@
 {% block navbar %}
+{% load static %}
+
 
 
 <div class="navbar">
 
-    <a href="{{ url_for('index') }}"><h1>Explore</h1></a>
+    <a href="{% url 'washington_project' %}"><h1>Explore</h1></a>
 
     <div class="nav-links">
-        <a href="{{ url_for('about') }}">About</a>
-        <a href="{{ url_for('portfolio') }}">Portfolio</a>
+        <a href="{% url 'washington_project_about' %}">About</a>
+        <a href="/">Home Portfolio</a>
         <a href="#">Options</a>
     </div>
 
@@ -25,18 +27,18 @@
 
 <div class="navbar2">
 
-    <a href="{{ url_for('index') }}"><h1>Explore</h1></a>
+    <a href="{% url 'washington_project' %}"><h1>Explore</h1></a>
 
     <div class="nav-links">
-        <a href="{{ url_for('about') }}">About</a>
-        <a href="{{ url_for('portfolio') }}">Portfolio</a>
+        <a href="{% url 'washington_project_about' %}">About</a>
+        <a href="/">Home Portfolio</a>
         <a href="#">Options</a>
     </div>
 
 
     <div id="nav_links2">
-        <a href="{{ url_for('about') }}">About</a>
-        <a href="{{ url_for('portfolio') }}">Portfolio</a>
+        <a href="{% url 'washington_project_about' %}">About</a>
+        <a href="/">Home Portfolio</a>
         <a href="#">Options</a>
     </div>
 
@@ -55,15 +57,17 @@
 
 
 <div id="nav_links">
-    <a href="{{ url_for('about') }}">About</a>
-    <a href="{{ url_for('portfolio') }}">Portfolio</a>
+    <a href="{% url 'washington_project_about' %}">About</a>
+    <a href="/">Home Portfolio</a>
     <a href="#">Options</a>
 </div>
 
 
 
-<script src="/static/js/navbar_dropdown.js"></script>
-<script src="/static/js/navbar.js"></script>
+
+<script src="{% static 'js/washington/navbar_dropdown.js' %}"></script>
+<script src="{% static 'js/washington/navbar.js' %}"></script>
+
 
 
 {% endblock navbar %}

@@ -2,15 +2,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="/static/css/smaller_screens.css">
+
+    <link rel="stylesheet" href="{% static 'css/washington/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/washington/smaller_screens.css' %}">
+
+
+    
+    <link rel="icon" href="{% static 'images/project_images/washington/darkModeV.ico' %}" type="image/x-icon">
+
     {% block title %} {% endblock title %}
 </head>
 <body>
 
     {% block navbar %}
-        {% include 'navbar.html' %}
+        {% include 'washington/navbar.html' %}
     {% endblock navbar %}
 
 
@@ -22,7 +29,7 @@
 
 
     {% block footer %}
-        {% include 'footer.html' %}
+        {% include 'washington/footer.html' %}
     {% endblock footer %}
 
 

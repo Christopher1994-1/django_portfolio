@@ -6,6 +6,9 @@ $border-black: 2px solid black;
 $border-white: 2px solid white;
 $text-hover-color: rgba(255, 255, 255, 0.747);
 
+//. jumbo image
+$jumbo-image: url('/static/images/project_images/washington/image_example_two.jpg');
+//$jumbo-image: url("https://main553.b-cdn.net/portfolio/washington/image_example_two.webp");
 
 body {
     margin: 0;
@@ -291,10 +294,10 @@ body {
 
 // CSS for the jumbotron that holds the image and the stuff inside
 .jumbotron {
-    background-image: url('/static/images/image_example_two.jpg');
+    background-image: $jumbo-image;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%; /* full width of the viewport */
+    width: 100%;
     height: 700px;
     border: none;
     margin: 0%;

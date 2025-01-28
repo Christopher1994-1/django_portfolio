@@ -2,14 +2,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="stylesheet" href="/static/css/smaller_screens.css">
+    <link rel="stylesheet" href="{% static 'css/washington/smaller_screens.css' %}">
+    <link rel="stylesheet" href="{% static 'css/washington/styles.css' %}">
     {% block title2 %} {% endblock title2 %}
 </head>
 <body>
     {% block navbar2 %}
-        {% include 'second_navbar.html' %}
+        {% include 'washington/second_navbar.html' %}
     {% endblock navbar2 %}
 
 
@@ -21,7 +22,7 @@
 
 
     {% block footer %}
-        {% include 'footer.html' %}
+        {% include 'washington/footer.html' %}
     {% endblock footer %}
 
     <script src="https://kit.fontawesome.com/89bc05284d.js" crossorigin="anonymous"></script>

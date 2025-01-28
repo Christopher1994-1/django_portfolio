@@ -230,10 +230,10 @@ body {
 }
 
 .jumbotron {
-  background-image: url("/static/images/image_example_two.jpg");
+  background-image: url("/static/images/project_images/washington/image_example_two.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%; /* full width of the viewport */
+  width: 100%;
   height: 700px;
   border: none;
   margin: 0%;

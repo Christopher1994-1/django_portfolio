@@ -233,7 +233,7 @@
     color: rgba(255, 255, 255, 0.747);
   }
   .jumbotron {
-    background-image: url("/static/images/image_example_one.jpg");
+    background-image: url("https://main553.b-cdn.net/portfolio/washington/image_example_two.webp");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%; /* full width of the viewport */
@@ -256,7 +256,7 @@
 }
 @media (max-width: 939px) {
   .jumbotron {
-    background-image: url("/static/images/image_example_two.jpg");
+    background-image: url("https://main553.b-cdn.net/portfolio/washington/image_example_two.webp");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -731,6 +731,25 @@
   .jumbotron .inside-jumbotron-info h1 {
     font-size: 70px;
     letter-spacing: 0;
+  }
+  .navbar {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    top: 30px;
+  }
+  .navbar button {
+    width: 30%;
+  }
+  .navbar2 button {
+    width: 30%;
+  }
+  #buttonjumobo {
+    width: 35%;
+  }
+  .under_jumbo p {
+    font-size: 15px;
+    font-family: math;
   }
 }
 @media (max-width: 476px) {

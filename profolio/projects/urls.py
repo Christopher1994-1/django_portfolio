@@ -15,7 +15,6 @@ urlpatterns = [
     #. chatgpt
     path("chatgpt_replica", chatgpt.chatgpt_replica, name="chatgpt_replica"),
     
-    
     #. starbucks
     path("starbucks_remake/", views.starbucks_remake, name="starbucks_remake"),
     
@@ -23,6 +22,7 @@ urlpatterns = [
     path("growth_project/", growth.growth_project, name="growth_project"),
     
     #. washington
-    path('washington_project/', views.washington_project, name="washington_project")
+    path('washington_project/', views.washington_project, name="washington_project"),
+    path("washington_project_about/", views.washington_project_about, name="washington_project_about")
     
 ] 

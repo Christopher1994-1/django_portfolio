@@ -17,5 +17,14 @@ def starbucks_remake(request):
 
 
 
+
+
+
+
 def washington_project(request):
     return render(request, "washington/index.html", {})
+
+
+
+def washington_project_about(request):
+    return render(request, "washington/pages/about.html", {})

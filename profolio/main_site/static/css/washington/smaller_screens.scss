@@ -7,6 +7,8 @@ $border-white: 2px solid white;
 $text-hover-color: rgba(255, 255, 255, 0.747);
 
 
+// $jumbo-image2: url("https://main553.b-cdn.net/portfolio/washington/image_example_two.webp");
+$jumbo-image: url('/images/project_images/washington/image_example_two.jpg');
 
 
 // CSS for max width ~ 1115px ~
@@ -336,7 +338,7 @@ $text-hover-color: rgba(255, 255, 255, 0.747);
 
     // CSS for the jumbotron that holds the image and the stuff inside
     .jumbotron {
-        background-image: url('/static/images/image_example_one.jpg');
+        background-image: $jumbo-image2;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%; /* full width of the viewport */
@@ -369,7 +371,7 @@ $text-hover-color: rgba(255, 255, 255, 0.747);
 @media(max-width:939px) {
     // CSS for the jumbotron that holds the image and the stuff inside
     .jumbotron {
-        background-image: url('/static/images/image_example_two.jpg');
+        background-image: $jumbo-image2;
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -1138,6 +1140,42 @@ $text-hover-color: rgba(255, 255, 255, 0.747);
             }
 
             
+        }
+    }
+
+
+    .navbar {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        top: 30px;
+
+
+        button {
+            width: 30%;
+        }
+
+    }
+
+
+    .navbar2 {
+
+        button {
+            width: 30%;
+        }
+
+    }
+
+        
+    #buttonjumobo {
+        width: 35%;
+    }
+
+
+    .under_jumbo {
+        p {
+            font-size: 15px;
+            font-family: math;
         }
     }
 
