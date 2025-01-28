@@ -27,6 +27,100 @@ $jumbotron_image: url('/static/images/site_images/main.jpg');
 $github_image: url('/static/images/site_images/github.jpg');
 
 
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+
+
+//. for mobile panel
+#mobile-side-panel {
+    border: $border-black;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #2b2b2b;
+    z-index: 1000;
+    height: 100%;
+
+
+    #close-button-container {
+        text-align: start;
+        width: 92%;
+        margin: auto;
+        margin-top: 13px;
+        margin-bottom: 11%;
+        display: flex;
+        justify-content: end;
+    
+        button {
+            width: 40%;
+            padding: 10px;
+            font-size: 20px;
+            background-color: #454545;
+            border: none;
+            color: white;
+            border-radius: 10px;
+        }
+
+    }
+    
+
+    .nav-item {
+        margin-bottom: 10%;
+
+        .nav-item-clickable {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #7b7b7b;
+            padding-bottom: 10px;
+
+            a {
+                font-size: 26px;
+                text-decoration: none;
+                color: #9b9b9b;
+                margin-left: 10px;
+                font-family: math;
+            }
+
+            i {
+                margin-right: 10px;
+                font-size: 22px;
+                color: #c6c6c6;
+            }
+        }
+    }
+
+    .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        margin-top: 2%;
+        display: none;
+        background-color: #000000;
+
+        a {
+            font-size: 24px;
+            margin-bottom: 4%;
+            text-decoration: none;
+            color: #ffffff;
+            margin-left: 10px;
+            font-family: math;
+        }
+    }
+}
+
+
 .overlay {
     position: fixed;
     top: 0;
@@ -1278,7 +1372,6 @@ $memberPopup: 401;
 
     //. PROJECT AREA CONTAINER
     .project_area {
-        border: $border-white;
         padding: 10px;
         overflow: auto;
         display: grid;

@@ -1200,6 +1200,37 @@
   }
 }
 @media (max-width: 500px) {
+  .info-area {
+    margin-top: 4%;
+  }
+  .info-area p {
+    font-size: 14px;
+  }
+  .github_conatiner .things1 #one1 {
+    height: 80px;
+    width: 80px;
+  }
+  .github_conatiner .things1 #one1 i {
+    font-size: 65px;
+  }
+  .github_conatiner .things1 #one- {
+    display: flex;
+    text-align: center;
+  }
+  .github_conatiner .things1 #one- a h5 {
+    margin: 0;
+    font-size: 19px;
+  }
+  .github_conatiner .things1 #one2 {
+    height: 80px;
+    width: 80px;
+  }
+  .github_conatiner .things1 #one2 i {
+    font-size: 57px;
+  }
+  .jumbotron {
+    height: 700px;
+  }
   .jumbotron .main_stuff h1 {
     color: white;
     font-size: 60px;
@@ -1207,6 +1238,89 @@
   .jumbotron .main_stuff h5 {
     color: white;
     font-size: 40px;
+  }
+  .projects2_container {
+    width: 100%;
+    padding: 2px;
+  }
+  .projects2_container #project_showcase_headerID {
+    font-size: 32px;
+    text-align: center;
+  }
+  .projects2_container #projects_paragraphID {
+    font-size: 12px;
+    text-align: center;
+    width: 96%;
+  }
+  .projects2_container .top_section {
+    width: 88%;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 6px;
+  }
+  .projects2_container .top_section .info {
+    width: 100%;
+    text-align: justify;
+    font-size: 20px;
+  }
+  .projects2_container .top_section .otherstuff {
+    width: 100%;
+    width: 100%;
+    justify-content: left;
+  }
+  .projects2_container .top_section .otherstuff #filterID {
+    background-color: black;
+    padding: 2px;
+    border-radius: 19px;
+    font-size: 16px;
+    margin: 0;
+    margin-right: 6px;
+    padding-left: 17px;
+    padding-right: 17px;
+    letter-spacing: 1px;
+  }
+  .projects2_container .top_section .otherstuff p {
+    background-color: black;
+    padding: 2px;
+    border-radius: 19px;
+    font-size: 16px;
+    margin: 0;
+    margin-right: 6px;
+    padding-left: 17px;
+    padding-right: 17px;
+    letter-spacing: 1px;
+  }
+  .projects2_container .project_area {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 4px;
+    max-height: 500px;
+    overflow: auto;
+  }
+  .projects2_container .project_area .project_container {
+    justify-content: center;
+  }
+  .projects2_container .project_area .project_container .project {
+    width: 90%;
+  }
+  #filter_popupID {
+    justify-content: initial;
+  }
+  #filter_popupID .popup-content {
+    width: 97%;
+    border: 2px solid white;
+  }
+  #filter_popupID .popup-content h5 {
+    font-size: 16px;
+    font-weight: 800;
+  }
+  #filter_popupID .popup-content p {
+    font-size: 13px;
+  }
+  hr {
+    display: none;
+  }
+  .biggger {
+    display: none;
   }
 }
 @media (max-width: 415px) {

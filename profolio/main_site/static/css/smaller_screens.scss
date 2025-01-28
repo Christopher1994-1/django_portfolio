@@ -1588,8 +1588,59 @@ $github_image: url('/static/images/site_images/github.jpg');
 
 
 @media(max-width:500px) {
+
+
+
+    .info-area {
+        margin-top: 4%;
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+
+    .github_conatiner {
+        .things1 {
+
+            #one1 {
+                height: 80px;
+                width: 80px;
+
+                i {
+                    font-size: 65px;
+                }
+            }
+
+            #one- {
+                display: flex;
+                text-align: center;
+
+                a {
+                    h5 {
+                        margin: 0;
+                        font-size: 19px;
+                    }
+
+
+                }
+            }
+
+            #one2 {
+                height: 80px;
+                width: 80px;
+
+                i {
+                    font-size: 57px;
+                }
+            }
+        }
+    }
+
+
     // Main CSS for the Jumbotron
     .jumbotron {
+        height: 700px;
 
         .main_stuff {
 
@@ -1603,6 +1654,120 @@ $github_image: url('/static/images/site_images/github.jpg');
                 font-size: 40px;
             }
         }
+    }
+
+
+
+    .projects2_container {
+        width: 100%;
+        padding: 2px;
+
+        #project_showcase_headerID {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        #projects_paragraphID {
+            font-size: 12px;
+            text-align: center;
+            width: 96%;
+        }
+
+        .top_section {
+            width: 88%;
+            flex-direction: column;
+            margin: auto;
+            margin-bottom: 6px;
+
+
+
+            .info {
+                width: 100%;
+                text-align: justify;
+                font-size: 20px;
+            }
+
+            .otherstuff {
+                width: 100%;
+                width: 100%;
+                justify-content: left;
+
+                #filterID {
+                    background-color: black;
+                    padding: 2px;
+                    border-radius: 19px;
+                    font-size: 16px;
+                    margin: 0;
+                    margin-right: 6px;
+                    padding-left: 17px;
+                    padding-right: 17px;
+                    letter-spacing: 1px;
+                }
+
+                p {
+                    background-color: black;
+                    padding: 2px;
+                    border-radius: 19px;
+                    font-size: 16px;
+                    margin: 0;
+                    margin-right: 6px;
+                    padding-left: 17px;
+                    padding-right: 17px;
+                    letter-spacing: 1px;
+                }
+            }
+
+        }
+
+
+
+        .project_area {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 4px;
+            max-height: 500px;
+            overflow: auto;
+
+            .project_container {
+                justify-content: center;
+
+                .project {
+                    width: 90%;
+                }
+            }
+        }
+
+
+    }
+
+
+    #filter_popupID {
+        justify-content: initial;
+        .popup-content {
+            width: 97%;
+            border: $border-white;
+    
+            h5 {
+                font-size: 16px;
+                font-weight: 800;
+            }
+    
+            p {
+                font-size: 13px;
+            }
+        }
+
+    }
+
+
+
+
+
+    hr {
+        display: none;
+    }
+
+    .biggger {
+        display: none;
     }
 
 }
