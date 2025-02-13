@@ -34,8 +34,9 @@ $transparent_color: rgba(255, 255, 255, 0);
 /***** Slide Left *****/
 .slide-left {
     animation: 1.2s slide-left;
-  }
-  @keyframes slide-left {
+}
+
+@keyframes slide-left {
     from {
         transform: translateX(100%);
     }
@@ -48,8 +49,9 @@ $transparent_color: rgba(255, 255, 255, 0);
 /***** Slide Right *****/
 .slide-right {
     animation: 1.2s slide-right;
-  }
-  @keyframes slide-right {
+}
+
+@keyframes slide-right {
     from {
         transform: translateX(0%);
     }
@@ -62,8 +64,9 @@ $transparent_color: rgba(255, 255, 255, 0);
 /***** Slide backk *****/
 .slide-backk {
     animation: 1.2s slide-backk;
-  }
-  @keyframes slide-backk {
+}
+
+@keyframes slide-backk {
     from {
         transform: translateX(-100%);
     }

@@ -1316,6 +1316,66 @@
   #filter_popupID .popup-content p {
     font-size: 13px;
   }
+  .entryWarning {
+    border: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.878);
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+  }
+  .entryWarning .popup-content {
+    background: #ffffff;
+    color: #ecf0f1;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 501;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    max-height: 620px;
+  }
+  .entryWarning .popup-content .close {
+    top: -20px;
+  }
+  .entryWarning .popup-content .image_div_tags {
+    flex-direction: column;
+  }
+  .entryWarning .popup-content .image_div_tags .img-div {
+    width: 80%;
+    margin: auto;
+  }
+  .entryWarning .popup-content .image_div_tags .tagsandMore {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .entryWarning .popup-content .image_div_tags .tagsandMore h5 {
+    margin-left: 11px;
+  }
+  .entryWarning .popup-content .image_div_tags .tagsandMore .tags {
+    font-weight: 700;
+    padding: 2px;
+  }
+  .entryWarning .popup-content .shortD {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  .entryWarning .popup-content .shortD p {
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+  }
+  .entryWarning .popup-content .buttons_stuff {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    text-align: end;
+  }
   hr {
     display: none;
   }
