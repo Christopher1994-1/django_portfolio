@@ -682,7 +682,7 @@ html, body {
   text-decoration: none;
 }
 .footer .footer_stuffs .footer-right {
-  width: 30%;
+  width: 35%;
 }
 .footer .footer_stuffs .footer-right .footer-company-about {
   line-height: 20px;
@@ -725,6 +725,9 @@ html, body {
 
 #thing2 {
   color: white;
+  margin-left: 20px;
+  width: 100%;
+  font-size: 12px;
 }
 
 .contact_more {
