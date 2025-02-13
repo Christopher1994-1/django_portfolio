@@ -1,7 +1,7 @@
 "use strict";
 let contactFormElement = document.getElementById('contactFormID');
 let indexContactFormElement = document.getElementById('index_form_');
-function open_thank_you() {
+function open_thank_you(message) {
     let contactElement = document.getElementById('contact-container');
     contactElement.style.display = 'none';
     contactFormElement.style.display = 'none';
@@ -15,12 +15,12 @@ function open_thank_you() {
     thankYouDiv.style.border = '1px solid #ccc';
     thankYouDiv.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
     thankYouDiv.style.zIndex = '1000';
-    thankYouDiv.textContent = 'Thank you for your submission!';
+    thankYouDiv.textContent = message;
     thankYouDiv.id = 'thank-you-div';
     document.body.appendChild(thankYouDiv);
 }
 ;
-function say_thank_you() {
+function say_thank_you(message1) {
     let name = document.getElementById('client_name');
     name.value = '';
     let email = document.getElementById('client_email');
@@ -37,7 +37,7 @@ function say_thank_you() {
     thankYouDiv.style.border = '1px solid #ccc';
     thankYouDiv.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
     thankYouDiv.style.zIndex = '1000';
-    thankYouDiv.textContent = 'Thank you for your submission!';
+    thankYouDiv.textContent = message1;
     thankYouDiv.id = 'thank-you-div';
     document.body.appendChild(thankYouDiv);
     setTimeout(function () {
@@ -71,7 +71,7 @@ if (contactFormElement) {
         let email = (_d = (_c = document.getElementById('email')) === null || _c === void 0 ? void 0 : _c.value) !== null && _d !== void 0 ? _d : '';
         let message = (_f = (_e = document.getElementById('message')) === null || _e === void 0 ? void 0 : _e.value) !== null && _f !== void 0 ? _f : '';
         message_backend(name, email, message);
-        open_thank_you();
+        open_thank_you("Thank you for your submission!");
     });
 }
 ;
@@ -82,8 +82,19 @@ if (indexContactFormElement) {
         let name = (_b = (_a = document.getElementById('client_name')) === null || _a === void 0 ? void 0 : _a.value) !== null && _b !== void 0 ? _b : '';
         let email = (_d = (_c = document.getElementById('client_email')) === null || _c === void 0 ? void 0 : _c.value) !== null && _d !== void 0 ? _d : '';
         let message = (_f = (_e = document.getElementById('client_msg')) === null || _e === void 0 ? void 0 : _e.value) !== null && _f !== void 0 ? _f : '';
-        message_backend(name, email, message);
-        say_thank_you();
+        if (name && email && message) {
+            message_backend(name, email, message);
+            say_thank_you("Thank you for your submission!");
+        }
+        else {
+            say_thank_you("Please fill out the information..");
+            let client_name = document.getElementById("client_name");
+            let client_email = document.getElementById("client_email");
+            let client_message = document.getElementById("client_msg");
+            client_name.style.border = "1px solid red";
+            client_email.style.border = "1px solid red";
+            client_message.style.border = "1px solid red";
+        }
     });
 }
 ;

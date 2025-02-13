@@ -9,7 +9,7 @@ let indexContactFormElement: any = document.getElementById('index_form_');
 
 
 //. FUNCTION THAT SHOWS THE THANK YOU
-function open_thank_you(): void {
+function open_thank_you(message: string): void {
 
     let contactElement: any = document.getElementById('contact-container');
     contactElement.style.display = 'none';
@@ -29,7 +29,7 @@ function open_thank_you(): void {
     thankYouDiv.style.zIndex = '1000';
 
     // Add content to the <div>
-    thankYouDiv.textContent = 'Thank you for your submission!';
+    thankYouDiv.textContent = message;
 
     // Add an ID to the <div> for easier management
     thankYouDiv.id = 'thank-you-div';
@@ -42,7 +42,7 @@ function open_thank_you(): void {
 
 
 //. FUNCTION THAT SHOWS THANK YOU MESSAGE ON INDEX PAGE
-function say_thank_you(): void {
+function say_thank_you(message1: string): void {
     //. CLEAN THE VALUES    
     let name: any = document.getElementById('client_name');
     name.value = '';
@@ -65,7 +65,7 @@ function say_thank_you(): void {
 
 
     // Add content to the <div>
-    thankYouDiv.textContent = 'Thank you for your submission!';
+    thankYouDiv.textContent = message1;
 
     // Add an ID to the <div> for easier management
     thankYouDiv.id = 'thank-you-div';
@@ -116,7 +116,7 @@ if (contactFormElement) {
         let message: string = (document.getElementById('message') as HTMLInputElement)?.value ?? '';
     
         message_backend(name, email, message);
-        open_thank_you();
+        open_thank_you("Thank you for your submission!");
     });
 
 };
@@ -133,8 +133,20 @@ if (indexContactFormElement) {
         let name: string = (document.getElementById('client_name') as HTMLInputElement)?.value ?? '';
         let email: string = (document.getElementById('client_email') as HTMLInputElement)?.value ?? '';
         let message: string = (document.getElementById('client_msg') as HTMLInputElement)?.value ?? '';
+
+        if (name && email && message) {
+            message_backend(name, email, message);
+            say_thank_you("Thank you for your submission!");
+        } else {
+            say_thank_you("Please fill out the information..");
+            let client_name: any = document.getElementById("client_name");
+            let client_email: any = document.getElementById("client_email");
+            let client_message: any = document.getElementById("client_msg");
+
+            client_name.style.border = "1px solid red";
+            client_email.style.border = "1px solid red";
+            client_message.style.border = "1px solid red";
+        }
         
-        message_backend(name, email, message);
-        say_thank_you();
     });
 };
