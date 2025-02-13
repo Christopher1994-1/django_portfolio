@@ -8,9 +8,13 @@ let mobileNavBurger2:any = document.getElementById("buttonMenu2");
 
 //. LINKS
 const LINKS: Record<string, string> = {
-    starbucks_project: "value1",
-    washington_project: "value2",
-    ofdream_project: "value3"
+    starbucks_project: "projects_showcase/Starbucks Remake",
+    washington_project: "projects_showcase/Washington",
+    ofdream_project: "projects_showcase/Ofdream",
+    stripe_payment: "",
+    chatgpt: "",
+    bigfoot: "",
+    calapp: "projects_showcase/GUI Calculator App"
 };
   
 
@@ -35,8 +39,8 @@ function openSidePanel(): void {
               <i class="fa-solid fa-plus"></i>
             </div>
             <div class="dropdown-content" id="clientside">
-                <a href="#">Starbucks Remake</a>
-                <a href="#">Washington</a>
+                <a href="${LINKS.starbucks_project}">Starbucks Remake</a>
+                <a href="${LINKS.washington_project}">Washington</a>
                 <a href="#">Ofdream</a>
             </div>
         </div>
@@ -59,7 +63,7 @@ function openSidePanel(): void {
               <i class="fa-solid fa-plus"></i>
             </div>
             <div class="dropdown-content" id="apps">
-                <a href="#">Calculator App</a>
+                <a href="${LINKS.calapp}">Calculator App</a>
             </div>
         </div>
   

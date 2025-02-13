@@ -700,6 +700,7 @@ html, body {
 }
 .footer .footer_stuffs .footer-right .footer-company-about p {
   margin-left: 20px;
+  color: white;
 }
 .footer .footer_stuffs .footer-right .footer-icons {
   margin-left: 20px;
@@ -720,6 +721,10 @@ html, body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+}
+
+#thing2 {
+  color: white;
 }
 
 .contact_more {

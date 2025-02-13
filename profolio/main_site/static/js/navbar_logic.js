@@ -2,9 +2,13 @@
 let mobileNavBurger = document.getElementById("buttonMenu");
 let mobileNavBurger2 = document.getElementById("buttonMenu2");
 const LINKS = {
-    starbucks_project: "value1",
-    washington_project: "value2",
-    ofdream_project: "value3"
+    starbucks_project: "projects_showcase/Starbucks Remake",
+    washington_project: "projects_showcase/Washington",
+    ofdream_project: "projects_showcase/Ofdream",
+    stripe_payment: "",
+    chatgpt: "",
+    bigfoot: "",
+    calapp: "projects_showcase/GUI Calculator App"
 };
 function openSidePanel() {
     const newDiv = document.createElement('div');
@@ -22,8 +26,8 @@ function openSidePanel() {
               <i class="fa-solid fa-plus"></i>
             </div>
             <div class="dropdown-content" id="clientside">
-                <a href="#">Starbucks Remake</a>
-                <a href="#">Washington</a>
+                <a href="${LINKS.starbucks_project}">Starbucks Remake</a>
+                <a href="${LINKS.washington_project}">Washington</a>
                 <a href="#">Ofdream</a>
             </div>
         </div>
@@ -46,7 +50,7 @@ function openSidePanel() {
               <i class="fa-solid fa-plus"></i>
             </div>
             <div class="dropdown-content" id="apps">
-                <a href="#">Calculator App</a>
+                <a href="${LINKS.calapp}">Calculator App</a>
             </div>
         </div>
   
