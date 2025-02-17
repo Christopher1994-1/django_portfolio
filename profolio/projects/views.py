@@ -1,7 +1,4 @@
 from django.shortcuts import render
-import json
-from .stripe_payment import products, dd, subtotal
-from django.http import JsonResponse
 
 # Create your views here.
 
@@ -28,3 +25,9 @@ def washington_project(request):
 
 def washington_project_about(request):
     return render(request, "washington/pages/about.html", {})
+
+
+
+
+def aero_demo(request):
+    return render(request, "aero/index.html", {})

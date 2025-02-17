@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerotherm Heaters</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/aero/main.css' %}">
+    <link rel="icon" href="https://main553.b-cdn.net/portfolio/aero/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+
+
+
+</head>
+<body>
+
+    {% block navbar %}
+        {% include 'aero/navbar.html' %}
+    {% endblock navbar %}
+    
+
+    {% block content %}
+    
+    {% endblock content %}
+
+
+    {% block footer %}
+        {% include 'aero/footer.html' %}
+    {% endblock footer %}
+
+
+</body>
+</html>

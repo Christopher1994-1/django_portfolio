@@ -752,6 +752,8 @@ html, body {
 
         p {
             cursor: default;
+            margin-left: 0;
+            font-size: 14px;
         }
     }
 
@@ -922,11 +924,11 @@ html, body {
 
 
 // FOOTER PARA
-#thing2 {
+#foorer_para {
     color: white;
-    margin-left: 20px;
     width: 100%;
     font-size: 12px;
+    margin-left: 20px;
 }
 
 

@@ -8,6 +8,7 @@ from ipware import get_client_ip
 import time
 from .models import Projects
 from projects import stripe_payment, chatgpt
+import random
 import stripe
 import os
 from django.views.decorators.csrf import csrf_exempt
@@ -23,7 +24,8 @@ SERVER_STATUS:str = "false"
 
 basic_context = {
     "footer_para": random_stuff.ABOUT_ME,
-    "about_me": random_stuff.ABOUT_ME
+    "about_me": random_stuff.ABOUT_ME,
+    "about_me2": random_stuff.ABOUT_ME2
 }
 
 
@@ -48,12 +50,16 @@ def index(request):
     year = str(datetime.datetime.now()).split(' ')[0].split('-')[0]
     
 
-    posts = Projects.objects.all()[:6]
+    # Get all posts from the database
+    posts = list(Projects.objects.all())
+
+    # Select 6 random posts
+    posts_randomize = random.sample(posts, 6)
     
     
     context = {
         "year": year, 
-        "posts":posts
+        "posts":posts_randomize
     }
     context.update(basic_context)
     

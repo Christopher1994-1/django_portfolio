@@ -1,0 +1,110 @@
+{% extends 'aero/base.html' %}
+
+
+{% load static %}
+
+{% block content %}
+    
+
+<main>
+
+
+<div class="main-jumbo">
+
+</div>
+
+
+
+<div class="ad-heaters">
+    <img src="https://main553.b-cdn.net/portfolio/aero/heaters-group.png" alt="">
+</div>
+
+
+
+<div class="wording">
+    <h2>Serving the Aircraft Industry since 2004 with the fastest, most efficient, electric preheaters in the marketplace.</h2>
+    <h3>With an Aerotherm heater you can have your engine ready to go in as little as <span>30 minutes!</span></h3>
+</div>
+
+
+
+<div class="preheat">
+    <img src="https://main553.b-cdn.net/portfolio/aero/p.jpg" alt="">
+
+    <div class="why-prehear">
+        <h5>Why Preheat?</h5>
+        <p>Find out why preheating your aircraft’s engine is so important.</p>
+        <button>Learn More</button>
+    </div>
+</div>
+
+
+
+
+
+<div class="our-videos">
+    <h2>Our Videos!</h2>
+    <div class="videos">
+
+        <div class="videoI">
+            <p>Which AeroTherm Heater is Right For You?</p>
+            <video width="600" height="320" controls disablePictureInPicture controlsList="nodownload">
+                <source src="{% static 'videos/Which AeroTherm Heater is right for you.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="videoI">
+            <p>Aerothem Airplane Engine Preheaters</p>
+            <video width="600" height="320" controls disablePictureInPicture controlsList="nodownload">
+                <source src="{% static 'videos/Aerotherm Airplane Engine Preheaters.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<div class="more-info">
+    <img src="https://aerothermheaters.com/wp-content/uploads/2020/02/Commander-114B_0.jpeg" alt="">
+    <div class="info">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, odio ut fuga quisquam tempora velit! Autem cumque aspernatur exercitationem eum, soluta rerum obcaecati quo magnam aut asperiores, nostrum corporis eligendi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit corrupti minus harum reprehenderit dignissimos sed quibusdam sit, dolor exercitationem placeat vitae culpa dicta repellat illum molestias, numquam, ad provident quo!</p>
+    </div>
+</div>
+
+
+
+<div class="aerotherm-container">
+    <h1>Who Uses AeroTherm?</h1>
+
+    <div class="containers">
+        <div class="user-card">
+            <img src="https://main553.b-cdn.net/portfolio/aero/nasa.webp" alt="NASA Logo">
+            <div class="info">
+              <h2>NASA</h2>
+              <p>NASA purchased the AeroTherm to heat the inside of an aircraft flying at 60,000 feet.</p>
+            </div>
+          </div>
+          <div class="user-card">
+            <img src="https://main553.b-cdn.net/portfolio/aero/images.png" alt="The Weather Channel Logo">
+            <div class="info">
+              <h2>The Weather Channel</h2>
+              <p>During cold periods, The Weather Channel uses the AeroTherm to keep satellite antennas free of snow.</p>
+            </div>
+          </div>
+    </div>
+</div>
+
+</main>
+
+
+<script src="{% static 'js/aerotherm_project.js' %}"></script>
+
+
+
+{% endblock content %}

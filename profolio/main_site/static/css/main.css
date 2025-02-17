@@ -593,6 +593,8 @@ html, body {
 }
 .info-area .info-side p {
   cursor: default;
+  margin-left: 0;
+  font-size: 14px;
 }
 .info-area .pic img {
   max-width: 320px;
@@ -723,11 +725,11 @@ html, body {
   font-size: 14px;
 }
 
-#thing2 {
+#foorer_para {
   color: white;
-  margin-left: 20px;
   width: 100%;
   font-size: 12px;
+  margin-left: 20px;
 }
 
 .contact_more {

@@ -23,6 +23,10 @@ urlpatterns = [
     
     #. washington
     path('washington_project/', views.washington_project, name="washington_project"),
-    path("washington_project_about/", views.washington_project_about, name="washington_project_about")
+    path("washington_project_about/", views.washington_project_about, name="washington_project_about"),
+    
+    
+    #. aerotherm 
+    path("aerotherm_project/", views.aero_demo, name="aero_demo")
     
 ] 

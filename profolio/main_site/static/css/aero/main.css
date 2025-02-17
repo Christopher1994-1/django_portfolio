@@ -1,0 +1,683 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  background-color: rgba(35, 35, 35, 0.7843137255);
+  z-index: 1;
+}
+nav img {
+  width: 300px;
+  height: 100px;
+}
+nav .nav-columns {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  margin-right: 15px;
+}
+nav .nav-columns .nav-item {
+  position: relative;
+}
+nav .nav-columns .nav-item a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 500;
+  font-family: math;
+}
+nav .nav-columns .nav-item a:hover {
+  background-color: black;
+}
+nav .nav-columns .nav-item .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: 200px;
+}
+nav .nav-columns .nav-item .dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+}
+nav .nav-columns .nav-item .dropdown-content a:hover {
+  background: #f5f5f5;
+}
+nav .nav-columns .nav-item:hover .dropdown-content {
+  display: block;
+}
+nav .nav-columns > a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 500;
+}
+nav .nav-columns > a:hover {
+  background-color: black;
+}
+nav .cart {
+  display: flex;
+  color: white;
+  align-items: center;
+  margin-right: 5px;
+}
+nav .cart p {
+  padding: 0;
+  margin: 0;
+  width: 20px; /* Set the width */
+  margin-left: 10px;
+  height: 20px; /* Set the height */
+  background-color: #ec4646; /* Optional: give it a color */
+  border-radius: 50%; /* Makes it a circle */
+  display: flex; /* To center text inside the circle */
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  text-align: center; /* Optional: centers text horizontally */
+  color: white; /* Optional: color for the text */
+}
+
+#mobile-side-panel {
+  border: 2px solid rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  background-color: white;
+  z-index: 20;
+  height: 100%;
+}
+#mobile-side-panel #close-button-container {
+  text-align: start;
+  margin-bottom: 8%;
+  margin-top: 13px;
+}
+#mobile-side-panel #close-button-container button {
+  width: 40;
+  padding: 10;
+  font-size: 20;
+  background-color: #ff6969;
+  border: none;
+  color: white;
+  margin-left: 212;
+}
+#mobile-side-panel .nav-item {
+  margin-bottom: 10%;
+}
+#mobile-side-panel .nav-item .nav-item-clickable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #c6c6c6;
+  padding-bottom: 10px;
+}
+#mobile-side-panel .nav-item .nav-item-clickable a {
+  font-size: 26px;
+  text-decoration: none;
+  color: #000000;
+  margin-left: 10px;
+  font-family: math;
+}
+#mobile-side-panel .nav-item .nav-item-clickable i {
+  margin-right: 10px;
+  font-size: 22px;
+  color: #c6c6c6;
+}
+#mobile-side-panel .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-top: 2%;
+  display: none;
+}
+#mobile-side-panel .dropdown-content a {
+  font-size: 20px;
+  margin-bottom: 4%;
+  text-decoration: none;
+  color: #000000;
+  margin-left: 10px;
+  font-family: math;
+}
+
+.mobile-screen-hamburger-pie-menu {
+  display: none;
+}
+.mobile-screen-hamburger-pie-menu button {
+  padding: 10px;
+  padding-left: 20;
+  padding-right: 20;
+  font-size: 16;
+  background-color: white;
+  border: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(84, 84, 84, 0.6078431373);
+  z-index: 15;
+}
+
+.main-jumbo {
+  background-image: url("https://webviously.net/sites/default/files/styles/seven-product-node/public/product-images/aerotherm.jpg?itok=2RniAemg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%; /* full width of the viewport */
+  height: 700px;
+  filter: brightness(90%);
+  border: none;
+  margin: 0%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-heaters {
+  margin-top: 10px;
+  background-color: #333;
+  width: 100%;
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ad-heaters img {
+  width: 80%;
+}
+
+.wording {
+  background-color: rgb(35, 35, 35);
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.wording h2 {
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  font-family: "Arial";
+  margin: auto;
+  margin-bottom: 10px;
+  cursor: default;
+}
+.wording h3 {
+  padding: 0;
+  margin: 0;
+  font-family: "Arial";
+  cursor: default;
+}
+.wording h3 span {
+  text-decoration: underline;
+}
+
+.preheat {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.preheat img {
+  width: 100%;
+}
+.preheat .why-prehear {
+  position: absolute;
+  top: 5%;
+  left: 55%;
+  transition: transform(-50%, -50%);
+  padding: 0;
+  margin: 0;
+}
+.preheat .why-prehear h5 {
+  font-size: 42px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #18274d;
+}
+.preheat .why-prehear p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #18274d;
+}
+.preheat .why-prehear button {
+  border: 2px solid #18274d;
+  color: #18274d;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.preheat .why-prehear button:hover {
+  background-color: #1d1d1d;
+  color: white;
+  transition: ease-in 0.2s;
+}
+
+.our-videos {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: #1d1d1d;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.our-videos h2 {
+  color: white;
+  font-size: 30px;
+  font-family: Arial;
+  margin-left: 40px;
+}
+.our-videos .videos {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-content: center;
+  justify-content: space-around;
+}
+.our-videos .videos p {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: Arial;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.more-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 0;
+  background-color: rgb(211, 211, 211);
+}
+.more-info img {
+  width: 580px;
+  height: 340px;
+}
+.more-info .info {
+  width: 40%;
+}
+.more-info .info p {
+  color: #6e6e6e;
+  font-family: math;
+  font-weight: 600;
+  cursor: default;
+  font-size: 16px;
+  line-height: 34px;
+}
+
+.aerotherm-container {
+  width: 100%;
+  background: #1d1d1d;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.aerotherm-container h1 {
+  font-size: 2rem;
+  color: white;
+  text-align: start;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  margin-left: 45px;
+  font-family: math;
+}
+.aerotherm-container .containers {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-content: space-around;
+  width: 90%;
+}
+.aerotherm-container .containers .user-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  width: 40%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.aerotherm-container .containers .user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(58, 58, 58, 0.266);
+  border-radius: 10px;
+}
+.aerotherm-container .containers .user-card img {
+  width: 130px;
+  height: auto;
+  border-radius: 50%;
+}
+.aerotherm-container .containers .user-card .info {
+  text-align: left;
+}
+.aerotherm-container .containers .user-card .info h2 {
+  margin: 0;
+  font-size: 30px;
+  color: #ffffff;
+  font-family: math;
+}
+.aerotherm-container .containers .user-card .info p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: math;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+footer .left-side {
+  margin-left: 20px;
+}
+footer .left-side img {
+  width: 240px;
+  height: 70px;
+}
+footer .left-side #first {
+  font-family: math;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 3px;
+  margin-bottom: 10px;
+}
+footer .left-side #second {
+  font-family: math;
+  padding: 0;
+  margin: 0;
+  font-size: 28px;
+  font-style: italic;
+}
+footer .right-side .footer-links a {
+  color: white;
+  font-family: math;
+  text-decoration: none;
+  font-size: 30;
+  margin-left: 25;
+}
+footer .right-side .footer-links a:hover {
+  text-decoration: underline;
+}
+footer .right-side small {
+  position: absolute;
+  bottom: 10px; /* Distance from the bottom */
+  right: 10px; /* Distance from the right */
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    background-color: #232323;
+    z-index: 1;
+    top: 0;
+  }
+  nav img {
+    width: 160px;
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  nav .nav-columns {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    margin-right: 15px;
+  }
+  nav .nav-columns .nav-item {
+    display: none;
+  }
+  nav .nav-columns > a {
+    display: none;
+  }
+  nav .cart {
+    display: flex;
+    color: white;
+    align-items: center;
+    margin-right: 5px;
+  }
+  nav .cart p {
+    padding: 0;
+    margin: 0;
+    width: 20px; /* Set the width */
+    margin-left: 10px;
+    height: 20px; /* Set the height */
+    background-color: #ec4646; /* Optional: give it a color */
+    border-radius: 50%; /* Makes it a circle */
+    display: flex; /* To center text inside the circle */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    text-align: center; /* Optional: centers text horizontally */
+    color: white; /* Optional: color for the text */
+  }
+  .mobile-screen-hamburger-pie-menu {
+    display: block;
+  }
+  .main-jumbo {
+    height: 200px; /* Adjust height for smaller screens */
+    width: 100%;
+    z-index: 0;
+  }
+  .wording h2 {
+    width: 90%;
+    margin-bottom: 30;
+  }
+  .ad-heaters img {
+    width: 100%;
+  }
+  .preheat img {
+    height: 328;
+    transform: scale(2) translate(2px, -38px); /* Zoom in and adjust position */
+    transform-origin: center; /* Ensure the scaling is centered */
+    width: 100%;
+  }
+  .preheat .why-prehear {
+    position: absolute;
+    top: 5;
+    left: 5;
+    transition: transform(-50%, -50%);
+    padding: 0;
+    margin: 0;
+  }
+  .preheat .why-prehear h5 {
+    font-size: 36px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #18274d;
+    font-weight: 100;
+  }
+  .preheat .why-prehear p {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-bottom: 17px;
+    color: #18274d;
+  }
+  .preheat .why-prehear button {
+    border: 2px solid #18274d;
+    color: #18274d;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 14px;
+  }
+  .preheat .why-prehear button:hover {
+    background-color: #1d1d1d;
+    color: white;
+    transition: ease-in 0.2s;
+  }
+  .our-videos {
+    padding: 0;
+  }
+  .our-videos h2 {
+    color: white;
+    font-size: 30px;
+    font-family: Arial;
+    margin-left: 2px;
+  }
+  .our-videos .videos {
+    flex-direction: column;
+  }
+  .our-videos .videos .videoI {
+    position: relative;
+  }
+  .our-videos .videos p {
+    position: absolute;
+    top: 23px;
+    left: -8px;
+  }
+  .our-videos .videos video {
+    width: 400;
+  }
+  .more-info {
+    flex-direction: column;
+    padding-top: 33px;
+  }
+  .more-info img {
+    width: 380px;
+    height: 231px;
+  }
+  .more-info .info {
+    width: 92%;
+  }
+  .more-info .info p {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .aerotherm-container h1 {
+    margin-left: 5px;
+    font-family: math;
+  }
+  .aerotherm-container .containers {
+    width: 90%;
+    flex-direction: column;
+  }
+  .aerotherm-container .containers .user-card {
+    width: 90%;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .aerotherm-container .containers .user-card .info {
+    text-align: left;
+  }
+  .aerotherm-container .containers .user-card .info h2 {
+    margin: 0;
+    font-size: 30px;
+    color: #ffffff;
+    font-family: math;
+  }
+  .aerotherm-container .containers .user-card .info p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: math;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    position: relative;
+    flex-direction: column;
+  }
+  footer .left-side {
+    margin-left: 1px;
+  }
+  footer .left-side img {
+    width: 311px;
+    height: 88px;
+    margin-left: 33px;
+  }
+  footer .left-side #first {
+    margin-left: 22px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  footer .left-side #second {
+    font-size: 20px;
+  }
+  footer .right-side {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .right-side .footer-links a {
+    color: white;
+    font-family: math;
+    text-decoration: none;
+    font-size: 30;
+    margin-left: 13;
+  }
+  footer .right-side .footer-links a:hover {
+    text-decoration: underline;
+  }
+  footer .right-side small {
+    position: relative;
+    bottom: 0px; /* Distance from the bottom */
+    right: -78px; /* Distance from the right */
+    margin: 0;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -152,7 +152,7 @@ def visitor_activity(userStuff, ip, bt):
         timestamp = str(subject[13]).split(' ')[0].strip()
         activity = str(subject[11])
         visitor_id = subject[0]
-        print(timestamp)
+        # print(timestamp)
 
         if timestamp == compareDate:
             if activity != 'none':
