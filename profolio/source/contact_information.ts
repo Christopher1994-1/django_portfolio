@@ -41,6 +41,18 @@ function open_thank_you(message: string): void {
 
 
 
+//. FUNCTION THAT HIGHLIGHTS INPUT FILEDS NEED TO BE FILLED IN
+function highlight_inputData_required(): void {
+    let client_name: any = document.getElementById("client_name");
+    let client_email: any = document.getElementById("client_email");
+    let client_message: any = document.getElementById("client_msg");
+
+    client_name.style.border = "1px solid red";
+    client_email.style.border = "1px solid red";
+    client_message.style.border = "1px solid red";
+}
+
+
 //. FUNCTION THAT SHOWS THANK YOU MESSAGE ON INDEX PAGE
 function say_thank_you(message1: string): void {
     //. CLEAN THE VALUES    
@@ -81,6 +93,120 @@ function say_thank_you(message1: string): void {
 
 };
 
+
+
+
+
+//. FUNCTION THAT CLOSES CAPTCHA DIV
+function closeCap(): void {
+    let capDiv: any = document.getElementById('captchaCode');
+    document.body.removeChild(capDiv);
+};
+
+
+
+
+//. FUNCTION THAT OPENS CAPTCHA DIV
+function open_captchaDIV(captchaCode: string, name: string, email: string, message: string): void {
+    // Create a new <div> element
+    const thankYouDiv = document.createElement('div');
+
+    thankYouDiv.style.position = 'fixed';
+    thankYouDiv.style.top = '50%';
+    thankYouDiv.style.left = '50%';
+    thankYouDiv.style.transform = 'translate(-50%, -50%)';
+    thankYouDiv.style.padding = '20px';
+    thankYouDiv.style.backgroundColor = 'rgb(0 0 0 / 36%)';
+    thankYouDiv.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+    thankYouDiv.style.zIndex = '1000';
+    thankYouDiv.style.width = '100%';
+    thankYouDiv.style.height = '100%';
+
+
+    // Add an ID to the <div> for easier management
+    thankYouDiv.id = 'captchaCode';
+
+    let innerHTML_: string = `
+        <div class="innerCaptcha" id="forRealz">
+
+            <div class="captchacodeHodler"><button id="captchacode" onclick="closeCap()">x</button></div>
+
+
+            <div class="capHolder">
+                <p>${captchaCode}</p>
+            </div>
+
+            <div class="inputCap">
+                <form id="captchaFORM">
+
+                    <input type="text" id="capinput" placeholder="Enter Code..">
+                    <button type="submit" >Submit</button>
+
+                </form>
+
+            </div>
+
+
+            <small id="failure">Captcha failed....Try Again!!</small>
+
+        </div>
+    `;
+
+    thankYouDiv.innerHTML = innerHTML_;
+
+    // Append the <div> to the body
+    document.body.appendChild(thankYouDiv);
+
+
+    //. CAPTCHA FORM
+    let captchaFORM: any = document.getElementById('captchaFORM');
+
+
+    if (captchaFORM) {
+        captchaFORM.addEventListener('submit', function(event:any) {
+            event.preventDefault();
+
+            //. get the input captcha code
+            let inputCaptcha: any = document.getElementById("capinput");
+            let inputCaptchaValue:string = inputCaptcha.value;
+
+
+            if (inputCaptchaValue == captchaCode) {
+                closeCap();
+                message_backend(name, email, message);
+                say_thank_you("Thank you for your submission!");
+                
+            } 
+            
+            else {
+                let capHolder:any = document.getElementById("forRealz");
+                let failure:any = document.getElementById("failure");
+
+                capHolder.style.border = '2px solid red';
+                failure.style.display = 'block';
+                
+            }
+
+
+        });
+    };
+
+};
+
+let captchaCode = "";
+
+
+//. FUNCTION THAT OPENS UP A CAPHTCA 
+function run_captcha(name: string, email: string, message: string): void {
+
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    captchaCode = '';
+    for (let i = 0; i < 6; i++) {
+        captchaCode += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+
+    open_captchaDIV(captchaCode, name, email, message)
+}
 
 
 //. FUNCTION THAT SENDS MESSAGE DATA TO BACKEND
@@ -135,17 +261,19 @@ if (indexContactFormElement) {
         let message: string = (document.getElementById('client_msg') as HTMLInputElement)?.value ?? '';
 
         if (name && email && message) {
-            message_backend(name, email, message);
-            say_thank_you("Thank you for your submission!");
-        } else {
-            say_thank_you("Please fill out the information..");
-            let client_name: any = document.getElementById("client_name");
-            let client_email: any = document.getElementById("client_email");
-            let client_message: any = document.getElementById("client_msg");
+            
+            run_captcha(name, email, message)
+        } 
+        
+        
+        else if (name == "None" && email == "None" && message == "None") {
+            say_thank_you("Please fill out the correct information..");
+            highlight_inputData_required();
+        }
 
-            client_name.style.border = "1px solid red";
-            client_email.style.border = "1px solid red";
-            client_message.style.border = "1px solid red";
+        else {
+            say_thank_you("Please fill out the information..");
+            highlight_inputData_required();
         }
         
     });

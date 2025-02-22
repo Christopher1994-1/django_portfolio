@@ -1497,4 +1497,59 @@ html, body {
 }
 .contact-page .contact-form .btn-submit:hover {
   background-color: #0056b3;
+}
+
+.innerCaptcha {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 10px;
+  width: 35%;
+}
+.innerCaptcha .captchacodeHodler {
+  display: flex;
+  justify-content: end;
+}
+.innerCaptcha .captchacodeHodler button {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  font-weight: bold;
+}
+.innerCaptcha .capHolder {
+  text-align: center;
+  border: 1px solid;
+}
+.innerCaptcha .capHolder p {
+  padding: 0;
+  margin: 0;
+  font-size: 44px;
+  transform: skewX(39deg) skewY(8deg);
+  text-decoration: line-through;
+}
+.innerCaptcha .inputCap {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.innerCaptcha .inputCap button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.innerCaptcha small {
+  border: 1px solid red;
+  color: red;
+  margin: auto;
+  display: block;
+  width: 51%;
+  margin-top: 10px;
+  text-align: center;
+  display: none;
 }/*# sourceMappingURL=main.css.map */
