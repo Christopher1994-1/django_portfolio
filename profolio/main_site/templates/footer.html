@@ -4,7 +4,7 @@
 
     <div class="footer-left">
 
-      <h1>CEJ <span>Van Niekirk</span></h1>
+      <h1>CEJ <span>{{lastName}}</span></h1>
 
       <p class="footer-links">
 
@@ -62,7 +62,7 @@
   </div>
 
   <div class="lastP">
-    <h5>&copy; {{year}} CEJ Van Niekirk. All Rights Reserved<a href="{% url 'adding_new_projects' %}" style="color: white; text-decoration: none;">.</a></h5>
+    <h5>&copy; {{year}} CEJ {{lastName}}. All Rights Reserved<a href="{% url 'adding_new_projects' %}" style="color: white; text-decoration: none;">.</a></h5>
   </div>
 
 

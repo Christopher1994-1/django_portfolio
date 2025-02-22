@@ -25,7 +25,8 @@ SERVER_STATUS:str = "false"
 basic_context = {
     "footer_para": random_stuff.ABOUT_ME,
     "about_me": random_stuff.ABOUT_ME,
-    "about_me2": random_stuff.ABOUT_ME2
+    "about_me2": random_stuff.ABOUT_ME2,
+    "lastName": random_stuff.LAST_NAME
 }
 
 

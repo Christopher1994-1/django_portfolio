@@ -21,10 +21,31 @@
 
     <h1 id="index_pageID">index</h1>
 
-    {% include 'index_things/jumbotron.html' %}
+
+    <div class="jumbotron">
+        {% load static %}   
+    
+        
+          <div class="main_stuff">
+            <h1 id="jumbotron_h1">CEJ Kirk</h1>
+            <h5 id="jumbotron_h5">Full Stack Developer</h5>
+          </div>
+        
+    
+    </div>
 
 
-    {% include 'index_things/info_area.html' %}
+    <div class="info-area">
+
+        <div class="info-side">
+            <h1>About Me</h1>
+            {{about_me2|safe}}
+        </div>
+    
+        <div class="pic">
+            <img src="{% static 'images/site_images/me.jpg' %}" alt="" srcset="" loading="lazy">
+        </div>
+    </div>
 
 
     {% include 'index_things/projects2.html' %}
@@ -36,7 +57,26 @@
     {% include 'index_things/contact_more.html' %}
 
 
-    {% include 'index_things/github_banner.html' %}
+    <div class="github_conatiner">
+
+        <div class="things1">
+    
+            <div class="side1 icon1 ii" id="one1">
+                <i class="fa-brands fa-github" id="i1"></i>
+            </div>
+        
+            <div class="side1" id="one-">
+                <a href="https://github.com/Christopher1994-1" target="_blank"><h5>My GitHub</h5></a>
+            </div>
+        
+            <div class="side1 icon2 ii2" id="one2">
+                <i class="fa-solid fa-code" id="i2"></i>
+            </div>
+    
+        </div>
+    
+    
+    </div>
 
 
     {% include 'index_things/popup.html' %}

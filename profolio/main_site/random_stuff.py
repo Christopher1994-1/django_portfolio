@@ -19,6 +19,8 @@ Let's build something amazing together!
 """
 
 
+LAST_NAME: str = "Van Niekirk"
+
 
 ABOUT_ME = """
 
