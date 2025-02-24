@@ -1972,3 +1972,13 @@ $memberPopup: 401;
     }
     
 }
+
+
+
+
+//. snapshot button
+#snapshot_button {
+    &:hover {
+        color: $hover-color;
+    }
+}

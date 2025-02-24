@@ -1552,4 +1552,8 @@ html, body {
   margin-top: 10px;
   text-align: center;
   display: none;
+}
+
+#snapshot_button:hover {
+  color: rgb(184, 36, 36);
 }/*# sourceMappingURL=main.css.map */

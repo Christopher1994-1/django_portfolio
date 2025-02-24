@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from . import app_functions
 import datetime 
-from django.template import *
 from django.http import JsonResponse
 import json
 from ipware import get_client_ip
@@ -140,8 +139,15 @@ def privacy_policy(request):
     client_ip, _ = get_client_ip(request)
     
     app_functions.start_session(client_ip, browser_type)
+    #! year for the footer
+    year = str(datetime.datetime.now()).split(' ')[0].split('-')[0]
     
-    return render(request, 'pages/privacy_policy.html', {})
+    context = {
+        "year": year, 
+    }
+    context.update(basic_context)
+    
+    return render(request, 'pages/privacy_policy.html', context)
 #.############################################################################################
 
 
@@ -183,6 +189,7 @@ def search_projects(request, filters):
         title = 'See all Projects'
         secondTitle = 'Frontend - Backend'
         context = {'project':projects_, 'pageTitle': title, 'secondTitle': secondTitle}
+        context.update(basic_context)
         
     else:
         stringg = str(filters)
@@ -193,6 +200,7 @@ def search_projects(request, filters):
         secondTitle2 = app_functions.handle_jumbo_wording(filters)
         
         context = {'project':projects1, 'pageTitle': title, 'secondTitle': secondTitle2}
+        context.update(basic_context)
         
     browser_type = request.META['HTTP_USER_AGENT']
     client_ip, _ = get_client_ip(request)
@@ -211,8 +219,7 @@ def search_projects(request, filters):
 
 #. ROUTE FOR THE CONTACT PAGE
 def contact_page(request):
-    context = {}
-    return render(request, 'pages/contact.html', context)
+    return render(request, 'pages/contact.html', {})
 
 
 
