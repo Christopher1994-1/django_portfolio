@@ -16,6 +16,17 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
+#. GOOGLE CAP API KEYS
+# Use this site key in the HTML code your site serves to users.
+RECAPTCHA_PUBLIC_KEY: str = "6LelmuAqAAAAADZ0VpIImUFLFSyDA30zDvWr5Jxe"
+
+# Use this secret key for communication between your site and reCAPTCHA.
+RECAPTCHA_PRIVATE_KEY: str = "6LelmuAqAAAAABs-BsHoNmJ0XivAANhD33NTiQyw"
+
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -27,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main_site',
     'projects',
+    'captcha'
 ]
 
 MIDDLEWARE = [

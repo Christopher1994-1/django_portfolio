@@ -1,17 +1,15 @@
 from django.shortcuts import render
-from . import app_functions, session_tracking
+from . import app_functions
 import datetime 
 from django.template import *
-from django.http import HttpRequest, JsonResponse
+from django.http import JsonResponse
 import json
 from ipware import get_client_ip
-import time
 from .models import Projects
 from projects import stripe_payment, chatgpt
 import random
 import stripe
 import os
-from django.views.decorators.csrf import csrf_exempt
 from . import random_stuff
 
 
@@ -38,7 +36,6 @@ STRIPE_PUBLISH_KEY = os.getenv('stripe_publish_key')
 
 
 
-
 #. ROUTE FOR THE HOME PAGE
 def index(request):
 
@@ -58,9 +55,18 @@ def index(request):
     posts_randomize = random.sample(posts, 6)
     
     
+    # if request.method == "POST":
+    #     form = ContactForm(request.POST)
+    #     if form.is_valid():
+    #         # Process the form (e.g., send an email)
+    #         return render(request, "success.html", {"message": "Form submitted successfully!"})
+    # else:
+    #     form = ContactForm()
+    
+    
     context = {
         "year": year, 
-        "posts":posts_randomize
+        "posts":posts_randomize,
     }
     context.update(basic_context)
     
@@ -244,3 +250,8 @@ def my_backend_function(request) -> JsonResponse:
         except json.JSONDecodeError:
             return JsonResponse({'error': 'Invalid JSON'}, status=400)
     
+    
+    
+    
+
+
