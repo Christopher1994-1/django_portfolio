@@ -9,6 +9,7 @@ from projects import stripe_payment, chatgpt
 import random
 import stripe
 import os
+from django.views.decorators.cache import cache_page
 from . import random_stuff
 
 
@@ -36,6 +37,7 @@ STRIPE_PUBLISH_KEY = os.getenv('stripe_publish_key')
 
 
 #. ROUTE FOR THE HOME PAGE
+@cache_page(60 * 15)
 def index(request):
 
     client_ip, _ = get_client_ip(request)
@@ -133,6 +135,7 @@ def tests(request):
 
 #=============================================================================================
 #* Route for the Privacy Policy page
+@cache_page(60 * 15)
 def privacy_policy(request):
 
     browser_type = request.META['HTTP_USER_AGENT']
@@ -180,6 +183,7 @@ def filter_projects(stringgg):
 
 #=============================================================================================
 #* Route for the all projects page
+@cache_page(60 * 15)
 def search_projects(request, filters):
     context = {}
 
@@ -218,6 +222,7 @@ def search_projects(request, filters):
 
 
 #. ROUTE FOR THE CONTACT PAGE
+@cache_page(60 * 15)
 def contact_page(request):
     return render(request, 'pages/contact.html', {})
 
