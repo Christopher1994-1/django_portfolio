@@ -1,0 +1,26 @@
+{% load static %}
+
+<nav id="navbar1010">
+    <div class="firstSide">
+        <a href="{% url 'index' %}" id="homePageLink"><h1>CEJ {{lastName}}</h1></a>
+    </div>
+
+    <div class="links">
+        <a href="{% url 'index' %}" id="home-page">Home</a>
+        <a href="#" id="about-page">About Me</a>
+        <div class="driodiwb">
+            <a id="projects-page" href="{% url 'search_projects' filters='all' %}">Projects <span><i class="fa-solid fa-caret-down"></i></span></a>
+        </div>
+        <a href="{% url 'contact_page' %}" id="contact-page">Contact</a>
+    </div>
+
+    <div class="hamburgerMenu">
+        <i class="fa-solid fa-bars" id="buttonMenu"></i>
+    </div>
+</nav>
+
+
+
+
+<script src="{% static 'js/navbar_code.js' %}"></script>
+<script src="{% static 'js/navbar_logic.js' %}"></script>

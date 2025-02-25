@@ -8,13 +8,13 @@ let mobileNavBurger2:any = document.getElementById("buttonMenu2");
 
 //. LINKS
 const LINKS: Record<string, string> = {
-    starbucks_project: "projects_showcase/Starbucks Remake",
-    washington_project: "projects_showcase/Washington",
-    ofdream_project: "projects_showcase/Ofdream",
-    stripe_payment: "",
-    chatgpt: "",
-    bigfoot: "",
-    calapp: "projects_showcase/GUI Calculator App"
+  starbucks_project: "projects_showcase/Starbucks Remake",
+  washington_project: "projects_showcase/Washington",
+  ofdream_project: "projects_showcase/Ofdream",
+  stripe_payment: "projects_showcase/Stripe Backend Payment/",
+  chatgpt: "/projects_showcase/ChatGPT Replica/",
+  bigfoot: "",
+  calapp: "projects_showcase/GUI Calculator App"
 };
   
 
@@ -41,7 +41,7 @@ function openSidePanel(): void {
             <div class="dropdown-content" id="clientside">
                 <a href="${LINKS.starbucks_project}">Starbucks Remake</a>
                 <a href="${LINKS.washington_project}">Washington</a>
-                <a href="#">Ofdream</a>
+                <a href="${LINKS.ofdream_project}">Ofdream</a>
             </div>
         </div>
   
@@ -51,8 +51,8 @@ function openSidePanel(): void {
               <i class="fa-solid fa-plus"></i>
             </div>
             <div class="dropdown-content" id="serverside">
-                <a href="#">Stripe Payment API</a>
-                <a href="#">ChatGPT Remake</a>
+                <a href="${LINKS.stripe_payment}">Stripe Payment API</a>
+                <a href="${LINKS.chatgpt}">ChatGPT Remake</a>
                 <a href="#">Bigfoot Dataset Visualization</a>
             </div>
         </div>
