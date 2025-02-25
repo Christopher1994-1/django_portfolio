@@ -37,7 +37,6 @@ STRIPE_PUBLISH_KEY = os.getenv('stripe_publish_key')
 
 
 #. ROUTE FOR THE HOME PAGE
-@cache_page(60 * 15)
 def index(request):
 
     client_ip, _ = get_client_ip(request)

@@ -43,15 +43,12 @@
         </div>
     
         <div class="pic">
-            <img src="{% static 'images/site_images/me.jpg' %}" alt="" srcset="" loading="lazy">
+            <img src="{% static 'images/site_images/me.jpg' %}" alt="" srcset="" loading="lazy" id="meIMAGE">
         </div>
     </div>
 
 
     {% include 'index_things/projects2.html' %}
-
-
-    {% include 'index_things/smaller_screen.html' %}
 
 
     {% include 'index_things/contact_more.html' %}
@@ -78,13 +75,5 @@
     
     </div>
 
-
-    {% include 'index_things/popup.html' %}
-
-
-
-    <script src="{% static 'js/index_.js' %}"></script>
-    <script src="{% static 'js/contact_information.js' %}"></script>
-    <script src="{% static 'js/index_contact.js' %}"></script>
 
 {% endblock content %}
