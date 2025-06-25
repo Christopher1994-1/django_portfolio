@@ -1,9 +1,17 @@
 from django.urls import path
 from . import views, route_functions, project_showcase_routes, updating_projects
 from django.contrib.sitemaps.views import sitemap
+from .sitemaps import ProjectSitemap
+
+
+
+sitemaps = {
+    'projects': ProjectSitemap,
+}
 
 
 urlpatterns = [
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     
     #= Paths for website routes
     path('', views.index, name="index"),
