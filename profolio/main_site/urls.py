@@ -12,6 +12,8 @@ sitemaps = {
 
 urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    #. test
+    path('test_video/', views.test_video, name='test_video'),
     
     #= Paths for website routes
     path('', views.index, name="index"),

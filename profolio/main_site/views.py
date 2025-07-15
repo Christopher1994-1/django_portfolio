@@ -18,13 +18,17 @@ from . import random_stuff
 #. SERVER LIVE / OFF
 SERVER_STATUS:str = "false"
 
+#. NAME
+NAME: str = "Christian"
+
 
 
 basic_context = {
     "footer_para": random_stuff.ABOUT_ME,
     "about_me": random_stuff.ABOUT_ME,
     "about_me2": random_stuff.ABOUT_ME2,
-    "lastName": random_stuff.LAST_NAME
+    "lastName": random_stuff.LAST_NAME,
+    'mainName': NAME
 }
 
 
@@ -264,5 +268,11 @@ def my_backend_function(request) -> JsonResponse:
     
     
     
+    
 
 
+#..............................................
+#. TEST FOR VIDEO
+
+def test_video(request):
+    return render(request, 'test_video.html', {})
