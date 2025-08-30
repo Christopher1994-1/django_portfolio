@@ -1,42 +1,44 @@
-
-
-let projectsDropdown: any = document.getElementById("projects-page");
-
-
-
-//. LINKS
-const LINKS2: Record<string, string> = {
-    starbucks_project: "projects_showcase/Starbucks Remake",
-    washington_project: "projects_showcase/Washington",
-    ofdream_project: "projects_showcase/Ofdream",
-    stripe_payment: "projects_showcase/Stripe Backend Payment/",
+"use strict";
+let projectsDropdown = document.getElementById("projects-page");
+let dropdownNavbar_thing = "none";
+const LINKS2 = {
+    starbucks_project: "/projects_showcase/Starbucks Remake",
+    washington_project: "/projects_showcase/Washington",
+    ofdream_project: "/projects_showcase/Ofdream",
+    stripe_payment: "/projects_showcase/Stripe Backend Payment/",
     chatgpt: "/projects_showcase/ChatGPT Replica/",
     bigfoot: "",
-    calapp: "projects_showcase/GUI Calculator App"
+    calapp: "/projects_showcase/GUI Calculator App"
 };
-
-
-function open_arrow(thing: any): void {
-    let arrowkeySTR: string = 'arrowkey' + thing;
-    let arrowkey: HTMLElement | null = document.getElementById(arrowkeySTR);
-
+function open_arrow(thing) {
+    let arrowkeySTR = 'arrowkey' + thing;
+    let arrowkey = document.getElementById(arrowkeySTR);
     if (arrowkey) {
         arrowkey.style.marginLeft = "5px";
         arrowkey.style.opacity = '1';
     }
-};
-
-function close_arrow(thing: any): void {
-    let arrowkeySTR: string = 'arrowkey' + thing;
-    let arrowkey: HTMLElement | null = document.getElementById(arrowkeySTR);
-
+}
+;
+function close_arrow(thing) {
+    let arrowkeySTR = 'arrowkey' + thing;
+    let arrowkey = document.getElementById(arrowkeySTR);
     if (arrowkey) {
         arrowkey.style.opacity = "0";
     }
-};
-
-
-let innherHTML2: string = `
+}
+;
+console.log(LINKS2.starbucks_project);
+console.log();
+console.log();
+console.log(window.location.href.split('/'));
+let url_thing = window.location.href.split('/').length;
+if (url_thing > 3) {
+    console.log("fuck");
+}
+else {
+    console.log('no');
+}
+let innherHTML2 = `
 <div class="item">
 
     <h5>Web Development</h5>
@@ -71,11 +73,7 @@ let innherHTML2: string = `
 
 
 
-
-
-
-
-<div class="item">
+<div class="item" >
     <h5>Backend Development</h5>
     <hr class="navbar_dropdownHR">
     <div class="slidepart">
@@ -105,7 +103,7 @@ let innherHTML2: string = `
 </div>
 
 
-<div class="item">
+<div class="item" >
     <h5>Application Development</h5>
     <hr class="navbar_dropdownHR">
     <div class="slidepart">
@@ -136,110 +134,74 @@ let innherHTML2: string = `
     </div>
 </div>
 
-
-
-`
-
-
+`;
 if (projectsDropdown) {
     const dropdownContainer = document.createElement('div');
     dropdownContainer.className = 'dropdownContainer';
-
     dropdownContainer.innerHTML = innherHTML2;
-
-    // Append dropdown only once
     projectsDropdown.appendChild(dropdownContainer);
-    dropdownContainer.style.display = 'none'; // Initially hidden
-
+    dropdownContainer.style.display = 'none';
     let isHovered = false;
-
     projectsDropdown.addEventListener("mouseenter", function () {
         dropdownContainer.style.display = 'flex';
         isHovered = true;
     });
-
     dropdownContainer.addEventListener("mouseenter", function () {
         isHovered = true;
     });
-
     projectsDropdown.addEventListener("mouseleave", function () {
         setTimeout(() => {
             if (!isHovered) {
-                dropdownContainer.style.display = 'flex'; // none
+                dropdownContainer.style.display = dropdownNavbar_thing;
             }
-        }, 20); // Slight delay to allow moving between elements
+        }, 20);
         isHovered = false;
     });
-
     dropdownContainer.addEventListener("mouseleave", function () {
         setTimeout(() => {
             if (!isHovered) {
-                dropdownContainer.style.display = 'flex'; // none
+                dropdownContainer.style.display = dropdownNavbar_thing;
             }
         }, 20);
         isHovered = false;
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function onScrollThreshold(threshold: number, callback: () => void): void {
+;
+function onScrollThreshold(threshold, callback) {
     let hasFired = false;
-
     window.addEventListener("scroll", () => {
         if (window.scrollY >= threshold && !hasFired) {
             hasFired = true;
             callback();
-        } else if (window.scrollY < threshold) {
-            hasFired = false; // Reset when scrolling up so it can trigger again
+        }
+        else if (window.scrollY < threshold) {
+            hasFired = false;
         }
     });
 }
-
-// Example usage:
+;
 onScrollThreshold(500, () => {
     let navbar01 = document.getElementById("navbar1010");
-
     if (navbar01) {
         navbar01.style.transition = "ease-in 0.3s";
         navbar01.style.backgroundColor = "grey";
     }
 });
-
-function onScrollUpThreshold(threshold: number, callback: () => void): void {
+function onScrollUpThreshold(threshold, callback) {
     let hasFired = false;
-
     window.addEventListener("scroll", () => {
         if (window.scrollY <= threshold && !hasFired) {
             hasFired = true;
             callback();
-        } else if (window.scrollY > threshold) {
-            hasFired = false; // Reset when scrolling down so it can trigger again
+        }
+        else if (window.scrollY > threshold) {
+            hasFired = false;
         }
     });
 }
-
-// Example usage:
+;
 onScrollUpThreshold(200, () => {
     let navbar01 = document.getElementById("navbar1010");
-
     if (navbar01) {
         navbar01.style.transition = "ease-in 0.3s";
         navbar01.style.backgroundColor = "transparent";

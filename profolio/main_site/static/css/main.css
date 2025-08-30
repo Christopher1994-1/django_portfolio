@@ -708,7 +708,7 @@ html, body {
   background-size: cover;
 }
 .jumbotron1 .main_stuff {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   top: 50%;
   left: 50%; /* Adjust left to 50% */
@@ -1294,95 +1294,6 @@ html, body {
 
 #snapshot_button:hover {
   color: rgb(184, 36, 36);
-}
-
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  z-index: 2;
-}
-nav .firstSide {
-  margin-left: 15px;
-}
-nav .firstSide a {
-  color: white;
-}
-nav .firstSide a:hover {
-  color: rgb(192, 192, 192);
-}
-nav .links {
-  display: flex;
-  width: 45%;
-  justify-content: space-around;
-}
-nav .links a {
-  color: white;
-  font-size: 22px;
-  text-decoration: none;
-}
-nav .links a:hover {
-  text-decoration: underline;
-}
-nav .links a .dropdownContainer {
-  width: 90%;
-  background-color: rgb(0, 0, 0);
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  display: flex;
-  z-index: 2;
-  justify-content: center;
-  padding: 10px;
-  cursor: default;
-  align-items: stretch;
-}
-nav .links a .dropdownContainer .item {
-  width: 37%;
-  border-left: 1px solid grey;
-  padding: 5px;
-  border-right: 1px solid grey;
-}
-nav .links a .dropdownContainer .item h5 {
-  font-family: math;
-  color: grey;
-}
-nav .links a .dropdownContainer .item .slidepart {
-  display: flex;
-  align-items: center;
-}
-nav .links a .dropdownContainer .item .slidepart a {
-  font-family: sans-serif;
-  font-size: 17px;
-  color: #ffffff;
-  font-weight: 500;
-  cursor: pointer;
-  position: relative;
-}
-nav .links a .dropdownContainer .item .info_dropdown {
-  max-height: 120px;
-  overflow: auto;
-}
-nav .links a .dropdownContainer .item .info_dropdown p {
-  font-size: 15px;
-}
-nav .links a .dropdownContainer .item .info_dropdown #skills2 {
-  padding-top: 33px;
-}
-nav .links a .dropdownContainer .item .skills {
-  margin-top: 30px;
-}
-nav .links a .dropdownContainer .item .skills p {
-  font-size: 15px;
-  color: #6088EE;
-  font-weight: 600;
-}
-nav .hamburgerMenu {
-  display: none;
 }
 
 .arrowkey {

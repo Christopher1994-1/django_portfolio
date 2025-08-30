@@ -708,7 +708,7 @@ html, body {
   background-size: cover;
 }
 .jumbotron1 .main_stuff {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   top: 50%;
   left: 50%; /* Adjust left to 50% */
@@ -1296,6 +1296,12 @@ html, body {
   color: rgb(184, 36, 36);
 }
 
+.arrowkey {
+  color: white;
+  font-size: 15px;
+  opacity: 0;
+}
+
 nav {
   position: fixed;
   width: 100%;
@@ -1383,12 +1389,6 @@ nav .links a .dropdownContainer .item .skills p {
 }
 nav .hamburgerMenu {
   display: none;
-}
-
-.arrowkey {
-  color: white;
-  font-size: 15px;
-  opacity: 0;
 }
 
 @media (max-width: 1115px) {

@@ -147,7 +147,7 @@ body.dark-mode .add-project-form button[type=submit] {
   background-color: #4dabf7;
 }
 body.dark-mode .add-project-form button[type=submit]:hover {
-  background-color: #7ec2f9;
+  background-color: rgb(125.8064516129, 194.0322580645, 249.1935483871);
 }
 
 .project-container {

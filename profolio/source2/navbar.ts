@@ -3,16 +3,21 @@
 let projectsDropdown: any = document.getElementById("projects-page");
 
 
+//. DROPDOWN NAVBAR THING
+// if you want to keep the dropdown on page change to 'flex'
+let dropdownNavbar_thing: string = "none";
+
 
 //. LINKS
+//! HERE IS WHY WE HAVE THE ISSUES WITH THE PRIVICY PAGE LINKS
 const LINKS2: Record<string, string> = {
-    starbucks_project: "projects_showcase/Starbucks Remake",
-    washington_project: "projects_showcase/Washington",
-    ofdream_project: "projects_showcase/Ofdream",
-    stripe_payment: "projects_showcase/Stripe Backend Payment/",
+    starbucks_project: "/projects_showcase/Starbucks Remake",
+    washington_project: "/projects_showcase/Washington",
+    ofdream_project: "/projects_showcase/Ofdream",
+    stripe_payment: "/projects_showcase/Stripe Backend Payment/",
     chatgpt: "/projects_showcase/ChatGPT Replica/",
     bigfoot: "",
-    calapp: "projects_showcase/GUI Calculator App"
+    calapp: "/projects_showcase/GUI Calculator App"
 };
 
 
@@ -34,6 +39,21 @@ function close_arrow(thing: any): void {
         arrowkey.style.opacity = "0";
     }
 };
+
+
+console.log(LINKS2.starbucks_project);
+console.log()
+console.log()
+console.log(window.location.href.split('/'))
+let url_thing: number = window.location.href.split('/').length;
+
+
+if (url_thing > 3) {
+    console.log("fuck")
+} else {
+    console.log('no')
+}
+
 
 
 let innherHTML2: string = `
@@ -71,11 +91,7 @@ let innherHTML2: string = `
 
 
 
-
-
-
-
-<div class="item">
+<div class="item" >
     <h5>Backend Development</h5>
     <hr class="navbar_dropdownHR">
     <div class="slidepart">
@@ -105,7 +121,7 @@ let innherHTML2: string = `
 </div>
 
 
-<div class="item">
+<div class="item" >
     <h5>Application Development</h5>
     <hr class="navbar_dropdownHR">
     <div class="slidepart">
@@ -136,9 +152,8 @@ let innherHTML2: string = `
     </div>
 </div>
 
+`;
 
-
-`
 
 
 if (projectsDropdown) {
@@ -165,7 +180,7 @@ if (projectsDropdown) {
     projectsDropdown.addEventListener("mouseleave", function () {
         setTimeout(() => {
             if (!isHovered) {
-                dropdownContainer.style.display = 'flex'; // none
+                dropdownContainer.style.display = dropdownNavbar_thing;
             }
         }, 20); // Slight delay to allow moving between elements
         isHovered = false;
@@ -174,12 +189,13 @@ if (projectsDropdown) {
     dropdownContainer.addEventListener("mouseleave", function () {
         setTimeout(() => {
             if (!isHovered) {
-                dropdownContainer.style.display = 'flex'; // none
+                dropdownContainer.style.display = dropdownNavbar_thing; 
             }
         }, 20);
         isHovered = false;
     });
-}
+
+};
 
 
 
@@ -211,7 +227,7 @@ function onScrollThreshold(threshold: number, callback: () => void): void {
             hasFired = false; // Reset when scrolling up so it can trigger again
         }
     });
-}
+};
 
 // Example usage:
 onScrollThreshold(500, () => {
@@ -234,7 +250,7 @@ function onScrollUpThreshold(threshold: number, callback: () => void): void {
             hasFired = false; // Reset when scrolling down so it can trigger again
         }
     });
-}
+};
 
 // Example usage:
 onScrollUpThreshold(200, () => {

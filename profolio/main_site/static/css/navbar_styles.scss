@@ -1,0 +1,120 @@
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    z-index: 2;
+    
+
+
+    .firstSide {
+        margin-left: 15px;
+
+        a {
+            color: white;
+
+            &:hover {
+                color: rgb(192, 192, 192);
+            }
+        }
+    }
+
+
+    .links {
+        display: flex;
+        width: 45%;
+        justify-content: space-around;
+
+        a {
+            color: white;
+            font-size: 22px;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+
+            
+            .dropdownContainer {
+                width: 90%;
+                background-color: rgb(0, 0, 0);
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                display: flex;
+                z-index: 2;
+                justify-content: center;
+                padding: 10px;
+                cursor: default;
+                align-items: stretch; // Ensures all items are the same height
+
+
+                .item {
+                    width: 37%;
+                    border-left: 1px solid grey;
+                    padding: 5px;
+                    border-right: 1px solid grey;
+
+
+
+                    h5 {
+                        font-family: math;
+                        color: grey;
+                    }
+
+                    .slidepart {
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            font-family: sans-serif;
+                            font-size: 17px;
+                            color: #ffffff;
+                            font-weight: 500;
+                            cursor: pointer;
+                            position: relative;
+                        }
+
+                    }
+
+                    .info_dropdown {
+                        max-height: 120px;
+                        overflow: auto;
+
+                        p {
+                            font-size: 15px;
+                        }
+
+
+                        #skills2 {
+                            padding-top: 33px;
+                        }
+                    }
+
+
+                    .skills {
+                        margin-top: 30px;
+                        p {
+                            font-size: 15px;
+                            color: #6088EE;
+                            font-weight: 600;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+
+
+    //. mobile hamburger button
+    .hamburgerMenu {
+        display: none;
+    }
+
+}
