@@ -1,0 +1,113 @@
+{% extends 'ofdream/base.html' %}
+
+
+{% block icon %} 
+    <link rel="shortcut icon" href="https://main553.b-cdn.net/portfolio/darkModeV.ico" type="image/x-icon">
+{% endblock icon%}
+
+
+
+{% block content %}
+
+{% load static %}
+
+
+<div class="main-jumbo-front0cover">
+    <img src="https://main553.b-cdn.net/portfolio/ofdream/jumbo_cover2.2.jpg" alt="girl taking pictures" srcset="">
+
+    <div class="jumbo-main-message">
+        <h1 id="jumbo-main-messageID">Øfdream - Main place for creation and stuff</h1>
+    </div>
+</div>
+
+
+<div class="info-area">
+    <div class="info-side">
+        <h1>Hi, I'm Cassie</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse nostrum aliquid officia recusandae eos obcaecati ipsam ex sunt. 
+            Rerum dignissimos nesciunt architecto vel! Ipsa cupiditate corporis itaque quia, nobis vitae. Lorem ipsum dolor sit amet 
+            consectetur adipisicing elit. Quibusdam numquam quisquam mollitia reprehenderit  eligendi, qui vel, tenetur nesciunt 
+            aperiam esse? Ullam laboriosam tenetur saepe quia.
+        </p>
+    </div>
+
+    <div class="pic">
+        <img src="https://main553.b-cdn.net/portfolio/ofdream/jumbo_port.jpg" alt="girl taking pictures" srcset="">
+    </div>
+</div>
+
+
+
+<div class="view-my-projects">
+    <h1>~ My Photo Sets ~</h1>
+
+    <div class="items">
+
+        <div class="item">
+            <img src="{% static 'images/project_images/ofdream/beach_wedding02.jpg' %}" alt="" srcset="">
+            <div class="info-area">
+                <h5>Beach Wedding Set 1</h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, natus magnam? Qui veritatis porro deserunt placeat 
+                    rerum facere quidem, pariatur possimus, obcaecati, officiis perspiciatis commodi dolor vero quaerat alias quae!
+                </p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="{% static 'images/project_images/ofdream/graduation03.jpeg' %}" alt="" srcset="">
+            <div class="info-area">
+                <h5>Graduation Set 2</h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, natus magnam? Qui veritatis porro deserunt placeat 
+                    rerum facere quidem, pariatur possimus, obcaecati, officiis perspiciatis commodi dolor vero quaerat alias quae!
+                </p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="{% static 'images/project_images/ofdream/scene02.jpg' %}" alt="" srcset="">
+            <div class="info-area">
+                <h5>Scenery Set 3</h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, natus magnam? Qui veritatis porro deserunt placeat 
+                    rerum facere quidem, pariatur possimus, obcaecati, officiis perspiciatis commodi dolor vero quaerat alias quae!
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="see-all-projects">
+    <a href="#">View All</a>
+</div>
+
+
+
+{% include 'ofdream/pages/client_testionials.html' %}
+
+
+
+{% include 'ofdream/pages/about_me.html' %}
+
+
+
+
+<div class="get-started">
+    <div class="getting-started-stuff">
+        <h3>Get Started</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a href="{% url 'contact_page' %}">GET IN TOUCH!</a>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="{% static 'js/ofdream/client.js' %}"></script>
+
+{% endblock content %}

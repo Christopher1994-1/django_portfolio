@@ -318,14 +318,14 @@ def start_session(ip, startime, current_page, last_page, browser):
 # dri()
 
 
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
-# Get the user instance
-user = User.objects.get(username='cej')  # Replace 'username' with the actual username
+# # Get the user instance
+# user = User.objects.get(username='cej')  # Replace 'username' with the actual username
 
-# Set the new password
-new_password = 'new_password'  # Replace 'new_password' with the desired new password
-user.set_password(new_password)
+# # Set the new password
+# new_password = 'new_password'  # Replace 'new_password' with the desired new password
+# user.set_password(new_password)
 
-# Save the user instance to update the password in the database
-user.save()
+# # Save the user instance to update the password in the database
+# user.save()

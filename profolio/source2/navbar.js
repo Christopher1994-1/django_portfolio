@@ -1,13 +1,14 @@
 "use strict";
 let projectsDropdown = document.getElementById("projects-page");
+let dropdownNavbar_thing = "none";
 const LINKS2 = {
-    starbucks_project: "projects_showcase/Starbucks Remake",
-    washington_project: "projects_showcase/Washington",
-    ofdream_project: "projects_showcase/Ofdream",
-    stripe_payment: "projects_showcase/Stripe Backend Payment/",
+    starbucks_project: "/projects_showcase/Starbucks Remake",
+    washington_project: "/projects_showcase/Washington",
+    ofdream_project: "/projects_showcase/Ofdream",
+    stripe_payment: "/projects_showcase/Stripe Backend Payment/",
     chatgpt: "/projects_showcase/ChatGPT Replica/",
     bigfoot: "",
-    calapp: "projects_showcase/GUI Calculator App"
+    calapp: "/projects_showcase/GUI Calculator App"
 };
 function open_arrow(thing) {
     let arrowkeySTR = 'arrowkey' + thing;
@@ -26,6 +27,17 @@ function close_arrow(thing) {
     }
 }
 ;
+console.log(LINKS2.starbucks_project);
+console.log();
+console.log();
+console.log(window.location.href.split('/'));
+let url_thing = window.location.href.split('/').length;
+if (url_thing > 3) {
+    console.log("fuck");
+}
+else {
+    console.log('no');
+}
 let innherHTML2 = `
 <div class="item">
 
@@ -61,11 +73,7 @@ let innherHTML2 = `
 
 
 
-
-
-
-
-<div class="item">
+<div class="item" >
     <h5>Backend Development</h5>
     <hr class="navbar_dropdownHR">
     <div class="slidepart">
@@ -95,7 +103,7 @@ let innherHTML2 = `
 </div>
 
 
-<div class="item">
+<div class="item" >
     <h5>Application Development</h5>
     <hr class="navbar_dropdownHR">
     <div class="slidepart">
@@ -126,8 +134,6 @@ let innherHTML2 = `
     </div>
 </div>
 
-
-
 `;
 if (projectsDropdown) {
     const dropdownContainer = document.createElement('div');
@@ -146,7 +152,7 @@ if (projectsDropdown) {
     projectsDropdown.addEventListener("mouseleave", function () {
         setTimeout(() => {
             if (!isHovered) {
-                dropdownContainer.style.display = 'flex';
+                dropdownContainer.style.display = dropdownNavbar_thing;
             }
         }, 20);
         isHovered = false;
@@ -154,12 +160,13 @@ if (projectsDropdown) {
     dropdownContainer.addEventListener("mouseleave", function () {
         setTimeout(() => {
             if (!isHovered) {
-                dropdownContainer.style.display = 'flex';
+                dropdownContainer.style.display = dropdownNavbar_thing;
             }
         }, 20);
         isHovered = false;
     });
 }
+;
 function onScrollThreshold(threshold, callback) {
     let hasFired = false;
     window.addEventListener("scroll", () => {
@@ -172,6 +179,7 @@ function onScrollThreshold(threshold, callback) {
         }
     });
 }
+;
 onScrollThreshold(500, () => {
     let navbar01 = document.getElementById("navbar1010");
     if (navbar01) {
@@ -191,6 +199,7 @@ function onScrollUpThreshold(threshold, callback) {
         }
     });
 }
+;
 onScrollUpThreshold(200, () => {
     let navbar01 = document.getElementById("navbar1010");
     if (navbar01) {

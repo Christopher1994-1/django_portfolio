@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views, stripe_payment, chatgpt, growth
+from . import views, stripe_payment, chatgpt, growth, ofdream
 
 
 
@@ -27,6 +27,10 @@ urlpatterns = [
     
     
     #. aerotherm 
-    path("aerotherm_project/", views.aero_demo, name="aero_demo")
+    path("aerotherm_project/", views.aero_demo, name="aero_demo"),
+    
+    
+    #. ofdream
+    path('ofdream/', ofdream.ofdream_project, name="ofdream")
     
 ] 
